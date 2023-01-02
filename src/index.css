@@ -2,8 +2,23 @@ body {
  background-image: url('./img/vintagepaper4.png');
 }
 
-img .checked {
- max-width: 100%;
+.unchecked {
  height: auto;
  display: inline-block;
+ background-color: aliceblue;
+}
+
+.line {
+  display: inline-block;
+  width: auto;
+  background-color: aliceblue;
+}
+
+
+.grid {
+  /* display: -moz-inline-grid; */
+  display: grid;
+  grid-template-columns: auto 10% 50px 10% auto;
+  grid-template-rows: 10% 50px 10%; 
+  grid-gap: 5px;
 }
