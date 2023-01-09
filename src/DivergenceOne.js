@@ -1,4 +1,5 @@
 import React from 'react'
+
 import UncheckedBox from './UncheckedBox'
 import line from './img/Line.png'
 import corner from './img/Corner.png'
@@ -11,12 +12,10 @@ export default function () {
         <div className='grid'>
             {/* <div className='checked'>
                 <img src={checked} alt='check' /> */}
-            {/* </div>
-             */}
+            {/* </div>*/}
              <div>
-                <TitleCard />
+                <TitleCard divergence="one" />
              </div>
-             
              <div/><div/><div/>
             <UncheckedBox />
             <div/><div/><div/>

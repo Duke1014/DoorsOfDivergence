@@ -10,7 +10,7 @@ export default function DivergenceThree() {
   return (
     <div className='grid'>
         <div>
-            <TitleCard />
+            <TitleCard divergence="three" />
         </div>
         <div/><div/><div/>
         <UncheckedBox />

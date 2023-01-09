@@ -17,7 +17,18 @@ export default function () {
 
   return (
     <div className='elixirs-and-alienists'>
-        <DivergenceFour />
+        <a>
+            <DivergenceOne />
+        </a>
+        <a>
+            <DivergenceTwo />
+        </a>
+        <a>
+            <DivergenceThree />
+        </a>
+        <a>
+            <DivergenceFour />
+        </a>
     </div>
   )
 }

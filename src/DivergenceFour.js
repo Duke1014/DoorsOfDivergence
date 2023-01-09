@@ -10,7 +10,7 @@ export default function DivergenceFour() {
   return (
     <div className='grid'>
         <div>
-            <TitleCard />
+            <TitleCard divergence="four" />
         </div>
         <div/><div/><div/>
         <UncheckedBox />

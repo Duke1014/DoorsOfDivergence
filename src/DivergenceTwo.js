@@ -10,7 +10,7 @@ export default function () {
   return (
     <div className='grid'>
         <div>
-            <TitleCard />
+            <TitleCard divergence="two" />
         </div>
         <div/><div/><div/>
         <UncheckedBox />
