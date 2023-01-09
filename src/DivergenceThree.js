@@ -3,36 +3,26 @@ import TitleCard from './TitleCard'
 import UncheckedBox from './UncheckedBox'
 import CommonSymptoms from './CommonSymptoms'
 
-import line from './img/Line.png'
+import Line from './Line'
 import corner from './img/Corner.png'
 
 export default function DivergenceThree() {
   return (
     <div className='grid'>
-        <div>
-            <TitleCard divergence="three" />
-        </div>
+        <TitleCard divergence="three" />
         <div/><div/><div/>
         <UncheckedBox />
         <div/><div/><div/>
-        <div>
-            <CommonSymptoms />
-        </div>
+        <CommonSymptoms />
         <div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
         </div>
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <div className='corners-down'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
@@ -43,33 +33,23 @@ export default function DivergenceThree() {
         <div/>
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
         </div>
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-left' />
         </div>
         <div/><div/><div/><div/>
         <UncheckedBox />
         <div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
@@ -78,16 +58,12 @@ export default function DivergenceThree() {
                 <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <UncheckedBox />
         <div/><div/><div/><div/>
         <UncheckedBox />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-right' />
@@ -98,12 +74,10 @@ export default function DivergenceThree() {
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-left' />
-            <img src={line} alt="line" />
+            <Line />
         </div>
         <div/><div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
@@ -114,23 +88,13 @@ export default function DivergenceThree() {
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
+        <Line />
+        <Line />
         <div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
         <div/>

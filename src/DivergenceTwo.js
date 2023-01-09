@@ -2,26 +2,21 @@ import React from 'react'
 import TitleCard from './TitleCard'
 import UncheckedBox from './UncheckedBox'
 import CommonSymptoms from './CommonSymptoms'
+import Cross from './Cross'
 
-import line from './img/Line.png'
 import corner from './img/Corner.png'
+import Line from './Line'
 
 export default function () {
   return (
     <div className='grid'>
-        <div>
-            <TitleCard divergence="two" />
-        </div>
+        <TitleCard divergence="two" />
         <div/><div/><div/>
         <UncheckedBox />
         <div/><div/><div/>
-        <div>
-            <CommonSymptoms />
-        </div>
+        <CommonSymptoms />
         <div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
@@ -29,18 +24,14 @@ export default function () {
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/><div/>
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
@@ -58,13 +49,9 @@ export default function () {
         <div/><div/><div/><div/>
         <UncheckedBox />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/>
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-right' />
@@ -76,31 +63,20 @@ export default function () {
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-left' />
         </div>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <div/>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <UncheckedBox />
         <div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
         </div>
-        <div className='crossed-lines'>
-                <img src={line} alt="line" />
-                <img src={line} alt="line" className='rotated-line'/>
-            </div>
+        <Cross />
             <div className='corners-down'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
@@ -110,30 +86,22 @@ export default function () {
                 <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <div className='crossed-lines'>
-                <img src={line} alt="line" />
-                <img src={line} alt="line" className='rotated-line'/>
-            </div>
-            <UncheckedBox />
-            <div/><div/><div/><div/>
-            <div className='line'>
-            <img src={line} alt="line"/>
-        </div>        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Cross />
+        <UncheckedBox />
+        <div/><div/><div/><div/>
+        <Line />       
+        <Line />
+        <Line />
+        <Line />
         <div/><div/><div/><div/><div/>
         <UncheckedBox />
         <div className='corners-up'>
-                <img src={corner} alt='corner' className='corner-up-left' />
-            </div>
-            <div className='corners-up'>
-                <img src={corner} alt='corner' className='corner-up-right' />
-            </div>
-            <UncheckedBox />
+            <img src={corner} alt='corner' className='corner-up-left' />
+        </div>
+        <div className='corners-up'>
+            <img src={corner} alt='corner' className='corner-up-right' />
+        </div>
+        <UncheckedBox />
     </div>
   )
 }

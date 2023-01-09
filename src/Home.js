@@ -16,7 +16,7 @@ import DivergenceTwo from './DivergenceTwo'
 export default function () {
 
   return (
-    <div className='elixirs-and-alienists'>
+    <div>
         <a>
             <DivergenceOne />
         </a>

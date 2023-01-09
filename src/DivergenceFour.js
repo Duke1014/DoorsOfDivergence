@@ -2,26 +2,21 @@ import React from 'react'
 import TitleCard from './TitleCard'
 import UncheckedBox from './UncheckedBox'
 import CommonSymptoms from './CommonSymptoms'
+import Cross from './Cross'
 
-import line from './img/Line.png'
 import corner from './img/Corner.png'
+import Line from './Line'
 
 export default function DivergenceFour() {
   return (
     <div className='grid'>
-        <div>
-            <TitleCard divergence="four" />
-        </div>
+        <TitleCard divergence="four" />
         <div/><div/><div/>
         <UncheckedBox />
         <div/><div/><div/>
-        <div>
-            <CommonSymptoms />
-        </div>
+        <CommonSymptoms />
         <div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
@@ -32,18 +27,13 @@ export default function DivergenceFour() {
         </div>
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" />
-        </div>
+        <Line />
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
         </div>
-        <div className='crossed-lines'>
-            <img src={line} alt="line" />
-            <img src={line} alt="line" className='rotated-line'/>
-        </div>
+        <Cross />
         <div className='corners-down'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
@@ -55,10 +45,7 @@ export default function DivergenceFour() {
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
-        <div className='crossed-lines'>
-            <img src={line} alt="line" />
-            <img src={line} alt="line" className='rotated-line'/>
-        </div>
+        <Cross />
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-left' />
         </div>
@@ -66,22 +53,14 @@ export default function DivergenceFour() {
         <div className='corner-se'>
                 <img src={corner} alt='corner' />
         </div>
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line />
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <div/><div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <div className='corner-se'>
             <img src={corner} alt='corner' />
             <img src={corner} alt='corner' className='corner-up-right' />
@@ -91,16 +70,12 @@ export default function DivergenceFour() {
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <UncheckedBox />
         <div/>
         <UncheckedBox />
         <div/><div/><div/><div/><div/>
-        <div className='line'>
-            <img src={line} alt="line"/>
-        </div>
+        <Line />
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
@@ -110,12 +85,10 @@ export default function DivergenceFour() {
         </div>
         <div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='line'>
-            <img src={line} alt="line" className='horizontal-line'/>
-        </div>
+        <Line horizontal="horizontal" />
         <div className='corners-up'>
             <img src={corner} alt='corner' className='corner-up-left' />
-            <img src={line} alt="line"/>
+            <Line />
         </div>
         <div/><div/><div/><div/><div/><div/><div/>
         <div className='corner-se'>

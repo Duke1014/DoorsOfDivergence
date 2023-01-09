@@ -1,10 +1,11 @@
 import React from 'react'
 
 import UncheckedBox from './UncheckedBox'
-import line from './img/Line.png'
+import Line from './Line'
 import corner from './img/Corner.png'
 import CommonSymptoms from './CommonSymptoms'
 import TitleCard from './TitleCard'
+import Cross from './Cross'
 
 export default function () {
   return (
@@ -13,35 +14,24 @@ export default function () {
             {/* <div className='checked'>
                 <img src={checked} alt='check' /> */}
             {/* </div>*/}
-             <div>
-                <TitleCard divergence="one" />
-             </div>
-             <div/><div/><div/>
+            <TitleCard divergence="one" />
+            <div/><div/><div/>
             <UncheckedBox />
             <div/><div/><div/>
-            <div>
-                <CommonSymptoms />
-            </div>
+            <CommonSymptoms />
             <div/><div/><div/><div/>
-            <div className='line'>
-                <img src={line} alt="line" />
-            </div>
+            <Line />
             <div/><div/><div/><div/><div/><div/><div/><div/>
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/><div/>
             <UncheckedBox />
-            <div className='crossed-lines'>
-                <img src={line} alt="line" />
-                <img src={line} alt="line" className='rotated-line'/>
-            </div>
+            <Cross />
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
             <div className='corner-se'>
                 <img src={corner} alt='corner' />
             </div>
-            <div className='line'>
-                <img src={line} alt="line" className='horizontal-line'/>
-            </div>
+            <Line horizontal="horizontal" />
             <div className='corner-sw'>
                 <img src={corner} alt='corner' />
             </div>
@@ -53,13 +43,9 @@ export default function () {
             </div>
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <UncheckedBox />
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <div/><div/><div/><div/><div/><div/>
             <UncheckedBox />         
             <div className='corners-up'>
@@ -68,36 +54,21 @@ export default function () {
             </div>
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <UncheckedBox /> 
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <div/><div/><div/><div/>
             <UncheckedBox /> 
-            <div className='line'>
-                <img src={line} alt="line" className='horizontal-line'/>
-            </div>
+            <Line horizontal="horizontal" />
             <UncheckedBox /> 
-            <div className='crossed-lines'>
-                <img src={line} alt="line" />
-                <img src={line} alt="line" className='rotated-line'/>
-            </div>
+            <Cross />
             <UncheckedBox /> 
-            <div className='line'>
-                <img src={line} alt="line" className='horizontal-line'/>
-            </div>
+            <Line horizontal="horizontal" />
             <UncheckedBox /> 
             <div/><div/><div/><div/>
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <UncheckedBox />
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <div/><div/><div/><div/><div/><div/>
             <UncheckedBox />
             <div className='corners-down'>
@@ -106,24 +77,16 @@ export default function () {
             </div>
             <UncheckedBox /> 
             <div/><div/><div/><div/><div/><div/>
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <UncheckedBox /> 
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <div/><div/><div/><div/><div/><div/>
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <div className='corners-down'>
                 <img src={corner} alt='corner' className='corner-down-left' />
                 <img src={corner} alt='corner' className='corner-down-right' />
             </div>
-            <div className='line'>
-                <img src={line} alt="line"/>
-            </div>
+            <Line />
             <div/><div/><div/><div/><div/>
             <div className='corners-down'>
                 <img src={corner} alt='corner' className='corner-down-right' />
