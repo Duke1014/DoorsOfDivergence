@@ -1,4 +1,5 @@
 import React from 'react'
+import DivergenceFour from './DivergenceFour'
 
 // import UncheckedBox from './UncheckedBox'
 // import TitleCard from './TitleCard'
@@ -16,7 +17,7 @@ export default function () {
 
   return (
     <div className='elixirs-and-alienists'>
-        <DivergenceThree />
+        <DivergenceFour />
     </div>
   )
 }
