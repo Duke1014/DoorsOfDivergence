@@ -9,13 +9,14 @@ import React from 'react'
 // import unchecked from './img/unchecked.png'
 // import corner from './img/Corner.png'
 import DivergenceOne from './DivergenceOne'
+import DivergenceThree from './DivergenceThree'
 import DivergenceTwo from './DivergenceTwo'
 
 export default function () {
 
   return (
     <div className='elixirs-and-alienists'>
-        <DivergenceTwo />
+        <DivergenceThree />
     </div>
   )
 }
