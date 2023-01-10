@@ -6,11 +6,12 @@ import corner from './img/Corner.png'
 import CommonSymptoms from './CommonSymptoms'
 import TitleCard from './TitleCard'
 import Cross from './Cross'
+import SmallLine from './SmallLine'
 
 export default function () {
   return (
     <div>
-        <div className='grid'>
+        <div className='grid-one'>
             {/* <div className='checked'>
                 <img src={checked} alt='check' /> */}
             {/* </div>*/}
@@ -31,7 +32,7 @@ export default function () {
             <div className='corner-dr'>
                 <img src={corner} alt='corner' />
             </div>
-            <Line horizontal="horizontal" />
+            <Line type="horizontal" />
             <div className='corner-dl'>
                 <img src={corner} alt='corner' />
             </div>
@@ -54,16 +55,16 @@ export default function () {
             </div>
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
-            <Line />
+            <Line type="bigger" />
             <UncheckedBox /> 
-            <Line />
+            <Line type="bigger" />
             <div/><div/><div/><div/>
             <UncheckedBox /> 
-            <Line horizontal="horizontal-two" />
+            <Line type="horizontal-two" />
             <UncheckedBox /> 
             <Cross type={2} />
             <UncheckedBox /> 
-            <Line horizontal="horizontal-two" />
+            <Line type="horizontal-two" />
             <UncheckedBox /> 
             <div/><div/><div/><div/>
             <Line />
@@ -83,8 +84,10 @@ export default function () {
             <div/><div/><div/><div/><div/><div/>
             <Line />
             <div className='corners-down'>
-                <img src={corner} alt='corner' className='corners-dl' />
-                <img src={corner} alt='corner' className='corners-dr' />
+                <img src={corner} alt='corner' className='corners-dl-three' />
+                <img src={corner} alt='corner' className='corners-dr-three' />
+                <SmallLine type={1} />
+                <SmallLine type={2} />
             </div>
             <Line />
             <div/><div/><div/><div/><div/>

@@ -1,14 +1,16 @@
 import React from 'react'
 import line from './img/Line.png'
 
-export default function Line({horizontal}) {
+export default function Line({type}) {
 
   let lineType
 
-  if (horizontal === "horizontal") {
+  if (type === "horizontal") {
     lineType = <img src={line} alt="line" className="horizontal-line" />
-  } else if (horizontal === "horizontal-two") {
+  } else if (type === "horizontal-two") {
     lineType = <img src={line} alt="line" className="horizontal-line-two" />
+  } else if (type === "bigger") {
+    lineType = <img src={line} alt="line" className="bigger" />
   } else {
     lineType = <img src={line} alt="line" />
   }

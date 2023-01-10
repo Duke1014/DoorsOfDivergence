@@ -9,7 +9,7 @@ import Line from './Line'
 
 export default function () {
   return (
-    <div className='grid'>
+    <div className='grid-two'>
         <TitleCard divergence="two" />
         <div/><div/><div/>
         <UncheckedBox />
@@ -18,8 +18,8 @@ export default function () {
         <div/><div/><div/><div/>
         <Line />
         <div/><div/><div/><div/><div/><div/><div/>
-        <div className='corner-se'>
-                <img src={corner} alt='corner' />
+        <div className='corner-dr'>
+            <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/><div/>
