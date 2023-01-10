@@ -2,26 +2,42 @@ body {
  background-image: url('./img/vintagepaper4.png');
 }
 
+.grid-one {
+  display: grid;
+  grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
+  grid-template-rows: 100px 75px 100px 100px 50px 100px 80px 100px 100px 100px 80px 100px 90px 70px 90px 100px ;
+  grid-gap: 5px;
+}
+
 .unchecked, .line, .small-line {
  height: 100px;
  width: 100px;
  display: inline-block;
 }
 
-.small-line-one {
+.cropped-line {
+  height: 75px;
+  width: 100px;
+  display: inline-block;
+  object-fit: cover;
+  top: 20px;
   position: relative;
-  top: -217px;
-  left: 83px;
+}
+
+.small-line-one, .small-line-two {
+  position: relative;
   width: 40%;
   height: 40%;
 }
 
+.small-line-one {
+  top: -217px;
+  left: 83px;
+}
+
 .small-line-two {
-  position: relative;
   top: -315px;
   left: -80px;
-  width: 40%;
-  height: 40%;
 }
 
 .corner-dr {
@@ -30,10 +46,48 @@ body {
   top: 4px;
 }
 
+.corner-dr-two {
+  position: relative;
+  left: 25px;
+  top: 25px;
+}
+
+.corner-dr-three {
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
 .corner-dl {
   position: relative;
   left: -12px;
   top: 6px;
+}
+
+.corner-dl-two {
+  position: relative;
+  left: -30px;
+  top: -130px;
+}
+
+.corner-dl-three {
+  position: relative;
+  left: -12px;
+  top: 4px;
+}
+
+.corner-ur {
+  position: relative;
+  left: 20px;
+  top: -5px;
+}
+
+.corner-ur > img {
+  transform: rotate(180deg);
+  height: 115px;
+  width: 115px;
+  /* left: 50px;
+  top: 0px; */
 }
 
 .corner-dr > img {
@@ -44,10 +98,34 @@ body {
   top: 0px; */
 }
 
+.corner-dr-two > img {
+  transform: rotate(270deg);
+  height: 115px;
+  width: 115px;
+}
+
+.corner-dr-three > img {
+  transform: rotate(270deg);
+  height: 115px;
+  width: 115px;
+}
+
 .corner-dl > img {
   /* transform: rotate(90deg); */
   height: 90px;
   width: 90px;
+}
+
+.corner-dl-two > img {
+  /* transform: rotate(90deg); */
+  height: 115px;
+  width: 115px;
+}
+
+.corner-dl-three > img {
+  /* transform: rotate(90deg); */
+  height: 100px;
+  width: 100px;
 }
 
 .corners-dl {
@@ -88,6 +166,7 @@ body {
   top: -120px;
   left: 30px;
 }
+
 
 .corners-ul {
   transform: rotate(90deg);
@@ -138,12 +217,9 @@ body {
 
 .corners-dr > img {
   transform: rotate(270deg);
-  /* width: 100px;
-  height: 100px; */
 }
 
 .crossed-lines-one {
-  /* display: inline-block; */
   position: relative;
   width: 140px;
   top: 1px;
@@ -151,7 +227,6 @@ body {
 }
 
 .crossed-lines-two {
-  /* display: inline-block; */
   position: relative;
   width: 125px;
   height: 125px;
@@ -176,6 +251,14 @@ body {
   position: relative
 }
 
+.horizontal-line-three {
+  height: 40px;
+  width: 40px;
+  top: -96px;
+  left: 60px;
+  position: relative
+}
+
 .rotated-line {
   position: absolute;
   transform: rotate(90deg);
@@ -193,7 +276,7 @@ body {
   width: 100%
 }
 
-.corner-se, .horizontal-line, .horizontal-line-two, .small-line-one, .small-line-two {
+.corner-se, .horizontal-line, .horizontal-line-two, .horizontal-line-three, .small-line-one, .small-line-two {
   transform: rotate(270deg);
 }
 
@@ -203,18 +286,9 @@ body {
   left: 0px;
 }
 
-.grid-one {
-  /* display: -moz-inline-grid; */
-  display: grid;
-  grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
-  grid-template-rows: 100px 75px 100px 100px 50px 100px 80px 100px 100px 100px 80px 100px 90px 70px 90px 100px ;
-  grid-gap: 5px;
-}
-
 .grid-two {
-  /* display: -moz-inline-grid; */
   display: grid;
   grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
-  grid-template-rows: 100px 80px 100px 80px 50px 100px 80px 100px 100px 100px 80px 100px 90px 70px 90px 100px ;
+  grid-template-rows: 100px 80px 100px 80px 100px 80px 80px 80px 100px 100px 80px 100px 90px 70px 90px 100px ;
   grid-gap: 5px;
 }

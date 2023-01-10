@@ -3,6 +3,7 @@ import TitleCard from './TitleCard'
 import UncheckedBox from './UncheckedBox'
 import CommonSymptoms from './CommonSymptoms'
 import Cross from './Cross'
+import SmallLine from './SmallLine'
 
 import corner from './img/Corner.png'
 import Line from './Line'
@@ -18,38 +19,42 @@ export default function () {
         <div/><div/><div/><div/>
         <Line />
         <div/><div/><div/><div/><div/><div/><div/>
-        <div className='corner-dr'>
-            <img src={corner} alt='corner' />
+        <div className='corner-dr-two'>
+            <img src={corner} alt='corner-dr-two' />
         </div>
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
         <Line />
         <div/><div/><div/><div/><div/><div/><div/>
-        <div className='corners-up'>
+        <div className='corner-ur'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/><div/><div/>
         <Line />
         <div/><div/><div/><div/><div/><div/>
-        <div className='corner-se'>
+        <div className='corner-dr-three'>
                 <img src={corner} alt='corner' />
+                <SmallLine type="horizontal-three" />
         </div>
-        <div className='corner-se'>
+        <div className='corner-dr-three'>
                 <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <div className='corners-down'>
-            <img src={corner} alt='corner' className='corner-down-left' />
+        <div>
+            <Line type="horizontal" />
+            <div className='corner-dl-two'>
+                <img src={corner} alt='corner' />
+            </div>
         </div>
-        <div className='corners-down'>
-            <img src={corner} alt='corner' className='corner-down-left' />
+        <div className='corner-dl-three'>
+            <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/>
         <UncheckedBox />
         <UncheckedBox />
-        <Line />
+        <Line type="cropped" />
         <UncheckedBox />
         <Line />
         <div/><div/><div/><div/>
