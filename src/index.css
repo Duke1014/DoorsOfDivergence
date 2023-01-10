@@ -8,12 +8,149 @@ body {
  display: inline-block;
 }
 
-.crossed-lines, .corners-up, .corners-down {
-  display: inline-block;
+.corner-dr {
+  position: relative;
+  left: 25px;
+  top: 4px;
+}
+
+.corner-dl {
+  position: relative;
+  left: -12px;
+  top: 6px;
+}
+
+.corner-dr > img {
+  transform: rotate(270deg);
+  height: 90px;
+  width: 90px;
+  /* left: 50px;
+  top: 0px; */
+}
+
+.corner-dl > img {
+  /* transform: rotate(90deg); */
+  height: 90px;
+  width: 90px;
+}
+
+/* //////////////////////? */
+
+.corners-dl {
+  position: relative;
+  top: 33px;
+  left: -40px;
+}
+
+.corners-dl-two {
+  position: relative;
+  top: 33px;
+  left: -20px;
+}
+
+.corners-dr {
+  transform: rotate(270deg);
+  position: relative;
+  top: -90px;
+  left: 30px;
+}
+
+.corners-dr-two {
+  transform: rotate(270deg);
+  position: relative;
+  top: 30px;
+  left: 10px;
+}
+
+.corners-ul {
+  transform: rotate(90deg);
+  position: relative;
+  top: -10px;
+  left: -40px;
+}
+
+.corners-ul-two {
+  transform: rotate(90deg);
+  position: relative;
+  top: 0px;
+  left: -25px;
+}
+
+.corners-ul-three {
+  transform: rotate(90deg);
+  position: relative;
+  top: -15px;
+  left: -40px;
+}
+
+.corners-ur {
+  transform: rotate(180deg);
+  position: relative;
+  top: -133px;
+  left: 25px;
+}
+
+.corners-ur-two {
+  transform: rotate(180deg);
+  position: relative;
+  top: -5px;
+  left: 10px;
+}
+
+.corners-ur-three {
+  transform: rotate(180deg);
+  position: relative;
+  top: -138px;
+  left: 20px;
+}
+
+.corners-down > img, .corners-up > img {
+  width: 115px;
+  height: 115px;
+}
+
+.corners-dr > img {
+  transform: rotate(270deg);
+  /* width: 100px;
+  height: 100px; */
+}
+
+/* .corners-up, .corners-down {
   position: relative;
   width: 100px;
   height: 100px;
+} */
+
+.crossed-lines-one {
+  /* display: inline-block; */
+  position: relative;
+  width: 140px;
+  top: 1px;
+  left: -18px;
 }
+
+.crossed-lines-two {
+  /* display: inline-block; */
+  position: relative;
+  width: 125px;
+  height: 125px;
+  top: -1px;
+  left: -12px;
+}
+
+.horizontal-line {
+  height: 140px;
+  top: -31px;
+  position: relative
+}
+
+.horizontal-line-two {
+  height: 140px;
+  width: 140px;
+  top: -15px;
+  position: relative
+}
+
 
 .rotated-line {
   position: absolute;
@@ -22,16 +159,21 @@ body {
   left: 0px;
 }
 
-.line > img, .crossed-lines > img, .unchecked > img, .corners-up > img, .corners-down > img, .corner-se > img, .corner-sw > img {
+.rotated-line > img {
+  width: 100px;
+  height: 100px;
+}
+
+.line > img, .crossed-lines-one > img, .crossed-lines-two > img, .unchecked > img, .corner-se > img, .corner-sw > img {
   object-fit: cover;
   width: 100%
 }
 
-.corner-se, .horizontal-line {
+.corner-se, .horizontal-line, .horizontal-line-two {
   transform: rotate(270deg);
 }
 
-.corner-up-left {
+/* .corner-up-left {
  transform: rotate(90deg);
  position: absolute;
  top: -50px;
@@ -43,12 +185,12 @@ body {
  position: absolute;
  top: -50px;
  left: 50px;
-}
+} */
 
-.corner-down-right {
+/* .corner-down-right {
   transform: rotate(270deg);
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: 50px;
 }
 
@@ -56,7 +198,7 @@ body {
   position: absolute;
   top: 50px;
   left: -50px;
-}
+} */
 
 .no-symptoms {
   position: relative;
@@ -68,6 +210,6 @@ body {
   /* display: -moz-inline-grid; */
   display: grid;
   grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
-  grid-template-rows: 100px 75px 100px 100px 75px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
+  grid-template-rows: 100px 75px 100px 100px 50px 100px 80px 100px 100px 100px 100px 100px 100px 100px 100px 100px ;
   grid-gap: 5px;
 }

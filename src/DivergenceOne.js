@@ -25,21 +25,21 @@ export default function () {
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/><div/>
             <UncheckedBox />
-            <Cross />
+            <Cross type={1} />
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
-            <div className='corner-se'>
+            <div className='corner-dr'>
                 <img src={corner} alt='corner' />
             </div>
             <Line horizontal="horizontal" />
-            <div className='corner-sw'>
+            <div className='corner-dl'>
                 <img src={corner} alt='corner' />
             </div>
             <div/><div/><div/><div/><div/><div/>
             <UncheckedBox />
             <div className='corners-down'>
-                <img src={corner} alt='corner' className='corner-down-left' />
-                <img src={corner} alt='corner' className='corner-down-right' />
+                <img src={corner} alt='corner' className='corners-dl' />
+                <img src={corner} alt='corner' className='corners-dr' />
             </div>
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
@@ -49,8 +49,8 @@ export default function () {
             <div/><div/><div/><div/><div/><div/>
             <UncheckedBox />         
             <div className='corners-up'>
-                <img src={corner} alt='corner' className='corner-up-left' />
-                <img src={corner} alt='corner' className='corner-up-right' />
+                <img src={corner} alt='corner' className='corners-ul' />
+                <img src={corner} alt='corner' className='corners-ur' />
             </div>
             <UncheckedBox />
             <div/><div/><div/><div/><div/><div/>
@@ -59,11 +59,11 @@ export default function () {
             <Line />
             <div/><div/><div/><div/>
             <UncheckedBox /> 
-            <Line horizontal="horizontal" />
+            <Line horizontal="horizontal-two" />
             <UncheckedBox /> 
-            <Cross />
+            <Cross type={2} />
             <UncheckedBox /> 
-            <Line horizontal="horizontal" />
+            <Line horizontal="horizontal-two" />
             <UncheckedBox /> 
             <div/><div/><div/><div/>
             <Line />
@@ -72,8 +72,8 @@ export default function () {
             <div/><div/><div/><div/><div/><div/>
             <UncheckedBox />
             <div className='corners-down'>
-                <img src={corner} alt='corner' className='corner-down-left' />
-                <img src={corner} alt='corner' className='corner-down-right' />
+                <img src={corner} alt='corner' className='corners-dl' />
+                <img src={corner} alt='corner' className='corners-dr' />
             </div>
             <UncheckedBox /> 
             <div/><div/><div/><div/><div/><div/>
@@ -83,30 +83,30 @@ export default function () {
             <div/><div/><div/><div/><div/><div/>
             <Line />
             <div className='corners-down'>
-                <img src={corner} alt='corner' className='corner-down-left' />
-                <img src={corner} alt='corner' className='corner-down-right' />
+                <img src={corner} alt='corner' className='corners-dl' />
+                <img src={corner} alt='corner' className='corners-dr' />
             </div>
             <Line />
             <div/><div/><div/><div/><div/>
             <div className='corners-down'>
-                <img src={corner} alt='corner' className='corner-down-right' />
+                <img src={corner} alt='corner' className='corners-dr-two' />
             </div>
             <div className='corners-up'>
-                <img src={corner} alt='corner' className='corner-up-left' />
+                <img src={corner} alt='corner' className='corners-ul-two' />
             </div>
             <UncheckedBox />
             <div className='corners-up'>
-                <img src={corner} alt='corner' className='corner-up-right' />
+                <img src={corner} alt='corner' className='corners-ur-two' />
             </div>
             <div className='corners-down'>
-                <img src={corner} alt='corner' className='corner-down-left' />
+                <img src={corner} alt='corner' className='corners-dl-two' />
             </div>
             <div/><div/><div/><div/>
             <UncheckedBox />
             <UncheckedBox />
             <div className='corners-up'>
-                <img src={corner} alt='corner' className='corner-up-left' />
-                <img src={corner} alt='corner' className='corner-up-right' />
+                <img src={corner} alt='corner' className='corners-ul-three' />
+                <img src={corner} alt='corner' className='corners-ur-three' />
             </div>
             <UncheckedBox />
             <UncheckedBox />
