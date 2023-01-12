@@ -11,6 +11,8 @@ export default function SmallLine({type}) {
         lineType = <img src={tinyline} alt="small-line" className='small-line-two' />
     } else if (type === "horizontal-three") {
         lineType = <img src={tinyline} alt="line" className="horizontal-line-three" />
+    } else if (type === "horizontal-six") {
+        lineType = <img src={tinyline} alt="line" className="horizontal-line-six" />
     }
   
     return (

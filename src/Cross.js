@@ -17,7 +17,10 @@ export default function Cross({type}) {
                 <img src={line} alt="line" className='rotated-line'/>
               </div>
   } else if (type === 3) {
-
+    cross =  <div className='crossed-lines-three'>
+                <img src={line} alt="line" />
+                <img src={line} alt="line" className='rotated-line'/>
+              </div>
   } else if (type === 4) {
 
   }

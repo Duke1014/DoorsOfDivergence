@@ -58,15 +58,17 @@ export default function () {
         <UncheckedBox />
         <Line />
         <div/><div/><div/><div/>
-        <div className='corners-up'>
-            <img src={corner} alt='corner' className='corner-up-right' />
+        <div className='corner-ur-two'>
+            <img src={corner} alt='corner' />
+            <SmallLine type="horizontal-six" />
         </div>
-        <div className='corners-up'>
-            <img src={corner} alt='corner' className='corner-up-right' />
+        <div className='corner-ur-two'>
+            <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <div className='corners-up'>
+        <div className='corner-ul'>
             <img src={corner} alt='corner' className='corner-up-left' />
+            <Line type="horizontal-four" />
         </div>
         <Line />
         <div/><div/><div/><div/><div/><div/>
@@ -75,13 +77,14 @@ export default function () {
         <Line />
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <Line horizontal="horizontal" />
+        <Line type="horizontal" />
         <UncheckedBox />
-        <div/><div/><div/><div/><div/>
-        <div className='corner-se'>
+        <div/><div/><div/><div/>
+        <div className='corner-dr-four'>
                 <img src={corner} alt='corner' />
         </div>
-        <Cross />
+        <Line type="horizontal-five" />
+        <Cross type={3} />
             <div className='corners-down'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
