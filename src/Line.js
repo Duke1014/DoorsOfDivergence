@@ -15,8 +15,10 @@ export default function Line({type}) {
     lineType = <img src={line} alt="line" className="horizontal-line-five" />
   } else if (type === "bigger") {
     lineType = <img src={line} alt="line" className="bigger" />
-  } else if(type === "cropped") {
+  } else if (type === "cropped") {
     lineType = <img src={line} alt="line" className="cropped-line" />
+  } else if (type === "vertical-two") {
+    lineType = <img src={line} alt="line" className='vertical-line-two' />
   } else {
     lineType = <img src={line} alt="line" />
   }

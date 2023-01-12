@@ -77,7 +77,7 @@ export default function () {
         <Line />
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <Line type="horizontal" />
+        <Line type="horizontal-two" />
         <UncheckedBox />
         <div/><div/><div/><div/>
         <div className='corner-dr-four'>

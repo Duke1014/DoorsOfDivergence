@@ -9,7 +9,7 @@ body {
   grid-gap: 5px;
 }
 
-.unchecked, .line, .small-line {
+.unchecked, .line, .small-line, .vertical-line-two {
  height: 100px;
  width: 100px;
  display: inline-block;
@@ -38,6 +38,12 @@ body {
 .small-line-two {
   top: -315px;
   left: -80px;
+}
+
+.vertical-line-two {
+  position: relative;
+  top: -95px;
+  left: 50px;
 }
 
 .corner-dr {
@@ -227,6 +233,20 @@ body {
   width: 115px;
 }
 
+.corner-ul-two {
+  /* transform: rotate(90deg); */
+  position: relative;
+  top: -10px;
+  left: -10px;
+}
+
+.corner-ul-two > img {
+  transform: rotate(90deg);
+  position: relative;
+  height: 90px;
+  width: 90px;
+}
+
 .corners-ul {
   transform: rotate(90deg);
   position: relative;
@@ -362,7 +382,7 @@ body {
   height: 100px;
 }
 
-.line > img, .crossed-lines-one > img, .crossed-lines-two > img, .crossed-lines-three > img, .unchecked > img, .corner-se > img, .corner-sw > img, .small-line > img {
+.line > img, .crossed-lines-one > img, .crossed-lines-two > img, .crossed-lines-three > img, .unchecked > img, .corner-se > img, .corner-sw > img, .small-line > img, .vertical-line-two > img {
   object-fit: cover;
   width: 100%
 }
@@ -381,5 +401,12 @@ body {
   display: grid;
   grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
   grid-template-rows: 100px 80px 100px 80px 100px 80px 80px 80px 100px 80px 80px 100px 90px 70px 90px 100px ;
+  grid-gap: 5px;
+}
+
+.grid-three {
+  display: grid;
+  grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
+  grid-template-rows: 100px 80px 100px 80px 100px 80px 80px 80px 100px 80px 80px 100px 90px 90px 80px 100px ;
   grid-gap: 5px;
 }
