@@ -40,6 +40,13 @@ body {
   left: -80px;
 }
 
+.small-line-four {
+  position: relative;
+  height: 70px;
+  width: 100px;
+  top: 30px;
+}
+
 .vertical-line-two {
   position: relative;
   top: -95px;
@@ -70,6 +77,18 @@ body {
   top: 30px;
 }
 
+.corner-dr-five {
+  position: relative;
+  left: 28px;
+  top: -130px;
+}
+
+.corner-dr-six {
+  position: relative;
+  left: 25px;
+  top: -105px;
+}
+
 .corner-dl {
   position: relative;
   left: -12px;
@@ -94,6 +113,12 @@ body {
   top: 38px;
 }
 
+.corner-dl-five {
+  position: relative;
+  left: -35px;
+  top: 17px;
+}
+
 .corner-ur {
   position: relative;
   left: 20px;
@@ -113,8 +138,20 @@ body {
   left: 7px;
   top: -5px;
 }
+.corner-ur-three {
+  position: relative;
+  left: 20px;
+  top: -30px;
+}
 
 .corner-ur-two > img {
+  transform: rotate(180deg);
+  height: 115px;
+  width: 115px;
+  /* left: 50px;
+  top: 0px; */
+}
+.corner-ur-three > img {
   transform: rotate(180deg);
   height: 115px;
   width: 115px;
@@ -148,6 +185,18 @@ body {
   width: 115px;
 }
 
+.corner-dr-five > img {
+  transform: rotate(270deg);
+  height: 115px;
+  width: 115px;
+}
+
+.corner-dr-six > img {
+  transform: rotate(270deg);
+  height: 115px;
+  width: 115px;
+}
+
 .corner-dl > img {
   /* transform: rotate(90deg); */
   height: 90px;
@@ -170,6 +219,12 @@ body {
   /* transform: rotate(90deg); */
   height: 100px;
   width: 100px;
+}
+
+.corner-dl-five > img {
+  /* transform: rotate(90deg); */
+  height: 115px;
+  width: 115px;
 }
 
 .corners-dl {
@@ -240,11 +295,25 @@ body {
   left: -10px;
 }
 
+.corner-ul-three {
+  /* transform: rotate(90deg); */
+  position: relative;
+  top: -10px;
+  left: -20px;
+}
+
 .corner-ul-two > img {
   transform: rotate(90deg);
   position: relative;
   height: 90px;
   width: 90px;
+}
+
+.corner-ul-three > img {
+  transform: rotate(90deg);
+  position: relative;
+  height: 100px;
+  width: 100px;
 }
 
 .corners-ul {
@@ -408,5 +477,12 @@ body {
   display: grid;
   grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
   grid-template-rows: 100px 80px 100px 80px 100px 80px 80px 80px 100px 80px 80px 100px 90px 90px 80px 100px ;
+  grid-gap: 5px;
+}
+
+.grid-four {
+  display: grid;
+  grid-template-columns: 10px 100px 100px 100px 100px 100px 100px 100px 10px;
+  grid-template-rows: 100px 80px 80px 80px 100px 80px 100px 80px 100px 80px 80px 100px 90px 90px 80px 100px ;
   grid-gap: 5px;
 }

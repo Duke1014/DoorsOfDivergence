@@ -6,10 +6,11 @@ import Cross from './Cross'
 
 import corner from './img/Corner.png'
 import Line from './Line'
+import SmallLine from './SmallLine'
 
 export default function DivergenceFour() {
   return (
-    <div className='grid'>
+    <div className='grid-four'>
         <TitleCard divergence="four" />
         <div/><div/><div/>
         <UncheckedBox />
@@ -18,23 +19,23 @@ export default function DivergenceFour() {
         <div/><div/><div/><div/>
         <Line />
         <div/><div/><div/><div/><div/><div/><div/>
-        <div className='corner-se'>
+        <div className='corner-dr'>
                 <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <div className='corners-down'>
+        <div className='corner-dl'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <Line />
+        <SmallLine type={4}/>
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/>
-        <div className='corner-se'>
+        <div className='corner-dr-two'>
                 <img src={corner} alt='corner' />
         </div>
-        <Cross />
-        <div className='corners-down'>
+        <Cross type={3} />
+        <div className='corner-dl-four'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/><div/>
@@ -42,32 +43,41 @@ export default function DivergenceFour() {
         <UncheckedBox />
         <UncheckedBox />
         <div/><div/><div/><div/><div/><div/>
-        <div className='corners-up'>
+        <div className='corner-ur'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
-        <Cross />
-        <div className='corners-up'>
+        <Cross type={3} />
+        <div className='corner-ul'>
             <img src={corner} alt='corner' className='corner-up-left' />
         </div>
         <div/><div/><div/><div/><div/>
-        <div className='corner-se'>
-                <img src={corner} alt='corner' />
-        </div>
-        <Line />
-        <UncheckedBox />
-        <div/><div/><div/><div/><div/><div/>
-        <Line />
-        <UncheckedBox />
-        <Line />
-        <div/><div/><div/><div/><div/><div/>
-        <Line />
-        <div className='corner-se'>
+        <div className='corner-dr'>
             <img src={corner} alt='corner' />
-            <img src={corner} alt='corner' className='corner-up-right' />
+        </div>
+        <div>
+            <Line type="horizontal" />
+            <div className='corner-dr-five'>
+                <img src={corner} alt='corner' />    
+            </div> 
         </div>
         <UncheckedBox />
-        <div className='corners-down'>
-            <img src={corner} alt='corner' className='corner-down-left' />
+        <div/><div/><div/><div/><div/><div/>
+        <Line />
+        <UncheckedBox />
+        <Line type="cropped"/>
+        <div/><div/><div/><div/><div/><div/>
+        <Line />
+        <div>
+            <div className='corner-ur-three'>
+                <img src={corner} alt='corner' />
+            </div>
+            <div className='corner-dr-six'>
+                <img src={corner} alt='corner' />
+            </div>
+        </div>
+        <UncheckedBox />
+        <div className='corner-dl-five'>
+            <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/><div/>
         <Line />
@@ -76,27 +86,27 @@ export default function DivergenceFour() {
         <UncheckedBox />
         <div/><div/><div/><div/><div/>
         <Line />
-        <div className='corners-up'>
-            <img src={corner} alt='corner' className='corner-up-right' />
-        </div>
-        <UncheckedBox />
-        <div className='corners-up'>
-            <img src={corner} alt='corner' className='corner-up-left' />
-        </div>
-        <div/><div/><div/><div/><div/>
-        <UncheckedBox />
-        <Line horizontal="horizontal" />
-        <div className='corners-up'>
-            <img src={corner} alt='corner' className='corner-up-left' />
-            <Line />
-        </div>
-        <div/><div/><div/><div/><div/><div/><div/>
-        <div className='corner-se'>
+        <div className='corner-ur'>
             <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <div className='corners-down'>
-            <img src={corner} alt='corner' className='corner-down-left' />
+        <div className='corner-ul'>
+            <img src={corner} alt='corner' />
+        </div>
+        <div/><div/><div/><div/><div/>
+        <UncheckedBox />
+        <Line type="horizontal-two" />
+        <div className='corner-ul-three'>
+            <img src={corner} alt='corner' className='corner-up-left' />
+            <Line type="vertical-two" />
+        </div>
+        <div/><div/><div/><div/><div/><div/><div/>
+        <div className='corner-dr-two'>
+            <img src={corner} alt='corner' />
+        </div>
+        <UncheckedBox />
+        <div className='corner-dl-five'>
+            <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/><div/><div/>
         <UncheckedBox />
