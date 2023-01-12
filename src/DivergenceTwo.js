@@ -85,16 +85,16 @@ export default function () {
         </div>
         <Line type="horizontal-five" />
         <Cross type={3} />
-            <div className='corners-down'>
+        <div className='corner-dl-four'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='corner-se'>
+        <div className='corner-dr-three'>
                 <img src={corner} alt='corner' />
         </div>
         <UncheckedBox />
-        <Cross />
+        <Cross type={2} />
         <UncheckedBox />
         <div/><div/><div/><div/>
         <Line />       
@@ -103,10 +103,10 @@ export default function () {
         <Line />
         <div/><div/><div/><div/><div/>
         <UncheckedBox />
-        <div className='corners-up'>
+        <div className='corner-ul'>
             <img src={corner} alt='corner' className='corner-up-left' />
         </div>
-        <div className='corners-up'>
+        <div className='corner-ur'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
         <UncheckedBox />

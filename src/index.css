@@ -82,6 +82,12 @@ body {
   top: 4px;
 }
 
+.corner-dl-four {
+  position: relative;
+  left: -12px;
+  top: 38px;
+}
+
 .corner-ur {
   position: relative;
   left: 20px;
@@ -154,6 +160,12 @@ body {
   width: 100px;
 }
 
+.corner-dl-four > img {
+  /* transform: rotate(90deg); */
+  height: 100px;
+  width: 100px;
+}
+
 .corners-dl {
   position: relative;
   top: 33px;
@@ -167,6 +179,12 @@ body {
 }
 
 .corners-dl-three {
+  position: relative;
+  top: 4px;
+  left: -38px;
+}
+
+.corners-dl-four {
   position: relative;
   top: 4px;
   left: -38px;
