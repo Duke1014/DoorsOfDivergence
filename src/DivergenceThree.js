@@ -1,6 +1,6 @@
 import React from 'react'
 import TitleCard from './TitleCard'
-import UncheckedBox from './UncheckedBox'
+import Box from './Box'
 import CommonSymptoms from './CommonSymptoms'
 
 import Line from './Line'
@@ -12,7 +12,7 @@ export default function DivergenceThree() {
     <div className='grid-three'>
         <TitleCard divergence="three" />
         <div/><div/><div/>
-        <UncheckedBox />
+        <Box node={39} />
         <div/><div/><div/>
         <CommonSymptoms />
         <div/><div/><div/><div/>
@@ -22,7 +22,7 @@ export default function DivergenceThree() {
                 <img src={corner} alt='corner' />
         </div>
         <Line type="horizontal" />
-        <UncheckedBox />
+        <Box node={40} />
         <Line type="horizontal" />
         <div className='corner-dl'>
             <img src={corner} alt='corner' className='corner-down-left' />
@@ -34,11 +34,11 @@ export default function DivergenceThree() {
         <div/>
         <Line />
         <div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={41} />
         <div/>
-        <UncheckedBox />
+        <Box node={42} />
         <div/>
-        <UncheckedBox />
+        <Box node={43} />
         <div/><div/><div/><div/><div/><div/>
         <Line />
         <div/>
@@ -48,13 +48,13 @@ export default function DivergenceThree() {
             <img src={corner} alt='corner' />
         </div>
         <Line type="horizontal" />
-        <UncheckedBox />
+        <Box node={44} />
         <Line type="horizontal" />
         <div className='corner-ul-two'>
             <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={45} />
         <div/>
         <Line />
         <div/><div/><div/><div/><div/><div/>
@@ -65,12 +65,12 @@ export default function DivergenceThree() {
         <div className='corner-dr-two'>
             <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={46} />
         <Line type="horizontal" />
-        <UncheckedBox />
+        <Box node={47} />
         <div/><div/><div/><div/>
-        <UncheckedBox />
-        <UncheckedBox />
+        <Box node={48} />
+        <Box node={49} />
         <Line />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-ur'>
@@ -80,9 +80,9 @@ export default function DivergenceThree() {
         <div className='corner-ur'>
             <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={50} />
         <div/><div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={51} />
         <Line type="horizontal-two" />
         <div className='corner-ul'>
             <img src={corner} alt='corner' />
@@ -93,7 +93,7 @@ export default function DivergenceThree() {
             <img src={corner} alt='corner' />
         </div>
         <Line type="horizontal" />
-        <UncheckedBox />
+        <Box node={52} />
         <Line type="horizontal" />
         <div className='corner-dl'>
             <img src={corner} alt='corner' className='corner-down-left' />
@@ -107,13 +107,13 @@ export default function DivergenceThree() {
         <div/><div/><div/><div/>
         <Line />
         <Line type="horizontal-two" />
-        <UncheckedBox />
+        <Box node={53} />
         <Line type="horizontal-two" />
         <Line />
         <div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={54} />
         <div/><div/><div/>        
-        <UncheckedBox />
+        <Box node={55} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import UncheckedBox from './UncheckedBox'
+import UncheckedBox from './Box'
 
 export default function CommonSymptoms() {
   return (

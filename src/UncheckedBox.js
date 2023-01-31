@@ -1,5 +1,4 @@
 import React from 'react'
-
 import unchecked from './img/unchecked.png'
 
 export default function UncheckedBox() {

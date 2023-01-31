@@ -1,7 +1,8 @@
 import React from 'react'
 import TitleCard from './TitleCard'
-import UncheckedBox from './UncheckedBox'
+import Box from './Box'
 import CommonSymptoms from './CommonSymptoms'
+
 import Cross from './Cross'
 import SmallLine from './SmallLine'
 
@@ -13,7 +14,7 @@ export default function () {
     <div className='grid-two'>
         <TitleCard divergence="two" />
         <div/><div/><div/>
-        <UncheckedBox />
+        <Box node={23} />
         <div/><div/><div/>
         <CommonSymptoms />
         <div/><div/><div/><div/>
@@ -22,15 +23,15 @@ export default function () {
         <div className='corner-dr-two'>
             <img src={corner} alt='corner-dr-two' />
         </div>
-        <UncheckedBox />
+        <Box node={24} />
         <div/><div/><div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={25} />
         <Line />
         <div/><div/><div/><div/><div/><div/><div/>
         <div className='corner-ur'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
-        <UncheckedBox />
+        <Box node={26} />
         <div/><div/><div/><div/><div/><div/><div/><div/>
         <Line />
         <div/><div/><div/><div/><div/><div/>
@@ -41,7 +42,7 @@ export default function () {
         <div className='corner-dr-three'>
                 <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={27} />
         <div>
             <Line type="horizontal" />
             <div className='corner-dl-two'>
@@ -52,10 +53,10 @@ export default function () {
             <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/>
-        <UncheckedBox />
-        <UncheckedBox />
+        <Box node={28} />
+        <Box node={29} />
         <Line type="cropped" />
-        <UncheckedBox />
+        <Box node={30} />
         <Line />
         <div/><div/><div/><div/>
         <div className='corner-ur-two'>
@@ -65,7 +66,7 @@ export default function () {
         <div className='corner-ur-two'>
             <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={31} />
         <div className='corner-ul'>
             <img src={corner} alt='corner' className='corner-up-left' />
             <Line type="horizontal-four" />
@@ -76,12 +77,12 @@ export default function () {
         <div/>
         <Line />
         <div/><div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={32} />
         <Line type="horizontal-two" />
-        <UncheckedBox />
+        <Box node={33} />
         <div/><div/><div/><div/>
         <div className='corner-dr-four'>
-                <img src={corner} alt='corner' />
+            <img src={corner} alt='corner' />
         </div>
         <Line type="horizontal-five" />
         <Cross type={3} />
@@ -89,27 +90,27 @@ export default function () {
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={34} />
         <div className='corner-dr-three'>
                 <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={35} />
         <Cross type={2} />
-        <UncheckedBox />
+        <Box node={36} />
         <div/><div/><div/><div/>
         <Line />       
         <Line />
         <Line />
         <Line />
         <div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={37} />
         <div className='corner-ul'>
             <img src={corner} alt='corner' className='corner-up-left' />
         </div>
         <div className='corner-ur'>
             <img src={corner} alt='corner' className='corner-up-right' />
         </div>
-        <UncheckedBox />
+        <Box node={38} />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import TitleCard from './TitleCard'
-import UncheckedBox from './UncheckedBox'
+import Box from './Box'
 import CommonSymptoms from './CommonSymptoms'
 import Cross from './Cross'
 
@@ -13,7 +13,7 @@ export default function DivergenceFour() {
     <div className='grid-four'>
         <TitleCard divergence="four" />
         <div/><div/><div/>
-        <UncheckedBox />
+        <Box node={56} />
         <div/><div/><div/>
         <CommonSymptoms />
         <div/><div/><div/><div/>
@@ -22,26 +22,26 @@ export default function DivergenceFour() {
         <div className='corner-dr'>
                 <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={57} />
         <div className='corner-dl'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={58} />
         <SmallLine type={4}/>
-        <UncheckedBox />
+        <Box node={59} />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-dr-two'>
-                <img src={corner} alt='corner' />
+            <img src={corner} alt='corner' />
         </div>
         <Cross type={3} />
         <div className='corner-dl-four'>
             <img src={corner} alt='corner' className='corner-down-left' />
         </div>
         <div/><div/><div/><div/><div/><div/>
-        <UncheckedBox />
-        <UncheckedBox />
-        <UncheckedBox />
+        <Box node={60} />
+        <Box node={61} />
+        <Box node={62} />
         <div/><div/><div/><div/><div/><div/>
         <div className='corner-ur'>
             <img src={corner} alt='corner' className='corner-up-right' />
@@ -60,10 +60,10 @@ export default function DivergenceFour() {
                 <img src={corner} alt='corner' />    
             </div> 
         </div>
-        <UncheckedBox />
+        <Box node={63} />
         <div/><div/><div/><div/><div/><div/>
         <Line />
-        <UncheckedBox />
+        <Box node={64} />
         <Line type="cropped"/>
         <div/><div/><div/><div/><div/><div/>
         <Line />
@@ -75,26 +75,26 @@ export default function DivergenceFour() {
                 <img src={corner} alt='corner' />
             </div>
         </div>
-        <UncheckedBox />
+        <Box node={65} />
         <div className='corner-dl-five'>
             <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/><div/>
         <Line />
-        <UncheckedBox />
+        <Box node={66} />
         <div/>
-        <UncheckedBox />
+        <Box node={67} />
         <div/><div/><div/><div/><div/>
         <Line />
         <div className='corner-ur'>
             <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={68} />
         <div className='corner-ul'>
             <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={69} />
         <Line type="horizontal-two" />
         <div className='corner-ul-three'>
             <img src={corner} alt='corner' className='corner-up-left' />
@@ -104,14 +104,14 @@ export default function DivergenceFour() {
         <div className='corner-dr-two'>
             <img src={corner} alt='corner' />
         </div>
-        <UncheckedBox />
+        <Box node={70} />
         <div className='corner-dl-five'>
             <img src={corner} alt='corner' />
         </div>
         <div/><div/><div/><div/><div/><div/>
-        <UncheckedBox />
+        <Box node={71} />
         <div/>
-        <UncheckedBox />
+        <Box node={72} />
     </div>
   )
 }
