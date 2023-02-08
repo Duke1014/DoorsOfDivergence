@@ -1,38 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from './context/user';
 
-export default function Footer({ user, isLoggedIn, isAdmin, showAdmin, auth }) {
+export default function Footer() {
 
+    const { user, loggedIn } = useContext(UserContext)
     let year = new Date().getFullYear();
 
-    const showLogin = () => {
-        if (isAdmin) {
-            return <div>
-                <p>
-                    You're logged in as {user.name} (an admin).
-                </p>
-                {showAdmin ? <><button onClick={showAdmin(false)} className="hover:underline">
-                        Close Admin View
-                    </button></> : <><button onClick={showAdmin(true)} className="hover:underline">
-                        Open Admin View
-                    </button>
-                </>}
-                <button onClick={() => auth.signOut()} className="hover:underline">
-                    Log out
-                </button>
-            </div>
-        } else if (user.name.length > 0) {
-            return <p>
-                You're logged in as {user.name}.
-                <button onClick={() => auth.signOut()} className="hover:underline">
-                    Log out
-                </button>
-            </p>
-        } else if (isLoggedIn) {
-            return <p>You're currently logged in.</p>
-        } else {
-            return <p>You're currently not logged in.</p>
-        }   
-    }
+/* <button onClick={showAdmin(false)} className="hover:underline">
+    Close Admin View
+</button></> : <><button onClick={showAdmin(true)} className="hover:underline">
+    Open Admin View
+</button> */
 
   return (
     <div>
@@ -51,9 +29,14 @@ export default function Footer({ user, isLoggedIn, isAdmin, showAdmin, auth }) {
                 </a>.
             </span>
         </p>
-
-        {showLogin}
-
+        {loggedIn ? <>
+            <p>You're currently logged in {user.name > 0 ? <>
+                    as {user.name}.
+                </> : <>.</>}
+                </p>
+        </> : <>
+            <p>You are not logged in.</p>
+        </>}
         </footer>
     </div>
   )

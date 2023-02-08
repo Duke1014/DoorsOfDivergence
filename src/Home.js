@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 // import DivergenceOne from './DivergenceOne'
 // import DivergenceTwo from './DivergenceTwo'
@@ -8,6 +8,7 @@ import React, { useState } from 'react'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
 import LoginAssistant from './LoginAssistant'
+import { UserContext } from './context/user'
 
 ////////////////////////////////////////////////
 
@@ -16,28 +17,13 @@ import LoginAssistant from './LoginAssistant'
 // import Grid from './Grid.svelte';
 
 // Imports
-import { initializeApp } from 'firebase/app';
+
 // import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
-import {
-    getAuth,
-//     GoogleAuthProvider,
-//     signInWithPopup,
-//     onAuthStateChanged,
-//     updateProfile,
-} from 'firebase/auth';
+
 // import { getAnalytics, logEvent } from 'firebase/analytics';
-import {
-    getFirestore,
-//     collection,
-//     addDoc,
-//     updateDoc,
-//     doc,
-//     setDoc,
-//     getDoc,
-//     onSnapshot,
-} from 'firebase/firestore';
+
 // import { getStorage } from 'firebase/storage';
-import { firebaseConfig } from './firebaseConfig';
+
 import Footer from './Footer'
 // import Tutorial from './Tutorial.svelte';
 // import Loader from '../base/Loader.svelte';
@@ -48,11 +34,11 @@ import Footer from './Footer'
 // import Admin from '../admin/Admin.svelte';
 // import GridDiv1 from './Grid_Div1.svelte';
 
-const app = initializeApp(firebaseConfig);
+
 // // const { initializeAppCheck, ReCaptchaV3Provider } = require('firebase/app-check');
-const auth = getAuth(app);
+
 // const analytics = getAnalytics();
-const db = getFirestore();
+
 // const storage = getStorage(firebaseApp);
 // // const appCheck = initializeAppCheck(app, {
 // //     provider: new ReCaptchaV3Provider('6LeecSogAAAAAF_ZjlX-JBhiXjxaGlbx3QgYfQ8W'),
@@ -62,18 +48,10 @@ const db = getFirestore();
 // // });
 // const google = new GoogleAuthProvider();
 
-
-let user = {
-    name: '',
-    uid: '',
-    photo: '',
-    email: '',
-};
-
 // let loader = true;
 // let pageloader = true;
 // let scrollLock = false;
-let isAdmin = false;
+
 let showAdmin = false; //testing only
 
 // $: isAdmin, (showAdmin = false);
@@ -91,28 +69,37 @@ let showAdmin = false; //testing only
 
 export default function () {
 
+    const { user, loggedIn, auth, db } = useContext(UserContext)
     const [signLog, setSignLog] = useState(false) // should not matter until loginState is true
     const [loginState, setLoginState] = useState(false) // Have we hit a signup or login button yet? 
-    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
+    const handleLogClick = () => {
+        setLoginState(true)
+        setSignLog(false)
+    }
+
+    const handleSignClick = () => {
+        setLoginState(true)
+        setSignLog(true)
+    }
 
   return (
     <div>
-        {isLoggedIn ? <> {/* have we signed up/logged in at all yet? rest of components go here */}
-        
+        {loggedIn ? <> {/* have we signed up/logged in at all yet? rest of components go here */}
+                WEEEE
             </> : <> 
             {loginState ? <> {/* have we pressed the sign up or login buttons yet? */}
                 {signLog ? <>
-                    <SignUp auth={auth} db={db} />
+                    <SignUp auth={auth} db={db} handleLogClick={handleLogClick} />
                 </> : <>
-                    <LogIn auth={auth} db={db} />
+                    <LogIn auth={auth} db={db} handleSignClick={handleSignClick} />
                 </>}
             </> : <>
             
             </>}
             <LoginAssistant 
-                setSignLog={setSignLog} 
-                signLog={signLog} 
-                setLoginState={setLoginState} 
+                handleLogClick={handleLogClick}
+                handleSignClick={handleSignClick}
             />
         </>}
 
@@ -128,7 +115,12 @@ export default function () {
         <a>
             <DivergenceFour />
         </a> */}
-        <Footer user={user} isLoggedIn={isLoggedIn} isAdmin={isAdmin} showAdmin={showAdmin} auth={auth} />
+        <Footer 
+            user={user} 
+            // isAdmin={isAdmin} 
+            showAdmin={showAdmin} 
+            auth={auth} 
+        />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LoginAssistant( {signLog, setSignLog, setLoginState} ) {
+export default function LoginAssistant( {handleLogClick, handleSignClick} ) {
 
     const buttonStyle = {
         padding: '6px 16px',
@@ -18,31 +18,16 @@ export default function LoginAssistant( {signLog, setSignLog, setLoginState} ) {
         // }
     }
 
-    const handleLogClick = (e) => {
-        // console.log(e.target)
-        setLoginState(true)
-        setSignLog(false)
-    }
-
-    const handleSignClick = () => {
-        setLoginState(true)
-        setSignLog(true)
-    }
-
   return (
     <section className="grid min-h-screen gap-5 md:grid-cols-2 font-archaic">
         <div className="grid p-8 text-white bg-black place-content-center bg-opacity-20">
-            {/* <!-- <h1 class="text-6xl">HERESY,<br />1897</h1> --> */}
             <h1 className="text-6xl">TIME HAS SHATTERED</h1>
-
-            {/* <!-- <h1 class="my-4 text-4xl font-archaic">TIME HAS SHATTERED</h1> --> */}
             <p className="max-w-xs mt-4 text-lg">
                 Hello, me. It’s you. <br />
                 From the future, that is. <br />
                 I know it's confusing - perhaps this map will help.
             </p>
         </div>
-
         <div className="grid p-8 text-center place-content-center">
             <h1 className="my-4 text-4xl font-archaic">Greetings, Parallel</h1>
             <p className="max-w-xs mb-4 text-lg">
@@ -52,7 +37,6 @@ export default function LoginAssistant( {signLog, setSignLog, setLoginState} ) {
                 <button style={buttonStyle} className="place-self-center" onClick={handleLogClick}>
                     Log in
                 </button>
-
                 <button style={buttonStyle} className="place-self-center" onClick={handleSignClick}>
                     Sign up
                 </button>

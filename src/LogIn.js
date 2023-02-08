@@ -1,137 +1,25 @@
-import React, { useState } from 'react'
-import {
-    //     getAuth,
-    //     GoogleAuthProvider,
-    //     signInWithPopup,
-    //     onAuthStateChanged,
-    //     updateProfile,
-    //     createUserWithEmailAndPassword,
-        signInWithEmailAndPassword,
-        sendPasswordResetEmail,
-    } from 'firebase/auth';
+import React, { useContext, useState, useEffect } from 'react'
+import PasswordReset from './PasswordReset';
+import paper from "./img/vintagepaper4.png"
+import { UserContext } from './context/user';
 
-    import paper from "./img/vintagepaper4.png"
+export default function Login({ handleSignClick }) {
 
-export default function Login({ auth, db, switchSignLog }) {
-
-    // import { createEventDispatcher } from 'svelte';
-
-    // import {
-    //     getFirestore,
-    //     collection,
-    //     addDoc,
-    //     updateDoc,
-    //     doc,
-    //     setDoc,
-    //     getDoc,
-    //     onSnapshot,
-    // } from 'firebase/firestore';
-    // export let auth;
-    // export let db;
-    // const dispatch = createEventDispatcher();
-    // import { Recaptcha, recaptcha, observer } from 'svelte-recaptcha-v2';
-    // const googleRecaptchaSiteKey = '6LcmTGMgAAAAAO5YDiZlX74yEjBcdGhsZ_Ee2dRa';
-    // let captchaState = 'unset';
-    let errorCode = false;
-
-    let user = {
-        firstName: null,
-        lastName: null,
-        email: null,
-        password: null,
-        repeatPassword: null,
-        marketingOptIn: true,
-    };
-
-    function logInUser() {
-        signInWithEmailAndPassword(auth, user.email, user.password)
-            .then((userCredential) => {
-                // Signed in
-                // console.log(userCredential.user);
-                user.uid = userCredential.user.uid;
-
-                // saveUser();
-                // ...
-            })
-            .catch((error) => {
-                errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, ': ', errorMessage);
-                // ..
-            });
-    }
-
-    function sendReset() {
-        sendPasswordResetEmail(auth, user.email)
-            .then(() => {
-                errorCode = 'success';
-            })
-            .catch((error) => {
-                errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, ': ', errorMessage);
-                // ..
-            });
-    }
-
-    // async function saveUser() {
-    //     const userRef = doc(db, 'users', user.uid);
-    //     await setDoc(
-    //         userRef,
-    //         {
-    //             uid: user.uid,
-    //             name: user.firstName + ' ' + user.lastName,
-    //             email: user.email,
-    //             marketing: user.marketingOptIn,
-    //         },
-    //         { merge: true }
-    //     );
-    // }
-
-    ////////////////////////////////////
-
-    const handleErrorCode = () => {
-        if (errorCode === 'auth/wrong-password') {
-            return <p className="mb-2">The password you've entered is incorrect.</p>   
-        } else if (errorCode === 'auth/user-not-found') {
-           return <p className="mb-2">
-            Sorry, a user with this email could not be found. Please check for
-            typos or sign up for an account.
-            </p>
+    const { error, login } = useContext(UserContext)
+    
+    const handleButtonStyle = () => {
+        if (mouseOver) {
+            setButtonStyle(buttonOn)
         } else {
-            return <p className="mb-2">Error: {errorCode}. Please try again or contact us.</p>
+            setButtonStyle(normalButton)
         }
     }
 
-    const showErrorCode = () => {
-        if (errorCode) {
-            if (errorCode.includes('auth/invalid-value-')) {
-                return <p className="mb-2">
-                    Sorry, a user with this email could not be found. Please check for
-                    typos or sign up for an account.
-                </p>
-            } else if (errorCode === 'auth/user-not-found') {
-                return <p className="mb-2">
-                    Sorry, a user with this email could not be found. Please check for
-                    typos or sign up for an account.
-                </p>
-            } else if (errorCode === 'success') {
-                return <div>
-                    <p className="mb-2">The email is on its way. Please check your Inbox.</p>
-                    <p className="mb-2" onClick={setShowForgotPassword(false)}>
-                        Back to Sign in
-                    </p>
-                </div>
-            } else {
-                return <p className="mb-2">Error: {errorCode}. Please try again or contact us.</p>
-            }
-        }
-    }
-
-    const [userEmail, setUserEmail] = useState()
-    const [userPassword, setUserPassword] = useState()
-
+    const [userEmail, setUserEmail] = useState('')
+    const [userPassword, setUserPassword] = useState('')
     const [showForgotPassword, setShowForgotPassword] = useState(false)
+    const [mouseOver, setMouseOver] = useState()
+    const [buttonStyle, setButtonStyle] = useState({})
 
     const wrapStyle = {
         backgroundColor: '#d2b79e',
@@ -140,43 +28,50 @@ export default function Login({ auth, db, switchSignLog }) {
         backgroundPosition: 'center'
     }
 
+    const buttonOn = {
+        padding: '6px 16px',
+        margin: '6px',
+        outline: '1px solid black',
+        outlineOffset: '2px',
+        backgroundColor: 'black',
+        border: '1px solid black',
+        color: 'white'
+    }
+    
+    const normalButton = {
+        padding: '6px 16px',
+        margin: '6px',
+        outline: '1px solid black',
+        outlineOffset: '2px',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        border: '1px solid black',
+        color: 'black'
+    }
+
+    useEffect(() => {
+        handleButtonStyle()
+    }, [mouseOver])
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        let user = {
+            email: userEmail,
+            password: userPassword
+        }
+        login(user)
+    }
 
     return (
         <div className="fixed z-50 grid w-full h-full overflow-auto bg-black bg-opacity-70">
             <div className=" xs:p-4 wrap place-self-center max-w-prose" style={wrapStyle}>
                 <div className="grid min-h-screen p-4 text-center text-black border-black place-content-center xs:min-h-0 xs:p-8 xs:border xs:outline outline-black outline-offset-2">
                     {showForgotPassword ? <>  
-                        <h1 className="my-4 text-4xl font-archaic">Password Reset</h1>
-                        <p className="text-lg">Enter your email to reset your password.</p>
-                        <p className="mt-4 text-lg">
-                            <small>
-                                Clicked here by mistake? <span onClick={setShowForgotPassword(true)}
-                                    >Log in as usual</span>.
-                            </small>
-                        </p>
-                        <br />
-                        <form onSubmit={sendReset}>
-                            <div className="grid gap-x-4 md:text-left">
-                                <label for="email">Email:</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    autocomplete="username"
-                                    id="email"
-                                    placeholder="Enter your email"
-                                    required
-                                    value={userEmail}
-                                    onChange={e => setUserEmail(e.target.value)}
-                                />
-                            </div>
-                            {showErrorCode}
-                            <button
-                                className=" place-self-center"
-                                disabled={user.email === null ? true : false}
-                            >
-                                Send reset instructions
-                            </button>
-                        </form>                        
+                        <PasswordReset 
+                            setUserEmail={setUserEmail} 
+                            showForgotPassword={showForgotPassword}
+                            setShowForgotPassword={setShowForgotPassword} 
+                            userEmail={userEmail}
+                        />           
                     </> : <>    
                         <h1 className="my-4 text-4xl font-archaic">Log In</h1>
                         <p className="text-lg">
@@ -184,30 +79,29 @@ export default function Login({ auth, db, switchSignLog }) {
                         </p>
                         <p className="mt-4 text-lg">
                             <small>
-                                Don't have an account yet? 
-                                <span onClick={switchSignLog}>Sign up instead</span>.
+                                Don't have an account yet? <span onClick={handleSignClick} style={{cursor: 'pointer', textDecoration: 'underline'}}>Sign up instead</span>.
                             </small>
                         </p>
                         <br />
-                        <form onSubmit={logInUser}>
+                        <form onSubmit={handleSubmit}>
                             <div className="grid gap-x-4 md:text-left">
-                                <label for="email">Email:</label>
+                                <label htmlFor="email">Email:</label>
                                 <input
                                     type="email"
                                     name="email"
-                                    autocomplete="username"
+                                    autoComplete="username"
                                     id="email"
                                     placeholder="Enter your email"
                                     required
                                     value={userEmail}
                                     onChange={e => setUserEmail(e.target.value)}
                                 />
-                                <label for="password">Password:</label>
+                                <label htmlFor="password">Password:</label>
                                 <input
                                     type="password"
-                                    minlength="6"
+                                    minLength="6"
                                     name="password"
-                                    autocomplete="current-password"
+                                    autoComplete="current-password"
                                     id="password"
                                     placeholder="Enter your password"
                                     required
@@ -215,27 +109,26 @@ export default function Login({ auth, db, switchSignLog }) {
                                     onChange={e => setUserPassword(e.target.value)}
                                 />
                                 <p className="mb-2 -mt-1 text-right">
-                                    <small onClick={setShowForgotPassword(true)}
-                                        >Forgot your password?</small>
+                                    <small onClick={() => setShowForgotPassword(!showForgotPassword)}>
+                                        Forgot your password?
+                                    </small>
                                 </p>
                             </div>                            
-                            {errorCode ? <>     
-                                {handleErrorCode}
-                                </> : <></>
-                            }
                             <button
-                                className=" place-self-center"
-                                disabled={user.password === null || user.email === null ? true : false}
+                                className="place-self-center"
+                                style={buttonStyle}
+                                onMouseOver={() => setMouseOver(true)}
+                                onMouseLeave={() => setMouseOver(false)}
+                                disabled={userPassword === null || userEmail === null ? true : false}
                             >Log in</button>
                         </form>
                     </>}
+                    <p className="mb-2">{error}</p>
                 </div>
             </div>
         </div>
     )
 }
-
-
 
     // :global(.g-recaptcha) {
     //     display: inline-block;
@@ -258,15 +151,6 @@ export default function Login({ auth, db, switchSignLog }) {
     //     background-color: white;
     // }
 
-    // button {
-    //     padding: 6px 16px;
-    //     margin: 6px;
-    //     outline: 1px solid black;
-    //     outline-offset: 2px;
-    //     background-color: rgba(255, 255, 255, 0.5);
-    //     border: 1px solid black;
-    //     color: black;
-    // }
     // button:hover:not(:disabled),
     // button:focus:not(:disabled) {
     //     background-color: black;

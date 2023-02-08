@@ -1,37 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
+import { UserContext } from './context/user';
 import paper from './img/vintagepaper4.png'
-import {
-//         getAuth,
-//         GoogleAuthProvider,
-//         signInWithPopup,
-//         onAuthStateChanged,
-//         updateProfile,
-    createUserWithEmailAndPassword,
-} from 'firebase/auth';
-import {
-//         getFirestore,
-//         collection,
-//         addDoc,
-//         updateDoc,
-    doc,
-    setDoc,
-//         getDoc,
-//         onSnapshot,
-} from 'firebase/firestore';
 import Recaptcha from "react-google-recaptcha"
 
-export default function SignUp({ auth, db, switchSignLog }) {
+export default function SignUp({ handleLogClick }) {
 
-    let errorCode = false;
+    const { signup, error } = useContext(UserContext)
 
-    let user = {
-        firstName: null,
-        lastName: null,
-        email: null,
-        password: null,
-        repeatPassword: null,
-        marketingOptIn: true,
+    /* :global(.g-recaptcha) {
+        display: inline-block;
     }
+    input:not([type='checkbox']) {
+        padding: 6px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 1px solid darkgoldenrod;
+    }
+
+    input:not([type='checkbox']):hover {
+        border: 1px solid black;
+    }
+    input:not([type='checkbox']):focus {
+        outline: 1px solid black;
+        outline-offset: 2px;
+        border: 1px solid black;
+        background-color: white;
+    }
+    button:hover:not(:disabled),
+    button:focus:not(:disabled) {
+        background-color: black;
+        border: 1px solid black;
+        color: white;
+    }
+     */
 
     const wrapStyle = {
         backgroundColor: '#d2b79e',
@@ -40,7 +42,36 @@ export default function SignUp({ auth, db, switchSignLog }) {
         backgroundPosition: 'center'
     }
 
-    const buttonStyle = {
+    const handleButtonStyle = () => {
+        if (mouseOver) {
+            setButtonStyle(buttonOn)
+        } else {
+            setButtonStyle(normalButton)
+        }
+    }
+    
+    // const buttonOff = {
+    //     padding: '6px 16px',
+    //     margin: '6px',
+    //     outline: '1px solid black',
+    //     outlineOffset: '2px',
+    //     opacity: '0.5',
+    //     cursor: 'not-allowed',
+    //     border: '1px solid black',
+    //     color: 'white'
+    // }
+
+    const buttonOn = {
+        padding: '6px 16px',
+        margin: '6px',
+        outline: '1px solid black',
+        outlineOffset: '2px',
+        backgroundColor: 'black',
+        border: '1px solid black',
+        color: 'white'
+    }
+    
+    const normalButton = {
         padding: '6px 16px',
         margin: '6px',
         outline: '1px solid black',
@@ -50,63 +81,64 @@ export default function SignUp({ auth, db, switchSignLog }) {
         color: 'black'
     }
 
-    function createUser() {
-        createUserWithEmailAndPassword(auth, user.email, user.password)
-            .then((userCredential) => {
-                // Signed in
-                // console.log(userCredential.user);
-                user.uid = userCredential.user.uid;
-
-                saveUser();
-                // ...
-            })
-            .catch((error) => {
-                errorCode = error.code;
-                const errorMessage = error.message;
-                console.log(errorCode, ': ', errorMessage);
-                // ..
-            });
-    }
-
-    async function saveUser() {
-        const userRef = doc(db, 'users', user.uid);
-        await setDoc(
-            userRef,
-            {
-                uid: user.uid,
-                name: user.firstName + ' ' + user.lastName,
-                email: user.email,
-                marketing: user.marketingOptIn,
-            },
-            { merge: true }
-        );
-    }
-
     // let REACT_APP_SECRET_KEY = "6Lf-Qj0kAAAAAGGBE9_n2ZiuUqQjd17JXo5Oqh_6"
     let REACT_APP_SITE_KEY = "6Lf-Qj0kAAAAAMLpNC5j8INXH_4zYEDb6iHxPtWH"
 
-    const showErrorCode = () => {
-        if (errorCode) {
-            if (errorCode === 'auth/email-already-in-use') {
-                return <p className="mb-2">Sorry, this e-mail is already used.</p>
-            } else if (errorCode === 'auth/user-disabled') {
-                return <p className="mb-2">Sorry, this email has been disabled</p>
-            } else {
-                return <p className="mb-2">Error: {errorCode}. Please try again or contact us.</p>
-            }
-        }
-    }
+    // const showErrorCode = () => {
+    //     if (errorCode) {
+    //         if (errorCode === 'auth/email-already-in-use') {
+    //             return <p className="mb-2">Sorry, this e-mail is already used.</p>
+    //         } else if (errorCode === 'auth/user-disabled') {
+    //             return <p className="mb-2">Sorry, this email has been disabled</p>
+    //         } else {
+    //             return <p className="mb-2">Error: {errorCode}. Please try again or contact us.</p>
+    //         }
+    //     }
+    // }
 
-    const [userFirstName, setUserFirstName] = useState()
-    const [userLastName, setUserLastName] = useState()
-    const [userEmail, setUserEmail] = useState()
-    const [userPassword, setUserPassword] = useState()
-    const [userRepeatPassword, setUserRepeatPassword] = useState()
+    const [userFirstName, setUserFirstName] = useState('')
+    const [userLastName, setUserLastName] = useState('')
+    const [userEmail, setUserEmail] = useState('')
+    const [userPassword, setUserPassword] = useState('')
+    const [userRepeatPassword, setUserRepeatPassword] = useState('')
     const [checked, setChecked] = useState(true)
-    const [captchaState, setCaptchaState] = useState()
+    const [captchaState, setCaptchaState] = useState(false)
+    const [mouseOver, setMouseOver] = useState()
+    const [buttonStyle, setButtonStyle] = useState({})
 
-    const handleCheck = (e) => {
-        setChecked(!checked)
+    useEffect(() => {
+        handleButtonStyle()
+    }, [mouseOver])
+
+    // const checkDisabled = () => {
+    //     if (captchaState !== 'success' || userPassword !== userRepeatPassword || userPassword === null || userRepeatPassword === null) {
+    //         setButtonDisable(true)
+    //     } else {
+    //         setButtonDisable(false)
+    //     }
+    // }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        let user = {
+            firstName: userFirstName,
+            lastName: userLastName,
+            email: userEmail,
+            password: userPassword,
+            marketingOptIn: checked,
+        }
+        if (!captchaState) {
+            console.log('do the captcha thing first')
+        } else if (userFirstName === null ||
+            userLastName === null ||
+            userPassword === null ||
+            userRepeatPassword === null) {
+            console.log('fill the form out all the way')
+        } else if (userPassword !== userRepeatPassword) {
+            console.log('password must equal repeat password')
+        } else {
+            signup(user)
+        }
     }
 
   return (
@@ -120,11 +152,11 @@ export default function SignUp({ auth, db, switchSignLog }) {
                     </p>
                     <p className="mt-4 text-lg">
                         <small>
-                            Already have an account? <span onClick={switchSignLog}>Log in instead</span>.
+                            Already have an account? <span onClick={handleLogClick} style={{cursor: "pointer", textDecoration: "underline"}}>Log in instead</span>.
                         </small>
                     </p>
                     <br />
-                    <form onSubmit={createUser}>
+                    <form onSubmit={handleSubmit}>
                         <div className="grid md:grid-cols-2 gap-x-4 md:text-left">
                             <div className="grid">
                                 <label htmlFor="first-name">First name:</label>
@@ -199,14 +231,15 @@ export default function SignUp({ auth, db, switchSignLog }) {
                                 name="marketing-optin"
                                 id="marketing-optin"
                                 checked={checked}
-                                onClick={handleCheck}
+                                onChange={() => setChecked(!checked)}
                             />
-                            <label htmlFor="marketing-optin"
-                                >I'd like to receive news about your experiences.
+                            <label htmlFor="marketing-optin">
+                                I'd like to receive news about your experiences.
                                 <br />
-                                <small
-                                    >Don't worry, we won't spam your Inbox, but save our emails only for the
-                                    important occasions.</small>
+                                <small>
+                                    Don't worry, we won't spam your Inbox, but save our emails only for the
+                                    important occasions.
+                                </small>
                             </label>
                         </div>     
 
@@ -218,7 +251,7 @@ export default function SignUp({ auth, db, switchSignLog }) {
                                     sitekey={REACT_APP_SITE_KEY}
                                     badge={'inline'}
                                     size={'normal'}
-                                    onSuccess={setCaptchaState(!captchaState)}
+                                    onChange={() => setCaptchaState(!captchaState)}
                                 /> 
                                 <p>
                                     <small>
@@ -234,18 +267,14 @@ export default function SignUp({ auth, db, switchSignLog }) {
                             </div>
                         </>}
          
-                        {showErrorCode}
+                        {error}
 
                         {/* <!-- on:click={() => authAnonymously()} --> */}
                         <button
                             className="place-self-center"
                             style={buttonStyle}
-                            disabled={captchaState !== 'success' ||
-                            user.password !== user.repeatPassword ||
-                            user.password === null ||
-                            user.repeatPassword === null
-                                ? true
-                                : false}
+                            onMouseOver={() => setMouseOver(true)}
+                            onMouseLeave={() => setMouseOver(false)}
                         >
                             Confirm
                         </button>
@@ -256,40 +285,3 @@ export default function SignUp({ auth, db, switchSignLog }) {
     </div>
   )
 }
-
-
-{/* 
-
-    :global(.g-recaptcha) {
-        display: inline-block;
-    }
-    input:not([type='checkbox']) {
-        padding: 6px;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: 1px solid darkgoldenrod;
-    }
-
-    input:not([type='checkbox']):hover {
-        border: 1px solid black;
-    }
-    input:not([type='checkbox']):focus {
-        outline: 1px solid black;
-        outline-offset: 2px;
-        border: 1px solid black;
-        background-color: white;
-    }
-
-
-    button:hover:not(:disabled),
-    button:focus:not(:disabled) {
-        background-color: black;
-        border: 1px solid black;
-        color: white;
-    }
-
-    button:disabled {
-        opacity: 0.5;
-        cursor: not-allowed;
-    } */}
