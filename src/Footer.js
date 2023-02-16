@@ -3,7 +3,7 @@ import { UserContext } from './context/user';
 
 export default function Footer() {
 
-    const { user, loggedIn } = useContext(UserContext)
+    const { user, loggedIn, logout } = useContext(UserContext)
     let year = new Date().getFullYear();
 
 /* <button onClick={showAdmin(false)} className="hover:underline">
@@ -19,10 +19,8 @@ export default function Footer() {
             className="flex flex-wrap self-end justify-between p-4 text-center text-white bg-black justify-items-center"
         >
         <p>
-            {year} &copy; Doors of Divergence. 
-            <span className="hidden xs:inline-block">
-                Powered by 
-                <a
+            {year} &copy; Doors of Divergence. <span className="hidden xs:inline-block">
+                Powered by <a
                     href="mailto:obelisk@vutreshenglas.com"
                     className="hover:underline"
                     title="Get in touch with Obelisk">Obelisk
@@ -30,10 +28,7 @@ export default function Footer() {
             </span>
         </p>
         {loggedIn ? <>
-            <p>You're currently logged in {user.name > 0 ? <>
-                    as {user.name}.
-                </> : <>.</>}
-                </p>
+            <p>You're currently logged in{user.name > 0 ? <> as {user.name}.</> : <>.</>} <button onClick={() => logout()}>Sign out here.</button></p>
         </> : <>
             <p>You are not logged in.</p>
         </>}

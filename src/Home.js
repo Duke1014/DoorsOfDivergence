@@ -25,6 +25,9 @@ import { UserContext } from './context/user'
 // import { getStorage } from 'firebase/storage';
 
 import Footer from './Footer'
+// import GridDiv1 from './GridDiv1'
+import Grid from './Grid'
+import EnterCode from './EnterCode'
 // import Tutorial from './Tutorial.svelte';
 // import Loader from '../base/Loader.svelte';
 // import LogInAssistant from './LogInAssistant.svelte';
@@ -56,7 +59,7 @@ let showAdmin = false; //testing only
 
 // $: isAdmin, (showAdmin = false);
 
-// let nodes = false;
+
 
 // let showCodePrompt = false;
 // let message = false;
@@ -69,9 +72,10 @@ let showAdmin = false; //testing only
 
 export default function () {
 
-    const { user, loggedIn, auth, db } = useContext(UserContext)
+    const { user, loggedIn, auth, db, nodes } = useContext(UserContext)
     const [signLog, setSignLog] = useState(false) // should not matter until loginState is true
     const [loginState, setLoginState] = useState(false) // Have we hit a signup or login button yet? 
+    const [showCodePrompt, setShowCodePrompt] = useState(false)
 
     const handleLogClick = () => {
         setLoginState(true)
@@ -86,7 +90,11 @@ export default function () {
   return (
     <div>
         {loggedIn ? <> {/* have we signed up/logged in at all yet? rest of components go here */}
-                WEEEE
+            {/* <GridDiv1 nodes={nodes} /> */}
+            {showCodePrompt ? <>
+                <EnterCode setShowCodePrompt={setShowCodePrompt} />
+            </> : <></>}
+            <Grid nodes={nodes} setShowCodePrompt={setShowCodePrompt} />
             </> : <> 
             {loginState ? <> {/* have we pressed the sign up or login buttons yet? */}
                 {signLog ? <>
