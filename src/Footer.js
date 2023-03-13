@@ -21,9 +21,10 @@ export default function Footer() {
         <p>
             {year} &copy; Doors of Divergence. <span className="hidden xs:inline-block">
                 Powered by <a
-                    href="mailto:obelisk@vutreshenglas.com"
+                    // href="mailto:obelisk@vutreshenglas.com"
                     className="hover:underline"
-                    title="Get in touch with Obelisk">Obelisk
+                    // title="Get in touch with Obelisk"
+                    >Deez
                 </a>.
             </span>
         </p>
