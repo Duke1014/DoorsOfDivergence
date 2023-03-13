@@ -1,23 +1,9 @@
 import React, { useState, useContext } from 'react'
-
-// import DivergenceOne from './DivergenceOne'
-// import DivergenceTwo from './DivergenceTwo'
-// import DivergenceThree from './DivergenceThree'
-// import DivergenceFour from './DivergenceFour'
-
 import LogIn from './LogIn'
 import SignUp from './SignUp'
 import LoginAssistant from './LoginAssistant'
+import Loader from './Loader'
 import { UserContext } from './context/user'
-
-////////////////////////////////////////////////
-
-// import EnterCode from './EnterCode.svelte';
-
-// import Grid from './Grid.svelte';
-
-// Imports
-
 // import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
 
 // import { getAnalytics, logEvent } from 'firebase/analytics';
@@ -25,18 +11,8 @@ import { UserContext } from './context/user'
 // import { getStorage } from 'firebase/storage';
 
 import Footer from './Footer'
-// import GridDiv1 from './GridDiv1'
 import Grid from './Grid'
-import EnterCode from './EnterCode'
 // import Tutorial from './Tutorial.svelte';
-// import Loader from '../base/Loader.svelte';
-// import LogInAssistant from './LogInAssistant.svelte';
-// import SignUp from './SignUp.svelte';
-// import Footer from './Footer.svelte';
-// import LogIn from './LogIn.svelte';
-// import Admin from '../admin/Admin.svelte';
-// import GridDiv1 from './Grid_Div1.svelte';
-
 
 // // const { initializeAppCheck, ReCaptchaV3Provider } = require('firebase/app-check');
 
@@ -59,8 +35,6 @@ let showAdmin = false; //testing only
 
 // $: isAdmin, (showAdmin = false);
 
-
-
 // let showCodePrompt = false;
 // let message = false;
 // let autoScrollTo = '#WelcomeToParadox';
@@ -72,10 +46,9 @@ let showAdmin = false; //testing only
 
 export default function () {
 
-    const { user, loggedIn, auth, db, nodes } = useContext(UserContext)
+    const { user, loggedIn, auth, db, loader } = useContext(UserContext)
     const [signLog, setSignLog] = useState(false) // should not matter until loginState is true
     const [loginState, setLoginState] = useState(false) // Have we hit a signup or login button yet? 
-    const [showCodePrompt, setShowCodePrompt] = useState(false)
 
     const handleLogClick = () => {
         setLoginState(true)
@@ -89,47 +62,28 @@ export default function () {
 
   return (
     <div>
-        {loggedIn ? <> {/* have we signed up/logged in at all yet? rest of components go here */}
-            {/* <GridDiv1 nodes={nodes} /> */}
-            {showCodePrompt ? <>
-                <EnterCode setShowCodePrompt={setShowCodePrompt} />
-            </> : <></>}
-            <Grid nodes={nodes} setShowCodePrompt={setShowCodePrompt} />
-            </> : <> 
-            {loginState ? <> {/* have we pressed the sign up or login buttons yet? */}
-                {signLog ? <>
-                    <SignUp auth={auth} db={db} handleLogClick={handleLogClick} />
-                </> : <>
-                    <LogIn auth={auth} db={db} handleSignClick={handleSignClick} />
-                </>}
-            </> : <>
-            
+        {loader ? <>
+            <Loader />
+        </> : <>
+            {loggedIn ? <>
+                <Grid />
+                </> : <> 
+                {loginState ? <>
+                    {signLog ? <>
+                        <SignUp auth={auth} db={db} handleLogClick={handleLogClick} />
+                    </> : <>
+                        <LogIn auth={auth} db={db} handleSignClick={handleSignClick} />
+                    </>}
+                </> : <></>}
+                <LoginAssistant handleLogClick={handleLogClick} handleSignClick={handleSignClick} />
             </>}
-            <LoginAssistant 
-                handleLogClick={handleLogClick}
-                handleSignClick={handleSignClick}
+            <Footer 
+                user={user} 
+                // isAdmin={isAdmin} 
+                showAdmin={showAdmin} 
+                auth={auth} 
             />
         </>}
-
-        {/* <a>
-            <DivergenceOne />
-        </a>
-        <a>
-            <DivergenceTwo />
-        </a>
-        <a>
-            <DivergenceThree />
-        </a>
-        <a>
-            <DivergenceFour />
-        </a> */}
-        <Footer 
-            user={user} 
-            // isAdmin={isAdmin} 
-            showAdmin={showAdmin} 
-            auth={auth} 
-        />
     </div>
   )
 }
-
