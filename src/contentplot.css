@@ -1,0 +1,61 @@
+.wrap {
+    background-color: #d2b79e;
+    background-image: url(./img/paper.jpg);
+    background-size: cover;
+    background-position: center;
+    animation-name: moveUp;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@media only screen and (max-width: 600px) {
+    @supports (-webkit-touch-callout: none) {
+        /* CSS specific to iOS devices */
+        .wraper {
+            border: 1px solid transparent;
+            height: 100vh;
+            width: 100vw;
+            /* position: absolute; */
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+        }
+    }
+}
+:global(body.noscroll) {
+    overflow: hidden;
+}
+
+@keyframes moveUp {
+    from {
+        margin-top: 100vh;
+    }
+    to {
+    }
+}
+
+p,
+blockquote {
+    line-height: 2;
+}
+p:not(.text-lg) {
+    text-indent: 2em;
+    margin-bottom: 2em;
+    text-align: left;
+}
+
+blockquote + p:not(.text-lg) {
+    text-align: right;
+    line-height: normal;
+}
+img {
+    filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.3));
+}
+iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left:0;
+}

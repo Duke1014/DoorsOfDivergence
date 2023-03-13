@@ -1,3 +1,5 @@
+@import url(//db.onlinewebfonts.com/c/bee05807d8579c5b75e5ed10a9314eb0?family=CF+Remington+Typewriter);
+
 .heresy-grid .stamp {
     box-sizing: border-box;
     /* background: radial-gradient(red, black, transparent, transparent); */
@@ -57,6 +59,7 @@
 
 .madness-tab-container {
     border-bottom: 1px solid black;
+    font-family: CFRemingtonTypewriter-Regul;
     /* white-space: nowrap; */
 }
 
