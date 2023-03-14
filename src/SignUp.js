@@ -246,6 +246,7 @@ export default function SignUp({ handleLogClick }) {
                         {captchaState ? <>
                             <p className="m-8">Marvelous, you're not a robot! Come join our ranks.</p>
                         </> : <>
+                        <div>
                             <div className="justify-center my-4 text-center place-self-center">
                                 <Recaptcha
                                     sitekey={REACT_APP_SITE_KEY}
@@ -255,16 +256,11 @@ export default function SignUp({ handleLogClick }) {
                                 /> 
                                 <p>
                                     <small>
-                                        If you don’t see our
-                                        <a href="https://www.google.com/recaptcha/about/" > {/* target="_blank" */}
-                                            reCAPTCHA
-                                        </a>
-                                        above,
-                                        <a href="https://m.me/doorsofdivergence"> contact us</a>
-                                        .
+                                        If you don’t see our <a href="https://www.google.com/recaptcha/about/" style={{textDecoration: 'underline'}}>reCAPTCHA</a> above, <a href="https://m.me/doorsofdivergence" style={{textDecoration: 'underline'}}> contact us</a>.
                                     </small>
                                 </p>
                             </div>
+                        </div>
                         </>}
          
                         {error}
