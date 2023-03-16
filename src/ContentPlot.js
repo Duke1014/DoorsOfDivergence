@@ -890,11 +890,15 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                     <br />
                     <img src={node20} alt='Indecisive' loading='lazy' />
                     <br />
-                    “One poor girl used to tell me every morning, "I dreamed of my mother last night. I think she may come to-day and take me home." That one thought, that longing, is always present, yet she has been confined some four years.
-What a mysterious thing madness is. I have watched patients whose lips are forever sealed in a perpetual silence. They live, breathe, eat; the human form is there, but that something, which the body can live without, but which cannot exist without the body, was missing. I have wondered if behind those sealed lips there were dreams we ken not of, or if all was blank?”
--Excerpt from Ten Days in a Madhouse by Journalist (and Order Historian) Nellie Bly, 1887
-
-Lost time is a commonly stated symptom amongst those living within an asylum, but just as common is a pervading sense of déjà vu. Many patients of Hollow Grove have claimed to experience the same days, hours, or even seconds over again, but the question is: are they actually in a time loop, or is it simply the day-to-day sameness of living in this dreary building?
+                    <blockquote>
+                        “One poor girl used to tell me every morning, "I dreamed of my mother last night. I think she may come to-day and take me home." That one thought, that longing, is always present, yet she has been confined some four years. What a mysterious thing madness is. I have watched patients whose lips are forever sealed in a perpetual silence. They live, breathe, eat; the human form is there, but that something, which the body can live without, but which cannot exist without the body, was missing. I have wondered if behind those sealed lips there were dreams we ken not of, or if all was blank?”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Ten Days in a Madhouse by Journalist (and Order Historian) Nellie Bly, 1887
+                    </p>
+                    <p>
+                        Lost time is a commonly stated symptom amongst those living within an asylum, but just as common is a pervading sense of déjà vu. Many patients of Hollow Grove have claimed to experience the same days, hours, or even seconds over again, but the question is: are they actually in a time loop, or is it simply the day-to-day sameness of living in this dreary building?
+                    </p>
                 </div>
             )
         break;
@@ -936,15 +940,15 @@ Lost time is a commonly stated symptom amongst those living within an asylum, bu
                     <br />
                     <img src={node23} alt='Narcoleptic' loading='lazy' />
                     <br />
-                    “My goodness, man, don’t you know how to spell? Now all of our medical supplies are going to be shipped off to God-knows-where, France!”
-
-		-Dr. Henry Culpepper, Former Superintendent of Hollow Grove Sanitarium (1882-1891)
-
-	There has been some confusion of late for those attempting to study the history of Hollow Grove, mostly due to the existence of two facilities by that name:  Hollow Grove Sanatorium, which existed in Verdun France until 1932, and Hollow Grove Sanitarium in Providence RI. The site of the latter is now the home of the Little Whispers Orphanage. 
-
-	Hollow Grove Sanitarium was founded in 1856 as a general wellness resort- a place for people with many different symptoms to come and alleviate their conditions. Over the years, the directors of the facility found more financial gain in converting the facility into an asylum, and charging rent to the state in exchange for easing the strained penitentiary system.
-
-This changed, for a time, in the late 1800’s after a concerted push for humanization of the mental health community, sparked by Nelly Bly’s expose, 10 Days in a Madhouse. Hollow Grove was updated with new electric lights and more modern treatment plans.
+                    <blockquote>
+                        “My goodness, man, don’t you know how to spell? Now all of our medical supplies are going to be shipped off to God-knows-where, France!”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Dr. Henry Culpepper, Former Superintendent of Hollow Grove Sanitarium (1882-1891)
+                    </p>
+                    <p>
+                        There has been some confusion of late for those attempting to study the history of Hollow Grove, mostly due to the existence of two facilities by that name:  Hollow Grove Sanatorium, which existed in Verdun France until 1932, and Hollow Grove Sanitarium in Providence RI. The site of the latter is now the home of the Little Whispers Orphanage. Hollow Grove Sanitarium was founded in 1856 as a general wellness resort- a place for people with many different symptoms to come and alleviate their conditions. Over the years, the directors of the facility found more financial gain in converting the facility into an asylum, and charging rent to the state in exchange for easing the strained penitentiary system. This changed, for a time, in the late 1800’s after a concerted push for humanization of the mental health community, sparked by Nelly Bly’s expose, 10 Days in a Madhouse. Hollow Grove was updated with new electric lights and more modern treatment plans.
+                    </p>
                 </div>
             )
         break;
@@ -956,14 +960,15 @@ This changed, for a time, in the late 1800’s after a concerted push for humani
                     <br />
                     <img src={node24} alt='Narcissistic' loading='lazy' />
                     <br />
-                    “Mon Dieu, mec, tu ne sais pas épeler ? Maintenant, toutes nos fournitures médicales vont être expédiées quelque part aux États-Unis !”
-
-		-Dr. Antoine Baschet, Former Superintendent of Hollow Grove Sanitorium (1871-1892)
-	
-There has been some confusion of late for those attempting to study the history of Hollow Grove, mostly due to the existence of two facilities by that name:  Hollow Grove Sanatorium, which existed in Verdun France until 1932, and Hollow Grove Sanitarium in Providence RI. The site of the former has now been turned into a WWI museum.
-
-Hollow Grove Sanatorium was founded in 1863 by Christian missionaries as a center for the treatment of respiratory diseases like tuberculosis (the name was a mistranslated attempt at “Hallowed Grounds”). With the coming of the Great War, the facility was quickly co-opted as a war hospital due to its proximity to the Western Front. A great many wounded soldiers passed through its doors, and few survived, either due to the nature of their wounds, or the inept or malicious nature of the staff. Because of the strain of medical facilities throughout Europe during this time, Hollow Grove also doubled as an asylum, taking in those who could not handle the mental stresses of the war. There are no records remaining of the poor souls committed to Hollow Grove, however, almost as though someone or something did not want their existence known. 
-
+                    <blockquote>
+                        “Mon Dieu, mec, tu ne sais pas épeler ? Maintenant, toutes nos fournitures médicales vont être expédiées quelque part aux États-Unis !”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Dr. Antoine Baschet, Former Superintendent of Hollow Grove Sanitorium (1871-1892)
+                    </p>
+                    <p>
+                        There has been some confusion of late for those attempting to study the history of Hollow Grove, mostly due to the existence of two facilities by that name: Hollow Grove Sanatorium, which existed in Verdun France until 1932, and Hollow Grove Sanitarium in Providence RI. The site of the former has now been turned into a WWI museum. Hollow Grove Sanatorium was founded in 1863 by Christian missionaries as a center for the treatment of respiratory diseases like tuberculosis (the name was a mistranslated attempt at “Hallowed Grounds”). With the coming of the Great War, the facility was quickly co-opted as a war hospital due to its proximity to the Western Front. A great many wounded soldiers passed through its doors, and few survived, either due to the nature of their wounds, or the inept or malicious nature of the staff. Because of the strain of medical facilities throughout Europe during this time, Hollow Grove also doubled as an asylum, taking in those who could not handle the mental stresses of the war. There are no records remaining of the poor souls committed to Hollow Grove, however, almost as though someone or something did not want their existence known. 
+                    </p>
                 </div>
             )
         break;
@@ -975,13 +980,15 @@ Hollow Grove Sanatorium was founded in 1863 by Christian missionaries as a cente
                     <br />
                     <img src={node25} alt='Co-ordinated' loading='lazy' />
                     <br />
-                    “You see, sometimes… things get worse. Take, for example, our resident agoraphobe who has become so afraid of the outside world he’s taken up residence inside the facility’s walls.”
-		
-		-Charles (as the late Dr. Tidwell), 1917
-
-The agoraphobe known only to the staff and faculty at Hollow Grove as “Hamlin” has lived at the facility for longer than anyone cares to remember- he has seen the changeover of four different superintendents and countless staff members. Before the arrival of Edmond Cavanaugh, Hamlin was content to stay within his cell, but an adverse reaction to the newest superintendent’s experimental serum only exacerbated his condition.
-
-Hamlin’s real name has been lost to time: a flood in the facility in 1896 resulted in the loss of a number of records, including his, and Hamlin has either does not remember or care to tell anyone his real name. The moniker seems to suit him just fine.
+                    <blockquote>
+                        “You see, sometimes… things get worse. Take, for example, our resident agoraphobe who has become so afraid of the outside world he’s taken up residence inside the facility’s walls.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Charles (as the late Dr. Tidwell), 1917
+                    </p>
+                    <p>
+                        The agoraphobe known only to the staff and faculty at Hollow Grove as “Hamlin” has lived at the facility for longer than anyone cares to remember- he has seen the changeover of four different superintendents and countless staff members. Before the arrival of Edmond Cavanaugh, Hamlin was content to stay within his cell, but an adverse reaction to the newest superintendent’s experimental serum only exacerbated his condition. Hamlin’s real name has been lost to time: a flood in the facility in 1896 resulted in the loss of a number of records, including his, and Hamlin has either does not remember or care to tell anyone his real name. The moniker seems to suit him just fine.
+                    </p>
                 </div>
             )
         break;
@@ -993,13 +1000,15 @@ Hamlin’s real name has been lost to time: a flood in the facility in 1896 resu
                     <br />
                     <img src={node26} alt='Vocal' loading='lazy' />
                     <br />
-                    “There came into the towne of Hamel in the countrie of Brunswicke an old kind of companion, who for the fantasticall coate which he wore being wrought with sundrie colours, was called the pide Piper; for a Piper he was, besides his other qualities.
-This fellow forsooth offered the townse-men for a certaine somme of money to rid the towne of all the rats that were in it (for at that time the Burgers were with that vermine greatly annoyed).
-The accord in fine being made; the pide Piper with a shrill pipe went piping through the streets, and forthwith the rats came all running out of the houses in great numbers after him; all which hee led into the river of Weaser and therein drowned them.”
-	-Excerpt from The Pide Piper, Richard Verstegan, 1628
-The moniker of “Hamlin” was given to the agoraphobe living within the walls of Hollow Grove by a staff member who noted the “rat-like” appearance of the man, specifically citing his “over-large front teeth” and “constant hand-wringing”. Little did he know the name would prove more accurate once Hamlin began to share living conditions with the other rats within the facility’s walls. There have been multiple attempts to track down his permanent home, but Hamlin appears to be migratory, never staying in one portion of the Sanitarium for very long.  
-In addition to agoraphobia, Hamlin also suffers from chronic kleptomania, and has used his new accommodations to his advantage. He finds particular enjoyment in pickpocketing oblivious staff through broken patches and cracks in the walls.
-
+                    <blockquote>
+                        “There came into the towne of Hamel in the countrie of Brunswicke an old kind of companion, who for the fantasticall coate which he wore being wrought with sundrie colours, was called the pide Piper; for a Piper he was, besides his other qualities. This fellow forsooth offered the townse-men for a certaine somme of money to rid the towne of all the rats that were in it (for at that time the Burgers were with that vermine greatly annoyed). The accord in fine being made; the pide Piper with a shrill pipe went piping through the streets, and forthwith the rats came all running out of the houses in great numbers after him; all which hee led into the river of Weaser and therein drowned them.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from The Pide Piper, Richard Verstegan, 1628
+                    </p>
+                    <p>
+                        The moniker of “Hamlin” was given to the agoraphobe living within the walls of Hollow Grove by a staff member who noted the “rat-like” appearance of the man, specifically citing his “over-large front teeth” and “constant hand-wringing”. Little did he know the name would prove more accurate once Hamlin began to share living conditions with the other rats within the facility’s walls. There have been multiple attempts to track down his permanent home, but Hamlin appears to be migratory, never staying in one portion of the Sanitarium for very long. In addition to agoraphobia, Hamlin also suffers from chronic kleptomania, and has used his new accommodations to his advantage. He finds particular enjoyment in pickpocketing oblivious staff through broken patches and cracks in the walls.
+                    </p>
                 </div>
             )
         break;
@@ -1011,16 +1020,22 @@ In addition to agoraphobia, Hamlin also suffers from chronic kleptomania, and ha
                     <br />
                     <img src={node27} alt='Obstinate' loading='lazy' />
                     <br />
-                    “We shall embody this viewpoint in a principle of self-consistency, which states that the only solutions to the laws of physics that can occur locally in the real Universe are those which are globally self-consistent.”
-
-	-Igor Dmitriyevich Novikov, [et al.] “Cauchy problem in spacetimes with closed timelike curves”,  1990.
-
-“Bullshit.”
--Anna Payne, Astro-physicist (and member of the Order), vocal response to Novikov, 1990
-
-There has long been debate in the physics community concerning the hypothetical practicality of time travel. Of specific concern are the effects of creating a paradox. There are some who believe that a causal loop, or “bootstrap paradox”, (wherein a time traveler going into the past to change events ends up creating the very events he traveled back to change) would create a logical inconsistency that could break the fabric of time. Others believe that a bootstrap paradox is the only form of paradox that could be allowed by the laws of physics to exist; it is instead the “Grandfather Paradox”, (named for the hypothetical time traveler who goes back in time and kills his own grandfather, thus preventing his birth and subsequent parricide) that threatens space-time with a logical fallacy powerful enough to tear it apart.
-
-Of course, these models disregard the possibility of multiple timelines and realities created by individual choices. Ultimately, this debate may never be settled, given its purely speculative nature. After all, time travel and branching realities are things of pure fiction impossible for any one person to truly observe, aren’t they?
+                    <blockquote>
+                        “We shall embody this viewpoint in a principle of self-consistency, which states that the only solutions to the laws of physics that can occur locally in the real Universe are those which are globally self-consistent.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Igor Dmitriyevich Novikov, [et al.] “Cauchy problem in spacetimes with closed timelike curves”,  1990.
+                    </p>
+                    <br/>
+                    <blockquote>
+                        “Bullshit.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Anna Payne, Astro-physicist (and member of the Order), vocal response to Novikov, 1990
+                    </p>
+                    <p>
+                    There has long been debate in the physics community concerning the hypothetical practicality of time travel. Of specific concern are the effects of creating a paradox. There are some who believe that a causal loop, or “bootstrap paradox”, (wherein a time traveler going into the past to change events ends up creating the very events he traveled back to change) would create a logical inconsistency that could break the fabric of time. Others believe that a bootstrap paradox is the only form of paradox that could be allowed by the laws of physics to exist; it is instead the “Grandfather Paradox”, (named for the hypothetical time traveler who goes back in time and kills his own grandfather, thus preventing his birth and subsequent parricide) that threatens space-time with a logical fallacy powerful enough to tear it apart. Of course, these models disregard the possibility of multiple timelines and realities created by individual choices. Ultimately, this debate may never be settled, given its purely speculative nature. After all, time travel and branching realities are things of pure fiction impossible for any one person to truly observe, aren’t they?
+                    </p>
                 </div>
             )
         break;
@@ -1032,12 +1047,19 @@ Of course, these models disregard the possibility of multiple timelines and real
                     <br />
                     <img src={node28} alt='Arrogant' loading='lazy' />
                     <br />
-                    “I have never seen water damage do anything like this. I’ll see what I can do. In the meantime, have you considered speaking with a Priest?
-		-Mason Frank Lester, speaking with Superintendent of Hollow Grove, 1916
+                    <blockquote>
+                        "I have never seen water damage do anything like this. I’ll see what I can do. In the meantime, have you considered speaking with a Priest?"
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Mason Frank Lester, speaking with Superintendent of Hollow Grove, 1916
+                    </p>
+                    <p>
+                        Hollow Grove enjoyed a modest reputation as being a generally well-kept and modern facility. It wasn’t until the later half of 1916 that things began to rapidly fall apart. Holes appeared in the walls, the plaster crumbled away, the paint chipped and peeled, and water stains were plentiful. All of this could have been explained if it weren’t for the evidentiary age and scope of the decay- mold and water marks that would have taken years to form suddenly appeared in a matter of days. Even stranger was the confusion among those that lived and worked there- had the damage in fact formed almost overnight? Hadn’t it always been there? Were their minds just playing tricks on them? And what was it about those particularly odd cracks, the ones that, if you looked at the right angle, seemed to gleam with an iridescent light? The cracks that, if you looked too long, would stare back at you, whispering siren melodies of things that hadn’t yet happened, that couldn’t possibly have occurred? 
+                        <br/>
+                        No, it must be a trick of the light. 
+                    </p>
 
-Hollow Grove enjoyed a modest reputation as being a generally well-kept and modern facility. It wasn’t until the later half of 1916 that things began to rapidly fall apart. Holes appeared in the walls, the plaster crumbled away, the paint chipped and peeled, and water stains were plentiful. All of this could have been explained if it weren’t for the evidentiary age and scope of the decay- mold and water marks that would have taken years to form suddenly appeared in a matter of days. Even stranger was the confusion among those that lived and worked there- had the damage in fact formed almost overnight? Hadn’t it always been there? Were their minds just playing tricks on them? And what was it about those particularly odd cracks, the ones that, if you looked at the right angle, seemed to gleam with an iridescent light? The cracks that, if you looked too long, would stare back at you, whispering siren melodies of things that hadn’t yet happened, that couldn’t possibly have occurred?
 
-No, it must be a trick of the light. 
 
                 </div>
             )
@@ -1076,23 +1098,25 @@ No, it must be a trick of the light.
                     <br />
                     <img src={node31} alt='Inactive' loading='lazy' />
                     <br />
-                    “- Father? 
-- Yes, Victor, what is it? 
-- Is that Hercules?
-- Hmm, let me see, lad. No, that’s Aquila, the eagle. 
-- A-Q-U-I-L-A. And this one? 
-- That’s Leo, the lion that Hercules slew. Let me adjust this telescope. Now there’s Lyra, the harp. I know you can find that one. And next to it is the crown of Queen Cassopeia.
-- C-a-s-s- uh, E?
-- I. O-p-e-i-a. We need to work on your letters. And which one is this? 
-- Oh! THAT’S Hercules!
-- Well done, my boy! We’ll make an astronomer of you yet!
-- Yes, Father. I- 
-- What’s wrong?
-- My chest- it hurts… father, help, I can’t-
-- Victor? VICTOR?! Hold on, boy. Constance! Come back here, there’s something wrong with your brother! I can’t-”
-
-
-		-Recorded exchange between Edmond Cavanaugh and his son, Victor, 1894.
+                    <blockquote>
+                    “- Father?<br/>
+                    - Yes, Victor, what is it? <br/>
+                    - Is that Hercules?<br/>
+                    - Hmm, let me see, lad. No, that’s Aquila, the eagle. <br/>
+                    - A-Q-U-I-L-A. And this one? <br/>
+                    - That’s Leo, the lion that Hercules slew. Let me adjust this telescope. Now there’s Lyra, the harp. I know you can find that one. And next to it is the crown of Queen Cassopeia.<br/>
+                    - C-a-s-s- uh, E?<br/>
+                    - I. O-p-e-i-a. We need to work on your letters. And which one is this? <br/>
+                    - Oh! THAT’S Hercules!<br/>
+                    - Well done, my boy! We’ll make an astronomer of you yet!<br/>
+                    - Yes, Father. I- <br/>
+                    - What’s wrong?<br/>
+                    - My chest- it hurts… father, help, I can’t-<br/>
+                    - Victor? VICTOR?! Hold on, boy. Constance! Come back here, there’s something wrong with your brother! I can’t-”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Recorded exchange between Edmond Cavanaugh and his son, Victor, 1894.
+                    </p>
                 </div>
             )
         break;
@@ -1104,10 +1128,13 @@ No, it must be a trick of the light.
                     <br />
                     <img src={node32} alt='Sanguine' loading='lazy' />
                     <br />
-                    “It has now been three years since I was forced to run from my family home. I was so close to curing Victor. Instead, we’ve come to this Sanitarium, offering my services as a doctor in exchange for a place to live.
-I have managed to keep Victor alive through frequent blood transfusions.  It was Constance’s idea, actually. Precocious little girl, she is. “If the problem is in Victor’s blood, why don’t you give him new blood, Daddy?” It’s not a cure, but it keeps him alive, and keeps the symptoms to a minimum. And no one questions the tragic deaths of our more troubled patients. After all, there’s only so much modern medicine can accomplish…”
-
-		Recording of Edmond Cavanaugh, 1900.
+                    <blockquote>
+                        “It has now been three years since I was forced to run from my family home. I was so close to curing Victor. Instead, we’ve come to this Sanitarium, offering my services as a doctor in exchange for a place to live. <br/>
+                        I have managed to keep Victor alive through frequent blood transfusions.  It was Constance’s idea, actually. Precocious little girl, she is. “If the problem is in Victor’s blood, why don’t you give him new blood, Daddy?” It’s not a cure, but it keeps him alive, and keeps the symptoms to a minimum. And no one questions the tragic deaths of our more troubled patients. After all, there’s only so much modern medicine can accomplish…”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Recording of Edmond Cavanaugh, 1900.
+                    </p>
                 </div>
             )
         break;
@@ -1119,10 +1146,12 @@ I have managed to keep Victor alive through frequent blood transfusions.  It was
                     <br />
                     <img src={node33} alt='Frequent Attacks' loading='lazy' />
                     <br />
+                    <blockquote>
                     “I have watched my son over the years, and I cannot escape the thought that I have made a mistake. He has grown cold, vicious… bloodthirsty, in more ways than one. More and more frequent transfusions are required to keep him alive. At least this Great War has supplied us with fresh blood. No one questions the disappearance of wounded soldiers. I’ve lost count of how many people I’ve drained to keep my son alive. Hundreds? Thousands? At what point will it be too much?”
-
--Recording of Edmond Cavanaugh, 1915
-
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Recording of Edmond Cavanaugh, 1915
+                    </p>
                 </div>
             )
         break;
@@ -1134,11 +1163,15 @@ I have managed to keep Victor alive through frequent blood transfusions.  It was
                     <br />
                     <img src={node34} alt='Kleptomania' loading='lazy' />
                     <br />
-                    “We're telling lies; we know we're telling lies; we don't tell the public the truth, that we're losing more officers than the Germans, and that it's impossible to get through on the Western Front.”
-
-		-Lord Rothmere, Britain journalist, 1917.
-
-Edmond Cavanaugh had already taken up residence as a physician in Hollow Grove Sanatorium well before the fighting in Europe began- but the conversion of the facility lead to an influx of fresh blood. Many patients brought through the doors of Hollow Grove were not expected to survive, so when Edmond drained them of their blood in order to further his research for a cure, no one gave it a second thought. After all, soldiers die, and never before in such great numbers as in the Great War.
+                    <blockquote>
+                        “We're telling lies; we know we're telling lies; we don't tell the public the truth, that we're losing more officers than the Germans, and that it's impossible to get through on the Western Front.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Lord Rothmere, Britain journalist, 1917.
+                    </p>
+                    <p>
+                        Edmond Cavanaugh had already taken up residence as a physician in Hollow Grove Sanatorium well before the fighting in Europe began- but the conversion of the facility lead to an influx of fresh blood. Many patients brought through the doors of Hollow Grove were not expected to survive, so when Edmond drained them of their blood in order to further his research for a cure, no one gave it a second thought. After all, soldiers die, and never before in such great numbers as in the Great War.
+                    </p>
                 </div>
             )
         break;
@@ -1150,12 +1183,15 @@ Edmond Cavanaugh had already taken up residence as a physician in Hollow Grove S
                     <br />
                     <img src={node35} alt='Lethargic' loading='lazy' />
                     <br />
-                    “Is Europe to be drenched in blood? And are we to be involved because, in an obscure town, a madman kills a prince? It is incredible that a Liberal government, whose members have spoken eloquently for peace, should abandon our impregnable independence. Let the people revolt against so criminal an act. Were we to fight, the consequences would be too awful to contemplate.”
-
-Edwin T Heys, British citizen, August 1914
-
-Victor had always had a latent talent for Divination, something that he never had the opportunity to develop. However, during his frequent transfusions, he discovered something fascinating: during an exsanguination, at the point of lowest blood pressure- as he began to feel lightheaded, his vision blurred, his fingertips numb- it was here that his abilities manifested strongly, and brief flashes of the future came to him, unbidden but clear, and often accurate. He began to formulate a theory about altered states of consciousness and their effects on a Divinator’s ability to see the future- but that was a thesis that, unfortunately, had no future.
-
+                    <blockquote>
+                        “Is Europe to be drenched in blood? And are we to be involved because, in an obscure town, a madman kills a prince? It is incredible that a Liberal government, whose members have spoken eloquently for peace, should abandon our impregnable independence. Let the people revolt against so criminal an act. Were we to fight, the consequences would be too awful to contemplate.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - Edwin T Heys, British citizen, August 1914
+                    </p>            
+                    <p>
+                        Victor had always had a latent talent for Divination, something that he never had the opportunity to develop. However, during his frequent transfusions, he discovered something fascinating: during an exsanguination, at the point of lowest blood pressure- as he began to feel lightheaded, his vision blurred, his fingertips numb- it was here that his abilities manifested strongly, and brief flashes of the future came to him, unbidden but clear, and often accurate. He began to formulate a theory about altered states of consciousness and their effects on a Divinator’s ability to see the future- but that was a thesis that, unfortunately, had no future.
+                    </p>
                 </div>
             )
         break;
@@ -1167,7 +1203,9 @@ Victor had always had a latent talent for Divination, something that he never ha
                     <br />
                     <img src={node36} alt='Insubordinate' loading='lazy' />
                     <br />
-                    In the 1750’s a member of the Order put forth a theory: it was possible, he said, to replicate the process of creating a Pandora stone in an unorthodox method. Instead of utilizing an alchemically infused container, he suggested using a human heart as a vessel. What better container on earth to hold blood than the one nature designed? Of course, the cost of creating such a stone would be a human life, a proposition the Elders of the Order did not agree with. The forgotten alchemist was cast out of the Order, his name stricken from all records, and every shred of his research destroyed- or so it was assumed. One can’t help but wonder, though- what if something of his theory survived? Perhaps some page of a document, some note in the margin of an extant alchemy text, something that, when encountered by a child prodigy, might reignite whatever smoldering embers remained of his radical theories.
+                    <p>
+                        In the 1750’s a member of the Order put forth a theory: it was possible, he said, to replicate the process of creating a Pandora stone in an unorthodox method. Instead of utilizing an alchemically infused container, he suggested using a human heart as a vessel. What better container on earth to hold blood than the one nature designed? Of course, the cost of creating such a stone would be a human life, a proposition the Elders of the Order did not agree with. The forgotten alchemist was cast out of the Order, his name stricken from all records, and every shred of his research destroyed- or so it was assumed. One can’t help but wonder, though- what if something of his theory survived? Perhaps some page of a document, some note in the margin of an extant alchemy text, something that, when encountered by a child prodigy, might reignite whatever smoldering embers remained of his radical theories.
+                    </p>                
                 </div>
             )
         break;
@@ -1179,9 +1217,12 @@ Victor had always had a latent talent for Divination, something that he never ha
                     <br />
                     <img src={node37} alt='Patricidal' loading='lazy' />
                     <br />
-                    “I love my son, and I’ve devoted my life to curing him, but now, on the precipice, knowing the price… he is not the man I thought he’d be. He has grown cruel, emotionless, with none of the Cavanaugh spark of inspiration. He cannot be my legacy. It is time I accepted- Victor? How long have you been standing there? What are you doing? Put that down, pleas- “
-
-		-Last words of Edmond Cavanaugh, 1897.
+                    <blockquote>
+                        “I love my son, and I’ve devoted my life to curing him, but now, on the precipice, knowing the price… he is not the man I thought he’d be. He has grown cruel, emotionless, with none of the Cavanaugh spark of inspiration. He cannot be my legacy. It is time I accepted- Victor? How long have you been standing there? What are you doing? Put that down, pleas- “
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Last words of Edmond Cavanaugh, 1897.
+                    </p>   
                 </div>
             )
         break;
@@ -1193,13 +1234,16 @@ Victor had always had a latent talent for Divination, something that he never ha
                     <br />
                     <img src={node38} alt='Disloyal' loading='lazy' />
                     <br />
-                    “There are few forces in the universe more powerful than love. This is something we Hermeticists have long understood- it is an energy, same as light, or gravity, and it bends the world to its will. Now I understand what drives Edmond’s madness.”
-
-	-Unnamed Proctor to Edmond Cavanaugh’s acquaintances, 1897.
-
-Try as he might, Edmond was never able to discern the cause of Victor’s chronic illness. He was only able to see its symptoms: bouts of debilitating pain, seizures, temporary blindness, bleeding from the eyes, ears, and nose. 
-In his research, he speculated that the condition might be genetic, with himself a passive carrier of the gene, only activated in his son. Perhaps this is why he drove himself to madness attempting to find a cure: he blamed himself for cursing his son with the condition.
-
+                    <blockquote>
+                        “There are few forces in the universe more powerful than love. This is something we Hermeticists have long understood- it is an energy, same as light, or gravity, and it bends the world to its will. Now I understand what drives Edmond’s madness.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Unnamed Proctor to Edmond Cavanaugh’s acquaintances, 1897.
+                    </p>  
+                    <p>
+                        Try as he might, Edmond was never able to discern the cause of Victor’s chronic illness. He was only able to see its symptoms: bouts of debilitating pain, seizures, temporary blindness, bleeding from the eyes, ears, and nose. <br/>
+                        In his research, he speculated that the condition might be genetic, with himself a passive carrier of the gene, only activated in his son. Perhaps this is why he drove himself to madness attempting to find a cure: he blamed himself for cursing his son with the condition. 
+                    </p>
                 </div>
             )
         break;
@@ -1226,11 +1270,15 @@ In his research, he speculated that the condition might be genetic, with himself
                     <br />
                     <img src={node40} alt='Bloodthirsty' loading='lazy' />
                     <br />
-                    “-seems to me these techniques are maintained simply because the Elders have not bothered to try new things. This old Order of Father’s has clearly stagnated, afraid of pioneering new techniques. The advent of production lines, electricity, new mathematical techniques- these  should be accounted for in the alchemical processes, and updated their methods. The wonders they could accomplish if they but tried! It would take someone unafraid of the future to shake them out of their complacency. But my fantasy of our family regaining our status in the Order of the Three Keys remains just that- a young girl’s silly daydreams.”
-
-		-Excerpt from the journal of Constance Cavanaugh, 1912.
-
-Constance Cavanaugh spent most of her young life hiding. Hiding from the Order’s Proctors who pursued her family. Hiding from the ghosts of her father’s past. Hiding her talents for alchemy from her distracted father. She chose to learn in secret, stealing his books and reading them by the light of her lantern in the middle of the night. She had a hunger for knowledge and an unmatched skill for alchemy, which may have resulted in something wondrous, had her life not been cut short by the actions of the Proctors who finally caught up to her.
+                    <blockquote>
+                        “-seems to me these techniques are maintained simply because the Elders have not bothered to try new things. This old Order of Father’s has clearly stagnated, afraid of pioneering new techniques. The advent of production lines, electricity, new mathematical techniques- these should be accounted for in the alchemical processes, and updated their methods. The wonders they could accomplish if they but tried! It would take someone unafraid of the future to shake them out of their complacency. But my fantasy of our family regaining our status in the Order of the Three Keys remains just that- a young girl’s silly daydreams.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from the journal of Constance Cavanaugh, 1912.
+                    </p>  
+                    <p>
+                        Constance Cavanaugh spent most of her young life hiding. Hiding from the Order’s Proctors who pursued her family. Hiding from the ghosts of her father’s past. Hiding her talents for alchemy from her distracted father. She chose to learn in secret, stealing his books and reading them by the light of her lantern in the middle of the night. She had a hunger for knowledge and an unmatched skill for alchemy, which may have resulted in something wondrous, had her life not been cut short by the actions of the Proctors who finally caught up to her.
+                    </p>
                 </div>
             )
         break;
@@ -1272,10 +1320,12 @@ Constance Cavanaugh spent most of her young life hiding. Hiding from the Order�
                     <br />
                     <img src={node43} alt='Reckless' loading='lazy' />
                     <br />
-                    “You get it, don’t you? If every possible outcome branches off into a different reality, it means that there is a world where the bullet fires and one where the bullet doesn’t fire. And while there’s a version of you that sees me die, and a version of you that sees me survive, there is only one version of me- the one that survives. We can’t experience our own death. From our own viewpoints, and only from our own viewpoints, we are each immortal. We are quite literal Gods among men!”
-
-Oscar Pentigras, PhD candidate and former initiate to the Order of the Three Keys (now excommunicated on “reasons of unsound principles”)
-
+                    <blockquote>
+                        “You get it, don’t you? If every possible outcome branches off into a different reality, it means that there is a world where the bullet fires and one where the bullet doesn’t fire. And while there’s a version of you that sees me die, and a version of you that sees me survive, there is only one version of me- the one that survives. We can’t experience our own death. From our own viewpoints, and only from our own viewpoints, we are each immortal. We are quite literal Gods among men!”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        Oscar Pentigras, PhD candidate and former initiate to the Order of the Three Keys (now excommunicated on “reasons of unsound principles”)
+                    </p>
                 </div>
             )
         break;
@@ -1287,15 +1337,16 @@ Oscar Pentigras, PhD candidate and former initiate to the Order of the Three Key
                     <br />
                     <img src={node44} alt='Unhinged Behavior' loading='lazy' />
                     <br />
-                    To the superintendent of Hollow Grove Sanitarium:
+                    <p>
+                        To the superintendent of Hollow Grove Sanitarium: <br/><br/>
 
-	The letter accompanies the newest inmates, hereby ordered by this Court for involuntary hospitalization to your facility for a time period of indeterminate length, with their stay only to be ended when your staff and this Court can both be convinced of their return to sanity.
-	These inmates have proven dangerous and absent of their faculties, prone to periodic fits of madness, visions, and violent outbursts. They seem unable to control themselves, and have been labeled a danger to society.
+                        The letter accompanies the newest inmates, hereby ordered by this Court for involuntary hospitalization to your facility for a time period of indeterminate length, with their stay only to be ended when your staff and this Court can both be convinced of their return to sanity.<br/>
+                        These inmates have proven dangerous and absent of their faculties, prone to periodic fits of madness, visions, and violent outbursts. They seem unable to control themselves, and have been labeled a danger to society.<br/><br/>
 
-Of note is that most of the offenses are barely, if at all, remembered by the subjects, many being committed when the patient was in a fugue state. In addition, during interrogations by apprehending officers, each subject used the phrases “the one made many”, despite being detained in different times and places. I can only assume some sort of shared trauma, but have no evidence to back up this theory.
+                        Of note is that most of the offenses are barely, if at all, remembered by the subjects, many being committed when the patient was in a fugue state. In addition, during interrogations by apprehending officers, each subject used the phrases “the one made many”, despite being detained in different times and places. I can only assume some sort of shared trauma, but have no evidence to back up this theory.<br/><br/>
 
-This Court directs these poor souls to your care. Treat them at your best discretion.
-
+                        This Court directs these poor souls to your care. Treat them at your best discretion.
+                    </p>
                 </div>
             )
         break;
@@ -1307,19 +1358,22 @@ This Court directs these poor souls to your care. Treat them at your best discre
                     <br />
                     <img src={node45} alt='Knowledgable' loading='lazy' />
                     <br />
-                    “Almost all subjects regard the experiment as a test of imagination. This conception is so general that it becomes, practically, a condition of the experiment. Nevertheless, the interpretation of the figures actually has little to do with imagination, and it is unnecessary to consider imagination a prerequisite....The interpretation of the chance forms falls in the field of perception and apperception rather than imagination.”
-Hermann Rorschach, “Psychodiagnostics: A Diagnostic Test Based on Perception”  1921
+                    <blockquote>
+                        “Almost all subjects regard the experiment as a test of imagination. This conception is so general that it becomes, practically, a condition of the experiment. Nevertheless, the interpretation of the figures actually has little to do with imagination, and it is unnecessary to consider imagination a prerequisite....The interpretation of the chance forms falls in the field of perception and apperception rather than imagination.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Hermann Rorschach, “Psychodiagnostics: A Diagnostic Test Based on Perception” 1921
+                    </p>             
+                    <p>
+                        Patients in Hollow Grove Sanitarium all began to exhibit signs of paranoia and hallucinations within a startlingly short period of time of one another. While the staff first saw this a coincidence, they soon began to hear the same phrases muttered under different breaths, and identical messages scrawled on floors and ceilings. Stories about a woman whispering in the walls spread so quickly that the staff thought the madness must be spread through suggestion, and greatly increased the isolation of each patient in an attempt to stop it multiplying. This proved a mistake.<br/>
+                        The patients put into solitary rooms had their symptoms grow inexorably worse. They screamed that they could not tune her out, that there was safety in the flock, that the wolf always attacks those that stray.<br/><br/>
 
 
-Patients in Hollow Grove Sanitarium all began to exhibit signs of paranoia and hallucinations within a startlingly short period of time of one another. While the staff first saw this a coincidence, they soon began to hear the same phrases muttered under different breaths, and identical messages scrawled on floors and ceilings. Stories about a woman whispering in the walls spread so quickly that the staff thought the madness must be spread through suggestion, and greatly increased the isolation of each patient in an attempt to stop it multiplying. This proved a mistake. 
-The patients put into solitary rooms had their symptoms grow inexorably worse. They screamed that they could not tune her out, that there was safety in the flock, that the wolf always attacks those that stray.
+                        They all yelled those exact same words. At the exact same time. In different wings of the building.<br/><br/>
 
 
-They all yelled those exact same words. At the exact same time. In different wings of the building.
-
-
-Soon after, the staff returned them to their more communal lifestyle. 
-
+                        Soon after, the staff returned them to their more communal lifestyle. <br/><br/>
+                    </p>
                 </div>
             )
         break;
@@ -1346,12 +1400,16 @@ Soon after, the staff returned them to their more communal lifestyle.
                     <br />
                     <img src={node47} alt='Retrophilic' loading='lazy' />
                     <br />
-                    “It matters not what toys and gadgets you bring to our doorstep. You cannot buy your way into our organization with ‘innovations’ we have already had for fifty years. Who do you think allowed you to create such things? Who served as the spark for your meager imagination? There is a larger world you will never be allowed to enter, Thomas, because if you did, it would swallow you whole.”
-
-	Elder Brahe of the Order of the Three Keys, in a letter to Thomas Edison, 1879
-
-It was the invention of the phonograph in 1877 that catapulted the man named Thomas Edison onto the world’s stage and earned him the moniker “The Wizard of Menlo Park”. Many other inventions would follow, and with them, money and fame. But no matter his success, there was one thing that remained out of Edison’s grasp: admittance into that strange social club he had heard tell of, and its strange lodge in Union Square. Even when he founded the Edison Electric Company with the help of the Vanderbilts, a family he knew frequented that enigmatic lodge, he could not get them to speak a word of its existence, instead receiving a look of disdain at its mere mention. 
-And yet, whenever he tried to contact someone within the organization, he would soon after find a stray note, or scrap of paper on one of his work tables detailing a new concept that would lead him to another invention. He could never get over the feeling that someone was giving him a consolation prize.
+                    <blockquote>
+                        “It matters not what toys and gadgets you bring to our doorstep. You cannot buy your way into our organization with ‘innovations’ we have already had for fifty years. Who do you think allowed you to create such things? Who served as the spark for your meager imagination? There is a larger world you will never be allowed to enter, Thomas, because if you did, it would swallow you whole.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Elder Brahe of the Order of the Three Keys, in a letter to Thomas Edison, 1879
+                    </p>
+                    <p>
+                        It was the invention of the phonograph in 1877 that catapulted the man named Thomas Edison onto the world’s stage and earned him the moniker “The Wizard of Menlo Park”. Many other inventions would follow, and with them, money and fame. But no matter his success, there was one thing that remained out of Edison’s grasp: admittance into that strange social club he had heard tell of, and its strange lodge in Union Square. Even when he founded the Edison Electric Company with the help of the Vanderbilts, a family he knew frequented that enigmatic lodge, he could not get them to speak a word of its existence, instead receiving a look of disdain at its mere mention. <br/>
+                        And yet, whenever he tried to contact someone within the organization, he would soon after find a stray note, or scrap of paper on one of his work tables detailing a new concept that would lead him to another invention. He could never get over the feeling that someone was giving him a consolation prize.
+                    </p>
                 </div>
             )
         break;
@@ -1363,19 +1421,22 @@ And yet, whenever he tried to contact someone within the organization, he would 
                     <br />
                     <img src={node48} alt='Neophilic' loading='lazy' />
                     <br />
-                    “I don't want to get well
-I don't want to get well
-I'm glad they shot me on the fighting line, fine!
-The doctor says that I'm in bad condition
-But oh, oh, oh, I've got so much ambition;
-I don't want to get well
-I don't want to get well
-For I'm having a wonderful time”
-
--”I Don’t Want to Get Well”. Composed by Harold Jentes, Lyrics by Harry Pease and Howard Johnson, 1917
-
-The staff at Hollow Grove know that the Superintendent's radio has a tendency to act weirdly. Its strange static and periodic interruptions have become so commonplace that none give it much thought anymore. Sure, sometimes their favorite Scott Joplin rag is interrupted by a man selling something called a “tell-a-vision”, or by incredibly aggressive music made by instruments no one amongst the crew can place, or by someone repeated the words “Chronos” and “1971” again and again, but really, is it any stranger than the other things they deal with on a day to day basis? Better to leave it alone.  
-
+                    <blockquote>
+                        “I don't want to get well<br/>
+                        I don't want to get well<br/>
+                        I'm glad they shot me on the fighting line, fine!<br/>
+                        The doctor says that I'm in bad condition<br/>
+                        But oh, oh, oh, I've got so much ambition;<br/>
+                        I don't want to get well<br/>
+                        I don't want to get well<br/>
+                        For I'm having a wonderful time”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -”I Don’t Want to Get Well”. Composed by Harold Jentes, Lyrics by Harry Pease and Howard Johnson, 1917
+                    </p>
+                    <p>
+                        The staff at Hollow Grove know that the Superintendent's radio has a tendency to act weirdly. Its strange static and periodic interruptions have become so commonplace that none give it much thought anymore. Sure, sometimes their favorite Scott Joplin rag is interrupted by a man selling something called a “tell-a-vision”, or by incredibly aggressive music made by instruments no one amongst the crew can place, or by someone repeated the words “Chronos” and “1971” again and again, but really, is it any stranger than the other things they deal with on a day to day basis? Better to leave it alone.  
+                    </p>
                 </div>
             )
         break;
