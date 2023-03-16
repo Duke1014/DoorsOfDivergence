@@ -612,11 +612,12 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                     <img src={node4} alt='Sound of Mind' loading='lazy' />
                     <br />
                     <blockquote>
-
+                        “A new patient was admitted to the facility, a young man by the name of Charles. Withdrawn, cold, shy- something behind his eyes, though. I don’t like him. I’m not supposed to say that, I know, but I don’t trust him. There's malice there, that no one else seems to see. He’s a writer, too, which means I have to clean the walls every day. More work for me.”
                     </blockquote>
-                    “A new patient was admitted to the facility, a young man by the name of Charles. Withdrawn, cold, shy- something behind his eyes, though. I don’t like him. I’m not supposed to say that, I know, but I don’t trust him. There's malice there, that no one else seems to see. He’s a writer, too, which means I have to clean the walls every day. More work for me.”
--Excerpt from Gunther’s journal,
-September 15, 1905
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal,<br />
+                        September 15, 1905
+                    </p>
                 </div>
             )
         break;
@@ -628,11 +629,13 @@ September 15, 1905
                     <br />
                     <img src={node5} alt='Sound of Body' loading='lazy' />
                     <br />
-                    “First day at Hollow Grove was today. My excitement at the new job was quickly doused, however, when we took on a new patient- Grace, all of eight years old. My heart broke seeing her for the first time- a tiny little thing, malnourished, forgotten, and yet, when I introduced myself, she clung to my waist, hugging me as tightly as she could- all the world’s cruelty cannot wash away the good in this child.”
-
--Excerpt from Gunther’s journal, 
-January 14th, 1898
-
+                    <blockquote>
+                        “First day at Hollow Grove was today. My excitement at the new job was quickly doused, however, when we took on a new patient- Grace, all of eight years old. My heart broke seeing her for the first time- a tiny little thing, malnourished, forgotten, and yet, when I introduced myself, she clung to my waist, hugging me as tightly as she could- all the world’s cruelty cannot wash away the good in this child.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal,<br />
+                        January 14th, 1898
+                    </p>
                 </div>
             )
         break;
@@ -644,11 +647,13 @@ January 14th, 1898
                     <br />
                     <img src={node6} alt='Critical Thinker' loading='lazy' />
                     <br />
-                    I hate Charles’ little game. I don’t want to play it. But Dr. Cavanaugh insists. He says it’s good for the boy’s social development. He doesn’t speak much otherwise. And since Charles only wants to play with a select few orderlies, myself included, my hand is forced. So he says words, and I have to repeat them, exactly as he does, with the same intonation. And if I get it wrong, he laughs, and writes it down. He tries to trick me, says I lose a lot. I don’t understand the rules. It feels like he’s judging me, looking down on me… but I’m not the one locked in a cell.
-
--Excerpt from Gunther’s Journal,
-July 23, 1907
-
+                    <blockquote>
+                        "I hate Charles’ little game. I don’t want to play it. But Dr. Cavanaugh insists. He says it’s good for the boy’s social development. He doesn’t speak much otherwise. And since Charles only wants to play with a select few orderlies, myself included, my hand is forced. So he says words, and I have to repeat them, exactly as he does, with the same intonation. And if I get it wrong, he laughs, and writes it down. He tries to trick me, says I lose a lot. I don’t understand the rules. It feels like he’s judging me, looking down on me… but I’m not the one locked in a cell."
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s Journal,<br/>
+                        July 23, 1907
+                    </p>
                 </div>
             )
         break;
@@ -660,10 +665,14 @@ July 23, 1907
                     <br />
                     <img src={node7} alt='Strong Willed' loading='lazy' />
                     <br />
-                    Grace’s tenth birthday today. She was so happy for the attention. The superintendent is cold and uncaring, so I had to smuggle the cake in while he wasn’t looking. Woke her up to give it to her, she could barely contain her squeals of delight. But an odd thing- when I lit the candles, told her to blow them out, she just stared at them, letting them burn almost all the way down. I had to shake her by the shoulder to snap her out of it. Perhaps next year I should consider a different present. Maybe a dollhouse.
+                    <blockquote>
+                        "Grace’s tenth birthday today. She was so happy for the attention. The superintendent is cold and uncaring, so I had to smuggle the cake in while he wasn’t looking. Woke her up to give it to her, she could barely contain her squeals of delight. But an odd thing- when I lit the candles, told her to blow them out, she just stared at them, letting them burn almost all the way down. I had to shake her by the shoulder to snap her out of it. Perhaps next year I should consider a different present. Maybe a dollhouse."
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        April 11, 1900
+                    </p>
 
--Excerpt from Gunther’s journal, 
-April 11, 1900
 
                 </div>
             )
@@ -676,11 +685,13 @@ April 11, 1900
                     <br />
                     <img src={node8} alt='Anxious' loading='lazy' />
                     <br />
-                    I’m missing time. The past two weeks, I’ll find myself in an exam room, holding a scalpel, or in the basement, staring at an electrical box, with no idea how I got there. Maybe it’s the stress- this thing in Serbia is getting out of hand, they’re saying all of Europe’s gonna be on fire before the year is out. War is a madness we just accept as part of living. When one of these patients harms someone out of panic or fear, we lock them in a cell, but when a king or a prime minister sends thousands to die, we don’t consider him mad, do we? I’m starting to think I’m on the wrong side of the cell.	
-
--Excerpt from Gunther’s journal,
-August 2, 1914
-
+                    <blockquote>
+                        "I’m missing time. The past two weeks, I’ll find myself in an exam room, holding a scalpel, or in the basement, staring at an electrical box, with no idea how I got there. Maybe it’s the stress- this thing in Serbia is getting out of hand, they’re saying all of Europe’s gonna be on fire before the year is out. War is a madness we just accept as part of living. When one of these patients harms someone out of panic or fear, we lock them in a cell, but when a king or a prime minister sends thousands to die, we don’t consider him mad, do we? I’m starting to think I’m on the wrong side of the cell."	
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        August 2, 1914
+                    </p>
                 </div>
             )
         break;
@@ -692,11 +703,11 @@ August 2, 1914
                     <br />
                     <img src={node9} alt='Pyromania' loading='lazy' />
                     <br />
-                    Grace has taken a shine to Charles. So much so that the superintendent has seen fit to put them in adjacent cells. Says that it might help both of them. If I didn’t know better, I’d say she has her first crush. I’ve tried to dissuade her, but she won’t listen. She’s even picked up his habit of writing all over her cell walls.
-
--Excerpt from Gunther’s journal, 
-September 15, 1905
-
+                        "Grace has taken a shine to Charles. So much so that the superintendent has seen fit to put them in adjacent cells. Says that it might help both of them. If I didn’t know better, I’d say she has her first crush. I’ve tried to dissuade her, but she won’t listen. She’s even picked up his habit of writing all over her cell walls."
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        September 15, 1905
+                    </p>
                 </div>
             )
         break;
@@ -708,10 +719,13 @@ September 15, 1905
                     <br />
                     <img src={node10} alt='Thanatophobia' loading='lazy' />
                     <br />
-                    The blackouts are getting more frequent. I haven’t told anyone, for fear of losing my job-or worse- but I may need to have a word with Cavanaugh soon. I’ve been trying to reconstruct events, and one thing stands out- before every missing block of time, I’ve encountered Charles. He’s usually the last thing I remember, but not always- sometimes I cross paths with him hours before I lose my memory, but always on the same day. Is it paranoia to believe he’s somehow responsible? It must be. I need a vacation.
-
-		-Excerpt from Gunther’s journal,
-		February 19, 1916
+                    <blockquote>
+                        "The blackouts are getting more frequent. I haven’t told anyone, for fear of losing my job-or worse- but I may need to have a word with Cavanaugh soon. I’ve been trying to reconstruct events, and one thing stands out- before every missing block of time, I’ve encountered Charles. He’s usually the last thing I remember, but not always- sometimes I cross paths with him hours before I lose my memory, but always on the same day. Is it paranoia to believe he’s somehow responsible? It must be. I need a vacation."
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        February 19, 1916
+                    </p>
                 </div>
             )
         break;
@@ -723,11 +737,13 @@ September 15, 1905
                     <br />
                     <img src={node11} alt='Hot-headed' loading='lazy' />
                     <br />
-                    Seventh patient has been mysteriously discharged from the facility. I’ve tried speaking to the other orderlies about it but they refuse to talk much. Something has everyone scared. Staff who go digging into the superintendent’s experiments get transferred pretty quickly. I think the only reason I’ve kept my job this long is because of my size- no one else can restrain a panicked patient like me. Still, I worry. The superintendent considers patients for his new procedure once they turn 21, and Grace’s birthday is in less than a month. There must be something I can do.
-
--Excerpt from Gunther’s journal, 
-March 17, 1910
-
+                    <blockquote>
+                        "Seventh patient has been mysteriously discharged from the facility. I’ve tried speaking to the other orderlies about it but they refuse to talk much. Something has everyone scared. Staff who go digging into the superintendent’s experiments get transferred pretty quickly. I think the only reason I’ve kept my job this long is because of my size- no one else can restrain a panicked patient like me. Still, I worry. The superintendent considers patients for his new procedure once they turn 21, and Grace’s birthday is in less than a month. There must be something I can do."
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        March 17, 1910
+                    </p>
                 </div>
             )
         break;
@@ -739,11 +755,13 @@ March 17, 1910
                     <br />
                     <img src={node12} alt='Electrophilia' loading='lazy' />
                     <br />
-                    He wants us to round up all the patients in the east wing. Including Charles and Grace. I don’t know what he’s planning, but I don’t like the looks of it. The other orderlies are too scared to do anything, but perhaps I can get a few of the patients away from here. I’ll just need to call in a favor or two.
-
--Excerpt from Gunther’s journal, 
-March 7, 1917
-
+                    <blockquote>
+                        "He wants us to round up all the patients in the east wing. Including Charles and Grace. I don’t know what he’s planning, but I don’t like the looks of it. The other orderlies are too scared to do anything, but perhaps I can get a few of the patients away from here. I’ll just need to call in a favor or two."
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        March 7, 1917
+                    </p>
                 </div>
             )
         break;
@@ -755,12 +773,13 @@ March 7, 1917
                     <br />
                     <img src={node13} alt='Epiplaphobia' loading='lazy' />
                     <br />
-                    I don’t recognize Grace anymore. Cavanaugh has gone too far. This serum of his… it’s broken her. I have to get her out of here. Tonight. Perhaps, away from this place she’ll heal.
-He’s calling for me again. Keeps calling me a dolt. I swear, if I don’t wring his neck before the night is out, it will be a small miracle.
-
--Excerpt from Gunther’s journal, 
-March 7, 1917
-
+                    <blockquote>
+                        "I don’t recognize Grace anymore. Cavanaugh has gone too far. This serum of his… it’s broken her. I have to get her out of here. Tonight. Perhaps, away from this place she’ll heal. He’s calling for me again. Keeps calling me a dolt. I swear, if I don’t wring his neck before the night is out, it will be a small miracle.""
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from Gunther’s journal, <br/>
+                        March 7, 1917
+                    </p>
                 </div>
             )
         break;
@@ -772,17 +791,19 @@ March 7, 1917
                     <br />
                     <img src={node14} alt='Gambler' loading='lazy' />
                     <br />
-                    “Which switch is the switch, Miss, for Ipswich?
-It’s the Ipswich switch which I require.
-Which switch switches Ipswich with this switch?
-You switched my switch on the wrong wire.
-You’ve switched me on Northwich...... not Ipswich!
-So now to prevent further hitch
-If you’ll tell me which switch is Northwich and which switch is Ipswich,
-I’ll know which switch is which!”
-
-	-From “Which Switch is the Switch, Miss, for Ipswitch” by Billy Murray, 1911
-
+                    <blockquote>
+                        “Which switch is the switch, Miss, for Ipswich?<br/>
+                        It’s the Ipswich switch which I require.<br/>
+                        Which switch switches Ipswich with this switch?<br/>
+                        You switched my switch on the wrong wire.<br/>
+                        You’ve switched me on Northwich...... not Ipswich!<br/>
+                        So now to prevent further hitch<br/>
+                        If you’ll tell me which switch is Northwich and which switch is Ipswich,<br/>
+                        I’ll know which switch is which!”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -From “Which Switch is the Switch, Miss, for Ipswitch” by Billy Murray, 1911
+                    </p>
                 </div>
             )
         break;

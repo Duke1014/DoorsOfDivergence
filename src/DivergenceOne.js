@@ -33,111 +33,116 @@ export default function ({ setCpShow, setActiveNode }) {
                         <p style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</p>
                         <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}} >
                             {nodes && nodes.Narcoleptic ? <>
-                            <div className='checked'>
-                                <img 
-                                src={Checked} 
-                                alt='checked'
-                                onClick={() => handleClick('Narcoleptic')} 
-                                />
-                                <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
-                            </div> 
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Narcoleptic')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
+                                </div> 
                             </>:<>
-                            <div className='unchecked'>
-                                <img 
-                                src={unchecked} 
-                                title='No Symptoms'
-                                alt='unchecked'
-                                />
-                                <p className='no-symptoms'>No Symptoms</p>
-                            </div>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                        onClick={() => handleClick('Hint: Narcoleptic')} 
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
                             </>}
                         </div>
                         <div className="checkbox" id='Narcissistic' style={{gridArea: '3/20/span 2/span 2'}}>
                             {nodes && nodes.Narcissistic ? <>
-                            <div className='checked'>
-                                <img 
-                                src={Checked} 
-                                alt='checked'
-                                onClick={() => handleClick('Narcissistic')} 
-                                />
-                                <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
-                            </div> 
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Narcissistic')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
+                                </div> 
                             </>:<>
-                            <div className='unchecked'>
-                                <img 
-                                src={unchecked} 
-                                title='No Symptoms'
-                                alt='unchecked'
-                                />
-                                <p className='no-symptoms'>No Symptoms</p>
-                            </div>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                        onClick={() => handleClick('Hint: Narcissistic')} 
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
                             </>}
                         </div>
                         <div className="checkbox" id='Obstinate' style={{gridArea: '5/20/span 2/span 2'}}>
-        {nodes && nodes.Obstinate ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('Obstinate')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
+                            {nodes && nodes.Obstinate ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Obstinate')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                        onClick={() => handleClick('Hint: Obstinate')} 
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
       
-      <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
-        {nodes && nodes.Arrogant ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('Arrogant')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
+                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
+                            {nodes && nodes.Arrogant ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Arrogant')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                        onClick={() => handleClick('Hint: Arrogant')}
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
 
-      <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
-        {nodes && nodes.DelusionsOfGrandeur ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('DelusionsOfGrandeur')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
+                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
+                            {nodes && nodes.DelusionsOfGrandeur ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('DelusionsOfGrandeur')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                        onClick={() => handleClick('Hint: Delusions of Grandeur')} 
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
 
                         <div className="checkbox" id='AlienistInTraining' style={{gridArea: '1/13/span 2/span 2'}}>
                             {nodes && nodes.AlienistsInTraining ? <>
