@@ -79,10 +79,6 @@ export default function Grid() {
         }
     }
 
-    // if (clickedTab === 'one') {
-    //     <DivergenceOne />
-    // }
-
     // $: document.body.classList[cpShow ? 'add' : 'remove']('noscroll');
 
     // $: autoScrollTo, autoscrollIntoView(autoScrollTo);
@@ -238,7 +234,7 @@ export default function Grid() {
                         <div className="stamp" style={{gridArea: '4/15/span 4/span 2'}} id="Stubborn">
                             {nodes && nodes.Stubborn ? <>
                                 <img
-                                    src={{GoldBlank}}
+                                    src={GoldBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('Stubborn')}
                                 />
@@ -253,10 +249,67 @@ export default function Grid() {
                                 />  
                             </>}
                         </div>
-                        <div className="stamp" style={{gridArea: '8 / 11 / span 2 / span 2'}} id="SinsOfTheFather">
-                            {nodes && nodes.SinsOfTheFather ? <>
+                        <div className="stamp" style={{gridArea: '8 / 11 / span 2 / span 2'}} id="Theurgist">
+                            {nodes && nodes.TrainingWheels ? <>
                                 <img
                                     src={GoldBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Theurgist')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.sixteen.title}</p>
+                            </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Gold}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: Theurgist')}
+                                />
+                            </>}
+                            
+                        </div>
+                        <div className="horizontal-line"  style={{gridArea: '3 / 12 / 12 / span 4'}} />
+                        <div className="stamp" style={{gridArea: '8 / 13 / span 2 / span 2'}} id="Divinator">
+                            {nodes && nodes.YourOwnTwoFeet ? <>
+                                <img
+                                    src={GoldBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Divinator')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title">Divinator</p>
+                            </> : <>
+                            <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Gold}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: Divinator')}
+                                />
+                            </>}
+                        </div>
+                        <div className="horizontal-line" style={{gridArea: '3 / 14 / 12 / span 2'}}/>
+                        <div className="stamp" style={{gridArea: '8 / 15 / span 2 / span 2'}} id="BeyondTheVeil">
+                            {nodes && nodes.YouWereWarned ? <>
+                            <img
+                                    src={GoldBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Alchemist')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.ten.title}</p>
+                            </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Gold}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: Alchemist')}
+                                />
+                            </>}
+                        </div>
+                        <div className="bg-red-100 stamp green" style={{gridArea: '11 / 10 / span 2 / span 2'}} id="SinsOfTheFather">
+                            {nodes && nodes.SinsOfTheFather ? <>
+                                <img
+                                    src={RedBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('SinsOfTheFather')}
                                 />
@@ -265,21 +318,20 @@ export default function Grid() {
                                 <img
                                     className="disabled"
                                     title={ui.general.not_unlocked}
-                                    src={Gold}
+                                    src={Red}
                                     alt="Stamp"
                                     onClick={() => handleClick('Hint: Sins of the Father')}
                                 />
                             </>}
                         </div>
-                        <div className="horizontal-line"  style={{gridArea: '3 / 12 / 12 / span 4'}} />
-                        <div className="stamp" style={{gridArea: '8 / 13 / span 2 / span 2'}} id="ToTheNines">
+                        <div className="bg-red-200 stamp red" style={{gridArea: '11 / 13 / span 2 / span 2'}} id="ToTheNines">
                             {nodes && nodes.ToTheNines ? <>
                                 <img
                                     src={GoldBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('ToTheNines')}
                                 />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.five.title}</p>
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.six.title}</p>
                             </> : <>
                                 <img
                                     className="disabled"
@@ -290,29 +342,46 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="horizontal-line" style={{gridArea: '3 / 14 / 12 / span 2'}}/>
-                        <div className="stamp" style={{gridArea: '8 / 15 / span 2 / span 2'}} id="BeyondTheVeil">
+                        <div className="bg-red-300 stamp blue" style={{gridArea: '11 / 16 / span 2 / span 2'}} id="BeyondTheVeil">
                             {nodes && nodes.BeyondTheVeil ? <>
                                 <img
-                                    src={GoldBlank}
+                                    src={BlueBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('BeyondTheVeil')}
                                 />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.six.title}</p>
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.nine.title}</p>
                             </> : <>
-                            <img
+                                <img
                                     className="disabled"
                                     title={ui.general.not_unlocked}
-                                    src={Gold}
+                                    src={Blue}
                                     alt="Stamp"
-                                    onClick={() => handleClick('Hint: Beyond the Veil')}
+                                    onClick={() => handleClick('Hint: Beyond The Veil')}
                                 />
                             </>}
                         </div>
-                        <div className="stamp" style={{gridArea: '14 / 16 / span 2 / span 2'}} id="OutOfTime">
-                            {nodes && nodes.OutOfTime ? <>
+                        <div className="bg-red-500 stamp green" style={{gridArea: '14 / 10 / span 2 / span 2'}} id="WhatWasLost">
+                            {nodes && nodes.PandorasBox ? <>
                                 <img
-                                    src={BlueBlank}
+                                    src={RedBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('PandorasBox')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title" >{ui.nodes.eight.title}</p>
+                            </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Red}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: What Was Lost')}
+                                />
+                            </>}
+                        </div>
+                        <div className="bg-red-700 stamp" style={{gridArea: '14 / 13 / span 2 / span 2'}} id="OutOfTime">
+                            {nodes && nodes.OutOfTime ? <>
+                            <img
+                                    src={GoldBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('OutOfTime')}
                                 />
@@ -321,9 +390,27 @@ export default function Grid() {
                                 <img
                                     className="disabled"
                                     title={ui.general.not_unlocked}
-                                    src={Blue}
+                                    src={Gold}
                                     alt="Stamp"
                                     onClick={() => handleClick('Hint: Out Of Time')}
+                                />
+                            </>}
+                        </div>
+                        <div className="stamp" style={{gridArea: '14 / 16 / span 2 / span 2'}} id="ASoulInLimbo">
+                            {nodes && nodes.ASoulInLimbo ? <>
+                                <img
+                                    src={BlueBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('ASoulInLimbo')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title">A Soul In Limbo</p>
+                            </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Blue}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: A Soul In Limbo')}
                                 />
                             </>}
                         </div>
@@ -335,66 +422,12 @@ export default function Grid() {
                         <div className="vertical-line" style={{gridArea: '13 / 13 / span 2 / span 2', marginLeft: 'calc(var(--spacing) * 4', marginTop: 'calc(var(--spacing) * 4)'}}/>
                         <div className="vertical-line" style={{gridArea: '12 / 10 / span 7 / span 2'}} />
                         <div className="vertical-line" style={{gridArea: '12 / 16 / span 7 / span 2'}} />
-                        <div className="bg-red-100 stamp green" style={{gridArea: '11 / 10 / span 2 / span 2'}} id="PandorasBox">
-                            {nodes && nodes.PandorasBox ? <>
-                                <img
-                                    src={RedBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('PandorasBox')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.eight.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Red}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Pandoras Box')}
-                                />
-                            </>}
-                        </div>
                         <div className="horizontal-line" style={{gridArea: '8 / 11 / 16 / span 3'}} />
                         <div className="horizontal-line" style={{gridArea: '8 / 14 / 16 / span 3'}} />
                         <div className="horizontal-line" style={{gridArea: '10 / 11 / 16 / span 3', marginLeft: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 9)', marginRight: 'calc(var(--spacing) * 2)'}} />
                         <div className="horizontal-line" style={{gridArea: '10 / 14 / 16 / span 3', marginLeft: 'calc(var(--spacing) * 2)', marginTop: 'calc(var(--spacing) * 9)', marginRight: 'calc(var(--spacing) * 4)'}} />
                         <div className="vertical-line" style={{gridArea: '12 / 10 / 14 / span 2', marginLeft: 'calc(var(--spacing) * 8', marginBottom:'calc(var(--spacing) * 8'}} />
                         <div className="vertical-line" style={{gridArea: '12 / 16 / 14 / span 2', marginRight: 'calc(var(--spacing) * 8', marginBottom:'calc(var(--spacing) * 8'}} />
-                        <div className="bg-red-200 stamp red" style={{gridArea: '11 / 13 / span 2 / span 2'}} id="BeyondTheVeil">
-                            {nodes && nodes.BeyondTheVeil ? <>
-                                <img
-                                    src={GoldBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('BeyondTheVeil')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.nine.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Gold}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Beyond The Veil')}
-                                />
-                            </>}
-                        </div>
-                        <div className="bg-red-300 stamp blue" style={{gridArea: '11 / 16 / span 2 / span 2'}} id="Alchemist">
-                            {nodes && nodes.Alchemist ? <>
-                                <img
-                                    src={BlueBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Alchemist')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.ten.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Blue}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Alchemist')}
-                                />
-                            </>}
-                        </div>
                         <div className="horizontal-line" style={{gridArea: '14 / 11 / 16 / span 3'}} />
                         <div className="horizontal-line" style={{gridArea: '14 / 14 / 16 / span 3'}} />
                         <div className="horizontal-line" style={{gridArea: '15 / 11 / span 2 / span 6', marginLeft: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 10)', marginRight: 'calc(var(--spacing) * 4)'}} />
@@ -403,57 +436,39 @@ export default function Grid() {
                         <div className="vertical-line" style={{gridArea: '16 / 9 / span 3 / span 3', marginTop: 'calc(var(--spacing) * 5)', marginLeft: 'calc(var(--spacing) * 24)'}} />
                         <div className="vertical-line" style={{gridArea: '16 / 16 / span 3 / span 3', marginRight: 'calc(var(--spacing) * 24)', marginTop: 'calc(var(--spacing) * 5)'}} />
                         <div className="vertical-line" style={{gridArea: '18 / 12 / 19 / span 3', marginRight: 'calc(var(--spacing) * 14)', marginTop: 'calc(var(--spacing) * 5)'}} />
-                        <div className="bg-red-500 stamp green" style={{gridArea: '14 / 10 / span 2 / span 2'}} id="WhatWasLost">
-                            {nodes && nodes.WhatWasLost ? <>
-                                <img
-                                    src={RedBlank}
+                        <div className="bg-blue-100 stamp" style={{gridArea: '17 / 12 / span 2 / span 2'}} id="WhatWasLost">
+                            {nodes && nodes.Oracle ? <>
+                            <img
+                                    src={GoldBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('WhatWasLost')}
                                 />
-                                <p className="w-2/3 text-2xl text-white title" >{ui.nodes.eleven.title}</p>
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.eleven.title}</p>
                             </> : <>
                                 <img
                                     className="disabled"
                                     title={ui.general.not_unlocked}
-                                    src={Red}
+                                    src={Gold}
                                     alt="Stamp"
                                     onClick={() => handleClick('Hint: What Was Lost')}
                                 />
                             </>}
                         </div>
-                        <div className="bg-red-700 stamp" style={{gridArea: '14 / 13 / span 2 / span 2'}} id="MachineOfBlood">
-                            {nodes && nodes.MachineOfBlood ? <>
+                        <div className="bg-red-800 stamp" style={{gridArea: '17 / 14 / span 2 / span 2'}} id="Honesty">
+                            {nodes && nodes.Honesty ? <>
                                 <img
                                     src={GoldBlank}
                                     alt="Stamp"
-                                    onClick={() => handleClick('MachineOfBlood')}
+                                    onClick={() => handleClick('Honesty')}
                                 />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.twelve.title}</p>
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.eighteen.title}</p>
                             </> : <>
                                 <img
                                     className="disabled"
                                     title={ui.general.not_unlocked}
                                     src={Gold}
                                     alt="Stamp"
-                                    onClick={() => handleClick('Hint: Machine Of Blood')}
-                                />
-                            </>}
-                        </div>
-                        <div className="bg-red-800 stamp" style={{gridArea: '17 / 14 / span 2 / span 2'}} id="ChainsThatBind">
-                            {nodes && nodes.ChainsThatBind ? <>
-                                <img
-                                    src={GoldBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('ChainsThatBind')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.thirteen.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Gold}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Chains That Bind')}
+                                    onClick={() => handleClick('Hint: Honesty')}
                                 />
                             </>}
                         </div>
@@ -491,7 +506,43 @@ export default function Grid() {
                         <div className="horizontal-line" style={{gridArea: '21 / 11 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 2'}} />
                         <div className="horizontal-line" style={{gridArea: '21 / 16 / span 2 / span 1', marginRight: 'calc(var(--spacing) * 2'}} />
                         <div className="horizontal-line" style={{gridArea: '21 / 17 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 2'}} />
+                        <div className="bg-green-400 stamp" style={{gridArea: '18 / 10 / span 2 / span 2'}} id="MachineOfBlood">
+                            {nodes && nodes.MachineOfBlood ? <>
+                                <img
+                                    src={RedBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('MachineOfBlood')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title" >{ui.nodes.twelve.title}</p>
+                            </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Red}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: Machine Of Blood')}
+                                />
+                            </>}
+                        </div>
                         <div className="bg-green-600 stamp" style={{gridArea: '18 / 16 / span 2 / span 2'}} id="Unbound">
+                            {nodes && nodes.ChainsThatBind ? <>
+                            <img
+                                    src={BlueBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('ChainsThatBind')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.thirteen.title}</p>
+                            </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Blue}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: Chains That Bind')}
+                                />
+                            </>}
+                        </div>
+                        <div className="bg-green-200 stamp" style={{gridArea: '20 / 18 / span 2 / span 2'}} id="Oracle">
                             {nodes && nodes.Unbound ? <>
                                 <img
                                     src={BlueBlank}
@@ -506,60 +557,6 @@ export default function Grid() {
                                     src={Blue}
                                     alt="Stamp"
                                     onClick={() => handleClick('Hint: Unbound')}
-                                />
-                            </>}
-                        </div>
-                        <div className="bg-green-400 stamp" style={{gridArea: '18 / 10 / span 2 / span 2'}} id="Theurgist">
-                            {nodes && nodes.Theurgist ? <>
-                                <img
-                                    src={RedBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Theurgist')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.sixteen.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Red}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Theurgist')}
-                                />
-                            </>}
-                        </div>
-                        <div className="bg-green-200 stamp" style={{gridArea: '20 / 18 / span 2 / span 2'}} id="Oracle">
-                            {nodes && nodes.Oracle ? <>
-                                <img
-                                    src={BlueBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Oracle')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.seventeen.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Blue}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Oracle')}
-                                />
-                            </>}
-                        </div>
-                        <div className="bg-blue-100 stamp" style={{gridArea: '17 / 12 / span 2 / span 2'}} id="Honesty">
-                            {nodes && nodes.Honesty ? <>
-                                <img
-                                    src={GoldBlank}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Honesty')}
-                                />
-                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.eighteen.title}</p>
-                            </> : <>
-                                <img
-                                    className="disabled"
-                                    title={ui.general.not_unlocked}
-                                    src={Gold}
-                                    alt="Stamp"
-                                    onClick={() => handleClick('Hint: Honesty')}
                                 />
                             </>}
                         </div>
@@ -599,7 +596,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="bg-blue-500 stamp" style={{gridArea: '23 / 15 / span 2 / span 2'}} id="Misled">
+                        <div className="bg-blue-500 stamp" style={{gridArea: '23 / 15 / span 2 / span 2'}} id="Broken Chains">
                             {nodes && nodes.Misled ? <>
                                 <img
                                     src={BlueBlank}
@@ -644,7 +641,7 @@ export default function Grid() {
             </section>
             <div 
                 className="w-full p-8 font-extrabold padding-top: 10vh madness"
-                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 20@', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'
+                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'
                     // , backgroundAttachment: 'fixed'
                 }}
             >

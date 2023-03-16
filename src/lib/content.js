@@ -21,7 +21,7 @@ export const uiContent = {
         eighteen: { title: 'Honesty' },
         nineteen: { title: 'Out With a Bang' },
         twenty: { title: 'Death Deferred' },
-        twentyone: { title: 'Misled' },
+        twentyone: { title: 'Broken Chains' },
         twentytwo: { title: 'Better Safe Than Sorry' },
     },
     madnessNodes: {

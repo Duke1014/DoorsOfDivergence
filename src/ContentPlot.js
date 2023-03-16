@@ -246,11 +246,11 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                 </div>
             )
         break;
-        case 'YouWereWarned':
+        case 'Alchemist':
             nodeContent = (
                 <div>
-                    <h1 className="my-4 text-4xl font-archaic">You Were Warned</h1>
-                    <p className="text-lg">You couldn't help yourself, could you?</p>
+                    <h1 className="my-4 text-4xl font-archaic">Alchemist</h1>
+                    <p className="text-lg">You encountered Proctor Caduceus</p>
                     <br />
                     <img src={YouWereWarned} alt="You Were Warned" loading="lazy" />
                     <br />
@@ -355,11 +355,11 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                 </div>
             )
         break;
-        case 'TrainingWheels':
+        case 'Theurgist':
             nodeContent = (
                 <div>
-                    <h1 className="my-4 text-4xl font-archaic">Training Wheels</h1>
-                    <p className="text-lg">You required the Proctor's assistance five times</p>
+                    <h1 className="my-4 text-4xl font-archaic">Theurgist</h1>
+                    <p className="text-lg">You encountered Proctor Isa.</p>
                     <br />
                     <img src={TrainingWheels} alt="Training Wheels" loading="lazy" />
                     <br />
@@ -381,11 +381,11 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                 </div>
             )
         break;
-        case 'YourOwnTwoFeet':
+        case 'Divinator':
             nodeContent = (
                 <div>
-                    <h1 className="my-4 text-4xl font-archaic">Your Own Two Feet</h1>
-                    <p className="text-lg">You never asked for the Proctor's assistance</p>
+                    <h1 className="my-4 text-4xl font-archaic">Divinator</h1>
+                    <p className="text-lg">You encountered Proctor Delphi.</p>
                     <br />
                     <img src={YourOwnTwoFeet} alt="Your Own Two Feet" loading="lazy" />
                     <br />
@@ -445,11 +445,11 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                 </div>
             )
         break;
-        case 'GoodHousekeeping':
+        case 'Honesty':
             nodeContent = (
                 <div>
-                    <h1 className="my-4 text-4xl font-archaic">Good Housekeeping</h1>
-                    <p className="text-lg">You placed most things back where you found them.</p>
+                    <h1 className="my-4 text-4xl font-archaic">Honesty</h1>
+                    <p className="text-lg">You made an admission to the Proctor.</p>
                     <br />
                     <img src={GoodHousekeeping} alt="Good Housekeeping" loading="lazy" />
                     <br />

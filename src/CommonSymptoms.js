@@ -5,20 +5,16 @@ import unchecked from './img/unchecked.png'
 
 import { uiContent } from './lib/content'
 
-export default function CommonSymptoms() {
+export default function CommonSymptoms({ handleClick }) {
 
   const { nodes } = useContext(UserContext)
 
   let ui = uiContent
 
-  const handleClick = () => {
-    return
-  }
-
   return (
-    <div>
+    <div style={{gridArea: '1/17/span 2/span 2'}}>
       Common Symptoms
-      <div className="checkbox" id='Narcoleptic'>
+      <div className="checkbox" id='Narcoleptic' >
         {nodes && nodes.Narcoleptic ? <>
           <div className='checked'>
             <img 

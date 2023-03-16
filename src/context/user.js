@@ -216,19 +216,20 @@ function UserProvider({ children }) {
     }
 
     async function handleEnterCode(e) {
-        const codesSnap = getDoc(doc(db, 'codes', 'heresy'));
-        console.log(codesSnap)
+        const docRef = doc(db, 'codes', 'heresy')
+        const codesSnap = await getDoc(docRef)
+        // console.log(codesSnap)
         if (codesSnap) {
-            console.log(codesSnap);
-            debugger;
-            let snapData = codesSnap.data
+            // console.log(codesSnap);
+            let snapData = codesSnap.data()
             // console.log(snapData);
             // console.log('code: ', e.detail);
-            let prop = e.detail;
+            // debugger;
+            // let prop = e
             // console.log(prop);
             // console.warn(snapData[prop]);
             // console.log(Object.keys(snapData));
-            if (snapData[prop]) {
+            if (snapData[e]) {
                 // let unlock;
                 console.log('EEEEY');
                 // console.warn(snapData[prop]);
@@ -239,8 +240,8 @@ function UserProvider({ children }) {
                 // });
                 // setUnlock(unlock);
             } else {
-                setMessage('Ahm...this code is not valid... Please check and try again!')
-                // console.log('Ahm...this code is not valid... Please check and try again!');
+                // setMessage('Ahm...this code is not valid... Please check and try again!')
+                console.log('Ahm...this code is not valid... Please check and try again!');
             }
         } else {
             console.log('No such document!');

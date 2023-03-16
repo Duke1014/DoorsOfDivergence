@@ -3,10 +3,10 @@ import './divergenceone.css'
 
 import line from './img/Line.png'
 import corner from './img/Corner.png'
-// import CommonSymptoms from './CommonSymptoms'
-
 import Checked from './img/Checked.png'
 import unchecked from './img/unchecked.png'
+
+// import CommonSymptoms from './CommonSymptoms'
 
 import { uiContent } from './lib/content'
 import { UserContext } from './context/user'
@@ -29,6 +29,116 @@ export default function ({ setCpShow, setActiveNode }) {
                 <div className='flex flex-wrap w-full h-52'/>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>
+                        {/* <CommonSymptoms handleClick={handleClick} /> */}
+                        <p style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</p>
+                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}} >
+                            {nodes && nodes.Narcoleptic ? <>
+                            <div className='checked'>
+                                <img 
+                                src={Checked} 
+                                alt='checked'
+                                onClick={() => handleClick('Narcoleptic')} 
+                                />
+                                <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
+                            </div> 
+                            </>:<>
+                            <div className='unchecked'>
+                                <img 
+                                src={unchecked} 
+                                title='No Symptoms'
+                                alt='unchecked'
+                                />
+                                <p className='no-symptoms'>No Symptoms</p>
+                            </div>
+                            </>}
+                        </div>
+                        <div className="checkbox" id='Narcissistic' style={{gridArea: '3/20/span 2/span 2'}}>
+                            {nodes && nodes.Narcissistic ? <>
+                            <div className='checked'>
+                                <img 
+                                src={Checked} 
+                                alt='checked'
+                                onClick={() => handleClick('Narcissistic')} 
+                                />
+                                <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
+                            </div> 
+                            </>:<>
+                            <div className='unchecked'>
+                                <img 
+                                src={unchecked} 
+                                title='No Symptoms'
+                                alt='unchecked'
+                                />
+                                <p className='no-symptoms'>No Symptoms</p>
+                            </div>
+                            </>}
+                        </div>
+                        <div className="checkbox" id='Obstinate' style={{gridArea: '5/20/span 2/span 2'}}>
+        {nodes && nodes.Obstinate ? <>
+          <div className='checked'>
+            <img 
+              src={Checked} 
+              alt='checked'
+              onClick={() => handleClick('Obstinate')} 
+            />
+            <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
+          </div> 
+        </>:<>
+          <div className='unchecked'>
+            <img 
+              src={unchecked} 
+              title='No Symptoms'
+              alt='unchecked'
+            />
+            <p className='no-symptoms'>No Symptoms</p>
+          </div>
+        </>}
+      </div>
+      
+      <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
+        {nodes && nodes.Arrogant ? <>
+          <div className='checked'>
+            <img 
+              src={Checked} 
+              alt='checked'
+              onClick={() => handleClick('Arrogant')} 
+            />
+            <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
+          </div> 
+        </>:<>
+          <div className='unchecked'>
+            <img 
+              src={unchecked} 
+              title='No Symptoms'
+              alt='unchecked'
+            />
+            <p className='no-symptoms'>No Symptoms</p>
+          </div>
+        </>}
+      </div>
+
+      <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
+        {nodes && nodes.DelusionsOfGrandeur ? <>
+          <div className='checked'>
+            <img 
+              src={Checked} 
+              alt='checked'
+              onClick={() => handleClick('DelusionsOfGrandeur')} 
+            />
+            <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
+          </div> 
+        </>:<>
+          <div className='unchecked'>
+            <img 
+              src={unchecked} 
+              title='No Symptoms'
+              alt='unchecked'
+            />
+            <p className='no-symptoms'>No Symptoms</p>
+          </div>
+        </>}
+      </div>
+
                         <div className="checkbox" id='AlienistInTraining' style={{gridArea: '1/13/span 2/span 2'}}>
                             {nodes && nodes.AlienistsInTraining ? <>
                                 <div className='checked'>
@@ -50,7 +160,6 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        {/* <CommonSymptoms /> */}
                         <div className="vertical-line-dash" style={{gridArea: '2/13/span 2/span 2', marginBottom: 'calc(var(--spacing) * 12', marginTop: 'calc(var(--spacing) * 12'}}>
                             <img src={line} alt='line' />
                         </div> 
