@@ -26,114 +26,112 @@ export default function ({ setCpShow, setActiveNode }) {
             <section className='grid h-full'>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>
-                    <p style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</p>
-                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}} >
+                    <div style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
+                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>
-                            <div className='checked'>
-                                <img 
-                                src={Checked} 
-                                alt='checked'
-                                onClick={() => handleClick('Narcoleptic')} 
-                                />
-                                <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
-                            </div> 
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Narcoleptic')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
+                                </div> 
                             </>:<>
-                            <div className='unchecked'>
-                                <img 
-                                src={unchecked} 
-                                title='No Symptoms'
-                                alt='unchecked'
-                                />
-                                <p className='no-symptoms'>No Symptoms</p>
-                            </div>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
                             </>}
                         </div>
                         <div className="checkbox" id='Narcissistic' style={{gridArea: '3/20/span 2/span 2'}}>
                             {nodes && nodes.Narcissistic ? <>
-                            <div className='checked'>
-                                <img 
-                                src={Checked} 
-                                alt='checked'
-                                onClick={() => handleClick('Narcissistic')} 
-                                />
-                                <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
-                            </div> 
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Narcissistic')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
+                                </div> 
                             </>:<>
-                            <div className='unchecked'>
-                                <img 
-                                src={unchecked} 
-                                title='No Symptoms'
-                                alt='unchecked'
-                                />
-                                <p className='no-symptoms'>No Symptoms</p>
-                            </div>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
                             </>}
                         </div>
                         <div className="checkbox" id='Obstinate' style={{gridArea: '5/20/span 2/span 2'}}>
-        {nodes && nodes.Obstinate ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('Obstinate')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
-      
-      <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
-        {nodes && nodes.Arrogant ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('Arrogant')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
-
-      <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
-        {nodes && nodes.DelusionsOfGrandeur ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('DelusionsOfGrandeur')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
+                            {nodes && nodes.Obstinate ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Obstinate')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
+                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
+                            {nodes && nodes.Arrogant ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Arrogant')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
+                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
+                            {nodes && nodes.DelusionsOfGrandeur ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('DelusionsOfGrandeur')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
                         <div className="checkbox" id='MissionOfMercy' style={{gridArea: '1/13/span 2/span 2'}}>
                             {nodes && nodes.MissionOfMercy ? <>
                                 <div className='checked'>
@@ -142,9 +140,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('MissionOfMercy')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirty.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -155,7 +153,6 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        {/* <CommonSymptoms /> */}
                         <div className="vertical-line-dash" style={{gridArea: '3/13/span 2/span 2', top: '-45px'}}>
                             <img src={line} alt='line' />
                         </div>
@@ -170,9 +167,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Nepotism')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtyone.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -191,9 +188,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Inactive')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtyfour.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -218,9 +215,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Sanguine')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtyfive.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -251,9 +248,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('FrequentAttacks')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtysix.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -287,9 +284,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Kleptomania')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtyseven.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -308,9 +305,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Lethargic')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtyeight.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -332,9 +329,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Insubordinate')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.thirtynine.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -365,9 +362,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Patricidal')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourty.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -407,9 +404,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Disloyal')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtyone.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -434,9 +431,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('DrainingDay')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtytwo.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -470,9 +467,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Bloodthirsty')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtythree.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -494,9 +491,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Indecisive')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyone.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -524,9 +521,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Reckless')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtysix.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -560,9 +557,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('TerminalIllness')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtyfour.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -571,7 +568,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                         onClick={() => handleClick('Hint: Terminal Illness')} />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
-                            </>  }
+                            </>}
                         </div>
                         <div className='corner-up-left' style={{gridArea: '22/12/span 2/span 2', width: '150px', top: '10px', left: '-10px'}}>
                             <img src={corner} alt='corner' />
@@ -587,7 +584,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('ForeverAndADay')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtyfive.title}</p>
                                 </div> 
                             </>  :   <>
                                 <div className='unchecked'>

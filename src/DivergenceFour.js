@@ -7,15 +7,20 @@ import line from './img/Line.png'
 import { uiContent } from './lib/content'
 import { UserContext } from './context/user'
 
-export default function DivergenceFour({ setCpShow, setActiveNode }) {
+export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant }) {
   
-    let ui = uiContent
+    let ui = uiContent    
 
     const { nodes } = useContext(UserContext)
 
     const handleClick = (nodeName) => {
         setCpShow(true)
         setActiveNode(nodeName)
+        if (nodeName === 'Hesitant') {
+            setIsHesitant(true)
+        } else {
+            setIsHesitant(false)
+        }
     }
   
     return (
@@ -24,114 +29,112 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                 <div className='flex flex-wrap w-full h-52'/>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>    
-                    <p style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</p>
-                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}} >
+                        <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
+                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>
-                            <div className='checked'>
-                                <img 
-                                src={Checked} 
-                                alt='checked'
-                                onClick={() => handleClick('Narcoleptic')} 
-                                />
-                                <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
-                            </div> 
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Narcoleptic')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyfour.title}</p>
+                                </div> 
                             </>:<>
-                            <div className='unchecked'>
-                                <img 
-                                src={unchecked} 
-                                title='No Symptoms'
-                                alt='unchecked'
-                                />
-                                <p className='no-symptoms'>No Symptoms</p>
-                            </div>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
                             </>}
                         </div>
                         <div className="checkbox" id='Narcissistic' style={{gridArea: '3/20/span 2/span 2'}}>
                             {nodes && nodes.Narcissistic ? <>
-                            <div className='checked'>
-                                <img 
-                                src={Checked} 
-                                alt='checked'
-                                onClick={() => handleClick('Narcissistic')} 
-                                />
-                                <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
-                            </div> 
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Narcissistic')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyfive.title}</p>
+                                </div> 
                             </>:<>
-                            <div className='unchecked'>
-                                <img 
-                                src={unchecked} 
-                                title='No Symptoms'
-                                alt='unchecked'
-                                />
-                                <p className='no-symptoms'>No Symptoms</p>
-                            </div>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
                             </>}
                         </div>
                         <div className="checkbox" id='Obstinate' style={{gridArea: '5/20/span 2/span 2'}}>
-        {nodes && nodes.Obstinate ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('Obstinate')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
-      
-      <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
-        {nodes && nodes.Arrogant ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('Arrogant')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
-
-      <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
-        {nodes && nodes.DelusionsOfGrandeur ? <>
-          <div className='checked'>
-            <img 
-              src={Checked} 
-              alt='checked'
-              onClick={() => handleClick('DelusionsOfGrandeur')} 
-            />
-            <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
-          </div> 
-        </>:<>
-          <div className='unchecked'>
-            <img 
-              src={unchecked} 
-              title='No Symptoms'
-              alt='unchecked'
-            />
-            <p className='no-symptoms'>No Symptoms</p>
-          </div>
-        </>}
-      </div>
+                            {nodes && nodes.Obstinate ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Obstinate')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentyeight.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
+                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
+                            {nodes && nodes.Arrogant ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Arrogant')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.twentynine.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
+                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
+                            {nodes && nodes.DelusionsOfGrandeur ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('DelusionsOfGrandeur')} 
+                                    />
+                                    <p className='symptom-found'>{ui.madnessNodes.seventyseven.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked'
+                                    />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
                         <div className="checkbox" id='ALead' style={{gridArea: '1/13/span 2/span 2'}}>
                             {nodes && nodes.ALead ? <>
                                 <div className='checked'>
@@ -140,9 +143,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('ALead')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtythree.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -153,7 +156,6 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        {/* <CommonSymptoms /> */}
                         <div className="vertical-line-dash" style={{gridArea: '3/13/span 2/span 2', top: '-45px'}}>
                             <img src={line} alt='line' />
                         </div> 
@@ -171,9 +173,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Combative')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtyfour.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -198,9 +200,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Hesitant')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtyfive.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -222,9 +224,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Knowledgable')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fourtyeight.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -233,7 +235,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         onClick={() => handleClick('Hint: Knowledgable')} />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
-                            </>  }
+                            </>}
                         </div>
                         <div className='corner-down-right' style={{gridArea: '7/10/span 2/span 2', width: '200px', left: '60px', top: '5px'}}>
                             <img src={corner} alt='corner' />
@@ -258,9 +260,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Retrophilic')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fifty.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -279,9 +281,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Headstrong')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventysix.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -300,9 +302,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Neophilic')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.fiftyone.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -351,9 +353,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Hallucinations')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtysix.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -375,9 +377,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Taciturn')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtyseven.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -414,9 +416,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Confused')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtyeight.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -444,9 +446,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Impatient')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.sixtynine.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -465,9 +467,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Unflappable')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventy.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -495,9 +497,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Dumbfounded')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventyone.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -522,9 +524,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('InvasiveProcedures')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventytwo.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -561,9 +563,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Fickle')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventythree.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -588,9 +590,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('ANewDay')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventyfour.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -609,9 +611,9 @@ export default function DivergenceFour({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('FinallyFree')} 
                                     />
-                                    <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.seventyfive.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 

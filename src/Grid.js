@@ -32,7 +32,7 @@ export default function Grid() {
     const [tabStyleThree, setTabStyleThree] = useState({})
     const [tabStyleFour, setTabStyleFour] = useState({})
     const [clickedTab, setClickedTab] = useState('')
-
+    const [isHesitant, setIsHesitant] = useState(false)
     // export let nodes;
     // export let autoScrollTo;
     // export let addUnlockTo;
@@ -163,7 +163,7 @@ export default function Grid() {
         case 'four':
             madnessMap = (
                 <div>
-                    <DivergenceFour setCpShow={setCpShow} setActiveNode={setActiveNode} />
+                    <DivergenceFour setCpShow={setCpShow} setActiveNode={setActiveNode} setIsHesitant={setIsHesitant} />
                 </div>
             )
         break;
@@ -175,7 +175,7 @@ export default function Grid() {
     <div>
         <div>
             {cpShow ? <>
-                <ContentPlot setCpShow={setCpShow} activeNode={activeNode} />
+                <ContentPlot setCpShow={setCpShow} activeNode={activeNode} isHesitant={isHesitant} />
             </> : <></>}
             <section className="grid h-full font-archaic">
                 <div className="flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white">

@@ -29,9 +29,8 @@ export default function ({ setCpShow, setActiveNode }) {
                 <div className='flex flex-wrap w-full h-52'/>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>
-                        {/* <CommonSymptoms handleClick={handleClick} /> */}
-                        <p style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</p>
-                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}} >
+                        <div style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
+                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>
                                 <div className='checked'>
                                     <img 
@@ -97,7 +96,6 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-      
                         <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
                             {nodes && nodes.Arrogant ? <>
                                 <div className='checked'>
@@ -120,7 +118,6 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-
                         <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
                             {nodes && nodes.DelusionsOfGrandeur ? <>
                                 <div className='checked'>
@@ -143,7 +140,6 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-
                         <div className="checkbox" id='AlienistInTraining' style={{gridArea: '1/13/span 2/span 2'}}>
                             {nodes && nodes.AlienistsInTraining ? <>
                                 <div className='checked'>
@@ -154,7 +150,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.one.title}</p>
                                 </div> 
-                            </>  :   <>
+                            </>:<>
                                 <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
@@ -169,26 +165,26 @@ export default function ({ setCpShow, setActiveNode }) {
                             <img src={line} alt='line' />
                         </div> 
                         <div className="checkbox" id='Oblivious' style={{gridArea: '4/13/span 2/ span 2'}}>
-                                {nodes && nodes.Oblivious ? <>
-                                    <div className='checked'>
-                                        <img 
-                                            src={Checked} 
-                                            alt='checked'
-                                            onClick={() => handleClick('Oblivious')} 
-                                        />
-                                        <p className='symptom-found'>{ui.madnessNodes.two.title}</p>
-                                    </div> 
-                                </>  :   <>
-                                    <div className='unchecked'>
-                                        <img 
-                                            src={unchecked} 
-                                            title='No Symptoms'
-                                            alt='unchecked' 
-                                            onClick={() => handleClick('Hint: Oblivious')} />
-                                        <p className='no-symptoms'>No Symptoms</p>
-                                    </div>
-                                </>  }
-                            </div>
+                            {nodes && nodes.Oblivious ? <>
+                                <div className='checked'>
+                                    <img 
+                                        src={Checked} 
+                                        alt='checked'
+                                        onClick={() => handleClick('Oblivious')} 
+                                    />
+                                    <p>{ui.madnessNodes.two.title}</p>
+                                </div> 
+                            </>:<>
+                                <div className='unchecked'>
+                                    <img 
+                                        src={unchecked} 
+                                        title='No Symptoms'
+                                        alt='unchecked' 
+                                        onClick={() => handleClick('Hint: Oblivious')} />
+                                    <p className='no-symptoms'>No Symptoms</p>
+                                </div>
+                            </>}
+                        </div>
                         <div className="checkbox" id='NarrowMinded' style={{gridArea: '6/11/span 2/span 2', left: '50px'}}>
                             {nodes && nodes.NarrowMinded ? <>
                                 <div className='checked'>
@@ -199,8 +195,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.three.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -226,8 +222,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.four.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -258,12 +254,12 @@ export default function ({ setCpShow, setActiveNode }) {
                                     <img 
                                         src={Checked} 
                                         alt='checked'
-                                        onClick={() => handleClick('SoundofMind')} 
+                                        onClick={() => handleClick('SoundOfMind')} 
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.five.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -289,12 +285,12 @@ export default function ({ setCpShow, setActiveNode }) {
                                     <img 
                                         src={Checked} 
                                         alt='checked'
-                                        onClick={() => handleClick('SoundofBody')} 
+                                        onClick={() => handleClick('SoundOfBody')} 
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.six.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -317,8 +313,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.sixteen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -341,8 +337,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.nine.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -372,8 +368,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.ten.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -396,8 +392,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twentysix.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -420,8 +416,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twentytwo.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -444,8 +440,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.eleven.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -477,8 +473,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twelve.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -501,8 +497,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twentythree.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -525,8 +521,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twentyseven.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -549,8 +545,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.thirteen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -580,8 +576,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.fourteen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -604,8 +600,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twentyone.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -656,8 +652,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.fifteen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -687,8 +683,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.seventeen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -708,8 +704,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.eighteen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -729,8 +725,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.nineteen.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'
@@ -750,8 +746,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.twenty.title}</p>
                                 </div> 
-                            </>  :   <>
-                            <div className='unchecked'>
+                            </>:<>
+                                <div className='unchecked'>
                                     <img 
                                         src={unchecked} 
                                         title='No Symptoms'

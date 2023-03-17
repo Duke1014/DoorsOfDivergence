@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './contentplot.css'
 
 import AnInvitation from "./img/node-AnInvitation.png"
@@ -70,7 +70,7 @@ import node68 from "./img/Node 68.jpg"
 import node70 from "./img/Node 70.jpg"
 import node73 from "./img/Node 73.jpg"
 
-export default function ContentPlot({ setCpShow, activeNode }) {
+export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
 
     let nodeContent = null
 
@@ -1337,7 +1337,7 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                     <br />
                     <img src={node44} alt='Unhinged Behavior' loading='lazy' />
                     <br />
-                    <p>
+                    {/* <p>
                         To the superintendent of Hollow Grove Sanitarium: <br/><br/>
 
                         The letter accompanies the newest inmates, hereby ordered by this Court for involuntary hospitalization to your facility for a time period of indeterminate length, with their stay only to be ended when your staff and this Court can both be convinced of their return to sanity.<br/>
@@ -1346,7 +1346,7 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                         Of note is that most of the offenses are barely, if at all, remembered by the subjects, many being committed when the patient was in a fugue state. In addition, during interrogations by apprehending officers, each subject used the phrases “the one made many”, despite being detained in different times and places. I can only assume some sort of shared trauma, but have no evidence to back up this theory.<br/><br/>
 
                         This Court directs these poor souls to your care. Treat them at your best discretion.
-                    </p>
+                    </p> */}
                 </div>
             )
         break;
@@ -1448,14 +1448,17 @@ export default function ContentPlot({ setCpShow, activeNode }) {
                     <br />
                     <img src={node49} alt='Intractible' loading='lazy' />
                     <br />
-                    “Into whatsoever houses I enter, I will enter to help the sick, and I will abstain from all intentional wrong-doing and harm, especially from abusing the bodies of man or woman, bond or free. And whatsoever I shall see or hear in the course of my profession, as well as outside my profession in my intercourse with men, if it be what should not be published abroad, I will never divulge, holding such things to be holy secrets.”
+                    <blockquote>
+                        “Into whatsoever houses I enter, I will enter to help the sick, and I will abstain from all intentional wrong-doing and harm, especially from abusing the bodies of man or woman, bond or free. And whatsoever I shall see or hear in the course of my profession, as well as outside my profession in my intercourse with men, if it be what should not be published abroad, I will never divulge, holding such things to be holy secrets.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -From the Hippocratic Oath, translated from the Greek (1923 Loeb Edition)
+                    </p>
+                    <p>
+                        The man known as Jeremiah Tidwell pursued a career in medicine only after trying and failing at a number of other vocations. A slight man, he struck others as feckless and bumbling, struggling to garner respect in those around him. He enrolled in medical school in an attempt to avoid being drafted in the military ahead of the rising conflicts in Europe. Imagine his dismay when, upon graduating, he was sent to a Sanitarium dangerously close to the Western Front. <br/><br/>
 
-
-		-From the Hippocratic Oath, translated from the Greek (1923 Loeb Edition)
-
-The man known as Jeremiah Tidwell pursued a career in medicine only after trying and failing at a number of other vocations. A slight man, he struck others as feckless and bumbling, struggling to garner respect in those around him. He enrolled in medical school in an attempt to avoid being drafted in the military ahead of the rising conflicts in Europe. Imagine his dismay when, upon graduating, he was sent to a Sanitarium dangerously close to the Western Front.
-
-The staff at Hollow Grove had been told to expect a stuttering, timid new doctor, but the man who arrived on their doorstep was not what they expected. Sure, he seemed quiet and withdrawn, but with a cold, calculating presence that seemed to fill the room with danger. One could be excused for thinking that the man who boarded the boat in New York City was not the same man who stepped off in France.
+                        The staff at Hollow Grove had been told to expect a stuttering, timid new doctor, but the man who arrived on their doorstep was not what they expected. Sure, he seemed quiet and withdrawn, but with a cold, calculating presence that seemed to fill the room with danger. One could be excused for thinking that the man who boarded the boat in New York City was not the same man who stepped off in France.
+                    </p>
                 </div>
             )
         break;
@@ -1467,14 +1470,18 @@ The staff at Hollow Grove had been told to expect a stuttering, timid new doctor
                     <br />
                     <img src={node50} alt='Paranoid' loading='lazy' />
                     <br />
-                    “Little by little all Bithynia and Galatia and Thrace came running, for every one of those who returned said that he saw the god born and touched him with his hands when after a while he became great and presented a human form. Images and statues were also made, representing that holy dragon, some of bronze, some of silver, and the god was given the name of Glykon, as a consequence of the emmeter and divine order, which Alexander pronounced: I am Glykon, third degree descendant of Zeus, light for men.”
-- From Alexander, a False Prophet, by Lucian of Samosata, approximately 160 AD
+                    <blockquote>
+                        “Little by little all Bithynia and Galatia and Thrace came running, for every one of those who returned said that he saw the god born and touched him with his hands when after a while he became great and presented a human form. Images and statues were also made, representing that holy dragon, some of bronze, some of silver, and the god was given the name of Glykon, as a consequence of the emmeter and divine order, which Alexander pronounced: I am Glykon, third degree descendant of Zeus, light for men.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - From Alexander, a False Prophet, by Lucian of Samosata, approximately 160 AD
+                    </p>
+                    <p>
+                        In 135 AD, a Greek mystic and oracle known as Alexander the Paphlagonian founded a group known as a Cult of Glycon, and worshiped a deity depicted as a large snake with humanlike features. The cult gained popularity over the next twenty to thirty years, but its true purpose was known to only a few: Glycon was a fabrication of Alexander, and the real subject of their worship was the Mesopotamian demoness, Lamashtu.<br/>
+                        Soon after the Cult’s founding, Alexander learned of the existence of a large, three sided Obelisk, hidden inside the Library of Alexandria and powerful enough, he believed, to return Lamashtu to our world. Though Alexander died before his task could be completed, his followers managed to steal Obelisk and bring it to the city of Chalcedon, where they undertook a dangerous ritual. They would have succeeded, had it not been for the intervention of the Order of the Three Keys. Instead of banishing her again, they had no choice but to seal her inside the Obelisk, and keep her contained with alchemically-imbued chains. They then tossed the Obelisk into the Black Sea, hoping to keep Lamastu hidden from the world forever. They would henceforth be known as the Order of the Three Keys.<br/><br/>
 
-In 135 AD, a Greek mystic and oracle known as Alexander the Paphlagonian founded a group known as a Cult of Glycon, and worshiped a deity depicted as a large snake with humanlike features. The cult gained popularity over the next twenty to thirty years, but its true purpose was known to only a few: Glycon was a fabrication of Alexander, and the real subject of their worship was the Mesopotamian demoness, Lamashtu. 
-Soon after the Cult’s founding, Alexander learned of the existence of a large, three sided Obelisk, hidden inside the Library of Alexandria and powerful enough, he believed, to return Lamashtu to our world. Though Alexander died before his task could be completed, his followers managed to steal Obelisk and bring it to the city of Chalcedon, where they undertook a dangerous ritual. They would have succeeded, had it not been for the intervention of the Order of the Three Keys. Instead of banishing her again, they had no choice but to seal her inside the Obelisk, and keep her contained with alchemically-imbued chains. They then tossed the Obelisk into the Black Sea, hoping to keep Lamastu hidden from the world forever. They would henceforth be known as the Order of the Three Keys.
-
-But the demoness had other ideas. 
-
+                        But the demoness had other ideas. 
+                    </p>
                 </div>
             )
         break;
@@ -1501,15 +1508,18 @@ But the demoness had other ideas.
                     <br />
                     <img src={node52} alt='Dishonest' loading='lazy' />
                     <br />
-                    “A week ago our hunters were able to track down the Proctor serving as Lamashtu’s host body. We lost three in the fight, but managed to kill it. That means her essence should be weakened and split, taking up residence in the minds of those whom she made her original deal with. If so, their minds won’t be able to take the strain, and they’ll crack. Our network is ensuring any mental patients with appropriate symptoms are sent to Hollow Grove. It will be up to you to undertake the ritual, reconstitute her, and bind her to our service. We await your success.”
-
-		-Adeptus Valefor, in a message to an unnamed agent of the Children of the 
-Broken Chain
-
-Stedelin and Kolgrim were middling Theurgists at best, with no real status in the Order. However their traveling companion, a man known to history as the Comte de St. Germain, was an exceptionally talented alchemist, and in possession of something of incredible value: a map to the underwater location of the forgotten Obelisk. It was, therefore, extremely unfortunate that their caravan should be set upon by a raiding party belonging to the Khan of the Golden Horde, Jani Beg.
-Stedelin and Kolgrim were middling at pain tolerance, as well, and it did not take long before the Khan’s torturer forced them to confess the map’s importance. Obsessed with what he saw as the ultimate weapon, Jani Beg raided the port city of Kaffi, stole two boats, and had his men dredge up the Obelisk from its resting place of over a thousand years. 
-St. Germain managed to escape into the night while the Khan’s attention was divided, but the ritual to break the Chains of Chalcedon was simple, even for two middling Theurgists. Lamashtu soon walked the world again after two millenia, and seeing the rise of corruption and feudalism across Europe, decided that a cleansing was in order. She created an illness the world would later come to call the Black Plague, and used the Golden Khan’s armies to spread it, demanding that they launch infected bodies over the walls of cities he invaded.
-Stedelin and Kolgrim, for their service, were granted wisdom and power by their Nightmare Queen, and formed a new cult, the Children of the Broken Chain, devoting themselves to new knowledge, and the pursuit of power, whatever the cost.
+                    <blockquote>
+                        “A week ago our hunters were able to track down the Proctor serving as Lamashtu’s host body. We lost three in the fight, but managed to kill it. That means her essence should be weakened and split, taking up residence in the minds of those whom she made her original deal with. If so, their minds won’t be able to take the strain, and they’ll crack. Our network is ensuring any mental patients with appropriate symptoms are sent to Hollow Grove. It will be up to you to undertake the ritual, reconstitute her, and bind her to our service. We await your success.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Adeptus Valefor, in a message to an unnamed agent of the Children of the Broken Chain
+                    </p>
+                    <p>
+                        Stedelin and Kolgrim were middling Theurgists at best, with no real status in the Order. However their traveling companion, a man known to history as the Comte de St. Germain, was an exceptionally talented alchemist, and in possession of something of incredible value: a map to the underwater location of the forgotten Obelisk. It was, therefore, extremely unfortunate that their caravan should be set upon by a raiding party belonging to the Khan of the Golden Horde, Jani Beg.<br/>
+                        Stedelin and Kolgrim were middling at pain tolerance, as well, and it did not take long before the Khan’s torturer forced them to confess the map’s importance. Obsessed with what he saw as the ultimate weapon, Jani Beg raided the port city of Kaffi, stole two boats, and had his men dredge up the Obelisk from its resting place of over a thousand years. <br/>
+                        St. Germain managed to escape into the night while the Khan’s attention was divided, but the ritual to break the Chains of Chalcedon was simple, even for two middling Theurgists. Lamashtu soon walked the world again after two millenia, and seeing the rise of corruption and feudalism across Europe, decided that a cleansing was in order. She created an illness the world would later come to call the Black Plague, and used the Golden Khan’s armies to spread it, demanding that they launch infected bodies over the walls of cities he invaded.<br/>
+                        Stedelin and Kolgrim, for their service, were granted wisdom and power by their Nightmare Queen, and formed a new cult, the Children of the Broken Chain, devoting themselves to new knowledge, and the pursuit of power, whatever the cost.
+                    </p>
                 </div>
             )
         break;
@@ -1536,19 +1546,19 @@ Stedelin and Kolgrim, for their service, were granted wisdom and power by their 
                     <br />
                     <img src={node54} alt='Deceitful' loading='lazy' />
                     <br />
-                    “This vessel of earth, in this form, is called by the Philosophers their Triple Vessel, for within it, there is in the midst a Stage, or Floor, and upon that a dish or platter full of lukewarm ashes, within which is set the Philosophical Egg, a container that might hold even the most violent of souls-”
-
-
--From The Book of Hieroglyphical Figures, by Nicholas Flamel and translated by Eirenaeus Orandus, 1624
-
-It took over ten years for the Comte De St. Germain to muster up hermeticists strong enough to combat Lamashtu’s campaign of terror. The Order of the Three Keys had long since scattered, weakened by the Great Dissolution of 363 AD and hadn’t attempted to centralize their power since. The organization only existed in small clusters, very few evening knowing of the other’s existence. St. Germain traveled throughout the world, attempting to rejoin the broken pieces of the Order, and finally crossed paths with a man by the name of Nicholas Flamel. 
-Flamel was not a member of the Order, but was still a supremely talented alchemist, with skill that put even St. Germain to shame. He also had connections all over Europe. Within months, he had managed to put together a group of Hermeticists strong enough to stand up to Lamashtu.
-The banishment ritual was grueling, and more than a few lost their lives in the struggle, but by the end, the demoness found herself bound within the Obelisk once again, and a divinator named Jacobina Felice was charged with hiding the the Obelisk where no one else could find it.
-Saddened by his role in Lamashtu’s release, St. Germain lamented there was not time enough to make up for his mistakes. Hearing this, Flamel produced a vial of red liquid, and insisted St. Germain take a single sip, then remarked that perhaps he could find the time after all. Flamel left, never crossing paths with the Order again.
-
-
-Historical accounts state that a man called the Comte de St. Germain died in 1784. 
-
+                    <blockquote>
+                        “This vessel of earth, in this form, is called by the Philosophers their Triple Vessel, for within it, there is in the midst a Stage, or Floor, and upon that a dish or platter full of lukewarm ashes, within which is set the Philosophical Egg, a container that might hold even the most violent of souls-”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -From The Book of Hieroglyphical Figures, by Nicholas Flamel and translated by Eirenaeus Orandus, 1624
+                    </p>
+                    <p>
+                        It took over ten years for the Comte De St. Germain to muster up hermeticists strong enough to combat Lamashtu’s campaign of terror. The Order of the Three Keys had long since scattered, weakened by the Great Dissolution of 363 AD and hadn’t attempted to centralize their power since. The organization only existed in small clusters, very few evening knowing of the other’s existence. St. Germain traveled throughout the world, attempting to rejoin the broken pieces of the Order, and finally crossed paths with a man by the name of Nicholas Flamel. <br/>
+                        Flamel was not a member of the Order, but was still a supremely talented alchemist, with skill that put even St. Germain to shame. He also had connections all over Europe. Within months, he had managed to put together a group of Hermeticists strong enough to stand up to Lamashtu.<br/>
+                        The banishment ritual was grueling, and more than a few lost their lives in the struggle, but by the end, the demoness found herself bound within the Obelisk once again, and a divinator named Jacobina Felice was charged with hiding the the Obelisk where no one else could find it.<br/>
+                        Saddened by his role in Lamashtu’s release, St. Germain lamented there was not time enough to make up for his mistakes. Hearing this, Flamel produced a vial of red liquid, and insisted St. Germain take a single sip, then remarked that perhaps he could find the time after all. Flamel left, never crossing paths with the Order again.<br/>
+                        Historical accounts state that a man called the Comte de St. Germain died in 1784. 
+                    </p>
                 </div>
             )
         break;
@@ -1575,21 +1585,25 @@ Historical accounts state that a man called the Comte de St. Germain died in 178
                     <br />
                     <img src={node56} alt='Uneasy' loading='lazy' />
                     <br />
-                    “Daughter Vepar- 
-Know, first, that the idea of writing this letter fills me with loathing. But it is nothing compared to the need I have for your cabal’s power. I have a ritual I must undertake, one that requires an artefact capable of harnessing energy from beyond the veil. Specifically, I seek a substance known as Akkadian Cobalt- I know your organization is in possession of a large amount. 
+                    <blockquote>
+                        “Daughter Vepar- <br/>
+                        Know, first, that the idea of writing this letter fills me with loathing. But it is nothing compared to the need I have for your cabal’s power. I have a ritual I must undertake, one that requires an artefact capable of harnessing energy from beyond the veil. Specifically, I seek a substance known as Akkadian Cobalt- I know your organization is in possession of a large amount. <br/><br/>
 
-Therefore, I regretfully request your assistance, as my own peers have denied me. I know not what I can offer in recompense, save for this: I am sure my attempts to pierce through whatever it is that separate our world from the world beyond will result in data you will desperately want for whatever designs you may have. I will offer the results of my experiments freely, you must simply give me use of the Obelisk until my needs are sated.”
+                        Therefore, I regretfully request your assistance, as my own peers have denied me. I know not what I can offer in recompense, save for this: I am sure my attempts to pierce through whatever it is that separate our world from the world beyond will result in data you will desperately want for whatever designs you may have. I will offer the results of my experiments freely, you must simply give me use of the Obelisk until my needs are sated.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Edmond Cavanaugh, a letter to the Children of the Broken Chain, 1897.
+                    </p>
+                    <p>
+                        Unbeknownst to most, the Divinator Jacobina Felice hid the Obelisk under a catacomb in the city of Sevastopol, intending for the knowledge of its whereabouts to die with her. However, in her final months, she was racked with doubts- what if this artefact was needed by her Order in the future? Her visions had failed years ago, and she was no longer sure of her predictions. In a fit of weakness, she left clues that, if followed, would lead back to the Obelisk’s hiding place.<br/><br/>
 
-		-Edmond Cavanaugh, a letter to the Children of the Broken Chain, 1897.
+                        Unfortunately for Felice, it was the Children of the Broken Chain that would find those clues. But by the time they located the Obelisk, it lay buried under a bustling city, and excavating Sevastopol was not something done in secret. So the Children began whispering in the ears of the right people, stoking conflict, fanning the flames until the world heard the opening salvos of the Crimean War.<br/><br/>
 
-Unbeknownst to most, the Divinator Jacobina Felice hid the Obelisk under a catacomb in the city of Sevastopol, intending for the knowledge of its whereabouts to die with her. However, in her final months, she was racked with doubts- what if this artefact was needed by her Order in the future? Her visions had failed years ago, and she was no longer sure of her predictions. In a fit of weakness, she left clues that, if followed, would lead back to the Obelisk’s hiding place.
+                        The chaos of the siege of Sevastopol served as a perfect cover to enter the city, find the Obelisk, and remove it without being noticed. The naval bombardments and trench digging did have the excavation for them, and the ill-fated and infamous Charge of the Light Brigade (itself a credit to the string-pulling abilities of the Children) ensured that there were no English troops around to witness the Obelisk being pulled from the Earth.<br/><br/>
 
+                        The only problem, of course, was that the Children had long lost the knowledge of how to release Lamashtu from the Obelisk again. But perhaps they could trick someone else into unwittingly doing it for them. Someone willing to direct vast amounts of power and arcane energies into the Obelisk… someone desperate, with nothing left to lose…
+                    </p>
 
-Unfortunately for Felice, it was the Children of the Broken Chain that would find those clues. But by the time they located the Obelisk, it lay buried under a bustling city, and excavating Sevastopol was not something done in secret. So the Children began whispering in the ears of the right people, stoking conflict, fanning the flames until the world heard the opening salvos of the Crimean War.
-
-The chaos of the siege of Sevastopol served as a perfect cover to enter the city, find the Obelisk, and remove it without being noticed. The naval bombardments and trench digging did have the excavation for them, and the ill-fated and infamous Charge of the Light Brigade (itself a credit to the string-pulling abilities of the Children) ensured that there were no English troops around to witness the Obelisk being pulled from the Earth.
-
-The only problem, of course, was that the Children had long lost the knowledge of how to release Lamashtu from the Obelisk again. But perhaps they could trick someone else into unwittingly doing it for them. Someone willing to direct vast amounts of power and arcane energies into the Obelisk… someone desperate, with nothing left to lose…
                 </div>
             )
         break;
@@ -1601,17 +1615,19 @@ The only problem, of course, was that the Children had long lost the knowledge o
                     <br />
                     <img src={node57} alt='Opportunistic' loading='lazy' />
                     <br />
-                    “She who sees beyond the curves of time. She who peers through the keyhole of fate. She is the arbiter of balance, the cleansing flame in a forest of chaos and corruption. Daughter of Anu, She of Seven Names, The Hand the Holds the Oar. Guide us. Lead us. Purge Us. Free Us.”
+                    <blockquote>
+                        “She who sees beyond the curves of time. She who peers through the keyhole of fate. She is the arbiter of balance, the cleansing flame in a forest of chaos and corruption. Daughter of Anu, She of Seven Names, The Hand the Holds the Oar. Guide us. Lead us. Purge Us. Free Us.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - “Devotion to the Nightmare Queen,” excerpt from an unnamed text found on the body of a suspected Heretic, circa 1765.
+                    </p>
+                    <p>
+                        There is a reason Lamashtu has had so many devoted followers over the millenia, and why so many cults spring up to worship her. These people are not inherently evil, but they are filled with the sense that Something is Not Right. The world is on a collision course with disaster, and only something with extreme power can divert its trajectory. <br/><br/>
 
+                        Throughout history, cults connected to Lamashtu have written of a coming calamity, one that could swallow up the world, and of Lamashtu’s singular ability to prevent it. Her followers believe all her terrible acts are a necessary evil, clearing the bad seeds of humanity before they have a chance to manifest their chaos. And there are some who believe this calamity has already begun.<br/><br/>
 
-- “Devotion to the Nightmare Queen,” excerpt from an unnamed text found on the body of a suspected Heretic, circa 1765.
-
-There is a reason Lamashtu has had so many devoted followers over the millenia, and why so many cults spring up to worship her. These people are not inherently evil, but they are filled with the sense that Something is Not Right. The world is on a collision course with disaster, and only something with extreme power can divert its trajectory. 
-
-Throughout history, cults connected to Lamashtu have written of a coming calamity, one that could swallow up the world, and of Lamashtu’s singular ability to prevent it. Her followers believe all her terrible acts are a necessary evil, clearing the bad seeds of humanity before they have a chance to manifest their chaos. And there are some who believe this calamity has already begun.
-
-But every writing is frustratingly vague about the nature of this disaster- is it something mundane as a force of nature? Something extrasolar? Or something even bigger? Is existence itself at risk? Is time? 
-
+                        But every writing is frustratingly vague about the nature of this disaster- is it something mundane as a force of nature? Something extrasolar? Or something even bigger? Is existence itself at risk? Is time?
+                    </p>
                 </div>
             )
         break;
@@ -1653,18 +1669,19 @@ But every writing is frustratingly vague about the nature of this disaster- is i
                     <br />
                     <img src={node60} img='A Lead' loading='lazy' />
                     <br />
-                    Proctors-
+                    <blockquote>
+                        Proctors-<br/><br/>
 
-We are dispatching you to investigate Hollow Grove Sanitarium. According to our informants, the patients are suffering from a sudden outbreak of psychosis and mass delusions. Many have been hearing voices. One escaped patient, when detained by police, would not speak, instead writing the name E. Cavanaugh over and over.
+                        We are dispatching you to investigate Hollow Grove Sanitarium. According to our informants, the patients are suffering from a sudden outbreak of psychosis and mass delusions. Many have been hearing voices. One escaped patient, when detained by police, would not speak, instead writing the name E. Cavanaugh over and over.<br/><br/>
 
+                        Upon further investigation, we discovered Edmond has taken up residence there as a staff doctor. This is the closest we’ve gotten to him in almost 20 years. Proceed with haste, but do not alert him.<br/><br/>
 
-Upon further investigation, we discovered Edmond has taken up residence there as a staff doctor. This is the closest we’ve gotten to him in almost 20 years. Proceed with haste, but do not alert him.
-
-
-Present this letter to the staff when you arrive. This seal will identify you as Proctors of the Order, with all the authority that afford you. The on-call alienist, Dr. Tidwell, will give you any assistance you require. If he resists, kindly remind him about the incident at Edinburgh Hospital, and how unfortunate it would be if news of his involvement were made public. 
-
-						-Elder Lockyear
+                        Present this letter to the staff when you arrive. This seal will identify you as Proctors of the Order, with all the authority that afford you. The on-call alienist, Dr. Tidwell, will give you any assistance you require. If he resists, kindly remind him about the incident at Edinburgh Hospital, and how unfortunate it would be if news of his involvement were made public. 
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Elder Lockyear<br/>
 						Theurgist of the Second Key
+                    </p>
                 </div>
             )
         break;
@@ -1691,23 +1708,29 @@ Present this letter to the staff when you arrive. This seal will identify you as
                     <br />
                     <img src={node62} alt='Hesitant' loading='lazy' />
                     <br />
-                    “...all the symptoms of a virus. It’s almost like it's evolving.”
-“How so?”
-“Every treatment just gets absorbed into the fantasy. The projective tests, the ECT, they just get reinterpreted and introduced into the delusion.”
-“But you specified a virus. Do you mean-”
-“It’s spreading. Like their madness is contagious.”
-
--Excerpt from audio recording between Dr. Tidwell and an undisclosed Hollow Grove staff member, year unknown.
-
-The Royal Edinburgh Hospital has a rich and storied history, dating back to its founding in 1807. It was originally established as the Edinburgh Lunatic Asylum, a place where*(hfkjhsf8&*
-
-alsuer)*hf1965, Edinburgh University was at the forefront of a series of U.S. Government-backed experiments in quantum physics and particle acceleration. However, tragedy struck(yALKHkjdf(
-
-lks,hlkhejhospital's past is not without controversy. In 1917, a number of patients mysteriously disappeared from the hospital, and their records would later be found to be missing. This led to rumors of a cover-upLakhflkheALKH
-
-qwrwqerwhen a catastrophic explosion in the accelerator killed 23 people and left several others in a coma. Further investigation uncovered the use of unapproved, previously sealed materials that may have lead toklashfasd 
-airjlarjwerp0w38rsome speculating that the missing patients had been the subjects of unethical medical experimentsalkhlFSkljlfhFLHyuieyuihlhERROR LOADING JAVASCRIPT
-
+                    <blockquote>
+                        “...all the symptoms of a virus. It’s almost like it's evolving.”<br/>
+                        “How so?”<br/>
+                        “Every treatment just gets absorbed into the fantasy. The projective tests, the ECT, they just get reinterpreted and introduced into the delusion.”<br/>
+                        “But you specified a virus. Do you mean-”<br/>
+                        “It’s spreading. Like their madness is contagious.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from audio recording between Dr. Tidwell and an undisclosed Hollow Grove staff member, year unknown.
+                    </p>   
+                    <p>
+                        The Royal Edinburgh Hospital has a rich and storied history, dating back to its founding in 1807. It was originally established as the Edinburgh Lunatic Asylum, a place where*(hfkjhsf8&*<br/>
+                    </p>
+                    <p>
+                        alsuer)*hf1965, Edinburgh University was at the forefront of a series of U.S. Government-backed experiments in quantum physics and particle acceleration. However, tragedy struck(yALKHkjdf(<br/>
+                    </p>
+                    <div className='focus-within:text-opacity-50'>
+                        lks,hlkhejhospital's past is not without controversy. In 1917, a number of patients mysteriously disappeared from the hospital, and their records would later be found to be missing. This led to rumors of a cover-upLakhflkheALKH
+                    </div>
+                    <div>
+                        qwrwqerwhen a catastrophic explosion in the accelerator killed 23 people and left several others in a coma. Further investigation uncovered the use of unapproved, previously sealed materials that may have lead toklashfasd <br/>
+                        airjlarjwerp0w38rsome speculating that the missing patients had been the subjects of unethical medical experimentsalkhlFSkljlfhFLHyuieyuihlh<p style={{textDecorationColor: 'red'}}>ERROR LOADING JAVASCRIPT</p>
+                    </div>
                 </div>
             )
         break;
@@ -1719,7 +1742,6 @@ airjlarjwerp0w38rsome speculating that the missing patients had been the subject
                     <br />
                     <img src={node63} alt='Hallucinations' loading='lazy' />
                     <br />
-                    
                 </div>
             )
         break;
@@ -1731,17 +1753,18 @@ airjlarjwerp0w38rsome speculating that the missing patients had been the subject
                     <br />
                     <img src={node64} alt='Taciturn' loading='lazy' />
                     <br />
-                    “-more about these shared delusions? I noticed the records were sparse.”
-“I’m just not sure where to start. There’s an incredibly rich lore here, and depending on the session, they’ll talk about events from nearly 5000 years.”
-“5000?”
-“Yes. An esoteric order that has roots in Ancient Greece, Babylon, and Egypt. A cadre of mask wearing demon hunters, alchemists, people who see the future-”
-“Well, we’ve heard stories like this before.”
-“Of course. But the scope of it, the breadth and depth of this invented world, let alone the fact that each of them share it, down to the most minute details. One could almost be forgiven if they, even just for a second, allowed themself to believe-”
-“I’m going to stop you there, Tidwell. This kind of talk is dangerous. You must not risk the patients hearing you give their false realities and kind of legitimacy.”
-
-
--Excerpt from audio recording between Dr. Tidwell and superintendent of Hollow Grove, year unknown.
-
+                    <blockquote>
+                        “-more about these shared delusions? I noticed the records were sparse.”<br/>
+                        “I’m just not sure where to start. There’s an incredibly rich lore here, and depending on the session, they’ll talk about events from nearly 5000 years.”<br/>
+                        “5000?”<br/>
+                        “Yes. An esoteric order that has roots in Ancient Greece, Babylon, and Egypt. A cadre of mask wearing demon hunters, alchemists, people who see the future-”<br/>
+                        “Well, we’ve heard stories like this before.”<br/>
+                        “Of course. But the scope of it, the breadth and depth of this invented world, let alone the fact that each of them share it, down to the most minute details. One could almost be forgiven if they, even just for a second, allowed themself to believe-”<br/>
+                        “I’m going to stop you there, Tidwell. This kind of talk is dangerous. You must not risk the patients hearing you give their false realities and kind of legitimacy.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from audio recording between Dr. Tidwell and superintendent of Hollow Grove, year unknown.
+                    </p>
                 </div>
             )
         break;
@@ -1765,18 +1788,21 @@ airjlarjwerp0w38rsome speculating that the missing patients had been the subject
                     <br />
                     <img src={node66} alt='Impatient' loading='lazy' />
                     <br />
-                    “And I beheld a great schism, a fracture in the fabric of space and time. It was as if a thousand million pasts and futures coalesced in a single moment, and I was but a mere witness to its enormity. The infinite realities of the universe were laid bare before me, stretching out into the vastness of the void, an endless expanse of what could have been and what might never be. 
+                    <blockquote>
+                        “And I beheld a great schism, a fracture in the fabric of space and time. It was as if a thousand million pasts and futures coalesced in a single moment, and I was but a mere witness to its enormity. The infinite realities of the universe were laid bare before me, stretching out into the vastness of the void, an endless expanse of what could have been and what might never be.<br/><br/> 
 
-I knew that my mortal mind could not comprehend the fullness of its meaning. For who among us can truly grasp the immensity of the cosmos, the uncountable threads of fate that bind us all together? And yet, there in the midst of it all, I saw a shadowy silhouette, a dark and ominous presence at the center of the fracture, staring out at me with cold and unfeeling eyes.”
+                        I knew that my mortal mind could not comprehend the fullness of its meaning. For who among us can truly grasp the immensity of the cosmos, the uncountable threads of fate that bind us all together? And yet, there in the midst of it all, I saw a shadowy silhouette, a dark and ominous presence at the center of the fracture, staring out at me with cold and unfeeling eyes.”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - Recovered Testimony of Proctor Ananke, from the collection of the Order’s Apocrypha. Year of origin unknown.
+                    </p>
+                    <p>
+                        Long have the initiated known of the Three Hermetic Keys: Theurgy, with its focus on the past; Alchemy, the study of the present nature of things; and Divination, the viewing and prediction of the future. Those who travel in these circles also know of the “Fourth Key”, Goetia: forbidden by some, it is the magic of the void outside our reality, and its study focuses on entropy and communication with the entities that exist outside the walls of our timeline.<br/><br/>
 
+                        But there has long been rumored the existence of a “Fifth Key”: never given a name, for fear that it might solidify it beyond the speculative. Those who suspect its existence refer to it as “Reality magic”, the ability to see beyond our own timeline, beyond the void that surrounds out world, and into the timelines of the infinite other realities that exist beyond the space between spaces.<br/><br/>
 
-- Recovered Testimony of Proctor Ananke, from the collection of the Order’s Apocrypha. Year of origin unknown.
-
-Long have the initiated known of the Three Hermetic Keys: Theurgy, with its focus on the past; Alchemy, the study of the present nature of things; and Divination, the viewing and prediction of the future. Those who travel in these circles also know of the “Fourth Key”, Goetia: forbidden by some, it is the magic of the void outside our reality, and its study focuses on entropy and communication with the entities that exist outside the walls of our timeline.
-
-But there has long been rumored the existence of a “Fifth Key”: never given a name, for fear that it might solidify it beyond the speculative. Those who suspect its existence refer to it as “Reality magic”, the ability to see beyond our own timeline, beyond the void that surrounds out world, and into the timelines of the infinite other realities that exist beyond the space between spaces.
-
-What if one could observe these other realities? Could contact them, bring things from one reality to another? These whispered questions are quickly silenced, however, as the people who know about such things also know that some threads are better left unpulled. 
+                        What if one could observe these other realities? Could contact them, bring things from one reality to another? These whispered questions are quickly silenced, however, as the people who know about such things also know that some threads are better left unpulled. 
+                    </p>
                 </div>
             )
         break;
@@ -1788,14 +1814,16 @@ What if one could observe these other realities? Could contact them, bring thing
                     <br />
                     <img src={node67} alt='Unflappable' loading='lazy' />
                     <br />
-                    “I don’t have weeks, Ramey! The Engine needs another Plutonium core if I’m expected to finish these rounds of tests. … The regulations are purely political, you know that. There has to be another source for… what? I thought it was destroyed! … No, no, no, it’s fine. do what you need to do, just get it to me. And keep it quiet. If word got out, people might think-”
-
-
--Excerpt from phone conversation between Edmond Cavanaugh, Director of Project Eveline, and James T. Ramey, Vice Chairman of the Atomic Energy Commision, 1964
-
-
-There are few objects in modern history that can truly be said to be cursed. The plutonium sphere known as the “Demon Core” certainly fits the bill. Originally part of a third atomic bomb scheduled for use on Japan, the war’s end changed its destiny. Instead, it was used in multiple experiments on radioactivity, but in not one but two separate trials, an accident exposed scientists to lethal doses of radiation. The more superstitious among the scientific community began to think that the core was trying to make up for lives it was owed.
-Officially, the core was melted down after the second incident, but a select few knew the truth: the core was kept in deep storage, off the books, in case another use could be found. Twenty years later, it disappeared from its storage facility.  
+                    <blockquote>
+                        “I don’t have weeks, Ramey! The Engine needs another Plutonium core if I’m expected to finish these rounds of tests. … The regulations are purely political, you know that. There has to be another source for… what? I thought it was destroyed! … No, no, no, it’s fine. do what you need to do, just get it to me. And keep it quiet. If word got out, people might think-”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - Excerpt from phone conversation between Edmond Cavanaugh, Director of Project Eveline, and James T. Ramey, Vice Chairman of the Atomic Energy Commision, 1964
+                    </p>
+                    <p>
+                        There are few objects in modern history that can truly be said to be cursed. The plutonium sphere known as the “Demon Core” certainly fits the bill. Originally part of a third atomic bomb scheduled for use on Japan, the war’s end changed its destiny. Instead, it was used in multiple experiments on radioactivity, but in not one but two separate trials, an accident exposed scientists to lethal doses of radiation. The more superstitious among the scientific community began to think that the core was trying to make up for lives it was owed.<br/>
+                        Officially, the core was melted down after the second incident, but a select few knew the truth: the core was kept in deep storage, off the books, in case another use could be found. Twenty years later, it disappeared from its storage facility. 
+                    </p>
                 </div>
             )
         break;
@@ -2189,7 +2217,7 @@ Officially, the core was melted down after the second incident, but a select few
                     <button
                         className="p-2 border border-black hover:bg-black hover:text-white"
                         onClick={() => setCpShow(false)}
-                        >Close</button>
+                    >{isHesitant ? "Open" : "Close"}</button>
                 </div>
             </div>
         </div>

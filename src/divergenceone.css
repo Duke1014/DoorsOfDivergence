@@ -43,7 +43,7 @@ body .madness-grid {
     place-items: center;
 } */
 
-.no-symptoms {
+.no-symptoms, .symptom-found {
     /* justify-content: center; */
     text-align: center !important; 
     text-indent: 0% !important;
