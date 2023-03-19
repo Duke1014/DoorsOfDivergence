@@ -1350,13 +1350,13 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                 </div>
             )
         break;
-        case 'Knowledgable':
+        case 'Knowledgeable':
             nodeContent = (
                 <div>
-                    <h1 className="my-4 text-4xl font-archaic">Knowledgable</h1>
+                    <h1 className="my-4 text-4xl font-archaic">Knowledgeable</h1>
                     <p className="text-lg">Reminded Tidwell of the Swiss alienist's name.</p>
                     <br />
-                    <img src={node45} alt='Knowledgable' loading='lazy' />
+                    <img src={node45} alt='Knowledgeable' loading='lazy' />
                     <br />
                     <blockquote>
                         “Almost all subjects regard the experiment as a test of imagination. This conception is so general that it becomes, practically, a condition of the experiment. Nevertheless, the interpretation of the figures actually has little to do with imagination, and it is unnecessary to consider imagination a prerequisite....The interpretation of the chance forms falls in the field of perception and apperception rather than imagination.”
@@ -2071,7 +2071,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                 </div>
             )
         break;
-        case 'Hint: Knowledgable':
+        case 'Hint: Knowledgeable':
             nodeContent = (
                 <div>
                     Sometimes it's good to show off what you know.

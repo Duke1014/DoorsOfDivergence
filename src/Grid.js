@@ -650,26 +650,59 @@ export default function Grid() {
                 </h1>
                 {/* <div className='w-full min-h-10' /> */}
                 <div className='flex flex-wrap justify-between w-full px-8 pt-8 text-4xl madness-tab-container'>
-                    <a
-                        className='text-3xl madness-tab'
-                        onClick={() => handleTab('one')}     
-                        style={tabStyleOne}   
-                    >Elixirs and Alienists</a>
-                    <a 
-                        className='text-3xl madness-tab'
-                        onClick={() => handleTab('two')}     
-                        style={tabStyleTwo}   
-                    >On the Bleeding Edge</a>
-                    <a 
-                        className='text-3xl madness-tab'
-                        onClick={() => handleTab('three')}   
-                        style={tabStyleThree}
-                    >Inner Demons</a>
-                    <a 
-                        className='text-3xl madness-tab'
-                        onClick={() => handleTab('four')}    
-                        style={tabStyleFour}  
-                    >A Voice in the Veil</a>
+                    {nodes.OutWithABang || nodes.AlienistInTraining ? <>
+                        <span
+                            className='text-3xl madness-tab'
+                            onClick={() => handleTab('one')}     
+                            style={tabStyleOne}   
+                        >Elixirs and Alienists</span>
+                    </>:<>
+                        <span
+                            className='text-3xl redacted'
+                            // onClick={() => handleTab('one')}     
+                            style={tabStyleOne}
+                        >REDACTED</span>
+                    </>}
+                    {nodes.DeathDeferred || nodes.MissionOfMercy ? <>
+                        <span 
+                            className='text-3xl madness-tab'
+                            onClick={() => handleTab('two')}     
+                            style={tabStyleTwo}   
+                        >On the Bleeding Edge</span>
+                    </>:<>
+                        <span
+                            className='text-3xl redacted'
+                            // onClick={() => handleTab('one')}     
+                            style={tabStyleTwo}
+                        >REDACTED</span>
+                    </>}
+                    {nodes.Misled || nodes.UnhingedBehavior ? <>
+                        <span
+                            className='text-3xl madness-tab'
+                            onClick={() => handleTab('three')}   
+                            style={tabStyleThree}
+                        >Inner Demons</span>
+                    </>:<>
+                        <span
+                            className='text-3xl redacted'
+                            // onClick={() => handleTab('one')}     
+                            style={tabStyleThree}
+                        >REDACTED</span>
+                    </>}
+                    {nodes.BetterSafeThanSorry || nodes.ALead ? <>
+                        <span 
+                            className='text-3xl madness-tab'
+                            onClick={() => handleTab('four')}    
+                            style={tabStyleFour}  
+                        >A Voice in the Veil</span>
+                    </>:<>
+                        <span
+                            className='text-3xl redacted'
+                            // onClick={() => handleTab('one')}     
+                            style={tabStyleFour}
+                        >REDACTED</span>
+                    </>}
+                    
                 </div>
                 
                 {/* <h3 className="max-w-xl px-8 text-xl font-light font-family:'Typewriter','Courier New', Courier, monospace">

@@ -216,13 +216,13 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                         <div className="vertical-line-dash" style={{gridArea: '6/13/span 2/span 2', top: '-45px'}}>
                             <img src={line} alt='line' />
                         </div> 
-                        <div className="checkbox" id='Knowledgable' style={{gridArea: '5/17/span 2/span 2', top: '30px'}}>
-                            {nodes && nodes.Knowledgable ? <>
+                        <div className="checkbox" id='Knowledgeable' style={{gridArea: '5/17/span 2/span 2', top: '30px'}}>
+                            {nodes && nodes.Knowledgeable ? <>
                                 <div className='checked'>
                                     <img 
                                         src={Checked} 
                                         alt='checked'
-                                        onClick={() => handleClick('Knowledgable')} 
+                                        onClick={() => handleClick('Knowledgeable')} 
                                     />
                                     <p className='symptom-found'>{ui.madnessNodes.fourtyeight.title}</p>
                                 </div> 
@@ -232,7 +232,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                         src={unchecked} 
                                         title='No Symptoms'
                                         alt='unchecked' 
-                                        onClick={() => handleClick('Hint: Knowledgable')} />
+                                        onClick={() => handleClick('Hint: Knowledgeable')} />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
                             </>}

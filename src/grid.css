@@ -63,7 +63,9 @@
     /* white-space: nowrap; */
 }
 
-.madness-tab {
+.madness-tab 
+/* .redacted  */
+{
     display: block;
     /* float: left; */
     padding: 30px;
@@ -71,11 +73,33 @@
     text-align: center;
     text-indent: 0%;
     background-color: rgba(231, 214, 183, 0.336);
-    border: 1px solid black;
+    border: 1px solid black; 
     border-top-right-radius: 40% 20%;
     border-top-left-radius: 40% 20%;
-    cursor: pointer;
     font-family: CFRemingtonTypewriter-Regul;
+}
+
+.redacted {
+    display: block;
+    /* float: left; */
+    padding: 30px;
+    width: 24%;
+    text-align: center;
+    text-indent: 0%;
+    background-color: rgba(231, 214, 183, 0.336);
+    border: 1px solid black; 
+    border-top-right-radius: 40% 20%;
+    border-top-left-radius: 40% 20%;
+    font-family: CFRemingtonTypewriter-Regul;
+}
+
+
+.madness-tab {
+    cursor: pointer;
+}
+
+.redacted {
+    color: red;
 }
 
 @font-face {
