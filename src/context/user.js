@@ -13,15 +13,17 @@ import {
     getFirestore,
 //     collection,
 //     addDoc,
-//     updateDoc,
+    updateDoc,
     doc,
     setDoc,
     getDoc,
     onSnapshot,
+    // arrayUnion,
 } from 'firebase/firestore';
 
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebaseConfig';
+// import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
 const UserContext = React.createContext()
 const app = initializeApp(firebaseConfig);
@@ -38,7 +40,7 @@ function UserProvider({ children }) {
     const [loader, setLoader] = useState(true)
     const [isAdmin, setIsAdmin] = useState(true)    
 
-    const [message, setMessage] = useState('')
+    // const [message, setMessage] = useState('')
     
     //     if (errorCode.includes('auth/invalid-value-')) {
     //         setError("Sorry, a user with this email could not be found. Please check for typos or sign up for an account.")
@@ -183,6 +185,18 @@ function UserProvider({ children }) {
         startListener(authUID);
     }
 
+    async function addNode(node) {
+        const noderef = doc(db, 'users', user.uid)
+        await updateDoc(
+            noderef,
+            {
+                ['nodes.' + node]: true,
+                lastNode: node,
+            },
+            { merge: true }
+        )
+    }
+
     async function checkAdmin(authUID) {
         // console.log(authUID);
         setLoader(true)
@@ -216,12 +230,40 @@ function UserProvider({ children }) {
     }
 
     async function handleEnterCode(e) {
-        const docRef = doc(db, 'codes', 'heresy')
+        const docRef = doc(db, 'codes', 'heresy')  
         const codesSnap = await getDoc(docRef)
-        // console.log(codesSnap)
         if (codesSnap) {
-            // console.log(codesSnap);
             let snapData = codesSnap.data()
+            const matchingCode = Object.keys(snapData).find(key => key.toLowerCase() === e.toLowerCase())
+            // debugger
+            if (matchingCode) {
+                console.log('EEEEY');
+                // debugger
+                snapData[matchingCode].forEach((element) => {
+                    addNode(element)
+                })
+
+
+                // let newNodes = [...nodes, snapData[e]]
+                // setNodes(newNodes)
+                //////////////
+                // snapData[e].forEach((node) => {
+                //     setNodes(...nodes, node)
+                // })
+            } else {
+                console.log('womp womp')
+            }
+        } else {
+            console.log('Ahm...this code is not valid... Please check and try again!');
+        }
+    }
+     
+            // setMessage('Ahm...this code is not valid... Please check and try again!')
+                  
+        // console.log(codesSnap)
+        // if (codesSnap) {
+            // console.log(codesSnap);
+            
             // console.log(snapData);
             // console.log('code: ', e.detail);
             // debugger;
@@ -229,29 +271,26 @@ function UserProvider({ children }) {
             // console.log(prop);
             // console.warn(snapData[prop]);
             // console.log(Object.keys(snapData));
-            if (snapData[e]) {
-                // let unlock;
-                console.log('EEEEY');
-                // console.warn(snapData[prop]);
-                // snapData[prop].forEach((element) => {
-                //     setNodes(element);
-                //     unlock = element;
-                //     // console.log(element);
-                // });
-                // setUnlock(unlock);
-            } else {
-                // setMessage('Ahm...this code is not valid... Please check and try again!')
-                console.log('Ahm...this code is not valid... Please check and try again!');
-            }
-        } else {
-            console.log('No such document!');
-        }
+            
+            // let unlock;
+            
+            // console.warn(snapData[prop]);
+            // snapData[prop].forEach((element) => {
+            //     setNodes(element);
+            //     unlock = element;
+            //     // console.log(element);
+            // });
+            // setUnlock(unlock);
+            
+        // } else {
+        //     console.log('No such document!');
+        // }
 
         // console.log('code: ', e.detail);
-    }
+    
 
     return (
-        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin, message}}>
+        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin}}>
             {children}
         </UserContext.Provider>
     )

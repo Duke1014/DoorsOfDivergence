@@ -46,6 +46,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                         src={unchecked} 
                                         title='No Symptoms'
                                         alt='unchecked'
+                                        onClick={() => handleClick('Hint: Narcoleptic')}
                                     />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
@@ -67,6 +68,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                         src={unchecked} 
                                         title='No Symptoms'
                                         alt='unchecked'
+                                        onClick={() => handleClick("Hint: Narcissistic")}
                                     />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
@@ -88,6 +90,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                         src={unchecked} 
                                         title='No Symptoms'
                                         alt='unchecked'
+                                        onClick={() => handleClick('Hint: Obstinate')}
                                     />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
@@ -109,6 +112,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                         src={unchecked} 
                                         title='No Symptoms'
                                         alt='unchecked'
+                                        onClick={() => handleClick('Hint: Arrogant')}
                                     />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
@@ -130,6 +134,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                         src={unchecked} 
                                         title='No Symptoms'
                                         alt='unchecked'
+                                        onClick={() => handleClick('Hint: Delusions Of Grandeur')}
                                     />
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>

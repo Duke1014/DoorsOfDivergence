@@ -7,7 +7,7 @@ import { UserContext } from './context/user'
 export default function EnterCode({setShowCodePrompt}) {
 
     const [code, setCode] = useState('')
-    const { message, handleEnterCode } = useContext(UserContext)
+    const { handleEnterCode } = useContext(UserContext)
 
     // const wrapStyle = {
     //     backgroundColor: '#d2b79e',
@@ -53,7 +53,7 @@ export default function EnterCode({setShowCodePrompt}) {
             }}
         />
         <br />
-        {message}
+        {/* {message} */}
     </div>
   )
 }

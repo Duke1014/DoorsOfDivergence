@@ -24,7 +24,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
             <div className='flex flex-wrap w-full h-52'/>
             <div className='grid place-content-center'>
                 <div className='relative grid w-full h-full mx-auto madness-grid'>
-                    <div style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
+                    <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
                     <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                         {nodes && nodes.Narcoleptic ? <>
                             <div className='checked'>
@@ -41,6 +41,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                                     src={unchecked} 
                                     title='No Symptoms'
                                     alt='unchecked'
+                                    onClick={() => handleClick('Hint: Narcoleptic')}
                                 />
                                 <p className='no-symptoms'>No Symptoms</p>
                             </div>
@@ -62,6 +63,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                                     src={unchecked} 
                                     title='No Symptoms'
                                     alt='unchecked'
+                                    onClick={() => handleClick("Hint: Narcissistic")}
                                 />
                                 <p className='no-symptoms'>No Symptoms</p>
                             </div>
@@ -83,6 +85,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                                     src={unchecked} 
                                     title='No Symptoms'
                                     alt='unchecked'
+                                    onClick={() => handleClick('Hint: Obstinate')}
                                 />
                                 <p className='no-symptoms'>No Symptoms</p>
                             </div>
@@ -104,6 +107,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                                     src={unchecked} 
                                     title='No Symptoms'
                                     alt='unchecked'
+                                    onClick={() => handleClick('Hint: Arrogant')}
                                 />
                                 <p className='no-symptoms'>No Symptoms</p>
                             </div>
@@ -125,6 +129,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                                     src={unchecked} 
                                     title='No Symptoms'
                                     alt='unchecked'
+                                    onClick={() => handleClick('Hint: Delusions Of Grandeur')}
                                 />
                                 <p className='no-symptoms'>No Symptoms</p>
                             </div>

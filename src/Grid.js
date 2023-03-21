@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import './grid.css'
 // import { createEventDispatcher, onMount } from 'svelte';
 import ContentPlot from './ContentPlot.js';
-import ProgressBar from './ProgressBar';
+// import ProgressBar from './ProgressBar';
 import EnterCode from './EnterCode';
 import { uiContent } from './lib/content.js';
 
@@ -43,7 +43,7 @@ export default function Grid() {
         if (tab === 'one') {
             setClickedTab('one')
             setTabStyleOne({
-                backgroundColor: 'yellow',
+                backgroundColor: 'rgb(238, 196, 119)',
                 width: '36%'
             })
             setTabStyleTwo({width: '20%'})
@@ -53,7 +53,7 @@ export default function Grid() {
             setClickedTab('two')
             setTabStyleOne({width: '20%'})
             setTabStyleTwo({
-                backgroundColor: 'yellow',
+                backgroundColor: 'rgb(238, 196, 119)',
                 width: '36%'
             })
             setTabStyleThree({width: '20%'})
@@ -63,7 +63,7 @@ export default function Grid() {
             setTabStyleOne({width: '20%'})
             setTabStyleTwo({width: '20%'})
             setTabStyleThree({
-                backgroundColor: 'yellow',
+                backgroundColor: 'rgb(238, 196, 119)',
                 width: '36%'
             })
             setTabStyleFour({width: '20%'})
@@ -73,7 +73,7 @@ export default function Grid() {
             setTabStyleTwo({width: '20%'})
             setTabStyleThree({width: '20%'})
             setTabStyleFour({
-                backgroundColor: 'yellow',
+                backgroundColor: 'rgb(238, 196, 119)',
                 width: '36%'
             })
         }
@@ -189,9 +189,9 @@ export default function Grid() {
                         style={{gridArea: '1/1/2/2'}}
                         id="scrollable"
                     >
-                        <div style={{gridArea: '1/1/2/2'}}>
+                        {/* <div style={{gridArea: '1/1/2/2'}}>
                             <ProgressBar ui={ui} />
-                        </div>
+                        </div> */}
                         <p />
                         <div className="stamp" style={{gridArea: '2/13/4/span 2'}} id="WelcomeToParadox">
                             {nodes && nodes.WelcomeToParadox ? <>
@@ -360,7 +360,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="bg-red-500 stamp green" style={{gridArea: '14 / 10 / span 2 / span 2'}} id="WhatWasLost">
+                        <div className="bg-red-500 stamp green" style={{gridArea: '14 / 10 / span 2 / span 2'}} id="PandorasBox">
                             {nodes && nodes.PandorasBox ? <>
                                 <img
                                     src={RedBlank}
@@ -437,8 +437,8 @@ export default function Grid() {
                         <div className="vertical-line" style={{gridArea: '16 / 16 / span 3 / span 3', marginRight: 'calc(var(--spacing) * 24)', marginTop: 'calc(var(--spacing) * 5)'}} />
                         <div className="vertical-line" style={{gridArea: '18 / 12 / 19 / span 3', marginRight: 'calc(var(--spacing) * 14)', marginTop: 'calc(var(--spacing) * 5)'}} />
                         <div className="bg-blue-100 stamp" style={{gridArea: '17 / 12 / span 2 / span 2'}} id="WhatWasLost">
-                            {nodes && nodes.Oracle ? <>
-                            <img
+                            {nodes && nodes.WhatWasLost ? <>
+                                <img
                                     src={GoldBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('WhatWasLost')}
@@ -455,7 +455,7 @@ export default function Grid() {
                             </>}
                         </div>
                         <div className="bg-red-800 stamp" style={{gridArea: '17 / 14 / span 2 / span 2'}} id="Honesty">
-                            {nodes && nodes.Honesty ? <>
+                            {nodes && nodes.GoodHousekeeping ? <>
                                 <img
                                     src={GoldBlank}
                                     alt="Stamp"
@@ -659,7 +659,7 @@ export default function Grid() {
                     </>:<>
                         <span
                             className='text-3xl redacted'
-                            // onClick={() => handleTab('one')}     
+                            onClick={() => handleClick('TabOne')}     
                             style={tabStyleOne}
                         >REDACTED</span>
                     </>}
@@ -672,7 +672,7 @@ export default function Grid() {
                     </>:<>
                         <span
                             className='text-3xl redacted'
-                            // onClick={() => handleTab('one')}     
+                            onClick={() => handleClick('TabTwo')}
                             style={tabStyleTwo}
                         >REDACTED</span>
                     </>}
@@ -685,7 +685,7 @@ export default function Grid() {
                     </>:<>
                         <span
                             className='text-3xl redacted'
-                            // onClick={() => handleTab('one')}     
+                            onClick={() => handleClick('TabThree')}
                             style={tabStyleThree}
                         >REDACTED</span>
                     </>}
@@ -698,11 +698,10 @@ export default function Grid() {
                     </>:<>
                         <span
                             className='text-3xl redacted'
-                            // onClick={() => handleTab('one')}     
+                            onClick={() => handleClick('TabFour')} 
                             style={tabStyleFour}
                         >REDACTED</span>
                     </>}
-                    
                 </div>
                 
                 {/* <h3 className="max-w-xl px-8 text-xl font-light font-family:'Typewriter','Courier New', Courier, monospace">

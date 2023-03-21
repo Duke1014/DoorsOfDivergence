@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './contentplot.css'
 
 import AnInvitation from "./img/node-AnInvitation.png"
@@ -537,6 +537,16 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                 </div>
             )
         break;
+        case 'TabOne':
+        case 'TabTwo':
+        case 'TabThree':
+        case 'TabFour':
+            nodeContent = (
+                <div>
+                    You must complete the previous story to unlock this divergence.
+                </div>
+            )
+        break; 
         case 'AlienistInTraining':
             nodeContent = (
                 <div>
@@ -902,7 +912,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                 </div>
             )
         break;
-        case 'OutWithABang':
+        case 'OutWithABang2':
             nodeContent = (
                 <div>
                     <iframe 
@@ -1667,7 +1677,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <h1 className="my-4 text-4xl font-archaic">A Lead</h1>
                     <p className="text-lg">Discovered Edmond's whereabouts.</p>
                     <br />
-                    <img src={node60} img='A Lead' loading='lazy' />
+                    <img src={node60} alt='A Lead' loading='lazy' />
                     <br />
                     <blockquote>
                         Proctors-<br/><br/>
@@ -1949,6 +1959,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
         break;
         case 'Hint: Alchemist': 
         case 'Hint: Theurgist': 
+        case 'Hint: Divinator':
         case 'Hint: Oracle':
             nodeContent = (
                 <div>
@@ -2127,7 +2138,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                 </div>
             )
         break;
-        case 'Hint: Delusions of Grandeur':
+        case 'Hint: Delusions Of Grandeur':
             nodeContent = (
                 <div>
                     Sometimes you find a message in an unexpected place.
@@ -2173,6 +2184,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
         case 'Hint: Epiplaphobia': 
         case 'Hint: Left To Starve': 
         case 'Hint: Out With A Bang':
+        case 'Hint: Out With A Bang 2':
         case 'Hint: Blaze Of Glory': 
         case 'Hint: Mission Of Mercy': 
         case 'Hint: Nepotism': 
