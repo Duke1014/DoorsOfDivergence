@@ -300,7 +300,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>}
                         </div>
                         <div className="checkbox" id='Neophilic' style={{gridArea: '8/16/span 2/span 2'}}>
-                            {nodes && nodes.Neoliphic ? <>
+                            {nodes && nodes.Neophilic ? <>
                                 <div className='checked'>
                                     <img 
                                         src={Checked} 

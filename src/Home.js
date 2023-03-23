@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
 import LoginAssistant from './LoginAssistant'
@@ -50,6 +50,23 @@ export default function () {
     const [signLog, setSignLog] = useState(false) // should not matter until loginState is true
     const [loginState, setLoginState] = useState(false) // Have we hit a signup or login button yet? 
 
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+        const position = window.pageYOffset;
+        if (position > 100) { // change 100 to the distance you want the user to scroll before the footer appears
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+        };
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        return () => {
+        window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     const handleLogClick = () => {
         setLoginState(true)
         setSignLog(false)
@@ -78,6 +95,7 @@ export default function () {
                 <LoginAssistant handleLogClick={handleLogClick} handleSignClick={handleSignClick} />
             </>}
             <Footer 
+                scrolled={scrolled}
                 user={user} 
                 // isAdmin={isAdmin} 
                 showAdmin={showAdmin} 

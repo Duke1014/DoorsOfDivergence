@@ -7,7 +7,7 @@ import { UserContext } from './context/user'
 export default function EnterCode({setShowCodePrompt}) {
 
     const [code, setCode] = useState('')
-    const { handleEnterCode } = useContext(UserContext)
+    const { handleEnterCode, codeStyle } = useContext(UserContext)
 
     // const wrapStyle = {
     //     backgroundColor: '#d2b79e',
@@ -45,7 +45,8 @@ export default function EnterCode({setShowCodePrompt}) {
             type="text"
             value={code}
             onChange={e => setCode(e.target.value)}
-            className="p-4 my-4 text-center text-black"
+            className="p-4 my-4 text-center"
+            style={codeStyle}
             onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                     handleEnterCode(code)

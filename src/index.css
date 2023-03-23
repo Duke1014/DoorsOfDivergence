@@ -3,6 +3,31 @@
 
 /* ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com */
 
+.testfont {
+  font-family:EBGaramond-VariableFont_wght
+}
+
+@font-face {
+  font-family: EBGaramond-VariableFont_wght;
+  src: url(font/EBGaramond-VariableFont_wght.ttf) format("truetype");
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.footerscrolled {
+  transform: translateY(0%);
+}
+
+
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -48,6 +73,7 @@ body {
   line-height: inherit; /* 2 */
   background-image: url('./img/background.png');
   font-family: Archaic1897;
+  overflow-x: hidden;
 }
  
 @font-face {

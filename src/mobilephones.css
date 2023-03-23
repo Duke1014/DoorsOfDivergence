@@ -1,0 +1,84 @@
+@media only screen and (max-width: 480px) {
+    .heresy-grid {
+        grid-template-columns: repeat(25, 1fr);
+        grid-template-rows: repeat(28, 1fr);
+        column-gap: 10px;
+    }
+    .heresy-grid .stamp {
+        box-sizing: border-box;
+        /* background: radial-gradient(red, black, transparent, transparent); */
+        background: transparent;
+        background-size: 60px 60px;
+        /* height: max-content; */
+        /* min-height: 100px; */
+        /* min-width: 100px; */
+        /* border: 2px solid red; */
+        /* background-position: center; */
+        /* background-repeat: no-repeat; */
+        /* scroll-snap-type: proximity; */
+        scroll-snap-align: center;
+        display: grid;
+        place-items: center;
+        place-self: center;
+        width: 50px;
+        height: 50px;
+        z-index: 5;
+        margin-inline: 16px;
+        position: relative;
+        /* padding: 0px !important; */
+        /* opacity: 0.5; */
+    }
+    .heresy-grid .stamp p {
+        /* grid-area: 1.5/auto/auto/auto; */
+        /* top: -100px; */
+        position: absolute;
+        /* width: 15%; */
+
+        padding: 10px;
+        font-size:x-small;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-indent: 0%;
+        /* height: 100%; */
+        text-align: center;
+        /* margin-left: auto;
+        margin-right: auto; */
+    }
+    .madness {
+        width: 180% !important;
+    }
+    .madness-grid .checkbox {
+        box-sizing: border-box;
+        /* background: radial-gradient(red, black, transparent, transparent); */
+        background: transparent;
+        background-size: 60px 60px;
+        /* height: max-content; */
+        /* min-height: 100px; */
+        /* min-width: 100px; */
+        /* border: 2px solid red; */
+        /* background-position: center; */
+        /* background-repeat: no-repeat; */
+        /* scroll-snap-type: proximity; */
+        scroll-snap-align: center;
+        display: grid;
+        place-items: center;
+        place-self: center;
+        /* width: max-content; */
+        z-index: 5;
+        margin-inline: 16px;
+        position: relative;
+        width: 10px !important;
+        height: 10px !important;
+        /* opacity: 0.5; */
+    }
+    .horizontal-line-dash,
+    .vertical-line-dash {
+        height: 25px !important;
+        width: 25px !important;
+    }
+    .no-symptoms,
+    .symptoms-found{
+        font-size: x-small !important;
+    }
+}

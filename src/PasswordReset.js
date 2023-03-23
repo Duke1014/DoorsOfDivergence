@@ -22,7 +22,7 @@ export default function PasswordReset({ setShowForgotPassword, showForgotPasswor
         <p className="mt-4 text-lg">
             <small>
                 Clicked here by mistake? <span 
-                style={{cursor: 'pointer'}}
+                style={{cursor: 'pointer', textDecoration: 'underline'}}
                 onClick={() => setShowForgotPassword(!showForgotPassword)}
                     >Log in as usual</span>.
             </small>
@@ -46,7 +46,7 @@ export default function PasswordReset({ setShowForgotPassword, showForgotPasswor
             <button 
                 className="place-self-center" 
                 style={buttonStyle}
-                disabled={userEmail === null ? true : false}>
+                disabled={userEmail ? false : true}>
                 Send reset instructions
             </button>
         </form>

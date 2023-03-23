@@ -20,6 +20,7 @@
     z-index: 5;
     margin-inline: 16px;
     position: relative;
+    padding: 0px !important;
     /* opacity: 0.5; */
 }
 
@@ -92,7 +93,6 @@
     border-top-left-radius: 40% 20%;
     font-family: CFRemingtonTypewriter-Regul;
 }
-
 
 .madness-tab {
     cursor: pointer;
@@ -193,12 +193,12 @@
 .heresy-grid {
     grid-template-columns: repeat(25, 1fr);
     /* grid-template-rows: repeat(28, 1fr); */
-    grid-template-rows: repeat(28, 1fr);
+    grid-template-rows: repeat(27, 1fr);
     /* grid-template-rows: 1fr 1fr 1fr min-content 1fr 1fr 1fr min-content 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr min-content min-content min-content 1fr 1fr 1fr 1fr; */
     /* overflow: scroll; */
     /* scroll-snap-type: both mandatory; */
     /* scroll-snap-type: both proximity; */
-    padding: 5%;
+    /* padding: 5%; */
     /* border: 1px solid black; */
 }
 

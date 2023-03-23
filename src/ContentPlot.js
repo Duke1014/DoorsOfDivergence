@@ -78,25 +78,25 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
         case 'WelcomeToParadox': 
             nodeContent = (
             <div>
-                <h1 className="my-4 text-4xl font-archaic">WELCOME TO PARADOX</h1>
-                <p className="text-lg">You began the journey of (multiple) lifetimes</p>
+                <h1 className="my-4 text-4xl testfont">WELCOME TO PARADOX</h1>
+                <p className="text-lg testfont">You began the journey of (multiple) lifetimes</p>
                 <br />
-                <p>
+                <p className='testfont'>
                     Hello me, it’s you. From the future, that is. It’s confusing, but trust me, you’ll understand eventually.
                 </p>
-                <p>
+                <p className='testfont'>
                     If you’re reading this- I mean, I know you are, I remember reading it, which is how I knew to send it back to you, or rather, myself… sorry, even I have trouble wrapping my head around things.
                 </p>
-                <p>
+                <p className='testfont'>
                     The important thing is: you’re getting this message because you’ve decided to enter the rift in time and space, and for good reason: it needs to be charted and fixed, and you have a big part to play in that. But don’t worry, it’s not all on your shoulders. You are one of many people to answer a summons from your future self- you’re going to meet other Parallels on your journey. (That’s what we call ourselves: people who have been sent on this journey bytheir future, living in a parallel iteration of- ah, don’t worry about it right now.)
                 </p>
-                <p>
+                <p className='testfont'>
                     This is where it gets weird: at the nexus point of the fracture, there’s a bar called Paradox. The first parallels set it up- they found an old bar from the 1950’s that had broken through the void. Some other places and times have broken through, too, and it looks like more are trying to push their way through. It’s kind of a watering hole for those of us trying to repair reality- a place to meet, talk about our efforts, and compare notes while we try to find the right set of choices that will fix this rift once and for all. Talk to them. They’re there to help.
                 </p>
-                <p>
+                <p className='testfont'>
                     One last thing I can give you- I’m providing you a map, of sorts, of all of the choices we’ve charted so far. Use this to track your progress, see where the unexplored places are. I wish I could help more, but we’re probably stretching the laws of causality enough just writing this letter.
                 </p>
-                <p>Good luck. You’re in for the ride of your lives.</p>
+                <p className='testfont'>Good luck. You’re in for the ride of your lives.</p>
             </div>
         ) 
         break;

@@ -244,7 +244,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                         </>}
                     </div>
                     <div className="checkbox" id='Neophilic' style={{gridArea: '7/16/span 2/span 2'}}>
-                        {nodes && nodes.Neoliphic ? <>
+                        {nodes && nodes.Neophilic ? <>
                             <div className='checked'>
                                 <img 
                                     src={Checked} 

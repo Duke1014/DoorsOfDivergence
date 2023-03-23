@@ -109,7 +109,7 @@ export default function Login({ handleSignClick }) {
                                     onChange={e => setUserPassword(e.target.value)}
                                 />
                                 <p className="mb-2 -mt-1 text-right">
-                                    <small onClick={() => setShowForgotPassword(!showForgotPassword)}>
+                                    <small style={{cursor: 'pointer', textDecoration: 'underline'}} onClick={() => setShowForgotPassword(!showForgotPassword)}>
                                         Forgot your password?
                                     </small>
                                 </p>

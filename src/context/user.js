@@ -39,6 +39,7 @@ function UserProvider({ children }) {
     const [nodes, setNodes] = useState({})
     const [loader, setLoader] = useState(true)
     const [isAdmin, setIsAdmin] = useState(true)    
+    const [codeStyle, setCodeStyle] = useState({color: 'black'})
 
     // const [message, setMessage] = useState('')
     
@@ -195,6 +196,9 @@ function UserProvider({ children }) {
             },
             { merge: true }
         )
+        let nodeId = document.getElementById(node)
+        // debugger
+        nodeId.scrollIntoView({ behavior: 'smooth' })
     }
 
     async function checkAdmin(authUID) {
@@ -232,12 +236,14 @@ function UserProvider({ children }) {
     async function handleEnterCode(e) {
         const docRef = doc(db, 'codes', 'heresy')  
         const codesSnap = await getDoc(docRef)
+        setCodeStyle({color: 'black'})
         if (codesSnap) {
             let snapData = codesSnap.data()
             const matchingCode = Object.keys(snapData).find(key => key.toLowerCase() === e.toLowerCase())
-            // debugger
+            
             if (matchingCode) {
                 console.log('EEEEY');
+                setCodeStyle({color: 'black', animation: 'goodCode 2s'})
                 // debugger
                 snapData[matchingCode].forEach((element) => {
                     addNode(element)
@@ -252,6 +258,7 @@ function UserProvider({ children }) {
                 // })
             } else {
                 console.log('womp womp')
+                setCodeStyle({color: 'black', animation: 'badCode 2s'})
             }
         } else {
             console.log('Ahm...this code is not valid... Please check and try again!');
@@ -290,7 +297,7 @@ function UserProvider({ children }) {
     
 
     return (
-        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin}}>
+        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin, codeStyle}}>
             {children}
         </UserContext.Provider>
     )

@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import './divergenceone.css'
+import './mobilephones.css'
 
 import line from './img/Line.png'
 import corner from './img/Corner.png'
@@ -29,8 +30,8 @@ export default function ({ setCpShow, setActiveNode }) {
                 <div className='flex flex-wrap w-full h-52'/>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>
-                    <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
-                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
+                    <div className='text-2xl' style={{gridArea: '1/18/span 2/span 2'}}>Common Symptoms</div>
+                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/18/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>
                                 <div className='checked'>
                                     <img 
@@ -52,7 +53,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Narcissistic' style={{gridArea: '3/20/span 2/span 2'}}>
+                        <div className="checkbox" id='Narcissistic' style={{gridArea: '3/18/span 2/span 2'}}>
                             {nodes && nodes.Narcissistic ? <>
                                 <div className='checked'>
                                     <img 
@@ -74,7 +75,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Obstinate' style={{gridArea: '5/20/span 2/span 2'}}>
+                        <div className="checkbox" id='Obstinate' style={{gridArea: '5/18/span 2/span 2'}}>
                             {nodes && nodes.Obstinate ? <>
                                 <div className='checked'>
                                     <img 
@@ -96,7 +97,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
+                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/18/span 2/span 2'}}>
                             {nodes && nodes.Arrogant ? <>
                                 <div className='checked'>
                                     <img 
@@ -118,7 +119,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/20/span 2/span 2'}}>
+                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/18/span 2/span 2'}}>
                             {nodes && nodes.DelusionsOfGrandeur ? <>
                                 <div className='checked'>
                                     <img 
@@ -141,7 +142,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>}
                         </div>
                         <div className="checkbox" id='AlienistInTraining' style={{gridArea: '1/13/span 2/span 2'}}>
-                            {nodes && nodes.AlienistsInTraining ? <>
+                            {nodes && nodes.AlienistInTraining ? <>
                                 <div className='checked'>
                                     <img 
                                         src={Checked} 
@@ -172,7 +173,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                         alt='checked'
                                         onClick={() => handleClick('Oblivious')} 
                                     />
-                                    <p>{ui.madnessNodes.two.title}</p>
+                                    <p className='symptom-found'>{ui.madnessNodes.two.title}</p>
                                 </div> 
                             </>:<>
                                 <div className='unchecked'>

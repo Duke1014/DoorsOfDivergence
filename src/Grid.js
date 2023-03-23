@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import './grid.css'
+import './mobilephones.css'
 // import { createEventDispatcher, onMount } from 'svelte';
 import ContentPlot from './ContentPlot.js';
 // import ProgressBar from './ProgressBar';
@@ -249,7 +250,7 @@ export default function Grid() {
                                 />  
                             </>}
                         </div>
-                        <div className="stamp" style={{gridArea: '8 / 11 / span 2 / span 2'}} id="Theurgist">
+                        <div className="stamp" style={{gridArea: '8 / 11 / span 2 / span 2'}} id="TrainingWheels">
                             {nodes && nodes.TrainingWheels ? <>
                                 <img
                                     src={GoldBlank}
@@ -269,7 +270,7 @@ export default function Grid() {
                             
                         </div>
                         <div className="horizontal-line"  style={{gridArea: '3 / 12 / 12 / span 4'}} />
-                        <div className="stamp" style={{gridArea: '8 / 13 / span 2 / span 2'}} id="Divinator">
+                        <div className="stamp" style={{gridArea: '8 / 13 / span 2 / span 2'}} id="YourOwnTwoFeet">
                             {nodes && nodes.YourOwnTwoFeet ? <>
                                 <img
                                     src={GoldBlank}
@@ -288,7 +289,7 @@ export default function Grid() {
                             </>}
                         </div>
                         <div className="horizontal-line" style={{gridArea: '3 / 14 / 12 / span 2'}}/>
-                        <div className="stamp" style={{gridArea: '8 / 15 / span 2 / span 2'}} id="BeyondTheVeil">
+                        <div className="stamp" style={{gridArea: '8 / 15 / span 2 / span 2'}} id="YouWereWarned">
                             {nodes && nodes.YouWereWarned ? <>
                             <img
                                     src={GoldBlank}
@@ -454,7 +455,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="bg-red-800 stamp" style={{gridArea: '17 / 14 / span 2 / span 2'}} id="Honesty">
+                        <div className="bg-red-800 stamp" style={{gridArea: '17 / 14 / span 2 / span 2'}} id="GoodHousekeeping">
                             {nodes && nodes.GoodHousekeeping ? <>
                                 <img
                                     src={GoldBlank}
@@ -524,7 +525,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="bg-green-600 stamp" style={{gridArea: '18 / 16 / span 2 / span 2'}} id="Unbound">
+                        <div className="bg-green-600 stamp" style={{gridArea: '18 / 16 / span 2 / span 2'}} id="ChainsThatBind">
                             {nodes && nodes.ChainsThatBind ? <>
                             <img
                                     src={BlueBlank}
@@ -542,7 +543,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="bg-green-200 stamp" style={{gridArea: '20 / 18 / span 2 / span 2'}} id="Oracle">
+                        <div className="bg-green-200 stamp" style={{gridArea: '20 / 18 / span 2 / span 2'}} id="Unbound">
                             {nodes && nodes.Unbound ? <>
                                 <img
                                     src={BlueBlank}
@@ -596,7 +597,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="bg-blue-500 stamp" style={{gridArea: '23 / 15 / span 2 / span 2'}} id="Broken Chains">
+                        <div className="bg-blue-500 stamp" style={{gridArea: '23 / 15 / span 2 / span 2'}} id="Misled">
                             {nodes && nodes.Misled ? <>
                                 <img
                                     src={BlueBlank}
@@ -640,12 +641,12 @@ export default function Grid() {
                 </div>
             </section>
             <div 
-                className="w-full p-8 font-extrabold padding-top: 10vh madness"
+                className="w-full font-extrabold madness"
                 style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'
                     // , backgroundAttachment: 'fixed'
                 }}
             >
-                <h1 className="z-10 px-8 text-6xl font-light madness-title" style={{paddingTop: '100px'}}>
+                <h1 className="z-10 px-8 text-6xl font-light madness-title" style={{paddingTop: '10px'}}>
                     Madness,<br />1917
                 </h1>
                 {/* <div className='w-full min-h-10' /> */}
@@ -709,6 +710,7 @@ export default function Grid() {
                 </h3> */}
             </div>
             {madnessMap}
+            <div style={{minHeight: '96px', width: 'full', position: 'absolute'}}>.</div>
         </div>
     </div>
   )
