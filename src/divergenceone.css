@@ -47,8 +47,8 @@ body .madness-grid {
     /* justify-content: center; */
     text-align: center !important; 
     text-indent: 0% !important;
-    position: relative;
-    top: -10px;
+    /* position: relative;
+    top: 0px; */
 }
 
 :global(body) {

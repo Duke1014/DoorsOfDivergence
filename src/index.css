@@ -132,6 +132,8 @@ body {
   background-image: url('./img/background.png');
   font-family: Archaic1897;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100%;
 }
  
 @font-face {

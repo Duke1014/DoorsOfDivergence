@@ -1,7 +1,7 @@
 @media only screen and (max-width: 480px) {
     .heresy-grid {
-        grid-template-columns: repeat(25, 1fr);
-        grid-template-rows: repeat(28, 1fr);
+        grid-template-columns: repeat(25, 1em) !important;
+        grid-template-rows: repeat(28, 1em) !important;
         column-gap: 10px;
     }
     .heresy-grid .stamp {
@@ -68,17 +68,25 @@
         z-index: 5;
         margin-inline: 16px;
         position: relative;
-        width: 10px !important;
-        height: 10px !important;
+        /* width: 10px !important; */
+        /* height: 10px !important; */
         /* opacity: 0.5; */
     }
-    .horizontal-line-dash,
+    /* .horizontal-line-dash,
     .vertical-line-dash {
         height: 25px !important;
         width: 25px !important;
-    }
+    } */
     .no-symptoms,
     .symptoms-found{
         font-size: x-small !important;
+    }
+    .corner-down-left,
+    .corner-down-right,
+    .corner-up-left,
+    .corner-up-right {
+        width: 200% !important;
+        top: 0 !important;
+        margin-top: 0 !important;
     }
 }
