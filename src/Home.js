@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from 'react'
 import LogIn from './LogIn'
 import SignUp from './SignUp'
 import LoginAssistant from './LoginAssistant'
+import Admin from './Admin'
 import Loader from './Loader'
 import { UserContext } from './context/user'
 // import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
@@ -49,6 +50,7 @@ export default function () {
     const { user, loggedIn, auth, db, loader } = useContext(UserContext)
     const [signLog, setSignLog] = useState(false) // should not matter until loginState is true
     const [loginState, setLoginState] = useState(false) // Have we hit a signup or login button yet? 
+    const [adminMode, setAdminMode] = useState(false)
 
     const [scrolled, setScrolled] = useState(false);
 
@@ -82,22 +84,28 @@ export default function () {
         {loader ? <>
             <Loader />
         </> : <>
-            {loggedIn ? <>
-                <Grid />
+            {adminMode ? <>
+                <Admin />
+            </> : <>
+                {loggedIn ? <>
+                    <Grid />
                 </> : <> 
-                {loginState ? <>
-                    {signLog ? <>
-                        <SignUp auth={auth} db={db} handleLogClick={handleLogClick} />
-                    </> : <>
-                        <LogIn auth={auth} db={db} handleSignClick={handleSignClick} />
-                    </>}
-                </> : <></>}
-                <LoginAssistant handleLogClick={handleLogClick} handleSignClick={handleSignClick} />
+                    {loginState ? <>
+                        {signLog ? <>
+                            <SignUp auth={auth} db={db} handleLogClick={handleLogClick} />
+                        </> : <>
+                            <LogIn auth={auth} db={db} handleSignClick={handleSignClick} />
+                        </>}
+                    </> : <></>}
+                    <LoginAssistant handleLogClick={handleLogClick} handleSignClick={handleSignClick} />
+                </>}
             </>}
+            
             <Footer 
                 scrolled={scrolled}
                 user={user} 
-                // isAdmin={isAdmin} 
+                setAdminMode={setAdminMode}
+                adminMode={adminMode}
                 showAdmin={showAdmin} 
                 auth={auth} 
             />

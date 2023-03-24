@@ -14,8 +14,8 @@
 
 .footer {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  bottom: 0 !important;
+  width: 100% !important;
   background-color: #ccc;
   padding: 20px;
   text-align: center;
@@ -27,6 +27,64 @@
   transform: translateY(0%);
 }
 
+.user-view {
+  padding: 10px;
+  background-color:#ffffff86;
+  border: 1px solid black;
+  /* float: left; */
+  width: 50em;
+  position: relative
+}
+
+.node-check,
+.password-reset {
+  border: 1px solid black;
+  padding: 2px;
+  position: absolute;
+}
+
+.node-check:hover,
+.password-reset:hover {
+  background-color: #000;
+  color: white
+}
+
+.node-check {
+  top: 4px;
+  right: 4px;  
+}
+
+.password-reset{
+  bottom: 4px;
+  right: 4px;  
+}
+
+.admin {
+  /* position: relative; */
+  width: 100%;
+}
+.calypso {
+  transform: scaleX(-1);
+  float: right;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px
+}
+
+.speech-bubble {
+  position: fixed;
+  /* display: none; */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.16);
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  height: auto;
+  top: 50px;
+  right: 350px;
+}
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)

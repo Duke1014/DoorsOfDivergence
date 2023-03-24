@@ -1,22 +1,20 @@
 import React, { useContext } from 'react'
 import { UserContext } from './context/user';
 
-export default function Footer({ scrolled }) {
+export default function Footer({ scrolled, adminMode, setAdminMode }) {
 
-    const { user, loggedIn, logout } = useContext(UserContext)
+    const { user, loggedIn, logout, isAdmin } = useContext(UserContext)
     let year = new Date().getFullYear();
-
-/* <button onClick={showAdmin(false)} className="hover:underline">
-    Close Admin View
-</button></> : <><button onClick={showAdmin(true)} className="hover:underline">
-    Open Admin View
-</button> */
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth'
         })
+    }
+
+    const handleButton = () => {
+        setAdminMode(!adminMode)
     }
 
   return (
@@ -37,10 +35,11 @@ export default function Footer({ scrolled }) {
         </p>
         <button className='text-2xl' onClick={scrollToTop}>Scroll To Top</button>
         {loggedIn ? <>
-            <p>You're currently logged in{user.name > 0 ? <> as {user.name}.</> : <>.</>} <button onClick={() => logout()}>Sign out here.</button></p>
+            <p>You're currently logged in as {user.name}. <button onClick={() => logout()}>Sign out here.</button></p>
         </> : <>
             <p>You are not logged in.</p>
         </>}
+        {isAdmin ? <><button onClick={handleButton}>ADMIN MODE</button></> : <></>}
         </footer>
     </div>
   )

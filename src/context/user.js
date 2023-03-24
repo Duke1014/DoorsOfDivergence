@@ -11,16 +11,21 @@ import {
 } from 'firebase/auth';
 import {
     getFirestore,
-//     collection,
+    collection,
 //     addDoc,
     updateDoc,
     doc,
     setDoc,
     getDoc,
     onSnapshot,
+    query,
+    where,
+    getDocs,
+    limit,
+    orderBy,
     // arrayUnion,
 } from 'firebase/firestore';
-
+// import { ref, query } from 'firebase/database'
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebaseConfig';
 // import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
@@ -34,12 +39,14 @@ function UserProvider({ children }) {
 
     const [user, setUser] = useState({}) // this gets used everywhere, stored info of user
     const [error, setError] = useState('')
-    // let isAdmin = false;
     const [loggedIn, setLoggedIn] = useState(false) // this gets used everywhere, tells app that you are allowed to see things
     const [nodes, setNodes] = useState({})
     const [loader, setLoader] = useState(true)
-    const [isAdmin, setIsAdmin] = useState(true)    
+    const [isAdmin, setIsAdmin] = useState(false)    
     const [codeStyle, setCodeStyle] = useState({color: 'black'})
+    
+    const [searchResults, setSearchResults] = useState([{}])
+    const [selectedOption, setSelectedOption] = useState('name')
 
     // const [message, setMessage] = useState('')
     
@@ -98,8 +105,8 @@ function UserProvider({ children }) {
         })
     }
 
-    const sendReset = () => {
-        sendPasswordResetEmail(auth, user.email)
+    const sendReset = (email = user.email) => {
+        sendPasswordResetEmail(auth, email)
         .then(() => {
             setError('success')
             console.log("Success")
@@ -264,6 +271,9 @@ function UserProvider({ children }) {
             console.log('Ahm...this code is not valid... Please check and try again!');
         }
     }
+
+
+
      
             // setMessage('Ahm...this code is not valid... Please check and try again!')
                   
@@ -297,7 +307,9 @@ function UserProvider({ children }) {
     
 
     return (
-        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin, codeStyle}}>
+        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin, codeStyle, searchResults, setSelectedOption, 
+        // handleSearch
+        }}>
             {children}
         </UserContext.Provider>
     )
