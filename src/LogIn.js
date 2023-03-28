@@ -129,36 +129,3 @@ export default function Login({ handleSignClick }) {
         </div>
     )
 }
-
-    // :global(.g-recaptcha) {
-    //     display: inline-block;
-    // }
-    // input:not([type='checkbox']) {
-    //     padding: 6px;
-    //     margin-top: 6px;
-    //     margin-bottom: 16px;
-    //     background-color: rgba(255, 255, 255, 0.5);
-    //     border: 1px solid darkgoldenrod;
-    // }
-
-    // input:not([type='checkbox']):hover {
-    //     border: 1px solid black;
-    // }
-    // input:not([type='checkbox']):focus {
-    //     outline: 1px solid black;
-    //     outline-offset: 2px;
-    //     border: 1px solid black;
-    //     background-color: white;
-    // }
-
-    // button:hover:not(:disabled),
-    // button:focus:not(:disabled) {
-    //     background-color: black;
-    //     border: 1px solid black;
-    //     color: white;
-    // }
-
-    // button:disabled {
-    //     opacity: 0.5;
-    //     cursor: not-allowed;
-    // }

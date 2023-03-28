@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import Checked from './img/Checked.png'
 import unchecked from './img/unchecked.png'
-// import CommonSymptoms from './CommonSymptoms'
 import line from './img/Line.png'
 import corner from './img/Corner.png'
 import { uiContent } from './lib/content'

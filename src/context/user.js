@@ -1,34 +1,21 @@
 import React, {useEffect, useState} from 'react'
 import {
     getAuth,
-//     GoogleAuthProvider,
-//     signInWithPopup,
     onAuthStateChanged,
-//     updateProfile,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     sendPasswordResetEmail,
 } from 'firebase/auth';
 import {
     getFirestore,
-    collection,
-//     addDoc,
     updateDoc,
     doc,
     setDoc,
     getDoc,
     onSnapshot,
-    query,
-    where,
-    getDocs,
-    limit,
-    orderBy,
-    // arrayUnion,
 } from 'firebase/firestore';
-// import { ref, query } from 'firebase/database'
 import { initializeApp } from 'firebase/app';
 import { firebaseConfig } from '../firebaseConfig';
-// import { hasFormSubmit } from '@testing-library/user-event/dist/utils';
 
 const UserContext = React.createContext()
 const app = initializeApp(firebaseConfig);
@@ -147,24 +134,10 @@ function UserProvider({ children }) {
         ]
     }
 
-    // const [message, setMessage] = useState('')
-    
-    //     if (errorCode.includes('auth/invalid-value-')) {
-    //         setError("Sorry, a user with this email could not be found. Please check for typos or sign up for an account.")
-    //     } else if (errorCode === 'auth/wrong-password') {
-    //         setError("The password you've entered is incorrect.")  
-    //     } else if (errorCode === 'auth/user-not-found') {
-    //         setError("Sorry, a user with this email could not be found. Please check for typos or sign up for an account.")
-    //     } else if (errorCode === 'success') {
-    //         setError("The email is on its way. Please check your Inbox.")
-    //     } else {
-    //         setError(`Error: ${errorCode}. Please try again or contact us.`)
-    //     } 
-
     const login = (user) => {
         signInWithEmailAndPassword(auth, user.email, user.password)
         .then((userCredential) => {
-            console.log(userCredential)
+            // console.log(userCredential)
             user.uid = userCredential.user.uid;
             setUser(user)
             setLoggedIn(true)
@@ -183,7 +156,7 @@ function UserProvider({ children }) {
     const signup = (user) => {        
         createUserWithEmailAndPassword(auth, user.email, user.password)
         .then((userCredential) => {
-            console.log(userCredential);
+            // console.log(userCredential);
             user.uid = userCredential.user.uid;
             saveUser();
         })
@@ -200,11 +173,11 @@ function UserProvider({ children }) {
         sendPasswordResetEmail(auth, email)
         .then(() => {
             setError('success')
-            console.log("Success")
+            // console.log("Success")
         })
         .catch((error) => {
             setError(error.message)
-            console.log(error.message)
+            // console.log(error.message)
         });
     }
 
@@ -251,7 +224,7 @@ function UserProvider({ children }) {
                 setLoader(false)
             }
         } else {
-            console.log('No such document!');
+            // console.log('No such document!');
             setNodes({})
         }
         startListener(authUID);
@@ -267,12 +240,12 @@ function UserProvider({ children }) {
             },
             { merge: true }
         )
-        console.log(madnessList)
-        debugger
+        // console.log(madnessList)
+        // debugger
         let madnessId = document.getElementById('madness')
         if (madnessList.div1.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1') // MAKE THESE TURN THEIR COORESPONDING TABS INTO GLOWY BOIS THANKS
+            handleTab('div1')
         } else if (madnessList.div2.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
             handleTab('div2')
@@ -414,8 +387,8 @@ function UserProvider({ children }) {
     function startListener(listener) {
         const listenTo = listener;
         onSnapshot(doc(db, 'users', listenTo), (doc) => {
-            const source = doc.metadata.hasPendingWrites ? 'Local' : 'Server';
-            console.log(source, ' data: ', doc.data());
+            // const source = doc.metadata.hasPendingWrites ? 'Local' : 'Server';
+            // console.log(source, ' data: ', doc.data());
             let snapData = doc.data();
             setNodes(snapData.nodes)
         });
@@ -443,7 +416,7 @@ function UserProvider({ children }) {
         }
         setTimeout(() => {
             setMessage({visibility: 'hidden'})
-        }, 3000)
+        }, 2000)
     }
 
     return (

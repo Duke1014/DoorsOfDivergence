@@ -10,12 +10,6 @@ export default function LoginAssistant( {handleLogClick, handleSignClick} ) {
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
         border: '1px solid black',
         color: 'black',
-        // button:hover:not(:disabled),
-        // button:focus:not(:disabled) {
-        //     background-color: 'black';
-        //     border: '1px solid black';
-        //     color: 'white';
-        // }
     }
 
   return (

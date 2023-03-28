@@ -7,34 +7,6 @@ export default function SignUp({ handleLogClick }) {
 
     const { signup, error } = useContext(UserContext)
 
-    /* :global(.g-recaptcha) {
-        display: inline-block;
-    }
-    input:not([type='checkbox']) {
-        padding: 6px;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        background-color: rgba(255, 255, 255, 0.5);
-        border: 1px solid darkgoldenrod;
-    }
-
-    input:not([type='checkbox']):hover {
-        border: 1px solid black;
-    }
-    input:not([type='checkbox']):focus {
-        outline: 1px solid black;
-        outline-offset: 2px;
-        border: 1px solid black;
-        background-color: white;
-    }
-    button:hover:not(:disabled),
-    button:focus:not(:disabled) {
-        background-color: black;
-        border: 1px solid black;
-        color: white;
-    }
-     */
-
     const wrapStyle = {
         backgroundColor: '#d2b79e',
         backgroundImage: `url(${paper})`,
@@ -49,17 +21,6 @@ export default function SignUp({ handleLogClick }) {
             setButtonStyle(normalButton)
         }
     }
-    
-    // const buttonOff = {
-    //     padding: '6px 16px',
-    //     margin: '6px',
-    //     outline: '1px solid black',
-    //     outlineOffset: '2px',
-    //     opacity: '0.5',
-    //     cursor: 'not-allowed',
-    //     border: '1px solid black',
-    //     color: 'white'
-    // }
 
     const buttonOn = {
         padding: '6px 16px',
@@ -81,20 +42,7 @@ export default function SignUp({ handleLogClick }) {
         color: 'black'
     }
 
-    // let REACT_APP_SECRET_KEY = "6Lf-Qj0kAAAAAGGBE9_n2ZiuUqQjd17JXo5Oqh_6"
     let REACT_APP_SITE_KEY = "6Lf-Qj0kAAAAAMLpNC5j8INXH_4zYEDb6iHxPtWH"
-
-    // const showErrorCode = () => {
-    //     if (errorCode) {
-    //         if (errorCode === 'auth/email-already-in-use') {
-    //             return <p className="mb-2">Sorry, this e-mail is already used.</p>
-    //         } else if (errorCode === 'auth/user-disabled') {
-    //             return <p className="mb-2">Sorry, this email has been disabled</p>
-    //         } else {
-    //             return <p className="mb-2">Error: {errorCode}. Please try again or contact us.</p>
-    //         }
-    //     }
-    // }
 
     const [userFirstName, setUserFirstName] = useState('')
     const [userLastName, setUserLastName] = useState('')
@@ -109,14 +57,6 @@ export default function SignUp({ handleLogClick }) {
     useEffect(() => {
         handleButtonStyle()
     }, [mouseOver])
-
-    // const checkDisabled = () => {
-    //     if (captchaState !== 'success' || userPassword !== userRepeatPassword || userPassword === null || userRepeatPassword === null) {
-    //         setButtonDisable(true)
-    //     } else {
-    //         setButtonDisable(false)
-    //     }
-    // }
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -261,11 +201,8 @@ export default function SignUp({ handleLogClick }) {
                                     </p>
                                 </div>
                             </div>
-                        </>}
-         
+                        </>}         
                         {error}
-
-                        {/* <!-- on:click={() => authAnonymously()} --> */}
                         <button
                             className="place-self-center"
                             style={buttonStyle}

@@ -2,19 +2,10 @@ import React, { useContext, useState } from 'react'
 import './entercode.css'
 import { UserContext } from './context/user'
 
-// import paper from './img/paper.jpg'
-
 export default function EnterCode({setShowCodePrompt}) {
 
     const [code, setCode] = useState('')
     const { handleEnterCode, codeStyle, message } = useContext(UserContext)
-
-    // const wrapStyle = {
-    //     backgroundColor: '#d2b79e',
-    //     backgroundImage: `url(${paper})`,
-    //     backgroundSize: 'cover',
-    //     backgroundPosition: 'center'
-    // }
 
   return (
     <div className='relative'>

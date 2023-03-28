@@ -52,10 +52,7 @@ blockquote + p:not(.text-lg) {
 img {
     filter: drop-shadow(2px 4px 3px rgba(0, 0, 0, 0.3));
 }
-/* iframe {
-    position: absolute;
+iframe {
     height: 100%;
     width: 100%;
-    top:0;
-    left:0;
-} */
+}

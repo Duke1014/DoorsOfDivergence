@@ -5,51 +5,16 @@ import LoginAssistant from './LoginAssistant'
 import Admin from './Admin'
 import Loader from './Loader'
 import { UserContext } from './context/user'
-// import { initializeAppCheck, ReCaptchaV3Provider } from 'firebase/app-check';
-
-// import { getAnalytics, logEvent } from 'firebase/analytics';
-
-// import { getStorage } from 'firebase/storage';
-
 import Footer from './Footer'
 import Grid from './Grid'
-// import Tutorial from './Tutorial.svelte';
 
-// // const { initializeAppCheck, ReCaptchaV3Provider } = require('firebase/app-check');
-
-// const analytics = getAnalytics();
-
-// const storage = getStorage(firebaseApp);
-// // const appCheck = initializeAppCheck(app, {
-// //     provider: new ReCaptchaV3Provider('6LeecSogAAAAAF_ZjlX-JBhiXjxaGlbx3QgYfQ8W'),
-// //     // Optional argument. If true, the SDK automatically refreshes App Check
-// //     // tokens as needed.
-// //     isTokenAutoRefreshEnabled: true,
-// // });
-// const google = new GoogleAuthProvider();
-
-// let loader = true;
-// let pageloader = true;
-// let scrollLock = false;
-
-let showAdmin = false; //testing only
-
-// $: isAdmin, (showAdmin = false);
-
-// let showCodePrompt = false;
-// let message = false;
-// let autoScrollTo = '#WelcomeToParadox';
-// let addUnlockTo = false;
-
-// let loginState = 'buttons';
-
-///////////////////////////////
+let showAdmin = false
 
 export default function () {
 
     const { user, loggedIn, auth, db, loader } = useContext(UserContext)
-    const [signLog, setSignLog] = useState(false) // should not matter until loginState is true
-    const [loginState, setLoginState] = useState(false) // Have we hit a signup or login button yet? 
+    const [signLog, setSignLog] = useState(false) 
+    const [loginState, setLoginState] = useState(false)
     const [adminMode, setAdminMode] = useState(false)
 
     const [scrolled, setScrolled] = useState(false);

@@ -20,7 +20,6 @@ export default function UserView({ r, setBubbleText }) {
     }
 
     const nodes = Object.keys(r.nodes).map((n => {
-        // console.log(n)
         if (n === r.lastNode){
             return <li key={n} style={{color: 'green'}}>
                 {n}
@@ -42,7 +41,6 @@ export default function UserView({ r, setBubbleText }) {
         </div>
         <button className='node-check' onClick={nodeClick}>Check Nodes</button>
         <button className='password-reset' onClick={resetPassword}>Password Reset</button>
-        {/* {r.nodes} */}
         {node ? <>
             <ol>
                 {nodes}

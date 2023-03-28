@@ -8,8 +8,6 @@ import corner from './img/Corner.png'
 import Checked from './img/Checked.png'
 import unchecked from './img/unchecked.png'
 
-// import CommonSymptoms from './CommonSymptoms'
-
 import { uiContent } from './lib/content'
 import { UserContext } from './context/user'
 

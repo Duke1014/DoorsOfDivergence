@@ -1,7 +1,5 @@
 import React, { useContext } from 'react'
 
-// import CommonSymptoms from './CommonSymptoms'
-
 import corner from './img/Corner.png'
 import line from './img/Line.png'
 import Checked from './img/Checked.png'

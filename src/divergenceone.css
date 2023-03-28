@@ -18,16 +18,8 @@ body .madness-grid {
 
 .madness-grid .checkbox {
     box-sizing: border-box;
-    /* background: radial-gradient(red, black, transparent, transparent); */
     background: transparent;
     background-size: 60px 60px;
-    /* height: max-content; */
-    /* min-height: 100px; */
-    /* min-width: 100px; */
-    /* border: 2px solid red; */
-    /* background-position: center; */
-    /* background-repeat: no-repeat; */
-    /* scroll-snap-type: proximity; */
     scroll-snap-align: center;
     display: grid;
     place-items: center;
@@ -36,22 +28,14 @@ body .madness-grid {
     z-index: 5;
     margin-inline: 16px;
     position: relative;
-    /* opacity: 0.5; */
 }
-/* .checkbox {
-    display: grid;
-    place-items: center;
-} */
 
 .no-symptoms, .symptom-found {
-    /* justify-content: center; */
     text-align: center !important; 
     text-indent: 0% !important;
-    /* position: relative; */
 }
 
 :global(body) {
-    /* background-image: url(../img/background-min.jpg); */
     background-size: cover;
     background-position: center;
 }
@@ -67,30 +51,15 @@ body .madness-grid {
     --border: 4px;
 }
 
-/* .vertical-line-dash,
-.horizontal-line-dash {
-    background-image: url('./img/Line.png');
-    height: 200px;
-    width: 200px;
-} */
-
 .vertical-line-dash {
-    /* border: var(--spacing) solid white; */
     justify-self: center;
     margin-block: calc(var(--border) * -1);
-    /* border-radius: 100px; */
-    /* border-block: 0px solid transparent !important; */
-    /* border-inline: 0px solid transparent !important; */
 }
 
 .horizontal-line-dash {
-    /* border: var(--spacing) solid white; */
     justify-self: center;
     margin-inline: calc(var(--border) * -1);
-    /* border-radius: 100px; */
-    /* border-inline: 0px solid transparent !important; */
     transform: rotate(90deg);
-    /* border-block: 0px solid transparent !important; */
 }
 
 .unchecked {
@@ -100,7 +69,6 @@ body .madness-grid {
 .horizontal-line-dash,
 .vertical-line-dash {
     padding: calc(var(--spacing) - (var(--spacing) - var(--border)));
-    /* border: 2px solid green; */
     position: absolute;
     height: 224px;
     width: 224px;
@@ -111,7 +79,6 @@ body .madness-grid {
     position: absolute;
 }
 .corner-down-left {
-    /* transform: rotate(270deg); */
     position: absolute;
 }
 .corner-up-right {
@@ -132,9 +99,6 @@ body .madness-grid {
     /* grid-template-rows: repeat(28, 1fr); */
     grid-template-rows: repeat(23, 1fr);
     /* grid-template-rows: min-content min-content min-content min-content min-content min-content min-content 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr min-content min-content min-content min-content min-content; */
-    /* overflow: scroll; */
-    /* scroll-snap-type: both mandatory; */
-    /* scroll-snap-type: both proximity; */
     padding: 100px;
 }
 

@@ -1,9 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './grid.css'
 import './mobilephones.css'
-// import { createEventDispatcher, onMount } from 'svelte';
 import ContentPlot from './ContentPlot.js';
-// import ProgressBar from './ProgressBar';
 import EnterCode from './EnterCode';
 import { uiContent } from './lib/content.js';
 
@@ -22,18 +20,12 @@ import DivergenceFour from './DivergenceFour';
 
 export default function Grid() {
 
-    // const dispatch = createEventDispatcher();
-    // const [scrollStyle, setScrollStyle] = useState('')
     const { nodes, tabStyleOne, tabStyleTwo, tabStyleThree, tabStyleFour, setTabStyleOne, setTabStyleTwo, setTabStyleThree, setTabStyleFour } = useContext(UserContext)
     const [cpShow, setCpShow] = useState(false)
     const [activeNode, setActiveNode] = useState()
-    // const [mouseOver, setMouseOver] = useState(false)
 
     const [clickedTab, setClickedTab] = useState('')
     const [isHesitant, setIsHesitant] = useState(false)
-    // export let nodes;
-    // export let autoScrollTo;
-    // export let addUnlockTo;
 
     let ui = uiContent;
 
@@ -76,58 +68,6 @@ export default function Grid() {
             })
         }
     }
-
-    // $: document.body.classList[cpShow ? 'add' : 'remove']('noscroll');
-
-    // $: autoScrollTo, autoscrollIntoView(autoScrollTo);
-    // console.log(autoScrollTo);
-    // $: addUnlockTo, addUnlockClass(addUnlockTo);
-
-    // function scrollIntoView({ target }) {
-    //     const el = document.querySelector(target.getAttribute('href'));
-    //     if (!el) return;
-    //     el.scrollIntoView({
-    //         behavior: 'smooth',
-    //         block: 'center',
-    //         inline: 'center',
-    //     });
-    // }
-
-    // function addUnlockClass(target) {
-    //     if (target) {
-    //         const el = document.querySelector(target);
-    //         el.classList.add('unlock');
-    //     }
-    // }
-    // function autoscrollIntoView(target, block, inline) {
-    //     const el = document.querySelector(target);
-    //     if (!el) return;
-    //     if (arguments.length === 3) {
-    //         el.scrollIntoView({
-    //             behavior: 'smooth',
-    //             block: block,
-    //             inline: inline,
-    //         });
-    //     } else {
-    //         el.scrollIntoView({
-    //             behavior: 'smooth',
-    //             block: 'center',
-    //             inline: 'center',
-    //         });
-    //     }
-    // }
-    // let scrollHeight;
-      // onMount(async () => {
-    //     setTimeout(autoscrollIntoView(autoScrollTo, 'end', 'center'), 1200);
-    // });
-    // const handleScroll = (e) => {
-    //     console.log(e.scrollHeight)
-    //     if (e.scrollHeight > 200) {
-    //         setScrollStyle({transform:'translate(0%, 100%)', opacity:'0'})
-    //     } else {
-    //         setScrollStyle({})
-    //     }
-    // }
 
     const handleClick = (nodeName) => {
         setCpShow(true)
@@ -187,9 +127,6 @@ export default function Grid() {
                         style={{gridArea: '1/1/2/2'}}
                         id="scrollable"
                     >
-                        {/* <div style={{gridArea: '1/1/2/2'}}>
-                            <ProgressBar ui={ui} />
-                        </div> */}
                         <p />
                         <div className="stamp" style={{gridArea: '2/13/4/span 2'}} id="WelcomeToParadox">
                             {nodes && nodes.WelcomeToParadox ? <>
@@ -639,20 +576,12 @@ export default function Grid() {
             </section>
             <div 
                 className="w-full font-extrabold madness"
-                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'
-                    // , backgroundAttachment: 'fixed'
-                }}
+                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}
             >
-                {/* <div className="flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white">
-                    <h1 className="z-10 text-6xl text-white">HERESY,<br />1897</h1>
-                    <EnterCode />
-                </div> */}
                 <div className='flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white'>
                     <h1 className="z-10 text-6xl text-black madness-title" >Madness,<br />1917</h1>
                     <div className='text-black'> <EnterCode /> </div>
                 </div>
-                
-                {/* <div className='w-full min-h-10' /> */}
                 <div className='flex flex-wrap justify-between w-full px-8 pt-8 text-4xl madness-tab-container' id='madness'>
                     {nodes.OutWithABang || nodes.AlienistInTraining ? <>
                         <span
@@ -707,10 +636,6 @@ export default function Grid() {
                         >REDACTED</span>
                     </>}
                 </div>
-                
-                {/* <h3 className="max-w-xl px-8 text-xl font-light font-family:'Typewriter','Courier New', Courier, monospace">
-                    The story continues onto chapter 2, but that is a chapter yet to be written.
-                </h3> */}
             </div>
             {madnessMap}
             <div style={{minHeight: '96px', width: 'full', position: 'absolute'}}>.</div>

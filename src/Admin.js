@@ -1,20 +1,11 @@
 import React, { useContext, useState } from 'react'
 import { UserContext } from './context/user'
 import {
-    // getFirestore,
     collection,
-//     addDoc,
-    // updateDoc,
-    // doc,
-    // setDoc,
-    // getDoc,
-    // onSnapshot,
     query,
     where,
     getDocs,
     limit,
-    // orderBy,
-    // arrayUnion,
 } from 'firebase/firestore';
 import UserView from './UserView';
 
@@ -38,10 +29,6 @@ export default function Admin() {
         setSearchText(e.target.value)
         handleSearch(e.target.value)
     }
-    // const handleAmount = e => {
-    //     setSearchAmount(e.target.value)
-    //     handleSearch(searchText)
-    // }
 
     async function handleSearch(e) {
         const q = query(collection(db, 'users'), where(`${selectedOption}`, '>=', e), limit(searchAmount))
@@ -65,7 +52,8 @@ export default function Admin() {
             "Ouch.",
             "The only sun lamp I need is the flames of my mind.",
             "IA LAMASHTU.",
-            "I swallowed the Fourth Key. Father musn't know."
+            "I swallowed the Fourth Key. Father musn't know.",
+            ':)'
         ]
         const logic = Math.floor(Math.random() * texts.length)
         setBubbleText(texts[logic])
@@ -86,12 +74,6 @@ export default function Admin() {
                     <option value="name">Name</option>
                     <option value='email'>E-Mail</option>
                 </select>
-                {/* <select name='amount' className='amount-select' onChange={handleAmount}>
-                    <option value='10'>10</option>
-                    <option value='25'>25</option>
-                    <option value='50'>50</option>
-                    <option value='100'>100</option>
-                </select> */}
             </form>
             {searchText.length > 0 ? <>
                 <ul>
