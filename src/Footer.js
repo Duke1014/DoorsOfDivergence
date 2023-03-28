@@ -32,6 +32,9 @@ export default function Footer({ scrolled, adminMode, setAdminMode }) {
                     >Duke
                 </a>.
             </span>
+            <span className="hidden xs:inline-block">
+            {isAdmin ? <><button onClick={handleButton}>ADMIN MODE</button></> : <></>}
+            </span>
         </p>
         <button className='text-2xl' onClick={scrollToTop}>Scroll To Top</button>
         {loggedIn ? <>
@@ -39,7 +42,7 @@ export default function Footer({ scrolled, adminMode, setAdminMode }) {
         </> : <>
             <p>You are not logged in.</p>
         </>}
-        {isAdmin ? <><button onClick={handleButton}>ADMIN MODE</button></> : <></>}
+        
         </footer>
     </div>
   )

@@ -44,9 +44,103 @@ function UserProvider({ children }) {
     const [loader, setLoader] = useState(true)
     const [isAdmin, setIsAdmin] = useState(false)    
     const [codeStyle, setCodeStyle] = useState({color: 'black'})
+    const [message, setMessage] = useState({visibility: 'hidden'})
     
     const [searchResults, setSearchResults] = useState([{}])
     const [selectedOption, setSelectedOption] = useState('name')
+
+    let madnessList = {
+        div1 : [
+            'AlienistInTraining',
+            'Oblivious',
+            'Unmotivated',
+            'SoundOfMind',
+            'SoundOfBody',
+            'CriticalThinker',
+            'StrongWilled',
+            'Anxious',
+            'Pyromania',
+            'Thanatophobia',
+            'HotHeaded',
+            'Electrophilia',
+            'Epiplaphobia',
+            'Gambler',
+            'LeftToStarve',
+            'CruelCalculus',
+            'AllTheThingsIMightHaveSaid',
+            'ACleansingFlame',
+            'NoSecondChances',
+            'OutWithABang',
+            'BlazeOfGlory',
+            'Coordinated',
+            'Vocal'
+        ],
+        div2 : [
+            'MissionOfMercy',
+            'Nepotism',
+            'Inactive',
+            'Sanguine',
+            'FrequentAttacks',
+            'Insubordinate',
+            'Patricidal',
+            'Disloyal',
+            'DrainingDay',
+            'Bloodthirsty',
+            'TerminalIllness',
+            'ForeverAndADay',
+            'Reckless'
+        ],
+        div3 : [
+            'UnhingedBehavior',
+            'Committed',
+            'Knowledgable',
+            'Intractible',
+            'Paranoid',
+            'LikeINeedAHoleInMyHead',
+            'Dishonest',
+            'TheOneMadeMany',
+            'Deceitful',
+            'TheManyMadeOne',
+            'Uneasy',
+            'Opportunistic',
+            'BetterTheDevilYouKnow',
+            'GoneForGood'
+        ],
+        div4 : [
+            'ALead',
+            'Combative',
+            'Hesitant',
+            'Hallucinations',
+            'Taciturn',
+            'Confused',
+            'Impatient',
+            'Unflappable',
+            'Dumbfounded',
+            'InvasiveProcedures',
+            'Fickle',
+            'ANewDay',
+            'FinallyFree',
+            'Headstrong',
+        ],
+        all : [
+            'Narcoleptic',
+            'Narcissistic',
+            'Obstinate',
+            'Arrogant',
+            'DelusionsOfGrandeur'
+        ],
+        divs1and2 : [
+            'Indecisive'
+        ],
+        divs2and3 : [
+            'Kleptomania',
+            'Lethargic'
+        ],
+        divs3and4 : [
+            'Retrophilic',
+            'Neophilic'
+        ]
+    }
 
     // const [message, setMessage] = useState('')
     
@@ -67,14 +161,10 @@ function UserProvider({ children }) {
         .then((userCredential) => {
             console.log(userCredential)
             user.uid = userCredential.user.uid;
-            // debugger
             setUser(user)
             setLoggedIn(true)
         })
         .catch((error) => {
-            // errorCode = error.code;
-            // const errorMessage = error.message;
-            // console.log(errorCode, ': ', errorMessage);
             setError(error.message)
         });
     }
@@ -97,11 +187,7 @@ function UserProvider({ children }) {
             setLoggedIn(true)
         })
         .catch((error) => {
-            // errorCode = error.code;
-            // const errorMessage = error.message;
-            // console.log(errorCode, ': ', errorMessage);
             setError(error.message)
-            console.log(error.message)
         })
     }
 
@@ -112,9 +198,6 @@ function UserProvider({ children }) {
             console.log("Success")
         })
         .catch((error) => {
-            // errorCode = error.code;
-            // const errorMessage = error.message;
-            // console.log(errorCode, ': ', errorMessage);
             setError(error.message)
             console.log(error.message)
         });
@@ -137,32 +220,12 @@ function UserProvider({ children }) {
     useEffect(() => {
         onAuthStateChanged(auth, (authUser) => {
             if (authUser) {
-                console.log(authUser);
-                // debugger
-                // list of available properties - https://firebase.google.com/docs/reference/js/firebase.User -- 2/11/2023: this does nothing
-                // user.name = authUser.displayName;
-                // user.photo = authUser.photoURL;
                 user.uid = authUser.uid;
-                // isLoggedIn = true;
                 setLoggedIn(true)
-                // setUser(authUser)
-                // state = 'user';
-                // console.log(authUser);
                 setLoader(false)
-                // checkActiveSession(authUser.uid);
-                // console.log(authUser.uid);
                 checkAdmin(authUser.uid);
                 checkNodes(authUser.uid);
             } else {
-                // state = 'login_buttons';
-                // console.log('No User');
-                // user = {
-                //     name: '',
-                //     uid: '',
-                //     photo: '',
-                //     email: '',
-                // };
-                // isLoggedIn = false;
                 setNodes({})
                 setLoader(false)
             }
@@ -170,17 +233,13 @@ function UserProvider({ children }) {
     }, [])
 
     async function checkNodes(authUID) {
-        // console.log(authUID);
         setLoader(true)
         const actSesSnap = await getDoc(doc(db, 'users', authUID));
-        // debugger
         if (actSesSnap.exists()) {
-            // console.log(actSesSnap);
             let snapData = actSesSnap.data();
             if (snapData.nodes) {
                 setNodes(snapData.nodes)
                 user.name = snapData.name;
-                // startListener(authUID);
                 setLoader(false)
             } else {
                 setNodes({})
@@ -203,26 +262,52 @@ function UserProvider({ children }) {
             },
             { merge: true }
         )
-        let nodeId = document.getElementById(node)
-        // debugger
-        nodeId.scrollIntoView({ behavior: 'smooth' })
+        console.log(madnessList)
+        debugger
+        let madnessId = document.getElementById('madness')
+        if (madnessList.div1.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1') // MAKE THESE TURN THEIR COORESPONDING TABS INTO GLOWY BOIS THANKS
+        } else if (madnessList.div2.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else if (madnessList.div3.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else if (madnessList.div4.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else if (madnessList.all.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else if (madnessList.divs1and2.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else if (madnessList.divs2and3.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else if (madnessList.divs3and4.find(n => n === node)) {
+            madnessId.scrollIntoView({ behavior: 'smooth' })
+            handleTab('div1')
+        } else {
+            let nodeId = document.getElementById(node)
+            nodeId.scrollIntoView({ behavior: 'smooth' })
+        }
+        
+        
     }
 
     async function checkAdmin(authUID) {
-        // console.log(authUID);
         setLoader(true)
         const actSesSnap = await getDoc(doc(db, 'users', authUID));
 
         if (actSesSnap.exists()) {
-            // console.log(actSesSnap);
             let snapData = actSesSnap.data();
-            // console.log(snapData);
             if (snapData.isAdmin) {
                 setIsAdmin(snapData.isAdmin)
                 console.log('An admin is in!');
             }
         } else {
-            console.log('No such document!');
             setNodes({})
         }
     }
@@ -232,83 +317,57 @@ function UserProvider({ children }) {
         onSnapshot(doc(db, 'users', listenTo), (doc) => {
             const source = doc.metadata.hasPendingWrites ? 'Local' : 'Server';
             console.log(source, ' data: ', doc.data());
-        //     // setLoader(true)
             let snapData = doc.data();
             setNodes(snapData.nodes)
-        //     // getCurrentTask();
         });
-        // console.warn('Listener started!');
     }
 
     async function handleEnterCode(e) {
+        setMessage({visibility: 'hidden'})
         const docRef = doc(db, 'codes', 'heresy')  
         const codesSnap = await getDoc(docRef)
         setCodeStyle({color: 'black'})
         if (codesSnap) {
             let snapData = codesSnap.data()
             const matchingCode = Object.keys(snapData).find(key => key.toLowerCase() === e.toLowerCase())
-            
             if (matchingCode) {
-                console.log('EEEEY');
                 setCodeStyle({color: 'black', animation: 'goodCode 2s'})
-                // debugger
                 snapData[matchingCode].forEach((element) => {
                     addNode(element)
                 })
-
-
-                // let newNodes = [...nodes, snapData[e]]
-                // setNodes(newNodes)
-                //////////////
-                // snapData[e].forEach((node) => {
-                //     setNodes(...nodes, node)
-                // })
             } else {
-                console.log('womp womp')
+                setMessage({visibility: 'visible', animation: 'badCode2 2s'})
                 setCodeStyle({color: 'black', animation: 'badCode 2s'})
             }
         } else {
-            console.log('Ahm...this code is not valid... Please check and try again!');
+            setMessage({visibility: 'visible', animation: 'badCode2 2s'})
         }
+        setTimeout(() => {
+            setMessage({visibility: 'hidden'})
+        }, 3000)
     }
 
-
-
-     
-            // setMessage('Ahm...this code is not valid... Please check and try again!')
-                  
-        // console.log(codesSnap)
-        // if (codesSnap) {
-            // console.log(codesSnap);
-            
-            // console.log(snapData);
-            // console.log('code: ', e.detail);
-            // debugger;
-            // let prop = e
-            // console.log(prop);
-            // console.warn(snapData[prop]);
-            // console.log(Object.keys(snapData));
-            
-            // let unlock;
-            
-            // console.warn(snapData[prop]);
-            // snapData[prop].forEach((element) => {
-            //     setNodes(element);
-            //     unlock = element;
-            //     // console.log(element);
-            // });
-            // setUnlock(unlock);
-            
-        // } else {
-        //     console.log('No such document!');
-        // }
-
-        // console.log('code: ', e.detail);
-    
-
     return (
-        <UserContext.Provider value={{user, auth, db, error, login, logout, signup, sendReset, handleEnterCode, loggedIn, nodes, loader, isAdmin, codeStyle, searchResults, setSelectedOption, 
-        // handleSearch
+        <UserContext.Provider 
+            value={{
+                user, 
+                auth, 
+                db, 
+                error, 
+                login, 
+                logout, 
+                signup, 
+                sendReset, 
+                handleEnterCode, 
+                loggedIn, 
+                nodes, 
+                loader, 
+                isAdmin, 
+                codeStyle, 
+                searchResults, 
+                setSelectedOption, 
+                message
+                // handleSearch
         }}>
             {children}
         </UserContext.Provider>

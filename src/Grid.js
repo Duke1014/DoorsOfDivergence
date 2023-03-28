@@ -646,11 +646,17 @@ export default function Grid() {
                     // , backgroundAttachment: 'fixed'
                 }}
             >
-                <h1 className="z-10 px-8 text-6xl font-light madness-title" style={{paddingTop: '10px'}}>
-                    Madness,<br />1917
-                </h1>
+                {/* <div className="flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white">
+                    <h1 className="z-10 text-6xl text-white">HERESY,<br />1897</h1>
+                    <EnterCode />
+                </div> */}
+                <div className='flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white'>
+                    <h1 className="z-10 text-6xl text-black madness-title" >Madness,<br />1917</h1>
+                    <div className='text-black'> <EnterCode /> </div>
+                </div>
+                
                 {/* <div className='w-full min-h-10' /> */}
-                <div className='flex flex-wrap justify-between w-full px-8 pt-8 text-4xl madness-tab-container'>
+                <div className='flex flex-wrap justify-between w-full px-8 pt-8 text-4xl madness-tab-container' id='madness'>
                     {nodes.OutWithABang || nodes.AlienistInTraining ? <>
                         <span
                             className='text-3xl madness-tab'

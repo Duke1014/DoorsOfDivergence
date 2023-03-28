@@ -28,6 +28,18 @@ input:not([type='checkbox']):focus {
     }
 }
 
+@keyframes badCode2 {
+    0% {
+        color: rgb(255, 255, 255)
+    }
+    20% {
+        color: red
+    }
+    100% {
+        color: rgb(255, 255, 255)
+    }
+}
+
 @keyframes goodCode {
     0% {
         color: black

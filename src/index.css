@@ -4,12 +4,18 @@
 /* ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com */
 
 .testfont {
-  font-family:EBGaramond-VariableFont_wght
+  font-family:EBGaramond-VariableFont_wght;
+  font-weight: bold;
 }
 
 @font-face {
   font-family: EBGaramond-VariableFont_wght;
   src: url(font/EBGaramond-VariableFont_wght.ttf) format("truetype");
+}
+
+.testfont2 {
+  font-family: 'Merriweather', serif;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .footer {
@@ -131,7 +137,7 @@ body {
   line-height: inherit; /* 2 */
   background-image: url('./img/background.png');
   font-family: Archaic1897;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 100%;
   min-height: 100%;
 }
