@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './divergenceone.css'
 import './mobilephones.css'
-import EnterCode from './EnterCode'
+// import EnterCode from './EnterCode'
 
 import line from './img/Line.png'
 import corner from './img/Corner.png'

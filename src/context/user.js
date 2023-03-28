@@ -38,8 +38,8 @@ function UserProvider({ children }) {
     const [tabStyleThree, setTabStyleThree] = useState({})
     const [tabStyleFour, setTabStyleFour] = useState({})
     
-    const [searchResults, setSearchResults] = useState([{}])
-    const [selectedOption, setSelectedOption] = useState('name')
+    // const [searchResults, setSearchResults] = useState([{}])
+    // const [selectedOption, setSelectedOption] = useState('name')
 
     let madnessList = {
         div1 : [
@@ -436,8 +436,8 @@ function UserProvider({ children }) {
                 loader, 
                 isAdmin, 
                 codeStyle, 
-                searchResults, 
-                setSelectedOption, 
+                // searchResults, 
+                // setSelectedOption, 
                 message,
                 tabStyleOne,
                 setTabStyleOne,

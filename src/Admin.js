@@ -17,7 +17,7 @@ export default function Admin() {
     
     const [searchText, setSearchText] = useState('')
     const [selectedOption, setSelectedOption] = useState('name')
-    const [searchAmount, setSearchAmount] = useState(10)
+    // const [searchAmount, setSearchAmount] = useState(10)
     const [newResults, setNewResults] = useState([])
     const [bubbleText, setBubbleText] = useState('')
 
@@ -31,7 +31,7 @@ export default function Admin() {
     }
 
     async function handleSearch(e) {
-        const q = query(collection(db, 'users'), where(`${selectedOption}`, '>=', e), limit(searchAmount))
+        const q = query(collection(db, 'users'), where(`${selectedOption}`, '>=', e), limit(10))
         const querySnapshot = await getDocs(q)
         let thing = []
         querySnapshot.forEach((doc) => {
