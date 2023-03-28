@@ -287,3 +287,17 @@ section {
         display: none;
     }
 }
+
+@keyframes glow {
+    0% {
+        background-color: none;
+    }
+
+    50% {
+        background-color: gold;
+    }
+
+    100% {
+        background-color: none;
+    }
+}

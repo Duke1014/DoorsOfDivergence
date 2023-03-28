@@ -24,14 +24,11 @@ export default function Grid() {
 
     // const dispatch = createEventDispatcher();
     // const [scrollStyle, setScrollStyle] = useState('')
-    const { nodes } = useContext(UserContext)
+    const { nodes, tabStyleOne, tabStyleTwo, tabStyleThree, tabStyleFour, setTabStyleOne, setTabStyleTwo, setTabStyleThree, setTabStyleFour } = useContext(UserContext)
     const [cpShow, setCpShow] = useState(false)
     const [activeNode, setActiveNode] = useState()
     // const [mouseOver, setMouseOver] = useState(false)
-    const [tabStyleOne, setTabStyleOne] = useState({})
-    const [tabStyleTwo, setTabStyleTwo] = useState({})
-    const [tabStyleThree, setTabStyleThree] = useState({})
-    const [tabStyleFour, setTabStyleFour] = useState({})
+
     const [clickedTab, setClickedTab] = useState('')
     const [isHesitant, setIsHesitant] = useState(false)
     // export let nodes;

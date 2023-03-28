@@ -45,6 +45,11 @@ function UserProvider({ children }) {
     const [isAdmin, setIsAdmin] = useState(false)    
     const [codeStyle, setCodeStyle] = useState({color: 'black'})
     const [message, setMessage] = useState({visibility: 'hidden'})
+
+    const [tabStyleOne, setTabStyleOne] = useState({})
+    const [tabStyleTwo, setTabStyleTwo] = useState({})
+    const [tabStyleThree, setTabStyleThree] = useState({})
+    const [tabStyleFour, setTabStyleFour] = useState({})
     
     const [searchResults, setSearchResults] = useState([{}])
     const [selectedOption, setSelectedOption] = useState('name')
@@ -270,31 +275,125 @@ function UserProvider({ children }) {
             handleTab('div1') // MAKE THESE TURN THEIR COORESPONDING TABS INTO GLOWY BOIS THANKS
         } else if (madnessList.div2.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('div2')
         } else if (madnessList.div3.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('div3')
         } else if (madnessList.div4.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('div4')
         } else if (madnessList.all.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('divAll')
         } else if (madnessList.divs1and2.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('div12')
         } else if (madnessList.divs2and3.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('div23')
         } else if (madnessList.divs3and4.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            handleTab('div34')
         } else {
             let nodeId = document.getElementById(node)
             nodeId.scrollIntoView({ behavior: 'smooth' })
         }
-        
-        
+    }
+
+    const handleTab = (div) => {
+        if (div === 'div1') {
+            setTabStyleOne({
+                ...tabStyleOne, 
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'div2') {
+            setTabStyleTwo({
+                ...tabStyleTwo,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'div3') {
+            setTabStyleThree({
+                ...tabStyleThree,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'div4') {
+            setTabStyleFour({
+                ...tabStyleFour,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'divAll') {
+            setTabStyleOne({
+                ...tabStyleOne, 
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+            setTabStyleTwo({
+                ...tabStyleTwo,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+            setTabStyleThree({
+                ...tabStyleThree,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+            setTabStyleFour({
+                ...tabStyleFour,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'div12') {
+            setTabStyleOne({
+                ...tabStyleOne, 
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+            setTabStyleTwo({
+                ...tabStyleTwo,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'div23') {
+            setTabStyleTwo({
+                ...tabStyleTwo,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+            setTabStyleThree({
+                ...tabStyleThree,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        } else if (div === 'div34') {
+            setTabStyleThree({
+                ...tabStyleThree,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+            setTabStyleFour({
+                ...tabStyleFour,
+                animationName: 'glow',
+                animationDuration: '2s',
+                animationIterationCount: 'infinite'  
+            })
+        }
     }
 
     async function checkAdmin(authUID) {
@@ -366,8 +465,15 @@ function UserProvider({ children }) {
                 codeStyle, 
                 searchResults, 
                 setSelectedOption, 
-                message
-                // handleSearch
+                message,
+                tabStyleOne,
+                setTabStyleOne,
+                tabStyleTwo,
+                setTabStyleTwo,
+                tabStyleThree,
+                setTabStyleThree,
+                tabStyleFour,
+                setTabStyleFour
         }}>
             {children}
         </UserContext.Provider>
