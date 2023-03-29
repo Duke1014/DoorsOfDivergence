@@ -263,32 +263,32 @@ function UserProvider({ children }) {
             { merge: true }
         )
         console.log(madnessList)
-        debugger
+        // debugger
         let madnessId = document.getElementById('madness')
         if (madnessList.div1.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1') // MAKE THESE TURN THEIR COORESPONDING TABS INTO GLOWY BOIS THANKS
+            // handleTab('div1') // MAKE THESE TURN THEIR COORESPONDING TABS INTO GLOWY BOIS THANKS
         } else if (madnessList.div2.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else if (madnessList.div3.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else if (madnessList.div4.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else if (madnessList.all.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else if (madnessList.divs1and2.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else if (madnessList.divs2and3.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else if (madnessList.divs3and4.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
-            handleTab('div1')
+            // handleTab('div1')
         } else {
             let nodeId = document.getElementById(node)
             nodeId.scrollIntoView({ behavior: 'smooth' })
@@ -344,7 +344,7 @@ function UserProvider({ children }) {
         }
         setTimeout(() => {
             setMessage({visibility: 'hidden'})
-        }, 3000)
+        }, 2000)
     }
 
     return (
