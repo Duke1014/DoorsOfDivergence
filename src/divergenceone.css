@@ -66,8 +66,8 @@ body .madness-grid {
     justify-content: center;
     align-items: center;
     /* top: 50px; */
-    width: 200px;
-    height: 200px;
+    width: 12rem;
+    height: 12rem;
 }
 
 .v-line-dash img {
