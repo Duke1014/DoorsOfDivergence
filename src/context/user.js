@@ -240,8 +240,7 @@ function UserProvider({ children }) {
             },
             { merge: true }
         )
-        // console.log(madnessList)
-        // debugger
+
         let madnessId = document.getElementById('madness')
         if (madnessList.div1.find(n => n === node)) {
             madnessId.scrollIntoView({ behavior: 'smooth' })
