@@ -17,22 +17,24 @@ body .madness-grid {
 } */
 
 .madness-grid .checkbox {
-    box-sizing: border-box;
-    background: transparent;
-    background-size: 60px 60px;
+    /* box-sizing: border-box; */
+    /* background: transparent; */
+    /* background-size: 60px 60px; */
     scroll-snap-align: center;
     display: grid;
     place-items: center;
     place-self: center;
-    width: max-content;
+    width: 200px;
+    height: 200px;
     z-index: 5;
-    margin-inline: 16px;
+    /* margin-inline: 16px; */
     position: relative;
 }
 
 .no-symptoms, .symptom-found {
     text-align: center !important; 
     text-indent: 0% !important;
+    margin-bottom: 0 !important;
 }
 
 :global(body) {
@@ -50,6 +52,50 @@ body .madness-grid {
     --spacing: 8px;
     --border: 4px;
 }
+
+.v-line-dash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 50px; */
+    width: 200px;
+    height: 200px;
+}
+.h-line-dash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* top: 50px; */
+    width: 200px;
+    height: 200px;
+}
+
+.v-line-dash img {
+    width: 4%;
+    height: 110%;
+    position: relative;
+    object-fit: contain;
+}
+
+.h-line-dash img {
+    width: auto;
+    height: 4%;
+    position: relative;
+    object-fit: contain;
+    /* top: 60px; */
+}
+
+/* .v-line-dash-cross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .h-line-dash-cross {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
 .vertical-line-dash {
     justify-self: center;
@@ -95,12 +141,53 @@ body .madness-grid {
 }
 
 .madness-grid {
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(24, min-content);
     /* grid-template-rows: repeat(28, 1fr); */
-    grid-template-rows: repeat(23, 1fr);
+    grid-template-rows: repeat(33, min-content);
     /* grid-template-rows: min-content min-content min-content min-content min-content min-content min-content 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr min-content min-content min-content min-content min-content; */
     padding: 100px;
+    border: 1px solid black;
 }
+
+/* .madness-grid > * {
+    border: 1px solid red
+}
+
+.madness-grid::before,
+.madness-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: black;
+}
+
+.madness-grid::before {
+  left: 0;
+}
+
+.madness-grid::after {
+  right: 0;
+} */
+
+/* create horizontal lines */
+/* .madness-grid > *:nth-child(-n+24) {
+  border-top: 1px solid black;
+}
+
+.madness-grid > *:nth-last-child(-n+24) {
+  border-bottom: 1px solid black;
+} */
+
+/* create vertical lines */
+/* .madness-grid > *:nth-child(24n-23) {
+  border-left: 1px solid black;
+}
+
+.madness-grid > *:nth-child(24n) {
+  border-right: 1px solid black;
+} */
 
 @media only screen and (max-width: 600px) {
     .heresy-grid {
