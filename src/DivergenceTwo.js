@@ -5,6 +5,19 @@ import line from './img/Line.png'
 import Checked from './img/Checked.png'
 import unchecked from './img/unchecked.png'
 
+import oneDashHorizontal from './img/1 Dash Horizontal.png'
+import twoDashHorizontal from './img/2 Dash Horizontal.png'
+import threeDashHorizontal from './img/3 Dash Horizontal.png'
+import twoDashVertical from './img/2 Dash Vertical.png'
+import threeDashVertical from './img/3 Dash Vertical.png'
+import cornerDownLeft from './img/Corner Down-Left.png'
+import cornerDownRight from './img/Corner Down-Right.png'
+import cornerUpLeft from './img/Corner Up- Left.png'
+import cornerUpRight from './img/Corner Up-Right.png'
+
+import uncheckedsmall from './img/uncheckedsmall.png'
+import checkedsmall from './img/Checkedsmall.png'
+
 import { uiContent } from './lib/content'
 import { UserContext } from './context/user'
 
@@ -29,7 +42,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.Narcoleptic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Narcoleptic')} 
                                     />
@@ -38,7 +51,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Narcoleptic')}
@@ -51,7 +64,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.Narcissistic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Narcissistic')} 
                                     />
@@ -60,7 +73,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick("Hint: Narcissistic")}
@@ -73,7 +86,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.Obstinate ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Obstinate')} 
                                     />
@@ -82,7 +95,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Obstinate')}
@@ -95,7 +108,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.Arrogant ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Arrogant')} 
                                     />
@@ -104,7 +117,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Arrogant')}
@@ -117,7 +130,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.DelusionsOfGrandeur ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('DelusionsOfGrandeur')} 
                                     />
@@ -126,7 +139,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Delusions Of Grandeur')}
@@ -139,7 +152,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.MissionOfMercy ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('MissionOfMercy')} 
                                     />
@@ -148,7 +161,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Mission Of Mercy')} />
@@ -156,17 +169,22 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '3/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '3/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
+                        </div> 
+                        
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '5/11/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownRight} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '4/12/span 2/span 2', top: '50px'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className="checkbox" id='Nepotism' style={{gridArea: '4/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Nepotism' style={{gridArea: '5/13/span 2/span 2'}}>
                             {nodes && nodes.Nepotism ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Nepotism')} 
                                     />
@@ -175,7 +193,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Nepotism')} />
@@ -183,11 +201,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Inactive' style={{gridArea: '5/12/span 2/span 2', left: '-80px', top: '60px'}}>
+                        <div className="checkbox" id='Inactive' style={{gridArea: '7/11/span 2/span 2'}}>
                             {nodes && nodes.Inactive ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Inactive')} 
                                     />
@@ -196,7 +214,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Inactive')} />
@@ -204,17 +222,21 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '5/13/span 2/span 2', marginTop: 'calc(var(--spacing) * 10)'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '7/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className='corner-up-right' style={{gridArea: '7/12/span 2/span 2', top: '-35px'}}>
-                            <img src={corner} alt='corner' />
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '9/11/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerUpRight} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className="checkbox" id='Sanguine' style={{gridArea: '7/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Sanguine' style={{gridArea: '9/13/span 2/span 2'}}>
                             {nodes && nodes.Sanguine ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Sanguine')} 
                                     />
@@ -223,7 +245,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Sanguine')} />
@@ -231,23 +253,29 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '9/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '11/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className='corner-down-right' style={{gridArea: '10/10/span 2/span 2', top: '45px'}}>
-                            <img src={corner} alt='corner' />
+                        
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '13/9/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownRight} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '10/11/span 2/span 2'}}>
-                            <img src={line} alt='line'/>
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '13/11/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownRight} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '10/12/span 2/span 2', top: '45px'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className="checkbox" id='FrequentAttacks' style={{gridArea: '10/13/span 2/span 2'}}>
+                        <div className="checkbox" id='FrequentAttacks' style={{gridArea: '13/13/span 2/span 2'}}>
                             {nodes && nodes.FrequentAttacks ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('FrequentAttacks')} 
                                     />
@@ -256,7 +284,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Frequent Attacks')} />
@@ -264,26 +292,22 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '10/14/span 2/span 2', left:'70px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '13/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line' />
+                        </div> 
+                        
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '13/16/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownLeft} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '10/14/span 2/span 2', left:'70px', top: '-20px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '10/16/span 2/span 2', left:'30px', top: '-20px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className='corner-down-left' style={{gridArea: '10/16/span 2/span 2', width: '200px', top: '50px'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className='corner-down-left' style={{gridArea: '10/18/span 2/span 2', width: '200px', top: '28px', left: '-40px'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className="checkbox" id='Kleptomania' style={{gridArea: '11/10/span 2/span 2', left: '-50px', top: '50px'}}>
+                        <div className="checkbox" id='Kleptomania' style={{gridArea: '15/9/span 2/span 2'}}>
                             {nodes && nodes.Kleptomania ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Kleptomania')} 
                                     />
@@ -292,7 +316,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Kleptomania')} />
@@ -300,11 +324,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Lethargic' style={{gridArea: '11/12/span 2/span 2', left: '-50px', top: '50px'}}>
+                        <div className="checkbox" id='Lethargic' style={{gridArea: '15/11/span 2/span 2'}}>
                             {nodes && nodes.Lethargic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Lethargic')} 
                                     />
@@ -313,7 +337,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Lethargic')} />
@@ -321,14 +345,15 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '12/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '15/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="checkbox" id='Insubordinate' style={{gridArea: '11/16/span 2/span 2', left: '10px', top: '50px'}}>
+                       
+                        <div className="checkbox" id='Insubordinate' style={{gridArea: '15/16/span 2/span 2'}}>
                             {nodes && nodes.Insubordinate ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Insubordinate')} 
                                     />
@@ -337,7 +362,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Insubordinate')} />
@@ -345,23 +370,26 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '11/18/span 2/span 2', top: '30px', left: '-25px'}}>
-                            <img src={line} alt='line' />
-                        </div> 
-                        <div className='corner-up-right' style={{gridArea: '13/9/span 2/span 2', width: '200px', left: '0px'}}>
-                            <img src={corner} alt='corner' />
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '17/9/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerUpRight} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '13/11/span 2/span 2', left:'10px', top: '15px'}}>
-                            <img src={line} alt='line'/>
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '17/11/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerUpRight} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className='corner-up-right' style={{gridArea: '13/12/span 2/span 2'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className="checkbox" id='Patricidal' style={{gridArea: '13/13/span 2/span 2'}}>
+                        
+                        <div className="checkbox" id='Patricidal' style={{gridArea: '17/13/span 2/span 2'}}>
                             {nodes && nodes.Patricidal ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Patricidal')} 
                                     />
@@ -370,7 +398,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Patricidal')} />
@@ -378,32 +406,29 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '13/15/span 2/span 2', left:'-35px'}}>
-                            <img src={line} alt='line'/>
+                        <div 
+                        // className='corner-down-right' 
+                            style={{gridArea: '17/16/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerUpLeft} alt='corner' style={{position: 'relative', float: 'right', top: '45%'}}/>
                         </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '13/15/span 2/span 2', left:'-35px', top: '-20px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className='corner-up-left' style={{gridArea: '13/16/span 2/span 2', top: '-30px'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className="horizontal-line-dash" style={{gridArea: '13/17/span 2/span 2', left:'-55px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="vertical-line-dash" style={{gridArea: '13/18/span 2/span 2', left: '-25px', top: '-20px'}}>
-                            <img src={line} alt='line' />
+                        <div className="h-line-dash" style={{gridArea: '17/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '15/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        
+                        <div className="v-line-dash" style={{gridArea: '19/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '15/18/span 2/span 2', top: '-55px', left: '-25px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '19/17/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="checkbox" id='Disloyal' style={{gridArea: '16/13/span 2/span 2'}}>
+                        
+                        <div className="checkbox" id='Disloyal' style={{gridArea: '21/13/span 2/span 2'}}>
                             {nodes && nodes.Disloyal ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Disloyal')} 
                                     />
@@ -412,7 +437,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Disloyal')} />
@@ -420,17 +445,15 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '16/15/span 2/span 2', left: '-30px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '16/16/span 2/span 2', left: '20px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="checkbox" id='DrainingDay' style={{gridArea: '16/18/span 2/span 2', left: '-25px'}}>
+                        <div className="h-line-dash" style={{gridArea: '21/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line' />
+                        </div> 
+                        
+                        <div className="checkbox" id='DrainingDay' style={{gridArea: '21/17/span 2/span 2'}}>
                             {nodes && nodes.DrainingDay ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('DrainingDay')} 
                                     />
@@ -439,7 +462,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Draining Day')} />
@@ -447,26 +470,41 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '18/11/span 2/span 2', top: '-10px', left: '0px'}}>
-                            <img src={corner} alt='corner' />
+                        
+                        
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '24/10/span 1/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownRight} alt='corner' 
+                            style={{position: 'relative', top: '-1.8rem'}}
+                            />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '18/12/span 2/span 2', top: '-55px', left: '20px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="vertical-line-dash" style={{gridArea: '18/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="h-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line' />
                         </div> 
-                        <div className="horizontal-line-dash"style={{gridArea: '18/14/span 2/span 2', top: '-55px', left: '-5px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '23/13/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line' />
+                        </div> 
+                        <div className="v-line-dash" style={{gridArea: '23/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
+                        </div> 
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '24/15/span 1/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownLeft} alt='corner' 
+                                style={{position: 'relative', top: '-1.8rem', left: '1.4rem'}}
+                            />
                         </div>
-                        <div className='corner-down-left' style={{gridArea: '18/15/span 2/span 2', top: '-5px', left: '0px'}}>
-                            <img src={corner} alt='corner' />
-                        </div>
-                        <div className="checkbox" id='Bloodthirsty' style={{gridArea: '19/11/span 2/span 2', top: '0px', left:'-50px'}}>
+                        
+                        <div className="checkbox" id='Bloodthirsty' style={{gridArea: '26/9/span 2/span 2'}}>
                             {nodes && nodes.Bloodthirsty ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Bloodthirsty')} 
                                     />
@@ -475,7 +513,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Bloodthirsty')} />
@@ -483,14 +521,21 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '19/12/span 2/span 2', width: '150px', top: '50px', left:'40px'}}>
-                            <img src={corner} alt='corner' />
+                        
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '27/12/span 1/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerDownRight} alt='corner' 
+                            style={{position: 'relative', top: '-1.8rem'}}
+                            />
                         </div>
-                        <div className="checkbox" id='Indecisive' style={{gridArea: '19/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Indecisive' style={{gridArea: '26/13/span 2/span 2'}}>
                             {nodes && nodes.Indecisive ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Indecisive')} 
                                     />
@@ -499,7 +544,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Indecisive')} />
@@ -507,20 +552,18 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '19/15/span 2/span 2', left: '-40px', top: '0px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="vertical-line-dash" style={{gridArea: '19/15/span 2/span 2', top: '0px', left: '10px'}}>
-                            <img src={line} alt='line' />
+                        <div className="h-line-dash" style={{gridArea: '26/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line' />
                         </div> 
-                        <div className="horizontal-line-dash"style={{gridArea: '19/16/span 2/span 2', left: '10px', top: '0px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="checkbox" id='Reckless' style={{gridArea: '19/18/span 2/span 2', left: '-25px'}}>
+                        <div className="v-line-dash" style={{gridArea: '26/15/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
+                        </div> 
+                        
+                        <div className="checkbox" id='Reckless' style={{gridArea: '26/17/span 2/span 2'}}>
                             {nodes && nodes.Reckless ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Reckless')} 
                                     />
@@ -529,7 +572,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Reckless')} />
@@ -537,26 +580,24 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '21/11/span 2/span 2', top: '-45px', left: '-50px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '28/9/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '20/12/span 2/span 2', top: '0px', left: '-25px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '28/11/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '21/12/span 2/span 2', top: '0px', left: '-25px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '28/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '21/13/span 2/span 2', top: '-20px', left: '0px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '28/15/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '20/15/span 2/span 2', top: '60px', left: '10px'}}>
-                            <img src={line} alt='line' />
-                        </div>
-                        <div className="checkbox" id='TerminalIllness' style={{gridArea: '22/11/span 2/span 2', left: '-50px'}}>
+                        
+                        <div className="checkbox" id='TerminalIllness' style={{gridArea: '30/9/span 2/span 2'}}>
                             {nodes && nodes.TerminalIllness ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('TerminalIllness')} 
                                     />
@@ -565,7 +606,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Terminal Illness')} />
@@ -573,17 +614,30 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className='corner-up-left' style={{gridArea: '22/12/span 2/span 2', width: '150px', top: '10px', left: '-10px'}}>
-                            <img src={corner} alt='corner' />
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '30/11/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerUpLeft} alt='corner' 
+                            style={{position: 'relative', top: '2rem', left: '1.5rem'}}
+                            />
                         </div>
-                        <div className='corner-up-right' style={{gridArea: '22/13/span 2/span 2', left: '50px'}}>
-                            <img src={corner} alt='corner' />
+                        
+                        <div 
+                        // className='corner-down-right' 
+                        style={{gridArea: '30/13/span 2/span 2'
+                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
+                        }}>
+                            <img src={cornerUpRight} alt='corner' 
+                            style={{position: 'relative', top: '2rem', left: '6rem'}}
+                            />
                         </div>
-                        <div className="checkbox" id='ForeverAndADay' style={{gridArea: '22/15/span 2/span 2'}}>
+                        <div className="checkbox" id='ForeverAndADay' style={{gridArea: '30/15/span 2/span 2'}}>
                             {nodes && nodes.ForeverAndADay ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('ForeverAndADay')} 
                                     />
@@ -592,7 +646,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>  :   <>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Forever And A Day')} />
