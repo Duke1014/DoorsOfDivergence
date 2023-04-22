@@ -42,12 +42,12 @@ export default function ({ setCpShow, setActiveNode }) {
                 <div className='flex flex-wrap w-full h-52'/>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>
-                    {/* <div className='text-2xl' style={{gridArea: '1/18/span 2/span 2'}}>Common Symptoms</div> */}
-                        {/* <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/18/span 2/span 2'}}>
+                    <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2', textAlign: 'center', position: 'relative', top: '-2.5rem'}}>Common Symptoms</div>
+                        <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Narcoleptic')} 
                                     />
@@ -56,7 +56,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Narcoleptic')}
@@ -65,11 +65,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Narcissistic' style={{gridArea: '3/18/span 2/span 2'}}>
+                        <div className="checkbox" id='Narcissistic' style={{gridArea: '3/20/span 2/span 2'}}>
                             {nodes && nodes.Narcissistic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Narcissistic')} 
                                     />
@@ -78,7 +78,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick("Hint: Narcissistic")}
@@ -87,11 +87,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Obstinate' style={{gridArea: '5/18/span 2/span 2'}}>
+                        <div className="checkbox" id='Obstinate' style={{gridArea: '5/20/span 2/span 2'}}>
                             {nodes && nodes.Obstinate ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Obstinate')} 
                                     />
@@ -100,7 +100,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Obstinate')}
@@ -109,11 +109,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/18/span 2/span 2'}}>
+                        <div className="checkbox" id='Arrogant' style={{gridArea: '7/20/span 2/span 2'}}>
                             {nodes && nodes.Arrogant ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Arrogant')} 
                                     />
@@ -122,7 +122,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Arrogant')}
@@ -131,11 +131,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '9/18/span 2/span 2'}}>
+                        <div className="checkbox" id='DelusionsOfGrandeur' style={{gridArea: '10/20/span 2/span 2'}}>
                             {nodes && nodes.DelusionsOfGrandeur ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('DelusionsOfGrandeur')} 
                                     />
@@ -144,7 +144,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Delusions Of Grandeur')}
@@ -152,7 +152,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
                             </>}
-                        </div> */}
+                        </div>
                         <div className="checkbox" id='AlienistInTraining' style={{gridArea: '1/13/span 2/span 2'}}>
                             {nodes && nodes.AlienistInTraining ? <>
                                 <div className='checked'>
@@ -830,7 +830,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.Gambler ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Gambler')} 
                                     />
@@ -839,7 +839,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Gambler')} />
@@ -878,7 +878,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.CruelCalculus ? <>
                                 <div className='checked'>
                                     <img
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('CruelCalculus')} 
                                     />
@@ -887,7 +887,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Cruel Calculus')} />
@@ -899,7 +899,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.AllTheThingsIMightHaveSaid ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('AllTheThingsIMightHaveSaid')} 
                                     />
@@ -908,7 +908,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: All The Things I Might Have Said')} />
@@ -918,7 +918,7 @@ export default function ({ setCpShow, setActiveNode }) {
                         </div>
                         <div 
                         // className='corner-down-right' 
-                        style={{gridArea: '31/11/span 2/span 2', position: 'relative', top: '3rem', left: '5rem'
+                        style={{gridArea: '31/12/span 2/span 2', position: 'relative', top: '3rem', left: '-0.5rem'
                         // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
                         }}>
                             <img src={cornerUpLeft} alt='corner' style={{float: 'right', position: 'relative'}} />
@@ -934,7 +934,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.ACleansingFlame ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('ACleansingFlame')} 
                                     />
@@ -943,7 +943,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: A Cleansing Flame')} />
@@ -955,7 +955,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             {nodes && nodes.NoSecondChances ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('NoSecondChances')} 
                                     />
@@ -964,7 +964,7 @@ export default function ({ setCpShow, setActiveNode }) {
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: No Second Chances')} />

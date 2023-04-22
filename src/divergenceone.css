@@ -149,7 +149,7 @@ body .madness-grid {
     border: 1px solid black;
 }
 
-/* .madness-grid > * {
+.madness-grid > * {
     border: 1px solid red
 }
 
@@ -169,25 +169,25 @@ body .madness-grid {
 
 .madness-grid::after {
   right: 0;
-} */
+}
 
 /* create horizontal lines */
-/* .madness-grid > *:nth-child(-n+24) {
+.madness-grid > *:nth-child(-n+24) {
   border-top: 1px solid black;
 }
 
 .madness-grid > *:nth-last-child(-n+24) {
   border-bottom: 1px solid black;
-} */
+}
 
 /* create vertical lines */
-/* .madness-grid > *:nth-child(24n-23) {
+.madness-grid > *:nth-child(24n-23) {
   border-left: 1px solid black;
 }
 
 .madness-grid > *:nth-child(24n) {
   border-right: 1px solid black;
-} */
+}
 
 @media only screen and (max-width: 600px) {
     .heresy-grid {
