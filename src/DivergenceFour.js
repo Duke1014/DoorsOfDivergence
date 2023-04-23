@@ -3,6 +3,20 @@ import Checked from './img/Checked.png'
 import unchecked from './img/unchecked.png'
 import corner from './img/Corner.png'
 import line from './img/Line.png'
+
+import oneDashHorizontal from './img/1 Dash Horizontal.png'
+import twoDashHorizontal from './img/2 Dash Horizontal.png'
+import threeDashHorizontal from './img/3 Dash Horizontal.png'
+import twoDashVertical from './img/2 Dash Vertical.png'
+import threeDashVertical from './img/3 Dash Vertical.png'
+import cornerDownLeft from './img/Corner Down-Left.png'
+import cornerDownRight from './img/Corner Down-Right.png'
+import cornerUpLeft from './img/Corner Up- Left.png'
+import cornerUpRight from './img/Corner Up-Right.png'
+
+import uncheckedsmall from './img/uncheckedsmall.png'
+import checkedsmall from './img/Checkedsmall.png'
+
 import { uiContent } from './lib/content'
 import { UserContext } from './context/user'
 
@@ -28,12 +42,12 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                 <div className='flex flex-wrap w-full h-52'/>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>    
-                        <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2'}}>Common Symptoms</div>
+                        <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2', textAlign: 'center', position: 'relative', top: '-2.5rem'}}>Common Symptoms</div>
                         <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Narcoleptic')} 
                                     />
@@ -42,7 +56,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Narcoleptic')}
@@ -55,7 +69,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             {nodes && nodes.Narcissistic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Narcissistic')} 
                                     />
@@ -64,7 +78,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick("Hint: Narcissistic")}
@@ -77,7 +91,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             {nodes && nodes.Obstinate ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Obstinate')} 
                                     />
@@ -86,7 +100,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Obstinate')}
@@ -99,7 +113,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             {nodes && nodes.Arrogant ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Arrogant')} 
                                     />
@@ -108,7 +122,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Arrogant')}
@@ -121,7 +135,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             {nodes && nodes.DelusionsOfGrandeur ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('DelusionsOfGrandeur')} 
                                     />
@@ -130,7 +144,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked'
                                         onClick={() => handleClick('Hint: Delusions Of Grandeur')}
@@ -143,7 +157,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             {nodes && nodes.ALead ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('ALead')} 
                                     />
@@ -152,7 +166,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: A Lead')} />
@@ -160,20 +174,20 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '3/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '3/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className='corner-down-right' style={{gridArea: '4/10/span 2/span 2', top: '40px', left: '-50px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '5/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
+                            <img src={cornerDownRight} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '4/11/span 2/span 2'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '5/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="checkbox" id='Combative' style={{gridArea: '4/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Combative' style={{gridArea: '5/13/span 2/span 2'}}>
                             {nodes && nodes.Combative ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Combative')} 
                                     />
@@ -182,7 +196,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Combative')} />
@@ -190,17 +204,17 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '4/15/span 2/span 2'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '5/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-down-left' style={{gridArea: '4/17/span 2/span 2', width: '200px', top: '48px', left: '-20px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '5/17/span 2/span 2', position: 'relative', top: '5.7rem', left: '1.4rem'}}>
+                            <img src={cornerDownLeft} alt='corner' />
                         </div>
-                        <div className="checkbox" id='Hesitant' style={{gridArea: '5/9/span 2/span 2', top: '30px'}}>
+                        <div className="checkbox" id='Hesitant' style={{gridArea: '7/9/span 2/span 2'}}>
                             {nodes && nodes.Hesitant ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Hesitant')} 
                                     />
@@ -209,7 +223,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Hesitant')} />
@@ -217,14 +231,14 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '6/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '7/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="checkbox" id='Knowledgeable' style={{gridArea: '5/17/span 2/span 2', top: '30px'}}>
+                        <div className="checkbox" id='Knowledgeable' style={{gridArea: '7/17/span 2/span 2'}}>
                             {nodes && nodes.Knowledgeable ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Knowledgeable')} 
                                     />
@@ -233,7 +247,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Knowledgeable')} />
@@ -241,26 +255,26 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '7/10/span 2/span 2', width: '200px', left: '60px', top: '5px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '9/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
+                            <img src={cornerDownRight} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '7/12/span 2/span 2', top: '-40px', left: '-40px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '9/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '7/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '9/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="horizontal-line-dash"style={{gridArea: '7/14/span 2/span 2', top: '-40px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '9/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-down-left' style={{gridArea: '7/16/span 2/span 2', width: '200px', left: '-20px', top: '10px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '9/17/span 2/span 2', position: 'relative', top: '5.7rem', left: '1.4rem'}}>
+                            <img src={cornerDownLeft} alt='corner' />
                         </div>
-                        <div className="checkbox" id='Retrophilic' style={{gridArea: '8/10/span 2/span 2'}}>
+                        <div className="checkbox" id='Retrophilic' style={{gridArea: '11/9/span 2/span 2'}}>
                             {nodes && nodes.Retrophilic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Retrophilic')} 
                                     />
@@ -269,7 +283,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Retrophilic')} />
@@ -277,11 +291,11 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Headstrong' style={{gridArea: '8/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Headstrong' style={{gridArea: '11/13/span 2/span 2'}}>
                             {nodes && nodes.Headstrong ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Headstrong')} 
                                     />
@@ -290,7 +304,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Headstrong')} />
@@ -298,11 +312,11 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Neophilic' style={{gridArea: '8/16/span 2/span 2'}}>
+                        <div className="checkbox" id='Neophilic' style={{gridArea: '11/17/span 2/span 2'}}>
                             {nodes && nodes.Neophilic ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Neophilic')} 
                                     />
@@ -311,7 +325,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Neophilic')} />
@@ -319,41 +333,41 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className='corner-up-right' style={{gridArea: '10/10/span 2/span 2', top: '-60px', left: '60px', width: '200px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '13/9/span 2/span 2', position: 'relative', top: '1.3rem', left: '6rem'}}>
+                            <img src={cornerUpRight} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '10/12/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '13/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '10/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
-                        </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '10/14/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="v-line-dash" style={{gridArea: '13/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className='corner-up-left' style={{gridArea: '10/16/span 2/span 2', top: '-60px', left: '-30px', width: '200px'}}>
-                            <img src={corner} alt='corner' />
+                        <div className="h-line-dash" style={{gridArea: '13/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '11/8/span 2/span 2', width: '200px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '13/17/span 2/span 2', position: 'relative', top: '1.3rem', left: '2rem'}}>
+                            <img src={cornerUpLeft} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '11/9/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line'/>
-                        </div>                    
-                        <div className='corner-down-right' style={{gridArea: '11/10/span 2/span 2', width: '150px', top: '60px', left: '-20px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '15/7/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
+                            <img src={cornerDownRight} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '11/11/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '15/9/span 2/span 2', position: 'relative', left: '3rem'}}>
+                            <img src={oneDashHorizontal} alt='line'/>
+                        </div>             
+                        <div style={{gridArea: '16/10/span 2/span 2', position: 'relative', top: '0.5rem'}}>
+                            <img src={cornerDownRight} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '11/11/span 2/span 2', top: '-10px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '15/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="checkbox" id='Hallucinations' style={{gridArea: '11/13/span 2/span 2'}}>
+                        <div className="h-line-dash"style={{gridArea: '15/11/span 2/span 2', position: 'relative', top: '1rem'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
+                        </div>
+                        <div className="checkbox" id='Hallucinations' style={{gridArea: '15/13/span 2/span 2'}}>
                             {nodes && nodes.Hallucinations ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Hallucinations')} 
                                     />
@@ -362,7 +376,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Hallucinations')} />
@@ -370,14 +384,14 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '12/8/span 2/span 2', left: '-45px', top: '10px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '17/8/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="checkbox" id='Taciturn' style={{gridArea: '12/9/span 2/span 2', top: '10px'}}>
+                        <div className="checkbox" id='Taciturn' style={{gridArea: '17/9/span 2/span 2'}}>
                             {nodes && nodes.Taciturn ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Taciturn')} 
                                     />
@@ -386,7 +400,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Taciturn')} />
@@ -394,29 +408,29 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '13/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '17/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className="vertical-line-dash" style={{gridArea: '14/8/span 2/span 2', left: '-45px', top: '-50px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '19/8/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div className='corner-up-right' style={{gridArea: '14/9/span 2/span 2', width: '200px', top: '-50px', left: '40px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '19/10/span 2/span 2', position: 'relative', top: '1.4rem'}}>
+                            <img src={cornerUpRight} alt='corner' />
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '14/9/span 2/span 2', width: '200px', top: '50px', left: '45px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '20/10/span 2/span 2', position: 'relative', top: '0.5rem'}}>
+                            <img src={cornerDownRight} alt='corner' />
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '14/11/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '19/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '14/11/span 2/span 2', top: '0px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '19/11/span 2/span 2', position: 'relative', top: '1rem'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="checkbox" id='Confused' style={{gridArea: '14/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Confused' style={{gridArea: '19/13/span 2/span 2'}}>
                             {nodes && nodes.Confused ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Confused')} 
                                     />
@@ -425,7 +439,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Confused')} />
@@ -433,20 +447,20 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '14/15/span 2/span 2', top: '0px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '19/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-down-left' style={{gridArea: '14/16/span 2/span 2', width: '200px', top: '50px', left: '90px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '19/17/span 2/span 2', position: 'relative', top: '5.7rem', left: '1.5rem'}}>
+                            <img src={cornerDownLeft} alt='corner' />
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '15/8/span 2/span 2', left: '-45px', top: '10px'}}>
-                            <img src={line} alt='line' />
-                        </div>
-                        <div className="checkbox" id='Impatient' style={{gridArea: '15/9/span 2/span 2', top: '50px'}}>
+                        <div className="v-line-dash" style={{gridArea: '21/8/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
+                        </div> 
+                        <div className="checkbox" id='Impatient' style={{gridArea: '21/9/span 2/span 2'}}>
                             {nodes && nodes.Impatient ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Impatient')} 
                                     />
@@ -455,7 +469,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Impatient')} />
@@ -463,11 +477,11 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='Unflappable' style={{gridArea: '15/16/span 2/span 2', top: '50px', left: '90px'}}>
+                        <div className="checkbox" id='Unflappable' style={{gridArea: '21/17/span 2/span 2'}}>
                             {nodes && nodes.Unflappable ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Unflappable')} 
                                     />
@@ -476,7 +490,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Unflappable')} />
@@ -484,20 +498,20 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '17/8/span 2/span 2', left: '-45px', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '23/8/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
+                        </div> 
+                        <div style={{gridArea: '23/9/span 2/span 2', position: 'relative', top: '1.4rem', left: '6rem'}}>
+                            <img src={cornerUpRight} alt='corner' />
                         </div>
-                        <div className='corner-up-right' style={{gridArea: '17/9/span 2/span 2', width: '200px', left: '30px'}}>
-                            <img src={corner} alt='corner' />
+                        <div className="h-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '17/11/span 2/span 2', top: '15px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="checkbox" id='Dumbfounded' style={{gridArea: '17/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Dumbfounded' style={{gridArea: '23/13/span 2/span 2'}}>
                             {nodes && nodes.Dumbfounded ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Dumbfounded')} 
                                     />
@@ -506,7 +520,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Dumbfounded')} />
@@ -514,17 +528,17 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '17/15/span 2/span 2', top: '15px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '23/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-up-left' style={{gridArea: '17/16/span 2/span 2', width: '200px', left: '90px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '23/17/span 2/span 2', position: 'relative', top: '1.2rem', left: '1.5rem'}}>
+                            <img src={cornerUpLeft} alt='corner' />
                         </div>
-                        <div className="checkbox" id='InvasiveProcedures' style={{gridArea: '18/8/span 2/span 2', left: '-45px'}}>
+                        <div className="checkbox" id='InvasiveProcedures' style={{gridArea: '25/8/span 2/span 2'}}>
                             {nodes && nodes.InvasiveProcedures ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('InvasiveProcedures')} 
                                     />
@@ -533,7 +547,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Invasive Procedures')} />
@@ -541,29 +555,29 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '18/9/span 2/span 2', top: '15px', left: '20px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '25/9/span 2/span 2', position: 'relative', left: '3rem'}}>
+                            <img src={oneDashHorizontal} alt='line'/>
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '18/11/span 2/span 2', top: '15px', left: '-20px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '25/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-up-left' style={{gridArea: '18/13/span 2/span 2', width: '150px', left: '-45px', top: '35px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '25/13/span 2/span 2', position: 'relative', top: '1.2rem'}}>
+                            <img src={cornerUpLeft} alt='corner' />
                         </div>
-                        <div className="vertical-line-dash" style={{gridArea: '19/13/span 2/span 2', top: '-45px'}}>
-                            <img src={line} alt='line' />
+                        <div className="v-line-dash" style={{gridArea: '25/13/span 2/span 2'}}>
+                            <img src={twoDashVertical} alt='line' />
+                        </div> 
+                        <div style={{gridArea: '27/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
+                            <img src={cornerDownRight} alt='corner' />
                         </div>
-                        <div className='corner-down-right' style={{gridArea: '20/9/span 2/span 2', left: '50px', top: '50px'}}>
-                            <img src={corner} alt='corner' />
+                        <div className="h-line-dash" style={{gridArea: '27/11/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '20/11/span 2/span 2', left: '-40px'}}>
-                            <img src={line} alt='line'/>
-                        </div>
-                        <div className="checkbox" id='Fickle' style={{gridArea: '20/13/span 2/span 2'}}>
+                        <div className="checkbox" id='Fickle' style={{gridArea: '27/13/span 2/span 2'}}>
                             {nodes && nodes.Fickle ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('Fickle')} 
                                     />
@@ -572,7 +586,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Fickle')} />
@@ -580,17 +594,17 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="horizontal-line-dash"style={{gridArea: '20/15/span 2/span 2', left: '-30px'}}>
-                            <img src={line} alt='line'/>
+                        <div className="h-line-dash" style={{gridArea: '27/15/span 2/span 2'}}>
+                            <img src={twoDashHorizontal} alt='line'/>
                         </div>
-                        <div className='corner-down-left' style={{gridArea: '20/17/span 2/span 2', top: '50px'}}>
-                            <img src={corner} alt='corner' />
+                        <div style={{gridArea: '27/17/span 2/span 2', position: 'relative', top: '5.7rem', left: '1.5rem'}}>
+                            <img src={cornerDownLeft} alt='corner' />
                         </div>
-                        <div className="checkbox" id='ANewDay' style={{gridArea: '21/9/span 2/span 2', top: '30px'}}>
+                        <div className="checkbox" id='ANewDay' style={{gridArea: '29/9/span 2/span 2'}}>
                             {nodes && nodes.ANewDay ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('ANewDay')} 
                                     />
@@ -599,7 +613,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: A New Day')} />
@@ -607,11 +621,11 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                                 </div>
                             </>}
                         </div>
-                        <div className="checkbox" id='FinallyFree' style={{gridArea: '21/17/span 2/span 2', top: '30px'}}>
+                        <div className="checkbox" id='FinallyFree' style={{gridArea: '29/17/span 2/span 2'}}>
                             {nodes && nodes.FinallyFree ? <>
                                 <div className='checked'>
                                     <img 
-                                        src={Checked} 
+                                        src={checkedsmall} 
                                         alt='checked'
                                         onClick={() => handleClick('FinallyFree')} 
                                     />
@@ -620,7 +634,7 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
                             </>:<>
                                 <div className='unchecked'>
                                     <img 
-                                        src={unchecked} 
+                                        src={uncheckedsmall} 
                                         title='No Symptoms'
                                         alt='unchecked' 
                                         onClick={() => handleClick('Hint: Finally Free')} />
