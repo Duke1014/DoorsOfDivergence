@@ -1,14 +1,10 @@
 import React, { useContext } from 'react'
-import Checked from './img/Checked.png'
-import unchecked from './img/unchecked.png'
-import line from './img/Line.png'
-import corner from './img/Corner.png'
 
 import oneDashHorizontal from './img/1 Dash Horizontal.png'
 import twoDashHorizontal from './img/2 Dash Horizontal.png'
-import threeDashHorizontal from './img/3 Dash Horizontal.png'
+// import threeDashHorizontal from './img/3 Dash Horizontal.png'
 import twoDashVertical from './img/2 Dash Vertical.png'
-import threeDashVertical from './img/3 Dash Vertical.png'
+// import threeDashVertical from './img/3 Dash Vertical.png'
 import cornerDownLeft from './img/Corner Down-Left.png'
 import cornerDownRight from './img/Corner Down-Right.png'
 import cornerUpLeft from './img/Corner Up- Left.png'
@@ -172,8 +168,8 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="v-line-dash" style={{gridArea: '3/13/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div className='corner-down-right' style={{gridArea: '5/9/span 2/span 2', position: 'relative', top: '1.4rem', left: '2rem'}}>
-                        <img src={corner} alt='corner' />
+                    <div style={{gridArea: '5/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
+                        <img src={cornerDownRight} alt='corner' />
                     </div>
                     <div className="h-line-dash" style={{gridArea: '5/11/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line'/>
@@ -202,8 +198,8 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="h-line-dash" style={{gridArea: '5/15/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line'/>
                     </div>
-                    <div className='corner-down-left' style={{gridArea: '5/17/span 2/span 2', position: 'relative', top: '1.6rem', left: '-1.7rem'}}>
-                        <img src={corner} alt='corner' />
+                    <div style={{gridArea: '5/17/span 2/span 2', position: 'relative', top: '5.7rem', left: '1.4rem'}}>
+                        <img src={cornerDownLeft} alt='corner' />
                     </div>
                     <div className="v-line-dash" style={{gridArea: '7/9/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />

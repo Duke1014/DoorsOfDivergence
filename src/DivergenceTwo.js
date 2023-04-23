@@ -1,13 +1,8 @@
 import React, { useContext } from 'react'
 
-import corner from './img/Corner.png'
-import line from './img/Line.png'
-import Checked from './img/Checked.png'
-import unchecked from './img/unchecked.png'
-
 import oneDashHorizontal from './img/1 Dash Horizontal.png'
 import twoDashHorizontal from './img/2 Dash Horizontal.png'
-import threeDashHorizontal from './img/3 Dash Horizontal.png'
+// import threeDashHorizontal from './img/3 Dash Horizontal.png'
 import twoDashVertical from './img/2 Dash Vertical.png'
 import threeDashVertical from './img/3 Dash Vertical.png'
 import cornerDownLeft from './img/Corner Down-Left.png'
@@ -33,7 +28,7 @@ export default function ({ setCpShow, setActiveNode }) {
     }
 
     return (
-        <div>
+        <div className='madness'>
             <section className='grid h-full'>
                 <div className='grid place-content-center'>
                     <div className='relative grid w-full h-full mx-auto madness-grid'>
@@ -247,8 +242,7 @@ export default function ({ setCpShow, setActiveNode }) {
                         </div>
                         <div className="v-line-dash" style={{gridArea: '11/13/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
-                        </div> 
-                        
+                        </div>                       
                         <div style={{gridArea: '13/9/span 2/span 2', display: 'flex', alignItems: 'flex-end'}}>
                             <img src={cornerDownRight} alt='corner' style={{position: 'relative', top: '-1.8rem', left: '6rem'}}/>
                         </div>
@@ -391,11 +385,7 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div 
-                        // className='corner-down-right' 
-                            style={{gridArea: '17/16/span 2/span 2'
-                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
-                        }}>
+                        <div style={{gridArea: '17/16/span 2/span 2'}}>
                             <img src={cornerUpLeft} alt='corner' style={{position: 'relative', top: '1.2rem', left: '1.7rem'}}/>
                         </div>
                         <div className="h-line-dash" style={{gridArea: '17/15/span 2/span 2', position: 'relative', left: '-2rem'}}>
@@ -416,7 +406,6 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div className="v-line-dash" style={{gridArea: '19/17/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
                         </div> 
-                        
                         <div className="checkbox" id='Disloyal' style={{gridArea: '21/13/span 2/span 2'}}>
                             {nodes && nodes.Disloyal ? <>
                                 <div className='checked'>
@@ -441,7 +430,6 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div className="h-line-dash" style={{gridArea: '21/15/span 2/span 2'}}>
                             <img src={twoDashHorizontal} alt='line' />
                         </div> 
-                        
                         <div className="checkbox" id='DrainingDay' style={{gridArea: '21/17/span 2/span 2'}}>
                             {nodes && nodes.DrainingDay ? <>
                                 <div className='checked'>
@@ -462,17 +450,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
                             </>}
-                        </div>
-                        
-                        
-                        <div 
-                        // className='corner-down-right' 
-                        style={{gridArea: '24/10/span 1/span 2'
-                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
-                        }}>
-                            <img src={cornerDownRight} alt='corner' 
-                            style={{position: 'relative', top: '-1.8rem'}}
-                            />
+                        </div>                       
+                        <div style={{gridArea: '24/10/span 1/span 2'}}>
+                            <img src={cornerDownRight} alt='corner' style={{position: 'relative', top: '-1.8rem'}} />
                         </div>
                         <div className="h-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
                             <img src={twoDashHorizontal} alt='line' />
@@ -483,16 +463,9 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div className="v-line-dash" style={{gridArea: '23/13/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
                         </div> 
-                        <div 
-                        // className='corner-down-right' 
-                        style={{gridArea: '24/15/span 1/span 2'
-                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
-                        }}>
-                            <img src={cornerDownLeft} alt='corner' 
-                                style={{position: 'relative', top: '-1.8rem', left: '1.4rem'}}
-                            />
+                        <div style={{gridArea: '24/15/span 1/span 2'}}>
+                            <img src={cornerDownLeft} alt='corner' style={{position: 'relative', top: '-1.8rem', left: '1.4rem'}} />
                         </div>
-                        
                         <div className="checkbox" id='Bloodthirsty' style={{gridArea: '26/9/span 2/span 2'}}>
                             {nodes && nodes.Bloodthirsty ? <>
                                 <div className='checked'>
@@ -514,15 +487,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        
-                        <div 
-                        // className='corner-down-right' 
-                        style={{gridArea: '27/12/span 1/span 2'
-                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
-                        }}>
-                            <img src={cornerDownRight} alt='corner' 
-                            style={{position: 'relative', top: '-1.8rem'}}
-                            />
+                        <div style={{gridArea: '27/12/span 1/span 2'}}>
+                            <img src={cornerDownRight} alt='corner' style={{position: 'relative', top: '-1.8rem'}} />
                         </div>
                         <div className="checkbox" id='Indecisive' style={{gridArea: '26/13/span 2/span 2'}}>
                             {nodes && nodes.Indecisive ? <>
@@ -551,7 +517,6 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div className="v-line-dash" style={{gridArea: '26/15/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
                         </div> 
-                        
                         <div className="checkbox" id='Reckless' style={{gridArea: '26/17/span 2/span 2'}}>
                             {nodes && nodes.Reckless ? <>
                                 <div className='checked'>
@@ -585,7 +550,6 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div className="v-line-dash" style={{gridArea: '28/15/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
                         </div> 
-                        
                         <div className="checkbox" id='TerminalIllness' style={{gridArea: '30/9/span 2/span 2'}}>
                             {nodes && nodes.TerminalIllness ? <>
                                 <div className='checked'>
@@ -607,24 +571,11 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div 
-                        // className='corner-down-right' 
-                        style={{gridArea: '30/11/span 2/span 2'
-                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
-                        }}>
-                            <img src={cornerUpLeft} alt='corner' 
-                            style={{position: 'relative', top: '2rem', left: '1.5rem'}}
-                            />
-                        </div>
-                        
-                        <div 
-                        // className='corner-down-right' 
-                        style={{gridArea: '30/13/span 2/span 2'
-                        // , marginLeft: 'calc(var(--spacing) * 8', marginTop: 'calc(var(--spacing) * 8', top: '-20px'
-                        }}>
-                            <img src={cornerUpRight} alt='corner' 
-                            style={{position: 'relative', top: '2rem', left: '6rem'}}
-                            />
+                        <div style={{gridArea: '30/11/span 2/span 2'}}>
+                            <img src={cornerUpLeft} alt='corner' style={{position: 'relative', top: '2rem', left: '1.5rem'}} />
+                        </div>    
+                        <div style={{gridArea: '30/13/span 2/span 2'}}>
+                            <img src={cornerUpRight} alt='corner' style={{position: 'relative', top: '2rem', left: '6rem'}} />
                         </div>
                         <div className="checkbox" id='ForeverAndADay' style={{gridArea: '30/15/span 2/span 2'}}>
                             {nodes && nodes.ForeverAndADay ? <>
