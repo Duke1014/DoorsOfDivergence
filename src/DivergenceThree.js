@@ -172,7 +172,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="v-line-dash" style={{gridArea: '3/13/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div className='corner-down-right' style={{gridArea: '5/9/span 2/span 2'}}>
+                    <div className='corner-down-right' style={{gridArea: '5/9/span 2/span 2', position: 'relative', top: '1.4rem', left: '2rem'}}>
                         <img src={corner} alt='corner' />
                     </div>
                     <div className="h-line-dash" style={{gridArea: '5/11/span 2/span 2'}}>
@@ -202,7 +202,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="h-line-dash" style={{gridArea: '5/15/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line'/>
                     </div>
-                    <div className='corner-down-left' style={{gridArea: '5/17/span 2/span 2'}}>
+                    <div className='corner-down-left' style={{gridArea: '5/17/span 2/span 2', position: 'relative', top: '1.6rem', left: '-1.7rem'}}>
                         <img src={corner} alt='corner' />
                     </div>
                     <div className="v-line-dash" style={{gridArea: '7/9/span 2/span 2'}}>
@@ -283,7 +283,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="v-line-dash" style={{gridArea: '11/17/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div style={{gridArea: '13/9/span 2/span 2'}}>
+                    <div style={{gridArea: '13/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
                         <img src={cornerDownRight} alt='corner' />
                     </div>
                     <div className="h-line-dash" style={{gridArea: '13/11/span 2/span 2'}}>
@@ -313,7 +313,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="h-line-dash" style={{gridArea: '13/15/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line' />
                     </div> 
-                    <div style={{gridArea: '13/17/span 2/span 2'}}>
+                    <div style={{gridArea: '13/17/span 2/span 2', position: 'relative', top: '1.2rem', left: '1.6rem'}}>
                         <img src={cornerUpLeft} alt='corner' />
                     </div>
                     <div className="checkbox" id='LikeINeedAHoleInMyHead' style={{gridArea: '15/9/span 2/span 2'}}>
@@ -340,13 +340,13 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="v-line-dash" style={{gridArea: '15/13/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div style={{gridArea: '17/9/span 2/span 2'}}>
+                    <div style={{gridArea: '17/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
                         <img src={cornerDownRight} alt='corner' />
                     </div>
-                    <div className="h-line-dash" style={{gridArea: '17/11/span 2/span 2'}}>
-                        <img src={twoDashHorizontal} alt='line' />
+                    <div className="h-line-dash" style={{gridArea: '17/10/span 2/span 2', position: 'relative', left: '3rem'}}>
+                        <img src={oneDashHorizontal} alt='line' />
                     </div> 
-                    <div style={{gridArea: '17/12/span 2/span 2'}}>
+                    <div style={{gridArea: '17/12/span 2/span 2', position: 'relative', top: '5.7rem'}}>
                         <img src={cornerDownRight} alt='corner' />
                     </div>
                     <div className="checkbox" id='Dishonest' style={{gridArea: '17/13/span 2/span 2'}}>
@@ -439,11 +439,11 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="v-line-dash" style={{gridArea: '19/13/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div style={{gridArea: '21/9/span 2/span 2'}}>
+                    <div style={{gridArea: '21/9/span 2/span 2', position: 'relative', left: '6rem'}}>
                         <img src={cornerUpRight} alt='corner' />
                     </div>
-                    <div className="h-line-dash" style={{gridArea: '21/11/span 2/span 2'}}>
-                        <img src={twoDashHorizontal} alt='line' />
+                    <div className="h-line-dash" style={{gridArea: '21/10/span 2/span 2', position: 'relative', top: '-1.3rem', left: '3rem'}}>
+                        <img src={oneDashHorizontal} alt='line' />
                     </div> 
                     <div style={{gridArea: '21/12/span 2/span 2'}}>
                         <img src={cornerUpRight} alt='corner' />
@@ -490,16 +490,16 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                             </div>
                         </>}
                     </div>
-                    <div className="v-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
-                        <img src={twoDashVertical} alt='line' />
+                    <div className="h-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
+                        <img src={twoDashHorizontal} alt='line' />
                     </div> 
-                    <div style={{gridArea: '23/13/span 2/span 2'}}>
+                    <div style={{gridArea: '23/13/span 2/span 2', position: 'relative', top: '1.2rem'}}>
                         <img src={cornerUpLeft} alt='corner' />
                     </div>
                     <div className="v-line-dash" style={{gridArea: '23/13/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div style={{gridArea: '25/9/span 2/span 2'}}>
+                    <div style={{gridArea: '25/9/span 2/span 2', position: 'relative', top: '5.7rem', left: '6rem'}}>
                         <img src={cornerDownRight} alt='corner' />
                     </div>
                     <div className="h-line-dash" style={{gridArea: '25/11/span 2/span 2'}}>
@@ -529,7 +529,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="h-line-dash" style={{gridArea: '25/15/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line' />
                     </div> 
-                    <div style={{gridArea: '25/17/span 2/span 2'}}>
+                    <div style={{gridArea: '25/17/span 2/span 2', position: 'relative', top: '5.7rem', left: '1.4rem'}}>
                         <img src={cornerDownLeft} alt='corner' />
                     </div>
                     <div className="v-line-dash" style={{gridArea: '27/9/span 2/span 2'}}>
@@ -538,16 +538,16 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="v-line-dash" style={{gridArea: '27/13/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
-                    <div className="v-line-dash" style={{gridArea: '27/16/span 2/span 2'}}>
+                    <div className="v-line-dash" style={{gridArea: '27/17/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
                     <div className="v-line-dash" style={{gridArea: '29/9/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div>  
-                    <div style={{gridArea: '29/11/span 2/span 2'}}>
+                    <div style={{gridArea: '30/10/span 2/span 2', position: 'relative', left: '1rem', top: '-0.5rem'}}>
                         <img src={cornerDownRight} alt='corner' />
                     </div>
-                    <div className="h-line-dash" style={{gridArea: '29/12/span 2/span 2'}}>
+                    <div className="h-line-dash" style={{gridArea: '29/11/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line' />
                     </div> 
                     <div className="checkbox" id='Opportunistic' style={{gridArea: '29/13/span 2/span 2'}}>
@@ -574,10 +574,10 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                     <div className="h-line-dash" style={{gridArea: '29/15/span 2/span 2'}}>
                         <img src={twoDashHorizontal} alt='line' />
                     </div> 
-                    <div style={{gridArea: '29/16/span 2/span 2'}}>
+                    <div style={{gridArea: '30/17/span 2/span 2', position: 'relative', top: '-0.5rem'}}>
                         <img src={cornerDownLeft} alt='corner' />
                     </div>
-                    <div className="v-line-dash" style={{gridArea: '29/13/span 2/span 2'}}>
+                    <div className="v-line-dash" style={{gridArea: '29/17/span 2/span 2'}}>
                         <img src={twoDashVertical} alt='line' />
                     </div> 
                     <div className="checkbox" id='TerminalIllness' style={{gridArea: '31/9/span 2/span 2'}}>
@@ -601,7 +601,7 @@ export default function DivergenceThree({ setCpShow, setActiveNode }) {
                             </div>
                         </>}
                     </div>
-                    <div className="checkbox" id='ForeverAndADay' style={{gridArea: '31/15/span 2/span 2'}}>
+                    <div className="checkbox" id='ForeverAndADay' style={{gridArea: '31/17/span 2/span 2'}}>
                         {nodes && nodes.ForeverAndADay ? <>
                             <div className='checked'>
                                 <img 
