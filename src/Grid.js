@@ -242,14 +242,14 @@ export default function Grid() {
                             </>}
                         </div>
                         <div className="stamp" style={{gridArea: '8 / 16 / span 2 / span 2'}} id="TheurgistII">
-                            {/* {nodes && nodes.TheurgistII ? <> */}
+                            {nodes && nodes.TheurgistII ? <>
                                 <img
                                     src={GoldBlank}
                                     alt="Stamp"
                                     onClick={() => handleClick('TheurgistII')}
                                 />
                                 <p className="w-2/3 text-2xl text-white title">{ui.nodes.twentythree.title}</p>
-                            {/* </> : <>
+                            </> : <>
                                 <img
                                     className="disabled"
                                     title={ui.general.not_unlocked}
@@ -257,7 +257,7 @@ export default function Grid() {
                                     alt="Stamp"
                                     onClick={() => handleClick('Hint: Theurgist')}
                                 />
-                            </>} */}
+                            </>}
                         </div>
                         <div className="bg-red-100 stamp green" style={{gridArea: '11 / 10 / span 2 / span 2'}} id="SinsOfTheFather">
                             {nodes && nodes.SinsOfTheFather ? <>
