@@ -145,7 +145,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '3 / 13 / 7 / span 2'}} />
+                        <div className="vertical-line" style={{gridArea: '3 / 13 / span 5 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}} />
                         <div className="stamp" style={{gridArea: '4/13/8/span 2'}} id="AnInvitation">
                             {nodes && nodes.AnInvitation ? <>
                                 <img
@@ -164,7 +164,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '4 / 13 / span 8 / span 2'}} />
+                        <div className="vertical-line" style={{gridArea: '7 / 12 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}} />
                         <div className="horizontal-line" style={{gridArea: '4 / 14 / 8 / span 2'}} />
                         <div className="stamp" style={{gridArea: '4/15/span 4/span 2'}} id="Stubborn">
                             {nodes && nodes.Stubborn ? <>
@@ -184,7 +184,7 @@ export default function Grid() {
                                 />  
                             </>}
                         </div>
-                        <div className="stamp" style={{gridArea: '8 / 11 / span 2 / span 2'}} id="TrainingWheels">
+                        <div className="stamp" style={{gridArea: '8 / 10 / span 2 / span 2'}} id="TrainingWheels">
                             {nodes && nodes.TrainingWheels ? <>
                                 <img
                                     src={GoldBlank}
@@ -203,8 +203,8 @@ export default function Grid() {
                             </>}
                             
                         </div>
-                        <div className="horizontal-line"  style={{gridArea: '3 / 12 / 12 / span 4'}} />
-                        <div className="stamp" style={{gridArea: '8 / 13 / span 2 / span 2'}} id="YourOwnTwoFeet">
+                        <div className="horizontal-line"  style={{gridArea: '3 / 11 / 12 / span 4'}} />
+                        <div className="stamp" style={{gridArea: '8 / 12 / span 2 / span 2'}} id="YourOwnTwoFeet">
                             {nodes && nodes.YourOwnTwoFeet ? <>
                                 <img
                                     src={GoldBlank}
@@ -222,8 +222,8 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="horizontal-line" style={{gridArea: '3 / 14 / 12 / span 2'}}/>
-                        <div className="stamp" style={{gridArea: '8 / 15 / span 2 / span 2'}} id="YouWereWarned">
+                        <div className="horizontal-line" style={{gridArea: '3 / 14 / 12 / span 3'}}/>
+                        <div className="stamp" style={{gridArea: '8 / 14 / span 2 / span 2'}} id="YouWereWarned">
                             {nodes && nodes.YouWereWarned ? <>
                             <img
                                     src={GoldBlank}
@@ -240,6 +240,24 @@ export default function Grid() {
                                     onClick={() => handleClick('Hint: Alchemist')}
                                 />
                             </>}
+                        </div>
+                        <div className="stamp" style={{gridArea: '8 / 16 / span 2 / span 2'}} id="TheurgistII">
+                            {/* {nodes && nodes.TheurgistII ? <> */}
+                                <img
+                                    src={GoldBlank}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('TheurgistII')}
+                                />
+                                <p className="w-2/3 text-2xl text-white title">{ui.nodes.twentythree.title}</p>
+                            {/* </> : <>
+                                <img
+                                    className="disabled"
+                                    title={ui.general.not_unlocked}
+                                    src={Gold}
+                                    alt="Stamp"
+                                    onClick={() => handleClick('Hint: Theurgist')}
+                                />
+                            </>} */}
                         </div>
                         <div className="bg-red-100 stamp green" style={{gridArea: '11 / 10 / span 2 / span 2'}} id="SinsOfTheFather">
                             {nodes && nodes.SinsOfTheFather ? <>
@@ -349,10 +367,12 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '7 / 14 / span 4 / 10', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
-                        <div className="horizontal-line" style={{gridArea: '7 / 12 / 14 / 14'}}/>
-                        <div className="vertical-line" style={{gridArea: '7 / 15 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
-                        <div className="horizontal-line" style={{gridArea: '7 / 14 / 14 / span 2'}}/>
+                        <div className="vertical-line" style={{gridArea: '7 / 12 / span 4 / 10', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="horizontal-line" style={{gridArea: '7 / 11 / 14 / 14'}}/>
+                        <div className="vertical-line" style={{gridArea: '7 / 14 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="vertical-line" style={{gridArea: '7 / 16 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="horizontal-line" style={{gridArea: '7 / 14 / 14 / span 3'}}/>
+                        <div className="vertical-line" style={{gridArea: '10 / 13 / span 3 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
                         <div className="vertical-line" style={{gridArea: '13 / 13 / span 2 / span 2', marginRight: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 4)'}}/>
                         <div className="vertical-line" style={{gridArea: '13 / 13 / span 2 / span 2', marginLeft: 'calc(var(--spacing) * 4', marginTop: 'calc(var(--spacing) * 4)'}}/>
                         <div className="vertical-line" style={{gridArea: '12 / 10 / span 7 / span 2'}} />

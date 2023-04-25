@@ -23,6 +23,7 @@ export const uiContent = {
         twenty: { title: 'Death Deferred' },
         twentyone: { title: 'Broken Chains' },
         twentytwo: { title: 'Better Safe Than Sorry' },
+        twentythree: { title: 'Theurgist II' }
     },
     madnessNodes: {
         one: { 
