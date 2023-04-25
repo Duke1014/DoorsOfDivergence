@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { UserContext } from './context/user';
+import { reactKey } from './lib/config.js';
 import paper from './img/vintagepaper4.png'
 import Recaptcha from "react-google-recaptcha"
 
@@ -41,8 +42,6 @@ export default function SignUp({ handleLogClick }) {
         border: '1px solid black',
         color: 'black'
     }
-
-    let REACT_APP_SITE_KEY = "6Lf-Qj0kAAAAAMLpNC5j8INXH_4zYEDb6iHxPtWH"
 
     const [userFirstName, setUserFirstName] = useState('')
     const [userLastName, setUserLastName] = useState('')
@@ -189,7 +188,7 @@ export default function SignUp({ handleLogClick }) {
                             <div>
                                 <div className="justify-center my-4 text-center place-self-center">
                                     <Recaptcha
-                                        sitekey={REACT_APP_SITE_KEY}
+                                        sitekey={reactKey.REACT_APP_SITE_KEY}
                                         badge={'inline'}
                                         size={'normal'}
                                         onChange={() => setCaptchaState(!captchaState)}
