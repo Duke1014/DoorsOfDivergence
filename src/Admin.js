@@ -53,7 +53,7 @@ export default function Admin() {
             "The only sun lamp I need is the flames of my mind.",
             "IA LAMASHTU.",
             "I swallowed the Fourth Key. Father musn't know.",
-            ':)'
+            '=)'
         ]
         const logic = Math.floor(Math.random() * texts.length)
         setBubbleText(texts[logic])
@@ -80,7 +80,7 @@ export default function Admin() {
                     {resultsElements}
                 </ul>
             </> : <>
-                <div style={{height: '90rem', width: '100%'}}>.</div>
+                <div style={{height: '90vh', width: '100%'}}>.</div>
             </>}
             
             <img src={Subject} alt='DAUGHTER' className='calypso' onClick={handleCalypso}/>

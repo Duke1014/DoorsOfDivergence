@@ -13,7 +13,7 @@ export default function CommonSymptoms({ handleClick }) {
 
   return (
     <div style={{gridArea: '1/17/span 2/span 2'}}>
-      Common Symptoms
+      <p>Common Symptoms</p>
       <div className="checkbox" id='Narcoleptic' >
         {nodes && nodes.Narcoleptic ? <>
           <div className='checked'>

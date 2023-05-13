@@ -17,6 +17,7 @@ import YourOwnTwoFeet from "./img/node-YourOwnTwoFeet.png"
 import MachineOfBlood from "./img/node-MachineOfBlood.png"
 import ChainsThatBind from "./img/node-ChainsThatBind.png"
 import GoodHousekeeping from "./img/node-GoodHousekeeping.png"
+import TheurgistII from "./img/node-TheurgistII.png"
 import node0 from "./img/Node 0- ALIENIST IN TRAINING Letter.jpg"
 import node2 from "./img/Node 2.jpg"
 import node3 from "./img/Node 3.jpg"
@@ -387,7 +388,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <h1 className="my-4 text-4xl font-archaic">Theurgist II</h1>
                     <p className="text-lg">You encountered Proctor Andromeda.</p>
                     <br />
-                    {/* <img src={TrainingWheels} alt="Training Wheels" loading="lazy" /> */}
+                    <img src={TheurgistII} alt="Training Wheels" loading="lazy" />
                     <br />
                     <blockquote>
                         “While seemingly random to an outside eye, the initiated know that the cast of the bones is innately deterministic- it’s outcome determined before the runes are thrown. Their final positions have already been determined by the actions of the casting’s subject- thereby drawing from the past in order to glimpse the future, and tying the two together. You see, there is as much Theurgy as Divination in this art. Thus is the way of Hermetics, each exists in the other, and all are part of the whole.”
