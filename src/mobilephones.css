@@ -1,8 +1,51 @@
 @media only screen and (max-width: 480px) {
+    body {
+        /* background: \i; */
+        width: 100%;
+        height: 100%;
+        /* max-width: 100%; */
+        /* overflow-x: hidden; */
+    }
+    footer {
+        display: none !important;
+    }
+    .grid-center {
+        width: 100%;
+    }
+    .heresy-title {
+        /* display: none; */
+        font-size: 10vi;
+    }
+    .title-code-container{
+        width: 150vw !important;
+    }
+    .enter-code-container {
+        /* display: none; */
+        /* width: .00000000001rem; */
+        height: 5rem;
+        /* left: -10rem; */
+        /* position: static; */
+        top: 0;
+        /* right: 0; */
+    }
+    .enter-code{
+        font-size: medium;
+        width: 5.5rem;
+        height: 1rem;
+    }
+    .enter-code-input {
+        width: 30vw;
+        height: 5vh;
+        font-size: small;
+    }
+    .enter-code-message {
+        
+    }
     .heresy-grid {
-        grid-template-columns: repeat(25, 1em) !important;
-        grid-template-rows: repeat(28, 1em) !important;
+        grid-template-columns: repeat(25, 1vw) !important;
+        grid-template-rows: repeat(28, 2vh) !important;
         column-gap: 10px;
+        left: -5rem;
     }
     .heresy-grid .stamp {
         box-sizing: border-box;
@@ -20,8 +63,8 @@
         display: grid;
         place-items: center;
         place-self: center;
-        width: 50px;
-        height: 50px;
+        width: 10vw;
+        height: auto;
         z-index: 5;
         margin-inline: 16px;
         position: relative;
@@ -29,6 +72,7 @@
         /* opacity: 0.5; */
     }
     .heresy-grid .stamp p {
+        display: none !important;
         /* grid-area: 1.5/auto/auto/auto; */
         /* top: -100px; */
         position: absolute;
@@ -46,7 +90,7 @@
         margin-right: auto; */
     }
     .madness {
-        width: 180% !important;
+        width: 100% !important;
     }
     .madness-grid .checkbox {
         box-sizing: border-box;
@@ -88,5 +132,29 @@
         width: 200% !important;
         top: 0 !important;
         margin-top: 0 !important;
+    }
+    #line-one {
+        /* background-color: red !important; */
+        grid-area: 2 / 13 / span 10 / span 2 !important;
+        margin-top: 0 !important;
+    }
+    #line-two {
+        /* background-color: red !important; */
+        grid-area: 4 / 12 / span 11 / span 2 !important;
+        /* margin-top: 0!important; */
+        /* display: none !important; */
+    }
+    #line-three {
+        /* background-color: red!important; */
+        grid-area: 5 / 13 / span 2 / span 4 !important;
+        /* margin-top: 0!important; */
+    }
+    .stamp#stubborn {
+        grid-area: 4 / 1 / span 4 / span 2 !important;
+    }
+    #line-six {
+        background-color: red !important;
+        grid-area: 7 / 12 / span 4 / 10 !important;
+        margin-top: calc(var(--spacing) * 6) !important;
     }
 }

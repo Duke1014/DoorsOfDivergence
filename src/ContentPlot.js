@@ -79,49 +79,49 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
         case 'WelcomeToParadox': 
             nodeContent = (
             <div>
-                <h1 className="my-4 text-4xl testfont2">WELCOME TO PARADOX</h1>
-                <p className="text-lg testfont">You began the journey of (multiple) lifetimes</p>
+                <h1 className="my-4 text-4xl">WELCOME TO PARADOX</h1>
+                <p className="text-lg">You began the journey of (multiple) lifetimes</p>
                 <br />
-                <p className='testfont2'>
+                <p>
                     Hello me, it’s you. From the future, that is. It’s confusing, but trust me, you’ll understand eventually.
                 </p>
-                <p className='testfont2'>
+                <p>
                     If you’re reading this- I mean, I know you are, I remember reading it, which is how I knew to send it back to you, or rather, myself… sorry, even I have trouble wrapping my head around things.
                 </p>
-                <p className='testfont2'>
+                <p>
                     The important thing is: you’re getting this message because you’ve decided to enter the rift in time and space, and for good reason: it needs to be charted and fixed, and you have a big part to play in that. But don’t worry, it’s not all on your shoulders. You are one of many people to answer a summons from your future self- you’re going to meet other Parallels on your journey. (That’s what we call ourselves: people who have been sent on this journey bytheir future, living in a parallel iteration of- ah, don’t worry about it right now.)
                 </p>
-                <p className='testfont2'>
+                <p>
                     This is where it gets weird: at the nexus point of the fracture, there’s a bar called Paradox. The first parallels set it up- they found an old bar from the 1950’s that had broken through the void. Some other places and times have broken through, too, and it looks like more are trying to push their way through. It’s kind of a watering hole for those of us trying to repair reality- a place to meet, talk about our efforts, and compare notes while we try to find the right set of choices that will fix this rift once and for all. Talk to them. They’re there to help.
                 </p>
-                <p className='testfont2'>
+                <p>
                     One last thing I can give you- I’m providing you a map, of sorts, of all of the choices we’ve charted so far. Use this to track your progress, see where the unexplored places are. I wish I could help more, but we’re probably stretching the laws of causality enough just writing this letter.
                 </p>
-                <p className='testfont2'>Good luck. You’re in for the ride of your lives.</p>
+                <p>Good luck. You’re in for the ride of your lives.</p>
             </div>
         ) 
         break;
         case 'AnInvitation': 
             nodeContent = (
                 <div>
-                    <h1 className="my-4 text-4xl testfont">An Invitation</h1>
-                    <p className="text-lg testfont">You answered Edmond Cavanaugh's summons</p>
+                    <h1 className="my-4 text-4xl">An Invitation</h1>
+                    <p className="text-lg">You answered Edmond Cavanaugh's summons</p>
                     <br />
                     <img src={AnInvitation} alt="An Invitation" loading="lazy" />
                     <br />
-                    <blockquote className='testfont'>
+                    <blockquote>
                         “As base metals are transmuted by our alchemy, so too do we transmute our spiritual forms. Discard your visage, it has no link to your mind. Discard your name, it does not baptize your spirit. Discard your past, it will not dictate your future. Take this mask, brother, and with it, show us the face of your soul.”
                     </blockquote>
-                    <p className="max-w-sm mt-2 ml-auto italic text-right testfont">
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
                         — From the Ritual of Initiation into the Order of the Three Keys, (Author unknown)
                     </p>
-                    <p className='testfont'>
+                    <p>
                         The members of the Order value anonymity to a high degree. They also value individuality. To this end, all members, upon joining, are given a unique mask, and choose a new name. This serves as their identity within the Order, and also ensures they do not recognize one another in the outside world.
                     </p>
-                    <p className='testfont'>
+                    <p>
                         This mask also serves as a signature of sorts, with many members choosing to use its imagery as letter seals, heraldry, etc.
                     </p>
-                    <p className='testfont'>
+                    <p>
                         There are times when Order members learn the outside identities of their peers, but it is considered the height of impropriety, and a grievous insult, to use a fellow member’s real name in mixed company.
                     </p>
                 </div>
@@ -2242,7 +2242,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
 
   return (
     <div>
-        <div className="fixed z-50 grid w-full h-full overflow-auto bg-black wrapper bg-opacity-70">
+        <div className="fixed z-50 grid w-full h-full overflow-auto bg-black wrapper bg-opacity-70 lore">
             <div className="p-4 wrap place-self-center max-w-prose md:my-20">
                 <div className="p-8 text-center text-black bg-white border border-black place-content-center outline outline-black outline-offset-2 bg-opacity-40">
                     {nodeContent}

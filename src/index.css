@@ -3,29 +3,30 @@
 
 /* ! tailwindcss v3.0.24 | MIT License | https://tailwindcss.com */
 
-.testfont {
+/* .testfont {
   font-family:EBGaramond-VariableFont_wght;
   font-weight: bold;
-}
+} */
 
-@font-face {
+/* @font-face {
   font-family: EBGaramond-VariableFont_wght;
   src: url(font/EBGaramond-VariableFont_wght.ttf) format("truetype");
-}
+} */
 
-.testfont2 {
-  font-family: 'Merriweather', serif;
-  font-family: 'Roboto Condensed', sans-serif;
+.lore,
+.lore p,
+.lore blockquote{
+  /* font-family: 'Merriweather', serif; */
+  /* font-family: 'Roboto Condensed', sans-serif; */
+  font-family: playfair !important;
 }
 
 .footer {
   position: fixed;
   bottom: 0 !important;
   width: 100% !important;
-  background-color: #ccc;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+  height: 7%;
+  transition: transform 1s ease-in-out;
   z-index: 10;
 }
 

@@ -8,13 +8,13 @@ export default function EnterCode({setShowCodePrompt}) {
     const { handleEnterCode, codeStyle, message } = useContext(UserContext)
 
   return (
-    <div className='relative'>
-        <h1 className="my-4 text-4xl text-center">Enter Code</h1>
+    <div className='relative enter-code-container'>
+        <h1 className="my-4 text-4xl text-center enter-code">Enter Code</h1>
         <input
             type="text"
             value={code}
             onChange={e => setCode(e.target.value)}
-            className="p-4 my-4 text-center"
+            className="p-4 my-4 text-center enter-code-input"
             style={codeStyle}
             onKeyDown={(e) => {
                 if (e.key === 'Enter') {
@@ -23,7 +23,7 @@ export default function EnterCode({setShowCodePrompt}) {
             }}
         />
         <br />
-        <p className='text-center relative inset-0' style={message}>
+        <p className='text-center relative inset-0 enter-code-message' style={message}>
             Incorrect Code.
         </p>
     </div>

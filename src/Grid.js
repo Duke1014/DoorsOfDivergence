@@ -79,28 +79,28 @@ export default function Grid() {
     switch (clickedTab) {
         case 'one':
             madnessMap = (
-                <div>
+                <div style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceOne setCpShow={setCpShow} setActiveNode={setActiveNode} />
                 </div>
             )
         break;
         case 'two':
             madnessMap = (
-                <div>
+                <div style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceTwo setCpShow={setCpShow} setActiveNode={setActiveNode} />
                 </div>
             )
         break;
         case 'three':
             madnessMap = (
-                <div>
+                <div style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceThree setCpShow={setCpShow} setActiveNode={setActiveNode} />
                 </div>
             )
         break;
         case 'four':
             madnessMap = (
-                <div>
+                <div style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceFour setCpShow={setCpShow} setActiveNode={setActiveNode} setIsHesitant={setIsHesitant} />
                 </div>
             )
@@ -115,9 +115,9 @@ export default function Grid() {
             {cpShow ? <>
                 <ContentPlot setCpShow={setCpShow} activeNode={activeNode} isHesitant={isHesitant} />
             </> : <></>}
-            <section className="grid h-full font-archaic">
-                <div className="flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white">
-                    <h1 className="z-10 text-6xl text-white">HERESY,<br />1897</h1>
+            <section className="grid h-full font-archaic grid-section">
+                <div className="flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white title-code-container">
+                    <h1 className="z-10 text-6xl text-white heresy-title">HERESY,<br />1897</h1>
                     <EnterCode />
                 </div>
                 <div className="grid place-content-center">
@@ -145,7 +145,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '3 / 13 / span 5 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}} />
+                        <div className="vertical-line" id='line-one' style={{gridArea: '3 / 13 / span 5 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}} />
                         <div className="stamp" style={{gridArea: '4/13/8/span 2'}} id="AnInvitation">
                             {nodes && nodes.AnInvitation ? <>
                                 <img
@@ -164,8 +164,8 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '7 / 12 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}} />
-                        <div className="horizontal-line" style={{gridArea: '4 / 14 / 8 / span 2'}} />
+                        <div className="vertical-line" id='line-two' style={{gridArea: '7 / 12 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}} />
+                        <div className="horizontal-line" id='line-three' style={{gridArea: '4 / 14 / 8 / span 2'}} />
                         <div className="stamp" style={{gridArea: '4/15/span 4/span 2'}} id="Stubborn">
                             {nodes && nodes.Stubborn ? <>
                                 <img
@@ -203,7 +203,7 @@ export default function Grid() {
                             </>}
                             
                         </div>
-                        <div className="horizontal-line"  style={{gridArea: '3 / 11 / 12 / span 4'}} />
+                        <div className="horizontal-line" id='line-four' style={{gridArea: '3 / 11 / 12 / span 4'}} />
                         <div className="stamp" style={{gridArea: '8 / 12 / span 2 / span 2'}} id="YourOwnTwoFeet">
                             {nodes && nodes.YourOwnTwoFeet ? <>
                                 <img
@@ -222,7 +222,7 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="horizontal-line" style={{gridArea: '3 / 14 / 12 / span 3'}}/>
+                        <div className="horizontal-line" id='line-five' style={{gridArea: '3 / 14 / 12 / span 3'}}/>
                         <div className="stamp" style={{gridArea: '8 / 14 / span 2 / span 2'}} id="YouWereWarned">
                             {nodes && nodes.YouWereWarned ? <>
                             <img
@@ -367,30 +367,30 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '7 / 12 / span 4 / 10', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
-                        <div className="horizontal-line" style={{gridArea: '7 / 11 / 14 / 14'}}/>
-                        <div className="vertical-line" style={{gridArea: '7 / 14 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
-                        <div className="vertical-line" style={{gridArea: '7 / 16 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
-                        <div className="horizontal-line" style={{gridArea: '7 / 14 / 14 / span 3'}}/>
-                        <div className="vertical-line" style={{gridArea: '10 / 13 / span 3 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
-                        <div className="vertical-line" style={{gridArea: '13 / 13 / span 2 / span 2', marginRight: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 4)'}}/>
-                        <div className="vertical-line" style={{gridArea: '13 / 13 / span 2 / span 2', marginLeft: 'calc(var(--spacing) * 4', marginTop: 'calc(var(--spacing) * 4)'}}/>
-                        <div className="vertical-line" style={{gridArea: '12 / 10 / span 7 / span 2'}} />
-                        <div className="vertical-line" style={{gridArea: '12 / 16 / span 7 / span 2'}} />
-                        <div className="horizontal-line" style={{gridArea: '8 / 11 / 16 / span 3'}} />
-                        <div className="horizontal-line" style={{gridArea: '8 / 14 / 16 / span 3'}} />
-                        <div className="horizontal-line" style={{gridArea: '10 / 11 / 16 / span 3', marginLeft: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 9)', marginRight: 'calc(var(--spacing) * 2)'}} />
-                        <div className="horizontal-line" style={{gridArea: '10 / 14 / 16 / span 3', marginLeft: 'calc(var(--spacing) * 2)', marginTop: 'calc(var(--spacing) * 9)', marginRight: 'calc(var(--spacing) * 4)'}} />
-                        <div className="vertical-line" style={{gridArea: '12 / 10 / 14 / span 2', marginLeft: 'calc(var(--spacing) * 8', marginBottom:'calc(var(--spacing) * 8'}} />
-                        <div className="vertical-line" style={{gridArea: '12 / 16 / 14 / span 2', marginRight: 'calc(var(--spacing) * 8', marginBottom:'calc(var(--spacing) * 8'}} />
-                        <div className="horizontal-line" style={{gridArea: '14 / 11 / 16 / span 3'}} />
-                        <div className="horizontal-line" style={{gridArea: '14 / 14 / 16 / span 3'}} />
-                        <div className="horizontal-line" style={{gridArea: '15 / 11 / span 2 / span 6', marginLeft: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 10)', marginRight: 'calc(var(--spacing) * 4)'}} />
-                        <div className="horizontal-line" style={{gridArea: '18 / 10 / span 2 / span 8'}} />
-                        <div className="vertical-line" style={{gridArea: '16 / 14 / span 2 / span 3', marginRight: 'calc(var(--spacing) * 14)', marginTop: 'calc(var(--spacing) * 5)'}} />
-                        <div className="vertical-line" style={{gridArea: '16 / 9 / span 3 / span 3', marginTop: 'calc(var(--spacing) * 5)', marginLeft: 'calc(var(--spacing) * 24)'}} />
-                        <div className="vertical-line" style={{gridArea: '16 / 16 / span 3 / span 3', marginRight: 'calc(var(--spacing) * 24)', marginTop: 'calc(var(--spacing) * 5)'}} />
-                        <div className="vertical-line" style={{gridArea: '18 / 12 / 19 / span 3', marginRight: 'calc(var(--spacing) * 14)', marginTop: 'calc(var(--spacing) * 5)'}} />
+                        <div className="vertical-line" id='line-six' style={{gridArea: '7 / 12 / span 4 / 10', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="horizontal-line" id='line-seven' style={{gridArea: '7 / 11 / 14 / 14'}}/>
+                        <div className="vertical-line" id='line-eight' style={{gridArea: '7 / 14 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="vertical-line" id='line-nine' style={{gridArea: '7 / 16 / span 4 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="horizontal-line" id='line-ten' style={{gridArea: '7 / 14 / 14 / span 3'}}/>
+                        <div className="vertical-line" id='line-eleven' style={{gridArea: '10 / 13 / span 3 / span 2', marginTop: 'calc(var(--spacing) * 6)', marginBottom: 'calc(var(--spacing) * 7)'}}/>
+                        <div className="vertical-line" id='line-twelve' style={{gridArea: '13 / 13 / span 2 / span 2', marginRight: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 4)'}}/>
+                        <div className="vertical-line" id='line-thirteen' style={{gridArea: '13 / 13 / span 2 / span 2', marginLeft: 'calc(var(--spacing) * 4', marginTop: 'calc(var(--spacing) * 4)'}}/>
+                        <div className="vertical-line" id='line-fourteen' style={{gridArea: '12 / 10 / span 7 / span 2'}} />
+                        <div className="vertical-line" id='line-fifteen' style={{gridArea: '12 / 16 / span 7 / span 2'}} />
+                        <div className="horizontal-line" id='line-sixteen' style={{gridArea: '8 / 11 / 16 / span 3'}} />
+                        <div className="horizontal-line" id='line-seventeen' style={{gridArea: '8 / 14 / 16 / span 3'}} />
+                        <div className="horizontal-line" id='line-eighteen' style={{gridArea: '10 / 11 / 16 / span 3', marginLeft: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 9)', marginRight: 'calc(var(--spacing) * 2)'}} />
+                        <div className="horizontal-line" id='line-nineteen' style={{gridArea: '10 / 14 / 16 / span 3', marginLeft: 'calc(var(--spacing) * 2)', marginTop: 'calc(var(--spacing) * 9)', marginRight: 'calc(var(--spacing) * 4)'}} />
+                        <div className="vertical-line" id='line-twenty' style={{gridArea: '12 / 10 / 14 / span 2', marginLeft: 'calc(var(--spacing) * 8', marginBottom:'calc(var(--spacing) * 8'}} />
+                        <div className="vertical-line" id='line-twentyone' style={{gridArea: '12 / 16 / 14 / span 2', marginRight: 'calc(var(--spacing) * 8', marginBottom:'calc(var(--spacing) * 8'}} />
+                        <div className="horizontal-line" id='line-twentytwo' style={{gridArea: '14 / 11 / 16 / span 3'}} />
+                        <div className="horizontal-line" id='line-twentythree' style={{gridArea: '14 / 14 / 16 / span 3'}} />
+                        <div className="horizontal-line" id='line-twentyfour' style={{gridArea: '15 / 11 / span 2 / span 6', marginLeft: 'calc(var(--spacing) * 4)', marginTop: 'calc(var(--spacing) * 10)', marginRight: 'calc(var(--spacing) * 4)'}} />
+                        <div className="horizontal-line" id='line-twentyfive' style={{gridArea: '18 / 10 / span 2 / span 8'}} />
+                        <div className="vertical-line" id='line-twentysix' style={{gridArea: '16 / 14 / span 2 / span 3', marginRight: 'calc(var(--spacing) * 14)', marginTop: 'calc(var(--spacing) * 5)'}} />
+                        <div className="vertical-line" id='line-twentyseven' style={{gridArea: '16 / 9 / span 3 / span 3', marginTop: 'calc(var(--spacing) * 5)', marginLeft: 'calc(var(--spacing) * 24)'}} />
+                        <div className="vertical-line" id='line-twentyeight' style={{gridArea: '16 / 16 / span 3 / span 3', marginRight: 'calc(var(--spacing) * 24)', marginTop: 'calc(var(--spacing) * 5)'}} />
+                        <div className="vertical-line" id='line-twentynine' style={{gridArea: '18 / 12 / 19 / span 3', marginRight: 'calc(var(--spacing) * 14)', marginTop: 'calc(var(--spacing) * 5)'}} />
                         <div className="bg-blue-100 stamp" style={{gridArea: '17 / 12 / span 2 / span 2'}} id="WhatWasLost">
                             {nodes && nodes.WhatWasLost ? <>
                                 <img
@@ -427,10 +427,10 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '19 / 9 / 21 / span 3', marginRight: 'calc(var(--spacing) * 15)'}} />
-                        <div className="vertical-line" style={{gridArea: '19 / 17 / 21 / span 3', marginRight: 'calc(var(--spacing) * 14)'}} />
-                        <div className="horizontal-line" style={{gridArea: '20 / 9 / span 2 / span 1'}} />
-                        <div className="horizontal-line" style={{gridArea: '20 / 18 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 0.5)'}} />
+                        <div className="vertical-line" id='line-thirty' style={{gridArea: '19 / 9 / 21 / span 3', marginRight: 'calc(var(--spacing) * 15)'}} />
+                        <div className="vertical-line" id='line-thirtyone' style={{gridArea: '19 / 17 / 21 / span 3', marginRight: 'calc(var(--spacing) * 14)'}} />
+                        <div className="horizontal-line" id='line-thirtytwo' style={{gridArea: '20 / 9 / span 2 / span 1'}} />
+                        <div className="horizontal-line" id='line-thirtythree' style={{gridArea: '20 / 18 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 0.5)'}} />
                         <div className="bg-green-800 stamp" style={{gridArea: '20 / 8 / span 2 / span 2'}} id="MorsExMachina">
                             {nodes && nodes.MorsExMachina ? <>
                                 <img
@@ -449,18 +449,18 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '19 / 10 / span 3 / span 2', marginRight: 'calc(var(--spacing) * 4'}} />
-                        <div className="vertical-line" style={{gridArea: '19 / 10 / span 3 / span 2', marginLeft: 'calc(var(--spacing) * 4'}} />
-                        <div className="vertical-line" style={{gridArea: '19 / 16 / span 3 / span 2', marginRight: 'calc(var(--spacing) * 4'}} />
-                        <div className="vertical-line" style={{gridArea: '19 / 16 / span 3 / span 2', marginLeft: 'calc(var(--spacing) * 4'}} />
-                        <div className="vertical-line" style={{gridArea: '22 / 9 / span 2 / span 2'}} />
-                        <div className="vertical-line" style={{gridArea: '22 / 11 / span 2 / span 2'}} />
-                        <div className="vertical-line" style={{gridArea: '22 / 15 / span 2 / span 2'}} />
-                        <div className="vertical-line" style={{gridArea: '22 / 17 / span 2 / span 2'}} />
-                        <div className="horizontal-line" style={{gridArea: '21 / 10 / span 2 / span 1', marginRight: 'calc(var(--spacing) * 2'}} />
-                        <div className="horizontal-line" style={{gridArea: '21 / 11 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 2'}} />
-                        <div className="horizontal-line" style={{gridArea: '21 / 16 / span 2 / span 1', marginRight: 'calc(var(--spacing) * 2'}} />
-                        <div className="horizontal-line" style={{gridArea: '21 / 17 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 2'}} />
+                        <div className="vertical-line" id='line-thirtyfour' style={{gridArea: '19 / 10 / span 3 / span 2', marginRight: 'calc(var(--spacing) * 4'}} />
+                        <div className="vertical-line" id='line-thirtyfive' style={{gridArea: '19 / 10 / span 3 / span 2', marginLeft: 'calc(var(--spacing) * 4'}} />
+                        <div className="vertical-line" id='line-thirtysix' style={{gridArea: '19 / 16 / span 3 / span 2', marginRight: 'calc(var(--spacing) * 4'}} />
+                        <div className="vertical-line" id='line-thirtyseven' style={{gridArea: '19 / 16 / span 3 / span 2', marginLeft: 'calc(var(--spacing) * 4'}} />
+                        <div className="vertical-line" id='line-thirtyeight' style={{gridArea: '22 / 9 / span 2 / span 2'}} />
+                        <div className="vertical-line" id='line-thirtynine' style={{gridArea: '22 / 11 / span 2 / span 2'}} />
+                        <div className="vertical-line" id='line-fourty' style={{gridArea: '22 / 15 / span 2 / span 2'}} />
+                        <div className="vertical-line" id='line-fourtyone' style={{gridArea: '22 / 17 / span 2 / span 2'}} />
+                        <div className="horizontal-line" id='line-fourtytwo' style={{gridArea: '21 / 10 / span 2 / span 1', marginRight: 'calc(var(--spacing) * 2'}} />
+                        <div className="horizontal-line" id='line-fourtythree' style={{gridArea: '21 / 11 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 2'}} />
+                        <div className="horizontal-line" id='line-fourtyfour' style={{gridArea: '21 / 16 / span 2 / span 1', marginRight: 'calc(var(--spacing) * 2'}} />
+                        <div className="horizontal-line" id='line-fourtyfive' style={{gridArea: '21 / 17 / span 2 / span 1', marginLeft: 'calc(var(--spacing) * 2'}} />
                         <div className="bg-green-400 stamp" style={{gridArea: '18 / 10 / span 2 / span 2'}} id="MachineOfBlood">
                             {nodes && nodes.MachineOfBlood ? <>
                                 <img
@@ -587,16 +587,16 @@ export default function Grid() {
                                 />
                             </>}
                         </div>
-                        <div className="vertical-line" style={{gridArea: '24 / 15 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
-                        <div className="vertical-line" style={{gridArea: '24 / 17 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
-                        <div className="vertical-line" style={{gridArea: '24 / 9 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
-                        <div className="vertical-line" style={{gridArea: '24 / 11 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
+                        <div className="vertical-line" id='line-fourtysix' style={{gridArea: '24 / 15 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
+                        <div className="vertical-line" id='line-fourtyseven' style={{gridArea: '24 / 17 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
+                        <div className="vertical-line" id='line-fourtyeight' style={{gridArea: '24 / 9 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
+                        <div className="vertical-line" id='line-fourtynine' style={{gridArea: '24 / 11 / span 4 / span 2', backgroundColor: 'transparent', backgroundImage: 'linear-gradient(white, white, transparent)'}}/>
                     </div>
                 </div>
             </section>
             <div 
                 className="w-full font-extrabold madness"
-                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}
+                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', display: 'flex', flexWrap: 'wrap'}}
             >
                 <div className='flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white'>
                     <h1 className="z-10 text-6xl text-black madness-title" >Madness,<br />1917</h1>
