@@ -18,6 +18,8 @@ import DivergenceTwo from './DivergenceTwo';
 import DivergenceThree from './DivergenceThree';
 import DivergenceFour from './DivergenceFour';
 
+import heresylines from './img/Heresy-Lines.png'
+
 export default function Grid() {
 
     const { nodes, tabStyleOne, tabStyleTwo, tabStyleThree, tabStyleFour, setTabStyleOne, setTabStyleTwo, setTabStyleThree, setTabStyleFour } = useContext(UserContext)
@@ -121,6 +123,9 @@ export default function Grid() {
                     <EnterCode />
                 </div>
                 <div className="grid place-content-center">
+                    <div className='heresy-grid-bg'>
+                        <img src={heresylines} alt={heresylines} />
+                    </div>
                     <div className="trans-heresy" style={{gridArea: '1/1/2/2'}} />
                     <div
                         className="relative grid w-full h-full mx-auto heresy-grid"
@@ -595,12 +600,12 @@ export default function Grid() {
                 </div>
             </section>
             <div 
-                className="w-full font-extrabold madness"
+                className="w-full font-extrabold madness-start"
                 style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', display: 'flex', flexWrap: 'wrap'}}
             >
-                <div className='flex flex-wrap justify-between w-full gap-5 p-8 text-3xl text-white'>
+                <div className='flex flex-wrap justify-between w-full h-full gap-5 p-8 text-3xl text-white'>
                     <h1 className="z-10 text-6xl text-black madness-title" >Madness,<br />1917</h1>
-                    <div className='text-black'> <EnterCode /> </div>
+                    <div className='text-black enter-code-two'> <EnterCode /> </div>
                 </div>
                 <div className='flex flex-wrap justify-between w-full px-8 pt-8 text-4xl madness-tab-container' id='madness'>
                     {nodes.OutWithABang || nodes.AlienistInTraining ? <>

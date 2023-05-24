@@ -18,14 +18,14 @@
 .lore blockquote{
   /* font-family: 'Merriweather', serif; */
   /* font-family: 'Roboto Condensed', sans-serif; */
-  font-family: playfair !important;
+  font-family: 'Playfair Display', serif !important;
 }
 
 .footer {
   position: fixed;
   bottom: 0 !important;
   width: 100% !important;
-  height: 7%;
+  /* height: 7%; */
   transition: transform 1s ease-in-out;
   z-index: 10;
 }

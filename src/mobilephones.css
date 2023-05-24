@@ -28,6 +28,17 @@
         top: 0;
         /* right: 0; */
     }
+    .madness-tab,
+    .redacted {
+        width: 210% !important;
+    }
+    .madness-title {
+        position:relative;
+        top: 2rem
+    }
+    .enter-code-two {
+        display: none;
+    }
     .enter-code{
         font-size: medium;
         width: 5.5rem;
@@ -38,14 +49,13 @@
         height: 5vh;
         font-size: small;
     }
-    .enter-code-message {
-        
-    }
     .heresy-grid {
-        grid-template-columns: repeat(25, 1vw) !important;
+        grid-template-columns: repeat(25, 0.6rem) !important;
         grid-template-rows: repeat(28, 2vh) !important;
         column-gap: 10px;
-        left: -5rem;
+        row-gap: 0.25rem;
+        top: -2rem;
+        left: -5.5rem;
     }
     .heresy-grid .stamp {
         box-sizing: border-box;
@@ -70,6 +80,7 @@
         position: relative;
         /* padding: 0px !important; */
         /* opacity: 0.5; */
+        /* display: none; */
     }
     .heresy-grid .stamp p {
         display: none !important;
@@ -89,9 +100,7 @@
         /* margin-left: auto;
         margin-right: auto; */
     }
-    .madness {
-        width: 100% !important;
-    }
+
     .madness-grid .checkbox {
         box-sizing: border-box;
         /* background: radial-gradient(red, black, transparent, transparent); */
@@ -133,21 +142,86 @@
         top: 0 !important;
         margin-top: 0 !important;
     }
-    #line-one {
-        /* background-color: red !important; */
+    .heresy-grid-bg {
+        /* background-image: url('./img/Heresy-Lines.png') !important; */
+        /* background: red !important; */
+        /* z-index: 9999; */
+        /* width: min-content; */
+        display: block;
+        position: absolute;
+        width: 100vw;
+        margin-left: 0 !important;
+        left: 1rem;
+        top: 10rem;
+    }
+    /* .trans-heresy {
+        position: relative;
+    } */
+    .vertical-line,
+    .horizontal-line {
+        display: none
+    }
+    .stamp#SinsOfTheFather {
+        /* display: none; */
+        grid-area: 11 / 8 / span 2 / span 2 !important;
+    }
+    .stamp#BeyondTheVeil {
+        /* display: none; */
+        grid-area: 11 / 18 / span 2 / span 2 !important;
+    }
+    .stamp#PandorasBox {
+        grid-area: 15 / 8 / span 2 / span 2 !important;
+    }
+    .stamp#OutOfTime {
+        grid-area: 15 / 13 / span 2 / span 2 !important;
+    }
+    .stamp#ASoulInLimbo {
+        grid-area: 15 / 18 / span 2 / span 2 !important;
+    }
+    .stamp#WhatWasLost {
+        grid-area: 19 / 11 / span 2 / span 2 !important
+    }
+    .stamp#GoodHousekeeping {
+        grid-area: 18 / 15 / span 2 / span 2 !important
+    }
+    .stamp#MachineOfBlood {
+        grid-area: 22 / 6 / span 2 / span 2 !important;
+        position: relative;
+        left: -0.5rem;
+    }
+    .stamp#ChainsThatBind {
+        grid-area: 22 / 21 / span 2 / span 2 !important;
+        position: relative;
+        left: -0.5rem;
+    }
+    .stamp#OutWithABang {
+        grid-area: 24 / 7 / span 2 / span 2 !important;
+        position: relative;
+        left: -0.5rem;
+    }
+    .stamp#DeathDeferred {
+        grid-area: 24 / 10 / span 2 / span 2 !important;
+    }
+    .stamp#Misled {
+        grid-area: 24 / 17 / span 2 / span 2 !important;
+        position: relative;
+        left: -0.8rem;
+    }
+    .stamp#BetterSafeThanSorry {
+        grid-area: 24 / 20 / span 2 / span 2 !important;
+    }
+        /* #line-one {
+        background-color: red !important;
         grid-area: 2 / 13 / span 10 / span 2 !important;
         margin-top: 0 !important;
     }
     #line-two {
-        /* background-color: red !important; */
+        background-color: red !important;
         grid-area: 4 / 12 / span 11 / span 2 !important;
-        /* margin-top: 0!important; */
-        /* display: none !important; */
     }
     #line-three {
-        /* background-color: red!important; */
+        background-color: red!important;
         grid-area: 5 / 13 / span 2 / span 4 !important;
-        /* margin-top: 0!important; */
     }
     .stamp#stubborn {
         grid-area: 4 / 1 / span 4 / span 2 !important;
@@ -156,5 +230,6 @@
         background-color: red !important;
         grid-area: 7 / 12 / span 4 / 10 !important;
         margin-top: calc(var(--spacing) * 6) !important;
-    }
+    } */
+
 }

@@ -451,14 +451,14 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>                       
-                        <div style={{gridArea: '24/10/span 1/span 2'}}>
+                        {/* <div style={{gridArea: '24/10/span 1/span 2'}}>
                             <img src={cornerDownRight} alt='corner' style={{position: 'relative', top: '-1.8rem'}} />
-                        </div>
-                        <div className="h-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
+                        </div> */}
+                        {/* <div className="h-line-dash" style={{gridArea: '23/11/span 2/span 2'}}>
                             <img src={twoDashHorizontal} alt='line' />
-                        </div> 
-                        <div className="h-line-dash" style={{gridArea: '23/13/span 2/span 2'}}>
-                            <img src={twoDashHorizontal} alt='line' />
+                        </div>  */}
+                        <div className="h-line-dash" style={{gridArea: '23/13/span 2/span 2', position: 'relative', left: '3rem'}}>
+                            <img src={oneDashHorizontal} alt='line' />
                         </div> 
                         <div className="v-line-dash" style={{gridArea: '23/13/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
@@ -466,7 +466,7 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div style={{gridArea: '24/15/span 1/span 2'}}>
                             <img src={cornerDownLeft} alt='corner' style={{position: 'relative', top: '-1.8rem', left: '1.4rem'}} />
                         </div>
-                        <div className="checkbox" id='Bloodthirsty' style={{gridArea: '26/9/span 2/span 2'}}>
+                        {/* <div className="checkbox" id='Bloodthirsty' style={{gridArea: '26/9/span 2/span 2'}}>
                             {nodes && nodes.Bloodthirsty ? <>
                                 <div className='checked'>
                                     <img 
@@ -486,7 +486,8 @@ export default function ({ setCpShow, setActiveNode }) {
                                     <p className='no-symptoms'>No Symptoms</p>
                                 </div>
                             </>}
-                        </div>
+                        </div> */}
+
                         <div style={{gridArea: '27/12/span 1/span 2'}}>
                             <img src={cornerDownRight} alt='corner' style={{position: 'relative', top: '-1.8rem'}} />
                         </div>
@@ -538,9 +539,9 @@ export default function ({ setCpShow, setActiveNode }) {
                                 </div>
                             </>}
                         </div>
-                        <div className="v-line-dash" style={{gridArea: '28/9/span 2/span 2'}}>
+                        {/* <div className="v-line-dash" style={{gridArea: '28/9/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
-                        </div> 
+                        </div>  */}
                         <div className="v-line-dash" style={{gridArea: '28/11/span 2/span 2'}}>
                             <img src={twoDashVertical} alt='line' />
                         </div> 

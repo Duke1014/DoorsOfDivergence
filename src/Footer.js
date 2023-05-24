@@ -26,9 +26,10 @@ export default function Footer({ scrolled, adminMode, setAdminMode }) {
             <p>
                 {year} &copy; Doors of Divergence. <span className="hidden xs:inline-block">
                     Powered by <a
-                        href="mailto:duke.norsworthy@gmail.com"
+                        href="dukenorsworthy.com/"
+                        target='_blank'
                         className="hover:underline"
-                        title="Get in touch with Duke"
+                        // title="Get in touch with Duke"
                         >Duke
                     </a>.
                 </span>

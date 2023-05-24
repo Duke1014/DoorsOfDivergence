@@ -23,6 +23,9 @@
     padding: 0px !important;
     /* opacity: 0.5; */
 }
+.heresy-grid-bg {
+    display:none;
+}
 
 .progress-bar-outer {
     border: 1px solid white;
@@ -121,6 +124,12 @@
     cursor: pointer;
 }
 
+.heresy-grid-bg {
+    /* background-image: url('./img/Heresy-Lines.png'); */
+    /* z-index: 100; */
+    width: 100vw;
+    /* display: none; */
+}
 .vertical-line {
     justify-self: center;
     margin-block: calc(var(--border) * -1);
