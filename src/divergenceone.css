@@ -2,9 +2,19 @@
                 
 body .madness {
     font-family: CFRemingtonTypewriter-Regul;
-    background-image: url('./img/vintagepaper4.png');
+    background-image: url('./img/Background2.png');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-color: rgba(229,181,117,255);
+    width: 100vw;
 }
+/* @media only screen and (min-width: 2000px) {
+    body .madness {
+        background-size: 100% 100%;
+        ;
+    }
+} */
    
 @font-face {
     font-family: CFRemingtonTypewriter-Regul;
@@ -14,6 +24,10 @@ body .madness {
 /* @font-face {
     font-family: CF Remington Typewriter;
     src: url(font/Archaic1897.ttf) format("truetype");
+} */
+/* 
+.madness-grid-container {
+    width: 100vw;
 } */
 
 .madness-grid .checkbox {
@@ -29,6 +43,15 @@ body .madness {
     z-index: 5;
     /* margin-inline: 16px; */
     position: relative;
+}
+
+.madness-grid {
+    grid-template-columns: repeat(24, min-content);
+    /* grid-template-rows: repeat(28, 1fr); */
+    grid-template-rows: repeat(33, min-content);
+    /* grid-template-rows: min-content min-content min-content min-content min-content min-content min-content 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr min-content min-content min-content min-content min-content; */
+    padding: 4rem 0rem 6rem 1rem;
+    /* border: 1px solid black; */
 }
 
 .no-symptoms, .symptom-found {
@@ -138,15 +161,6 @@ body .madness {
 .trans-madness {
     z-index: 1;
     pointer-events: none;
-}
-
-.madness-grid {
-    grid-template-columns: repeat(24, min-content);
-    /* grid-template-rows: repeat(28, 1fr); */
-    grid-template-rows: repeat(33, min-content);
-    /* grid-template-rows: min-content min-content min-content min-content min-content min-content min-content 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr min-content min-content min-content min-content min-content; */
-    padding: 100px;
-    /* border: 1px solid black; */
 }
 
 /* .madness-grid > * {

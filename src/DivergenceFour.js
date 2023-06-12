@@ -34,10 +34,10 @@ export default function DivergenceFour({ setCpShow, setActiveNode, setIsHesitant
   
     return (
         <div className='madness'>
-            <section className='grid h-full'>
+            <section className='grid h-full w-full'>
                 <div className='flex flex-wrap w-full h-52'/>
-                <div className='grid place-content-center'>
-                    <div className='relative grid w-full h-full mx-auto madness-grid'>    
+                <div className='grid w-screen place-content-center madness-grid-container'>
+                    <div className='relative grid w-screen h-full mx-auto madness-grid'>    
                         <div className='text-2xl' style={{gridArea: '1/20/span 2/span 2', textAlign: 'center', position: 'relative', top: '-2.5rem'}}>Common Symptoms</div>
                         <div className="checkbox" id='Narcoleptic' style={{gridArea: '1/20/span 2/span 2'}}>
                             {nodes && nodes.Narcoleptic ? <>

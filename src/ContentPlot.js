@@ -703,8 +703,6 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                         -Excerpt from Gunther’s journal, <br/>
                         April 11, 1900
                     </p>
-
-
                 </div>
             )
         break;
@@ -1065,7 +1063,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                         -Anna Payne, Astro-physicist (and member of the Order), vocal response to Novikov, 1990
                     </p>
                     <p>
-                    There has long been debate in the physics community concerning the hypothetical practicality of time travel. Of specific concern are the effects of creating a paradox. There are some who believe that a causal loop, or “bootstrap paradox”, (wherein a time traveler going into the past to change events ends up creating the very events he traveled back to change) would create a logical inconsistency that could break the fabric of time. Others believe that a bootstrap paradox is the only form of paradox that could be allowed by the laws of physics to exist; it is instead the “Grandfather Paradox”, (named for the hypothetical time traveler who goes back in time and kills his own grandfather, thus preventing his birth and subsequent parricide) that threatens space-time with a logical fallacy powerful enough to tear it apart. Of course, these models disregard the possibility of multiple timelines and realities created by individual choices. Ultimately, this debate may never be settled, given its purely speculative nature. After all, time travel and branching realities are things of pure fiction impossible for any one person to truly observe, aren’t they?
+                        There has long been debate in the physics community concerning the hypothetical practicality of time travel. Of specific concern are the effects of creating a paradox. There are some who believe that a causal loop, or “bootstrap paradox”, (wherein a time traveler going into the past to change events ends up creating the very events he traveled back to change) would create a logical inconsistency that could break the fabric of time. Others believe that a bootstrap paradox is the only form of paradox that could be allowed by the laws of physics to exist; it is instead the “Grandfather Paradox”, (named for the hypothetical time traveler who goes back in time and kills his own grandfather, thus preventing his birth and subsequent parricide) that threatens space-time with a logical fallacy powerful enough to tear it apart. Of course, these models disregard the possibility of multiple timelines and realities created by individual choices. Ultimately, this debate may never be settled, given its purely speculative nature. After all, time travel and branching realities are things of pure fiction impossible for any one person to truly observe, aren’t they?
                     </p>
                 </div>
             )
@@ -1089,9 +1087,6 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                         <br/>
                         No, it must be a trick of the light. 
                     </p>
-
-
-
                 </div>
             )
         break;
@@ -1368,7 +1363,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <br />
                     <img src={node44} alt='Unhinged Behavior' loading='lazy' />
                     <br />
-                    {/* <p>
+                    <p>
                         To the superintendent of Hollow Grove Sanitarium: <br/><br/>
 
                         The letter accompanies the newest inmates, hereby ordered by this Court for involuntary hospitalization to your facility for a time period of indeterminate length, with their stay only to be ended when your staff and this Court can both be convinced of their return to sanity.<br/>
@@ -1377,7 +1372,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                         Of note is that most of the offenses are barely, if at all, remembered by the subjects, many being committed when the patient was in a fugue state. In addition, during interrogations by apprehending officers, each subject used the phrases “the one made many”, despite being detained in different times and places. I can only assume some sort of shared trauma, but have no evidence to back up this theory.<br/><br/>
 
                         This Court directs these poor souls to your care. Treat them at your best discretion.
-                    </p> */}
+                    </p>
                 </div>
             )
         break;
@@ -1749,6 +1744,23 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <p className="max-w-sm mt-2 ml-auto italic text-right">
                         -Excerpt from audio recording between Dr. Tidwell and an undisclosed Hollow Grove staff member, year unknown.
                     </p>   
+                </div>
+            )
+        break;
+        case 'Hallucinations':
+            nodeContent = (
+                <div>
+                    <h1 className="my-4 text-4xl font-archaic">Hallucinations</h1>
+                    <p className="text-lg">Received visions of Eveline.</p>
+                    <br />
+                    <img src={node63} alt='Hallucinations' loading='lazy' />
+                    <br />
+                    <blockquote>
+                        “My eye! Dammit, my eye! Who left that pen within reach- fire the idiot who- agh, dammit. How bad is it? Don’t lie to me, I- Start restraining them before the therapy- It hurts, fu-”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        -Excerpt from audio recording between Dr. Tidwell and an undisclosed Hollow Grove staff member, year unknown.
+                    </p>   
                     <p>
                         The Royal Edinburgh Hospital has a rich and storied history, dating back to its founding in 1807. It was originally established as the Edinburgh Lunatic Asylum, a place where*(hfkjhsf8&*<br/>
                     </p>
@@ -1762,17 +1774,6 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                         qwrwqerwhen a catastrophic explosion in the accelerator killed 23 people and left several others in a coma. Further investigation uncovered the use of unapproved, previously sealed materials that may have lead toklashfasd <br/>
                         airjlarjwerp0w38rsome speculating that the missing patients had been the subjects of unethical medical experimentsalkhlFSkljlfhFLHyuieyuihlh<p style={{textDecorationColor: 'red'}}>ERROR LOADING JAVASCRIPT</p>
                     </div>
-                </div>
-            )
-        break;
-        case 'Hallucinations':
-            nodeContent = (
-                <div>
-                    <h1 className="my-4 text-4xl font-archaic">Hallucinations</h1>
-                    <p className="text-lg">Received visions of Eveline.</p>
-                    <br />
-                    <img src={node63} alt='Hallucinations' loading='lazy' />
-                    <br />
                 </div>
             )
         break;
@@ -1807,7 +1808,28 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <br />
                     <img src={node65} alt='Confused' loading='lazy' />
                     <br />
+                    <p>
+                    kf*&*()saf-stories about Edinburgh’s coverups continued into the early 1920’s, even after the facility underwent numerous safety and procedural changes in the wake of a revolution in psychiatric ethics and-&)(fksdf(*)
 
+                    </p>
+                    <p>
+                        (*&&&&&&-ernment disavowed any knowledge of experiments related to particle acceleration or illicit use of nuclear materials. Despite multiple FOI requests as recently as 19-kljh*^*&(^%*(&
+                    </p>
+                    <p>
+                        “"DP_@()-auntings of patients related to demonic worship and esoteric rituals. The idea of trepanning in order to allow the evil spirits out was a-+_()sdf*(&
+                    </p>
+                    <p>
+                        (&&E@-new understanding about the nature of time and space itself. Only if-PPPP#()@(#
+                    </p>
+                    <p>
+                        *()*)(*)(*-Hello, can anyone hear me? I think we’re stuck-*^*%hJUHkjyh
+                    </p>
+                    <p>
+                        “A>!)@-een Elizabeth to declare a temporary moratorium on all studies related to-(>@jhws
+                    </p>
+                    <p>
+                        L*&*(-authorized personnel only. Do not attempt to access records related to EVELINE without direct approval from-*&kjhk% CORRUPTED CODE
+                    </p>
                 </div>
             )
         break;
@@ -1866,7 +1888,15 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <br />
                     <img src={node68} alt='Dumbfounded' loading='lazy' />
                     <br />
-
+                    <blockquote>
+                    “It can be said, then, that the old texts that refer to places like Heaven, and Hell, and Purgatory (or other cultural equivalents) are really speaking of something altogether different- a place between places- the negative space that exists between the realities. Perhaps to some, this nothingness can be a relief from the chaotic terror of their reality; for others, a never-ending Hell. Or perhaps there are those that view it as a mere transitory state, like the Limbo Dante wrote about. What if, maybe, this void is the only thing waiting for us after death, and the name you call it merely depends upon your perspective?”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - From “Meditiations on the Metaphysical Afterlife” by Dr. Louis Pasternack, Second Artificer, Boston Chapter, Order of the Three Keys, 1963
+                    </p>
+                    <p>
+                        *&Eoihsaof hP(*^&EY OWIH : NO TIME. PLEASE, HELP. HAVE TO BREAK THE LOOP_)*)&$) *Woafr0w37r&)*(&ROLfhoe7w08rP
+                    </p>
                 </div>
             )
         break;
@@ -1893,7 +1923,12 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <br />
                     <img src={node70} alt='Fickle' loading='lazy' />
                     <br />
-
+                    <blockquote>
+                    ”My friends, do you know what the most power force in the universe is? Gravity? Ludicrous. We know objects can escape a planetary orbit. Electromagnetism? Looks like someone has finished a their basic introductory course. What’s that? Love? There’s always a sentimentalist. No. Hearts can be broken. No, I posit to you that the most powerful force in the universe is, of course, choice. Every choice, every decision, creates a new reality, a new universe in which that choice was made. It is the only thing in our observable universe that is force of pure creation. And as such, my compatriots, I suggest that we all throw out the manuals and grimoires we have been writing all our long and storied history, and re-think the manner in which we engage in our experimentations-”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - Excerpt from a speech delivered to the Elders of the Manchester chapter, author unknown (likey due to excommunication and their name being stricken from the record, circa 1866.
+                    </p>
                 </div>
             )
         break;
@@ -1935,7 +1970,12 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <br />
                     <img src={node73} alt='Headstrong' loading='lazy' />
                     <br />
-
+                    <blockquote>
+                        “It is the directive of this office that Dr. J. Tidwell undertakes the rehabilitation of the patients previously named in Section 1. Dr. Tidwell is authorized to use whatever treatments (established or experimental) necessary to return the patients to a level of cognizance and/or functionality that their memories about the incident named in Section 3 (“Edinburgh”) can be accurately conveyed, and their level of involvement in the incident be assessed so that an appropriate course of action may be taken.  Dr. Tidwell and his staff are given wide latitude in pursuing this rehabilitation, as expediency is of utmost importance. In the event of further incidents, legal council will be provided to-”
+                    </blockquote>
+                    <p className="max-w-sm mt-2 ml-auto italic text-right">
+                        - Fragment of a letter delivered to Hollow Grove Sanitorium, author unknown, (but Government credentials affixed to the letterhead)
+                    </p>
                 </div>
             )
         break;
@@ -1944,6 +1984,8 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                 <div>
                     <h1 className="my-4 text-4xl font-archaic">Delusions Of Grandeur</h1>
                     <p className="text-lg">You saw a message from the future.</p>
+                    <br/>
+                    <p>00110100 00111001 00110110 00110110 00110010 00110000 00110111 00111001 00110110 01100110 00110111 00110101 00110010 00110111 00110111 00110010 00110110 00110101 00110010 00110000 00110111 00110010 00110110 00110101 00110110 00110001 00110110 00110100 00110110 00111001 00110110 01100101 00110110 00110111 00110010 00110000 00110111 00110100 00110110 00111000 00110110 00111001 00110111 00110011 00110010 01100100 00110010 00110000 00110111 00110111 00110110 00110101 00110010 00110111 00110111 00110010 00110110 00110101 00110010 00110000 00110110 00110011 00110110 00110001 00110111 00110101 00110110 00110111 00110110 00111000 00110111 00110100 00110010 00110000 00110110 00111001 00110110 01100101 00110010 00110000 00110110 00110001 00110010 00110000 00110111 00110100 00110110 00111001 00110110 01100100 00110110 00110101 00110010 00110000 00110110 01100011 00110110 01100110 00110110 01100110 00110111 00110000 00110010 01100101 00110010 00110000 00110100 00110011 00110110 00111000 00110111 00110010 00110110 01100110 00110110 01100101 00110110 01100110 00110111 00110011 00110010 00110000 00110101 00110011 00110111 00110100 00110110 00110001 00110111 00110100 00110110 00111001 00110110 01100110 00110110 01100101 00110010 01100101 00110010 00110000 00110101 00110011 00110110 00110101 00110110 01100101 00110110 00110100 00110010 00110000 00110100 00111000 00110110 00110101 00110110 01100011 00110111 00110000 00110010 01100101 00110010 00110000 00110101 00110011 00110110 00110001 00110111 00111001 00110010 00110000 00110111 00110100 00110110 00111000 00110110 00110101 00110010 00110000 00110111 00110000 00110110 00111000 00110111 00110010 00110110 00110001 00110111 00110011 00110110 00110101 00110010 00110000 00110010 00110010 00110100 01100100 00110110 00111001 00110111 00110011 00110111 00110100 00110111 00111001 00110010 00110000 00110100 01100100 00110110 01100110 00110111 00110010 00110110 01100101 00110110 00111001 00110110 01100101 00110110 00110111 00110010 00110000 00110100 00110101 00110111 00111001 00110110 00110101 00110111 00110011 00110010 00110010 00110010 00110000 00110111 00110100 00110110 01100110 00110010 00110000 00110110 00110001 00110010 00110000 00110110 00110011 00110111 00110010 00110110 00110101 00110111 00110111 00110010 00110000 00110110 01100100 00110110 00110101 00110110 01100100 00110110 00110010 00110110 00110101 00110111 00110010 00110010 00110000 00110111 00110011 00110110 01100110 00110010 00110000 00110111 00110100 00110110 00111000 00110110 00110101 00110111 00111001 00110010 00110000 00110110 01100010 00110110 01100101 00110110 01100110 00110111 00110111 00110010 00110000 00110110 01100110 00110111 00110101 00110111 00110010 00110010 00110000 00110110 01100100 00110110 00110101 00110111 00110011 00110111 00110011 00110110 00110001 00110110 00110111 00110110 00110101 00110010 00110000 00110110 01100100 00110110 00110001 00110110 00110100 00110110 00110101 00110010 00110000 00110110 00111001 00110111 00110100 00110010 00110000 00110111 00110100 00110110 00111000 00110111 00110010 00110110 01100110 00110111 00110101 00110110 00110111 00110110 00111000 00110010 01100101</p>
                 </div>
             )
         break;

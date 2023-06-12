@@ -39,8 +39,8 @@
   background-color:#ffffff86;
   border: 1px solid black;
   /* float: left; */
-  width: 50em;
-  position: relative
+  width: 30em;
+  position: relative;
 }
 
 .node-check,
@@ -76,7 +76,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px
+  width: 15rem;
 }
 
 .speech-bubble {

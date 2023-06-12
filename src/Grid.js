@@ -18,7 +18,13 @@ import DivergenceTwo from './DivergenceTwo';
 import DivergenceThree from './DivergenceThree';
 import DivergenceFour from './DivergenceFour';
 
-import heresylines from './img/Heresy-Lines.png'
+import divonetab from './img/div-one-tab.png';
+import divtwotab from './img/div-two-tab.png';
+import divthreetab from './img/div-three-tab.png';
+import divfourtab from './img/div-four-tab.png';
+import filesSealed from './img/FilesSealed.png';
+
+// import heresylines from './img/Heresy-Lines.png'
 
 export default function Grid() {
 
@@ -35,38 +41,38 @@ export default function Grid() {
         if (tab === 'one') {
             setClickedTab('one')
             setTabStyleOne({
-                backgroundColor: 'rgb(238, 196, 119)',
-                width: '36%'
+                backgroundColor: 'rgb(238, 196, 119)'
+                // width: '36%'
             })
-            setTabStyleTwo({width: '20%'})
-            setTabStyleThree({width: '20%'})
-            setTabStyleFour({width: '20%'})
+            setTabStyleTwo({width: '24%'})
+            setTabStyleThree({width: '24%'})
+            setTabStyleFour({width: '24%'})
         } else if (tab === 'two') {
             setClickedTab('two')
-            setTabStyleOne({width: '20%'})
+            setTabStyleOne({width: '24%'})
             setTabStyleTwo({
-                backgroundColor: 'rgb(238, 196, 119)',
-                width: '36%'
+                backgroundColor: 'rgb(238, 196, 119)'
+                // width: '36%'
             })
-            setTabStyleThree({width: '20%'})
-            setTabStyleFour({width: '20%'})
+            setTabStyleThree({width: '24%'})
+            setTabStyleFour({width: '24%'})
         } else if (tab === 'three') {
             setClickedTab('three')
-            setTabStyleOne({width: '20%'})
-            setTabStyleTwo({width: '20%'})
+            setTabStyleOne({width: '24%'})
+            setTabStyleTwo({width: '24%'})
             setTabStyleThree({
-                backgroundColor: 'rgb(238, 196, 119)',
-                width: '36%'
+                backgroundColor: 'rgb(238, 196, 119)'
+                // width: '36%'
             })
-            setTabStyleFour({width: '20%'})
+            setTabStyleFour({width: '24%'})
         } else if (tab === 'four') {
             setClickedTab('four')
-            setTabStyleOne({width: '20%'})
-            setTabStyleTwo({width: '20%'})
-            setTabStyleThree({width: '20%'})
+            setTabStyleOne({width: '24%'})
+            setTabStyleTwo({width: '24%'})
+            setTabStyleThree({width: '24%'})
             setTabStyleFour({
-                backgroundColor: 'rgb(238, 196, 119)',
-                width: '36%'
+                backgroundColor: 'rgb(238, 196, 119)'
+                // width: '36%'
             })
         }
     }
@@ -81,28 +87,28 @@ export default function Grid() {
     switch (clickedTab) {
         case 'one':
             madnessMap = (
-                <div style={{position: 'absolute', display: 'flex'}}>
+                <div className='madness-madness' style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceOne setCpShow={setCpShow} setActiveNode={setActiveNode} />
                 </div>
             )
         break;
         case 'two':
             madnessMap = (
-                <div style={{position: 'absolute', display: 'flex'}}>
+                <div className='madness-madness' style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceTwo setCpShow={setCpShow} setActiveNode={setActiveNode} />
                 </div>
             )
         break;
         case 'three':
             madnessMap = (
-                <div style={{position: 'absolute', display: 'flex'}}>
+                <div className='madness-madness' style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceThree setCpShow={setCpShow} setActiveNode={setActiveNode} />
                 </div>
             )
         break;
         case 'four':
             madnessMap = (
-                <div style={{position: 'absolute', display: 'flex'}}>
+                <div className='madness-madness' style={{position: 'absolute', display: 'flex'}}>
                     <DivergenceFour setCpShow={setCpShow} setActiveNode={setActiveNode} setIsHesitant={setIsHesitant} />
                 </div>
             )
@@ -124,7 +130,7 @@ export default function Grid() {
                 </div>
                 <div className="grid place-content-center">
                     <div className='heresy-grid-bg'>
-                        <img src={heresylines} alt={heresylines} />
+                        {/* <img src={heresylines} alt={heresylines} /> */}
                     </div>
                     <div className="trans-heresy" style={{gridArea: '1/1/2/2'}} />
                     <div
@@ -601,9 +607,9 @@ export default function Grid() {
             </section>
             <div 
                 className="w-full font-extrabold madness-start"
-                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100% 100%', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', display: 'flex', flexWrap: 'wrap'}}
+                style={{backgroundImage: `url(${madnessBg})`, backgroundSize: '100vw 100vh', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat', display: 'flex', flexWrap: 'wrap'}}
             >
-                <div className='flex flex-wrap justify-between w-full h-full gap-5 p-8 text-3xl text-white'>
+                <div className='flex flex-wrap justify-between w-full h-60 gap-5 text-3xl text-white title-container'>
                     <h1 className="z-10 text-6xl text-black madness-title" >Madness,<br />1917</h1>
                     <div className='text-black enter-code-two'> <EnterCode /> </div>
                 </div>
@@ -613,57 +619,81 @@ export default function Grid() {
                             className='text-3xl madness-tab'
                             onClick={() => handleTab('one')}     
                             style={tabStyleOne}   
-                        >Elixirs and Alienists</span>
+                        >
+                            <img src={divonetab} alt='tab'/>
+                            {/* Elixirs and Alienists */}
+                            </span>
                     </>:<>
                         <span
                             className='text-3xl redacted'
                             onClick={() => handleClick('TabOne')}     
                             style={tabStyleOne}
-                        >REDACTED</span>
+                        >
+                            <img src={filesSealed} alt='tab'/>
+                            {/* REDACTED */}
+                            </span>
                     </>}
                     {nodes.DeathDeferred || nodes.MissionOfMercy ? <>
                         <span 
                             className='text-3xl madness-tab'
                             onClick={() => handleTab('two')}     
                             style={tabStyleTwo}   
-                        >On the Bleeding Edge</span>
+                        >
+                            <img src={divtwotab} alt='tab'/>
+                            {/* On the Bleeding Edge */}
+                            </span>
                     </>:<>
-                        <span
+                    <span
                             className='text-3xl redacted'
-                            onClick={() => handleClick('TabTwo')}
-                            style={tabStyleTwo}
-                        >REDACTED</span>
+                            onClick={() => handleClick('TabOne')}     
+                            style={tabStyleOne}
+                        >
+                            <img src={filesSealed} alt='tab'/>
+                            {/* REDACTED */}
+                            </span>
                     </>}
                     {nodes.Misled || nodes.UnhingedBehavior ? <>
                         <span
                             className='text-3xl madness-tab'
                             onClick={() => handleTab('three')}   
                             style={tabStyleThree}
-                        >Inner Demons</span>
+                        >
+                            <img src={divthreetab} alt='tab'/>
+                            {/* Inner Demons */}
+                            </span>
                     </>:<>
-                        <span
+                    <span
                             className='text-3xl redacted'
-                            onClick={() => handleClick('TabThree')}
-                            style={tabStyleThree}
-                        >REDACTED</span>
+                            onClick={() => handleClick('TabOne')}     
+                            style={tabStyleOne}
+                        >
+                            <img src={filesSealed} alt='tab'/>
+                            {/* REDACTED */}
+                            </span>
                     </>}
                     {nodes.BetterSafeThanSorry || nodes.ALead ? <>
                         <span 
                             className='text-3xl madness-tab'
                             onClick={() => handleTab('four')}    
                             style={tabStyleFour}  
-                        >A Voice in the Veil</span>
+                        >
+                            <img src={divfourtab} alt='tab'/>
+                            {/* A Voice in the Veil */}
+                            </span>
                     </>:<>
-                        <span
+                    <span
                             className='text-3xl redacted'
-                            onClick={() => handleClick('TabFour')} 
-                            style={tabStyleFour}
-                        >REDACTED</span>
+                            onClick={() => handleClick('TabOne')}     
+                            style={tabStyleOne}
+                        >
+                            <img src={filesSealed} alt='tab'/>
+                            {/* REDACTED */}
+                            </span>
                     </>}
                 </div>
             </div>
             {madnessMap}
-            <div style={{minHeight: '96px', width: 'full', position: 'absolute'}}>.</div>
+            <div className='space' style={{minHeight: '96px', width: 'full', position: 'absolute'}}>.</div>
         </div>
     </div>
   )

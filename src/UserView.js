@@ -40,7 +40,7 @@ export default function UserView({ r, setBubbleText }) {
             E-mail: {r.email}
         </div>
         <button className='node-check' onClick={nodeClick}>Check Nodes</button>
-        <button className='password-reset' onClick={resetPassword}>Password Reset</button>
+        <button className='password-reset' style={{backgroundColor: 'red'}} onClick={resetPassword}>Password Reset</button>
         {node ? <>
             <ol>
                 {nodes}

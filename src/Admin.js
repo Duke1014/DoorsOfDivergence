@@ -26,21 +26,32 @@ export default function Admin() {
         handleSearch(searchText)
     }
     const handleText = e => {
+        // debugger
         setSearchText(e.target.value)
         handleSearch(e.target.value)
     }
 
     async function handleSearch(e) {
-        const q = query(collection(db, 'users'), where(`${selectedOption}`, '>=', e), limit(10))
+        const q = query(
+            collection(db, 'users'), 
+            // where(selectedOption, '>=', e),
+            // where(selectedOption, '<=', e + '\uf8ff'),
+            // limit(10)
+        )
+        
         const querySnapshot = await getDocs(q)
         let thing = []
         querySnapshot.forEach((doc) => {
             let data = doc.data()
-            thing.push(data)
+            debugger
+            if (!data.nodes) {
+                return
+            } else {
+                thing.push(data)
+            }
         })
         setNewResults(thing)
     }
-
     const resultsElements = newResults.map((r) => {
         return <UserView key={r.uid} r={r} setBubbleText={setBubbleText} />
     })
