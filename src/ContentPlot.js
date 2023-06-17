@@ -732,7 +732,9 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                     <br />
                     <img src={node9} alt='Pyromania' loading='lazy' />
                     <br />
+                    <blockquote>
                         "Grace has taken a shine to Charles. So much so that the superintendent has seen fit to put them in adjacent cells. Says that it might help both of them. If I didn’t know better, I’d say she has her first crush. I’ve tried to dissuade her, but she won’t listen. She’s even picked up his habit of writing all over her cell walls."
+                    </blockquote>               
                     <p className="max-w-sm mt-2 ml-auto italic text-right">
                         -Excerpt from Gunther’s journal, <br/>
                         September 15, 1905
@@ -1825,7 +1827,7 @@ export default function ContentPlot({ setCpShow, activeNode, isHesitant }) {
                         *()*)(*)(*-Hello, can anyone hear me? I think we’re stuck-*^*%hJUHkjyh
                     </p>
                     <p>
-                        “A>!)@-een Elizabeth to declare a temporary moratorium on all studies related to-(>@jhws
+                        “A!)@-een Elizabeth to declare a temporary moratorium on all studies related to-(@jhws
                     </p>
                     <p>
                         L*&*(-authorized personnel only. Do not attempt to access records related to EVELINE without direct approval from-*&kjhk% CORRUPTED CODE

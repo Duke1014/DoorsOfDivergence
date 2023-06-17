@@ -2,10 +2,10 @@ import React, { useContext, useState } from 'react'
 import { UserContext } from './context/user'
 import {
     collection,
-    query,
     where,
-    getDocs,
     limit,
+    query,
+    getDocs,
 } from 'firebase/firestore';
 import UserView from './UserView';
 
@@ -34,9 +34,9 @@ export default function Admin() {
     async function handleSearch(e) {
         const q = query(
             collection(db, 'users'), 
-            // where(selectedOption, '>=', e),
-            // where(selectedOption, '<=', e + '\uf8ff'),
-            // limit(10)
+            where(selectedOption, '>=', e),
+            where(selectedOption, '<=', e + '\uf8ff'),
+            limit(10)
         )
         
         const querySnapshot = await getDocs(q)

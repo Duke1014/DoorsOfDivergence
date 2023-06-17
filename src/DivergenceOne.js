@@ -252,8 +252,8 @@ export default function ({ setCpShow, setActiveNode }) {
                         <div style={{gridArea: '9/16/span 2/span 2'}}>
                             <img src={cornerDownLeft} alt='corner' />
                         </div>
-                        <div className="checkbox" id='SoundofMind' style={{gridArea: '11/10/span 2/span 2'}}>
-                            {nodes && nodes.SoundofMind ? <>
+                        <div className="checkbox" id='SoundOfMind' style={{gridArea: '11/10/span 2/span 2'}}>
+                            {nodes && nodes.SoundOfMind ? <>
                                 <div className='checked'>
                                     <img 
                                         src={checkedsmall} 

@@ -21,6 +21,11 @@
   font-family: 'Playfair Display', serif !important;
 }
 
+blockquote {
+  font-style: italic;
+  font-size: small;
+}
+
 .footer {
   position: fixed;
   bottom: 0 !important;
